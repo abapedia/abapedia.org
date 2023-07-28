@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CX_APJ_DT_CONTENT CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CX_APJ_DT_CONTENT</h2>
+<a href="https://github.com/abapedia/steampunk-2111-api/blob/mainrc%2Fcx_apj_dt_content.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cx_apj_dt_content/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cx_amdp_version_mismatch.clas.html">CX_AMDP_VERSION_MISMATCH</a></small><br><small>Next Object: <a href="cx_apj_rt.clas.html">CX_APJ_RT</a></small><br><br>Status: RELEASED<br><br>Superclass: <a href="cx_static_check.clas.html">cx_static_check</a><br><br>
+<u>Public</u><br>Interface <tt><a href="if_t100_message.intf.html">IF_T100_MESSAGE</a></tt><br>
+Interface <tt><a href="if_t100_dyn_msg.intf.html">IF_T100_DYN_MSG</a></tt><br>
+Attribute <tt>object</tt> TYPE <tt>c LENGTH 40</tt><br>
+Attribute <tt>object_type</tt> TYPE <tt>c LENGTH 30</tt><br>
+Attribute <tt>class_name</tt> TYPE <tt>c LENGTH 30</tt><br>
+Constant <tt>cx_no_authority</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>cx_catalog_doesnt_exist</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>cx_obj_must_not_be_used</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>cx_catalog_not_in_scope</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>cx_error_in_saving</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>cx_class_invalid</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>cx_class_not_whitelisted</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>cx_catalog_length</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>cx_invalid_parameter</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>cx_object_already_exists</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>cx_object_doesnt_exist</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>cx_no_auth_language_version</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>cx_parameter_length</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>cx_del_failed_due_to_rel_jobs</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Method <tt>constructor</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>textid</tt> TYPE <tt>SCX_T100KEY</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>previous</tt> TYPE <tt>cx_root</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>object</tt> TYPE <tt>c LENGTH 40</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>object_type</tt> TYPE <tt>c LENGTH 30</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>class_name</tt> TYPE <tt>c LENGTH 30</tt> Optional<br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

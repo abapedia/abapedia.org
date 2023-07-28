@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_HTTP_REQUEST INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_HTTP_REQUEST</h2>
+<a href="https://github.com/open-abap/open-abap-core/blob/mainrc%2Fhttp%2Fif_http_request.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_http_request/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_http_extension.intf.html">IF_HTTP_EXTENSION</a></small><br><small>Next Object: <a href="if_http_response.intf.html">IF_HTTP_RESPONSE</a></small><br><br><u>Public</u><br>Interface <tt><a href="if_http_entity.intf.html">if_http_entity</a></tt><br>
+Constant <tt>co_protocol_version_1_1</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>co_protocol_version_1_0</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>co_request_method_get</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>co_request_method_post</tt> TYPE <tt>STRING</tt><br>
+Method <tt>set_method</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>method</tt> TYPE <tt>STRING</tt><br>
+Method <tt>get_method</tt><br>
+&nbsp;&nbsp;RETURNING <tt>meth</tt> TYPE <tt>STRING</tt><br>
+Method <tt>set_version</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>version</tt> TYPE <tt>STRING</tt><br>
+Method <tt>set_authorization</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>auth_type</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>username</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>password</tt> TYPE <tt>STRING</tt><br>
+Method <tt>copy</tt><br>
+&nbsp;&nbsp;RETURNING <tt>request</tt> TYPE <tt>if_http_request</tt><br>
+Method <tt>get_authorization</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>auth_type</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>username</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>password</tt> TYPE <tt>STRING</tt><br>
+Method <tt>get_form_data</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>data</tt> TYPE <tt>any</tt><br>
+Method <tt>get_raw_message</tt><br>
+&nbsp;&nbsp;RETURNING <tt>data</tt> TYPE <tt>XSTRING</tt><br>
+Method <tt>get_uri_parameter</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>value</tt> TYPE <tt>STRING</tt><br>
+Method <tt>get_user_agent</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>user_agent_type</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>user_agent_version</tt> TYPE <tt>I</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>750</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>702</td><td bgcolor='red'>undefined</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_ABAP_TIMEFM CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_ABAP_TIMEFM</h2>
+<a href="https://github.com/abapedia/steampunk-2208-api/blob/mainrc%2Fcl_abap_timefm.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_abap_timefm/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_abap_testdouble.clas.html">CL_ABAP_TESTDOUBLE</a></small><br><small>Next Object: <a href="cl_abap_tstmp.clas.html">CL_ABAP_TSTMP</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ty_format</tt> TYPE <tt>cl_abap_timefm=>ty_format</tt><br>
+Type <tt>ty_timefm</tt> TYPE <tt>cl_abap_timefm=>ty_timefm</tt><br>
+Constant <tt>user</tt> TYPE <tt>cl_abap_timefm=>ty_format</tt><br>
+Constant <tt>environment</tt> TYPE <tt>cl_abap_timefm=>ty_format</tt><br>
+Constant <tt>iso</tt> TYPE <tt>cl_abap_timefm=>ty_format</tt><br>
+Constant <tt>fm_24h</tt> TYPE <tt>cl_abap_timefm=>ty_timefm</tt><br>
+Constant <tt>fm_12h_upper</tt> TYPE <tt>cl_abap_timefm=>ty_timefm</tt><br>
+Constant <tt>fm_12h_lower</tt> TYPE <tt>cl_abap_timefm=>ty_timefm</tt><br>
+Constant <tt>fm_0_11h_upper</tt> TYPE <tt>cl_abap_timefm=>ty_timefm</tt><br>
+Constant <tt>fm_0_11h_lower</tt> TYPE <tt>cl_abap_timefm=>ty_timefm</tt><br>
+Constant <tt>max_time_output_len</tt> TYPE <tt>I</tt><br>
+Static Method <tt>conv_time_ext_to_int</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>time_ext</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>is_24_allowed</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>time_int</tt> TYPE <tt>T</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_timefm_invalid.clas.html">cx_abap_timefm_invalid</a></tt><br>
+Static Method <tt>conv_time_int_to_ext</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>time_int</tt> TYPE <tt>T</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>without_seconds</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>format_according_to</tt> TYPE <tt>cl_abap_timefm=>ty_format</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>time_ext</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_parameter_invalid_range.clas.html">cx_parameter_invalid_range</a></tt><br>
+Static Method <tt>get_output_length</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>without_seconds</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>format_according_to</tt> TYPE <tt>cl_abap_timefm=>ty_format</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>length</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_parameter_invalid_range.clas.html">cx_parameter_invalid_range</a></tt><br>
+Static Method <tt>get_country_timefm</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>country</tt> TYPE <tt>LAND1</tt><br>
+&nbsp;&nbsp;RETURNING <tt>timefm</tt> TYPE <tt>cl_abap_timefm=>ty_timefm</tt><br>
+Static Method <tt>get_environment_timefm</tt><br>
+&nbsp;&nbsp;RETURNING <tt>timefm</tt> TYPE <tt>cl_abap_timefm=>ty_timefm</tt><br>
+Static Method <tt>get_user_timefm</tt><br>
+&nbsp;&nbsp;RETURNING <tt>timefm</tt> TYPE <tt>cl_abap_timefm=>ty_timefm</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='green'>true</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

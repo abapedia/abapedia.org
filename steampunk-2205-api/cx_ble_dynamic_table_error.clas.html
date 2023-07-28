@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CX_BLE_DYNAMIC_TABLE_ERROR CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CX_BLE_DYNAMIC_TABLE_ERROR</h2>
+<a href="https://github.com/abapedia/steampunk-2205-api/blob/mainrc%2Fcx_ble_dynamic_table_error.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cx_ble_dynamic_table_error/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cx_bcs_mail_config.clas.html">CX_BCS_MAIL_CONFIG</a></small><br><small>Next Object: <a href="cx_ble_runtime_error.clas.html">CX_BLE_RUNTIME_ERROR</a></small><br><br>Status: RELEASED<br><br>Superclass: <a href="cx_static_check.clas.html">cx_static_check</a><br><br>
+<u>Public</u><br>Interface <tt><a href="if_t100_dyn_msg.intf.html">IF_T100_DYN_MSG</a></tt><br>
+Interface <tt><a href="if_t100_message.intf.html">IF_T100_MESSAGE</a></tt><br>
+Attribute <tt>row</tt> TYPE <tt>I</tt><br>
+Attribute <tt>type</tt> TYPE <tt>STRING</tt><br>
+Attribute <tt>column</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>internal_error</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>length_missing</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>length_or_decimals_missing</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>unsupported_type</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>row_deleted</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>iteration_in_progress</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>no_current_row</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>at_last_row</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>column_exists</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>no_columns</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Method <tt>constructor</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>textid</tt> TYPE <tt>SCX_T100KEY</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>previous</tt> TYPE <tt>cx_root</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>row</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>type</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>column</tt> TYPE <tt>STRING</tt> Optional<br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>750</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>702</td><td bgcolor='red'>undefined</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

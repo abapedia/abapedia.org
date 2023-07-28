@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - /IWBEP/IF_CP_RESOURCE_LIST INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF /IWBEP/IF_CP_RESOURCE_LIST</h2>
+<a href="https://github.com/abapedia/steampunk-2208-api/blob/mainrc%2F%23iwbep%23if_cp_resource_list.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces//iwbep/if_cp_resource_list/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="%23iwbep%23if_cp_resource_function.intf.html">/IWBEP/IF_CP_RESOURCE_FUNCTION</a></small><br><small>Next Object: <a href="%23iwbep%23if_cp_response_action.intf.html">/IWBEP/IF_CP_RESPONSE_ACTION</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Method <tt>bind_action</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_action_name</tt> TYPE <tt>/iwbep/if_cp_runtime_types=>ty_internal_name</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_action_resource</tt> TYPE <tt>/iwbep/if_cp_resource_action</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+Method <tt>bind_function</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_function_name</tt> TYPE <tt>/iwbep/if_cp_runtime_types=>ty_internal_name</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_function_resource</tt> TYPE <tt>/iwbep/if_cp_resource_function</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+Method <tt>create_request_for_create</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_request</tt> TYPE <tt>/iwbep/if_cp_request_create</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+Method <tt>create_request_for_read</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_request</tt> TYPE <tt>/iwbep/if_cp_request_read_list</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+Method <tt>create_request_for_update</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_request</tt> TYPE <tt>/iwbep/if_cp_request_update_l</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+Method <tt>navigate_with_key</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>is_key_data</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_child_resource</tt> TYPE <tt>/iwbep/if_cp_resource_entity</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

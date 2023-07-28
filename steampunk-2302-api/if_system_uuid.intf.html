@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_SYSTEM_UUID INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_SYSTEM_UUID</h2>
+<a href="https://github.com/abapedia/steampunk-2302-api/blob/mainrc%2Fif_system_uuid.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_system_uuid/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_sxml_writer.intf.html">IF_SXML_WRITER</a></small><br><small>Next Object: <a href="if_system_uuid_rfc4122_static.intf.html">IF_SYSTEM_UUID_RFC4122_STATIC</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Method <tt>create_uuid_x16</tt><br>
+&nbsp;&nbsp;RETURNING <tt>uuid</tt> TYPE <tt>SYSUUID_X16</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_uuid_error.clas.html">cx_uuid_error</a></tt><br>
+Method <tt>create_uuid_c22</tt><br>
+&nbsp;&nbsp;RETURNING <tt>uuid</tt> TYPE <tt>SYSUUID_C22</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_uuid_error.clas.html">cx_uuid_error</a></tt><br>
+Method <tt>create_uuid_c26</tt><br>
+&nbsp;&nbsp;RETURNING <tt>uuid</tt> TYPE <tt>SYSUUID_C26</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_uuid_error.clas.html">cx_uuid_error</a></tt><br>
+Method <tt>create_uuid_c32</tt><br>
+&nbsp;&nbsp;RETURNING <tt>uuid</tt> TYPE <tt>SYSUUID_C32</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_uuid_error.clas.html">cx_uuid_error</a></tt><br>
+Method <tt>convert_uuid_x16</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>uuid</tt> TYPE <tt>SYSUUID_X16</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>uuid_c22</tt> TYPE <tt>SYSUUID_C22</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>uuid_c32</tt> TYPE <tt>SYSUUID_C32</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>uuid_c26</tt> TYPE <tt>SYSUUID_C26</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_uuid_error.clas.html">cx_uuid_error</a></tt><br>
+Method <tt>convert_uuid_c22</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>uuid</tt> TYPE <tt>SYSUUID_C22</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>uuid_x16</tt> TYPE <tt>SYSUUID_X16</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>uuid_c32</tt> TYPE <tt>SYSUUID_C32</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>uuid_c26</tt> TYPE <tt>SYSUUID_C26</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_uuid_error.clas.html">cx_uuid_error</a></tt><br>
+Method <tt>convert_uuid_c26</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>uuid</tt> TYPE <tt>SYSUUID_C26</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>uuid_x16</tt> TYPE <tt>SYSUUID_X16</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>uuid_c32</tt> TYPE <tt>SYSUUID_C32</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>uuid_c22</tt> TYPE <tt>SYSUUID_C22</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_uuid_error.clas.html">cx_uuid_error</a></tt><br>
+Method <tt>convert_uuid_c32</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>uuid</tt> TYPE <tt>SYSUUID_C32</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>uuid_x16</tt> TYPE <tt>SYSUUID_X16</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>uuid_c22</tt> TYPE <tt>SYSUUID_C22</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>uuid_c26</tt> TYPE <tt>SYSUUID_C26</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_uuid_error.clas.html">cx_uuid_error</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='green'>true</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

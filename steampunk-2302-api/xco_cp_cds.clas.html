@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - XCO_CP_CDS CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS XCO_CP_CDS</h2>
+<a href="https://github.com/abapedia/steampunk-2302-api/blob/mainrc%2Fxco_cp_cds.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/xco_cp_cds/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="xco_cp_call_stack.clas.html">XCO_CP_CALL_STACK</a></small><br><small>Next Object: <a href="xco_cp_cds_annotation.clas.html">XCO_CP_CDS_ANNOTATION</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Static Attribute <tt>cardinality</tt> TYPE <tt>cl_xco_cds_cardinality_f</tt><br>
+Static Attribute <tt>left_outer_join_cardinality</tt> TYPE <tt>cl_xco_cds_left_outer_join_c_f</tt><br>
+Static Attribute <tt>provider_contract</tt> TYPE <tt>cl_xco_cp_cds_prvdr_cntrct_f</tt><br>
+Static Attribute <tt>annotations</tt> TYPE <tt>if_xco_cp_cds_api_annotations</tt><br>
+Static Method <tt>access_control</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_CDS_OBJECT_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_access_control</tt> TYPE <tt>if_xco_access_control</tt><br>
+Static Method <tt>behavior_definition</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_CDS_OBJECT_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_behavior_definition</tt> TYPE <tt>if_xco_behavior_definition</tt><br>
+Static Method <tt>data_definition</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_CDS_OBJECT_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_data_definition</tt> TYPE <tt>if_xco_data_definition</tt><br>
+Static Method <tt>metadata_extension</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_CDS_OBJECT_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_metadata_extension</tt> TYPE <tt>if_xco_metadata_extension</tt><br>
+Static Method <tt>entity</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_CDS_OBJECT_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_entity</tt> TYPE <tt>if_xco_cds_entity</tt><br>
+Static Method <tt>view</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_CDS_OBJECT_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_view</tt> TYPE <tt>if_xco_cds_view</tt><br>
+Static Method <tt>view_entity</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_CDS_OBJECT_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_view_entity</tt> TYPE <tt>if_xco_cds_view_entity</tt><br>
+Static Method <tt>projection_view</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_CDS_OBJECT_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_projection_view</tt> TYPE <tt>if_xco_cds_projection_view</tt><br>
+Static Method <tt>abstract_entity</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_CDS_OBJECT_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_abstract_entity</tt> TYPE <tt>if_xco_cds_abstract_entity</tt><br>
+Static Method <tt>custom_entity</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_CDS_OBJECT_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_custom_entity</tt> TYPE <tt>if_xco_cds_custom_entity</tt><br>
+Static Method <tt>table_function</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_CDS_OBJECT_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_table_function</tt> TYPE <tt>if_xco_cds_table_function</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

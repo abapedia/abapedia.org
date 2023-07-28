@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_FDT_CP_ADMIN_DATA INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_FDT_CP_ADMIN_DATA</h2>
+<a href="https://github.com/abapedia/steampunk-2205-api/blob/mainrc%2Fif_fdt_cp_admin_data.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_fdt_cp_admin_data/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_fdt_cp_actions.intf.html">IF_FDT_CP_ACTIONS</a></small><br><small>Next Object: <a href="if_fdt_cp_ast_factory.intf.html">IF_FDT_CP_AST_FACTORY</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Attribute <tt>mv_id</tt> TYPE <tt>if_fdt_cp_external_types=>id</tt><br>
+Attribute <tt>mv_type</tt> TYPE <tt>if_fdt_cp_external_types=>cpbr_object_type</tt><br>
+Method <tt>get_name</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_name</tt> TYPE <tt>STRING</tt><br>
+Method <tt>get_label</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rt_label</tt> TYPE <tt>if_fdt_cp_external_types=>tt_label</tt><br>
+Method <tt>get_description</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rt_description</tt> TYPE <tt>if_fdt_cp_external_types=>tt_description</tt><br>
+Method <tt>get_project</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_project_id</tt> TYPE <tt>if_fdt_cp_external_types=>id</tt><br>
+Method <tt>set_description</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_description</tt> TYPE <tt>if_fdt_cp_external_types=>tt_description</tt><br>
+Method <tt>set_label</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_label</tt> TYPE <tt>if_fdt_cp_external_types=>tt_label</tt><br>
+Method <tt>set_name</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>STRING</tt><br>
+Method <tt>set_project</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_project_id</tt> TYPE <tt>if_fdt_cp_external_types=>id</tt><br>
+Method <tt>get_annotations</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rt_annotations</tt> TYPE <tt>if_fdt_cp_external_types=>tt_annotations</tt><br>
+Method <tt>set_annotations</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_annotations</tt> TYPE <tt>if_fdt_cp_external_types=>tt_annotations</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

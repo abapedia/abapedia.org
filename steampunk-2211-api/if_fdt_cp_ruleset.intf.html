@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_FDT_CP_RULESET INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_FDT_CP_RULESET</h2>
+<a href="https://github.com/abapedia/steampunk-2211-api/blob/mainrc%2Fif_fdt_cp_ruleset.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_fdt_cp_ruleset/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_fdt_cp_ruleservice_version.intf.html">IF_FDT_CP_RULESERVICE_VERSION</a></small><br><small>Next Object: <a href="if_fdt_cp_text_rule.intf.html">IF_FDT_CP_TEXT_RULE</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Interface <tt><a href="if_fdt_cp_admin_data.intf.html">if_fdt_cp_admin_data</a></tt><br>
+Interface <tt><a href="if_fdt_cp_actions.intf.html">if_fdt_cp_actions</a></tt><br>
+Constant <tt>gcs_ruleset_policy</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Method <tt>set_priority</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_priority</tt> TYPE <tt>if_fdt_cp_external_types=>ty_priority</tt><br>
+Method <tt>get_priority</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_priority</tt> TYPE <tt>if_fdt_cp_external_types=>ty_priority</tt><br>
+Method <tt>get_execution_policy</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_execution_policy</tt> TYPE <tt>if_fdt_cp_external_types=>ty_policy</tt><br>
+Method <tt>set_execution_policy</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_execution_policy</tt> TYPE <tt>if_fdt_cp_external_types=>ty_policy</tt><br>
+Method <tt>get_assigned_ruleservice</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_ruleservice</tt> TYPE <tt>STRING</tt><br>
+Method <tt>set_assigned_ruleservice</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_ruleservice</tt> TYPE <tt>STRING</tt><br>
+Method <tt>set_assigned_rules</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_ruleset_rules</tt> TYPE <tt>if_fdt_cp_external_types=>tt_ruleset_rule</tt><br>
+Method <tt>get_assigned_rules</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rt_ruleset_rules</tt> TYPE <tt>if_fdt_cp_external_types=>tt_ruleset_rule</tt><br>
+Method <tt>set_ruleset_vocabulary</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_ruleset_vocabulary</tt> TYPE <tt>if_fdt_cp_external_types=>ty_ruleset_vocabulary</tt><br>
+Method <tt>get_ruleset_vocabulary</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rt_ruleset_vocabulary</tt> TYPE <tt>if_fdt_cp_external_types=>ty_ruleset_vocabulary</tt><br>
+Method <tt>set_header_precondition</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_condition</tt> TYPE <tt>if_fdt_cp_ast_node</tt><br>
+Method <tt>get_header_precondition</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_condition</tt> TYPE <tt>if_fdt_cp_ast_node</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

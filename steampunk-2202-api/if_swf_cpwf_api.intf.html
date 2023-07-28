@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_SWF_CPWF_API INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_SWF_CPWF_API</h2>
+<a href="https://github.com/abapedia/steampunk-2202-api/blob/mainrc%2Fif_swf_cpwf_api.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_swf_cpwf_api/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_swf_cp_json.intf.html">IF_SWF_CP_JSON</a></small><br><small>Next Object: <a href="if_swf_cpwf_callback.intf.html">IF_SWF_CPWF_CALLBACK</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Interface <tt><a href="if_swf_cpwf_capi.intf.html">if_swf_cpwf_capi</a></tt><br>
+Type <tt>callback_classname</tt> TYPE <tt>if_swf_cpwf_api=>callback_classname</tt><br>
+Type <tt>retention_time</tt> TYPE <tt>if_swf_cpwf_api=>retention_time</tt><br>
+Type <tt>cpwf_status</tt> TYPE <tt>if_swf_cpwf_api=>cpwf_status</tt><br>
+Type <tt>cpwf_task_status</tt> TYPE <tt>if_swf_cpwf_api=>cpwf_task_status</tt><br>
+Type <tt>cpwf_def_id</tt> TYPE <tt>if_swf_cpwf_api=>cpwf_def_id</tt><br>
+Type <tt>cpwf_id</tt> TYPE <tt>if_swf_cpwf_api=>cpwf_id</tt><br>
+Type <tt>context</tt> TYPE <tt>if_swf_cpwf_api=>context</tt><br>
+Type <tt>cpwf_handle</tt> TYPE <tt>if_swf_cpwf_api=>cpwf_handle</tt><br>
+Type <tt>cpwf_evt_def_id</tt> TYPE <tt>if_swf_cpwf_api=>cpwf_evt_def_id</tt><br>
+Type <tt>cpwf_log_type</tt> TYPE <tt>if_swf_cpwf_api=>cpwf_log_type</tt><br>
+Type <tt>uppercase_word</tt> TYPE <tt>if_swf_cpwf_api=>uppercase_word</tt><br>
+Type <tt>uppercase_words</tt> TYPE <tt>if_swf_cpwf_api=>uppercase_words</tt><br>
+Type <tt>name_mapping</tt> TYPE <tt>if_swf_cpwf_api=>name_mapping</tt><br>
+Type <tt>name_mappings</tt> TYPE <tt>if_swf_cpwf_api=>name_mappings</tt><br>
+Type <tt>user_task_instance</tt> TYPE <tt>if_swf_cpwf_api=>user_task_instance</tt><br>
+Type <tt>user_task_instances</tt> TYPE <tt>if_swf_cpwf_api=>user_task_instances</tt><br>
+Type <tt>workflow_definition</tt> TYPE <tt>if_swf_cpwf_api=>workflow_definition</tt><br>
+Type <tt>workflow_definitions</tt> TYPE <tt>if_swf_cpwf_api=>workflow_definitions</tt><br>
+Type <tt>workflow_log_error</tt> TYPE <tt>if_swf_cpwf_api=>workflow_log_error</tt><br>
+Type <tt>workflow_log_errors</tt> TYPE <tt>if_swf_cpwf_api=>workflow_log_errors</tt><br>
+Type <tt>workflow_log</tt> TYPE <tt>if_swf_cpwf_api=>workflow_log</tt><br>
+Type <tt>workflow_logs</tt> TYPE <tt>if_swf_cpwf_api=>workflow_logs</tt><br>
+Constant <tt>c_cpwf_status</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>c_cpwf_task_status</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>c_cpwf_log_type</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>cv_consumer_type_default</tt> TYPE <tt>SWF_CPWF_CONSUMER</tt><br>
+Static Method <tt>get_start_context_from_data</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_data</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_name_mapping</tt> TYPE <tt>if_swf_cpwf_api=>name_mappings</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_camel_case</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_capital_letter</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_uppercase_word</tt> TYPE <tt>if_swf_cpwf_api=>uppercase_words</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_suppress_empty_components</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rv_context</tt> TYPE <tt>if_swf_cpwf_api=>context</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_swf_cpwf_api.clas.html">cx_swf_cpwf_api</a></tt><br>
+Static Method <tt>get_context_from_data</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_data</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_name_mapping</tt> TYPE <tt>if_swf_cpwf_api=>name_mappings</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_camel_case</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_capital_letter</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_uppercase_word</tt> TYPE <tt>if_swf_cpwf_api=>uppercase_words</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_suppress_empty_components</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rv_context</tt> TYPE <tt>if_swf_cpwf_api=>context</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_swf_cpwf_api.clas.html">cx_swf_cpwf_api</a></tt><br>
+Static Method <tt>get_context_data_from_json</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_context</tt> TYPE <tt>if_swf_cpwf_api=>context</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_name_mapping</tt> TYPE <tt>if_swf_cpwf_api=>name_mappings</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_camel_case</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_capital_letter</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_uppercase_word</tt> TYPE <tt>if_swf_cpwf_api=>uppercase_words</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_data</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_swf_cpwf_api.clas.html">cx_swf_cpwf_api</a></tt><br>
+Method <tt>start_workflow</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_cp_workflow_def_id</tt> TYPE <tt>if_swf_cpwf_api=>cpwf_def_id</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_context</tt> TYPE <tt>if_swf_cpwf_api=>context</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_retention_time</tt> TYPE <tt>if_swf_cpwf_api=>retention_time</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_callback_class</tt> TYPE <tt>if_swf_cpwf_api=>callback_classname</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_do_commit</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rv_cpwf_handle</tt> TYPE <tt>if_swf_cpwf_api=>cpwf_handle</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_swf_cpwf_api.clas.html">cx_swf_cpwf_api</a></tt><br>
+Method <tt>register_workflow</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_cp_workflow_inst_id</tt> TYPE <tt>if_swf_cpwf_api=>cpwf_id</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_retention_time</tt> TYPE <tt>if_swf_cpwf_api=>retention_time</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_callback_class</tt> TYPE <tt>if_swf_cpwf_api=>callback_classname</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_do_commit</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_cpwf_handle</tt> TYPE <tt>if_swf_cpwf_api=>cpwf_handle</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_cpwf_status</tt> TYPE <tt>if_swf_cpwf_api=>cpwf_status</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_swf_cpwf_api.clas.html">cx_swf_cpwf_api</a></tt><br>
+Method <tt>cancel_workflow</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_cpwf_handle</tt> TYPE <tt>if_swf_cpwf_api=>cpwf_handle</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_do_commit</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_swf_cpwf_api.clas.html">cx_swf_cpwf_api</a></tt><br>
+Method <tt>get_workflow_status</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_cpwf_handle</tt> TYPE <tt>if_swf_cpwf_api=>cpwf_handle</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_status</tt> TYPE <tt>if_swf_cpwf_api=>cpwf_status</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_swf_cpwf_api.clas.html">cx_swf_cpwf_api</a></tt><br>
+Method <tt>get_workflow_log</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_cpwf_handle</tt> TYPE <tt>if_swf_cpwf_api=>cpwf_handle</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rt_log</tt> TYPE <tt>if_swf_cpwf_api=>workflow_logs</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_swf_cpwf_api.clas.html">cx_swf_cpwf_api</a></tt><br>
+Method <tt>get_workflow_context</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_cpwf_handle</tt> TYPE <tt>if_swf_cpwf_api=>cpwf_handle</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_context</tt> TYPE <tt>if_swf_cpwf_api=>context</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_swf_cpwf_api.clas.html">cx_swf_cpwf_api</a></tt><br>
+Method <tt>get_user_task_instances</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_cpwf_handle</tt> TYPE <tt>if_swf_cpwf_api=>cpwf_handle</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rt_user_task_instance</tt> TYPE <tt>if_swf_cpwf_api=>user_task_instances</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_swf_cpwf_api.clas.html">cx_swf_cpwf_api</a></tt><br>
+Method <tt>get_workflow_definitions</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rt_workflow_definition</tt> TYPE <tt>if_swf_cpwf_api=>workflow_definitions</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_swf_cpwf_api.clas.html">cx_swf_cpwf_api</a></tt><br>
+Method <tt>raise_event</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_cpwf_handle</tt> TYPE <tt>if_swf_cpwf_api=>cpwf_handle</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_event_def_id</tt> TYPE <tt>if_swf_cpwf_api=>cpwf_evt_def_id</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_event_context</tt> TYPE <tt>if_swf_cpwf_api=>context</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_do_commit</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_swf_cpwf_api.clas.html">cx_swf_cpwf_api</a></tt><br>
+Method <tt>get_json_converter</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_name_mapping</tt> TYPE <tt>if_swf_cpwf_api=>name_mappings</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_camel_case</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_capital_letter</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_uppercase_word</tt> TYPE <tt>if_swf_cpwf_api=>uppercase_words</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_suppress_empty_components</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_uppercase</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>ro_json_converter</tt> TYPE <tt>if_swf_cp_json</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

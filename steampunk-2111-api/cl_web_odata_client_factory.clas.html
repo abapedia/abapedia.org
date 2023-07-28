@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_WEB_ODATA_CLIENT_FACTORY CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_WEB_ODATA_CLIENT_FACTORY</h2>
+<a href="https://github.com/abapedia/steampunk-2111-api/blob/mainrc%2Fcl_web_odata_client_factory.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_web_odata_client_factory/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_web_http_utility.clas.html">CL_WEB_HTTP_UTILITY</a></small><br><small>Next Object: <a href="cl_xco_abap_t_bi_fixed_length.clas.html">CL_XCO_ABAP_T_BI_FIXED_LENGTH</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ty_service_definition_name</tt> TYPE <tt>cl_web_odata_client_factory=>ty_service_definition_name</tt><br>
+Static Method <tt>create_v2_local_proxy</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>is_service_key</tt> TYPE <tt>/iwbep/if_cp_client_proxy=>ty_s_service_key_v2</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_client_proxy</tt> TYPE <tt>/iwbep/if_cp_client_proxy</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+Static Method <tt>create_v2_remote_proxy</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_service_definition_name</tt> TYPE <tt>cl_web_odata_client_factory=>ty_service_definition_name</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_http_client</tt> TYPE <tt>if_web_http_client</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_relative_service_root</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_client_proxy</tt> TYPE <tt>/iwbep/if_cp_client_proxy</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_web_http_client_error.clas.html">cx_web_http_client_error</a></tt><br>
+Static Method <tt>create_v4_remote_proxy</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_service_definition_name</tt> TYPE <tt>cl_web_odata_client_factory=>ty_service_definition_name</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_http_client</tt> TYPE <tt>if_web_http_client</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_relative_service_root</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_client_proxy</tt> TYPE <tt>/iwbep/if_cp_client_proxy</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_web_http_client_error.clas.html">cx_web_http_client_error</a></tt><br>
+Static Method <tt>create_v4_local_proxy</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>is_service_key</tt> TYPE <tt>/iwbep/if_cp_client_proxy=>ty_s_service_key_v4</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_client_proxy</tt> TYPE <tt>/iwbep/if_cp_client_proxy</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

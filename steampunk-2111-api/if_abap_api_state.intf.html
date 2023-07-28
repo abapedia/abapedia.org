@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_ABAP_API_STATE INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_ABAP_API_STATE</h2>
+<a href="https://github.com/abapedia/steampunk-2111-api/blob/mainrc%2Fif_abap_api_state.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_abap_api_state/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_a4c_rap_query_response.intf.html">IF_A4C_RAP_QUERY_RESPONSE</a></small><br><small>Next Object: <a href="if_abap_behavior_testdouble.intf.html">IF_ABAP_BEHAVIOR_TESTDOUBLE</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ty_object_directory_type</tt> TYPE <tt>if_abap_api_state=>ty_object_directory_type</tt><br>
+Type <tt>ty_object_directory_name</tt> TYPE <tt>if_abap_api_state=>ty_object_directory_name</tt><br>
+Type <tt>ty_sub_object_type</tt> TYPE <tt>if_abap_api_state=>ty_sub_object_type</tt><br>
+Type <tt>ty_sub_object_name</tt> TYPE <tt>if_abap_api_state=>ty_sub_object_name</tt><br>
+Type <tt>ty_release_contract</tt> TYPE <tt>if_abap_api_state=>ty_release_contract</tt><br>
+Type <tt>ty_request</tt> TYPE <tt>if_abap_api_state=>ty_request</tt><br>
+Type <tt>ty_s_object_directory_key</tt> TYPE <tt>if_abap_api_state=>ty_s_object_directory_key</tt><br>
+Type <tt>ty_s_sub_object_key</tt> TYPE <tt>if_abap_api_state=>ty_s_sub_object_key</tt><br>
+Type <tt>ty_s_api_key</tt> TYPE <tt>if_abap_api_state=>ty_s_api_key</tt><br>
+Type <tt>ty_s_visibility</tt> TYPE <tt>if_abap_api_state=>ty_s_visibility</tt><br>
+Type <tt>ty_s_release_info</tt> TYPE <tt>if_abap_api_state=>ty_s_release_info</tt><br>
+Type <tt>ty_s_referenced_api</tt> TYPE <tt>if_abap_api_state=>ty_s_referenced_api</tt><br>
+Type <tt>ty_t_referenced_api</tt> TYPE <tt>if_abap_api_state=>ty_t_referenced_api</tt><br>
+Constant <tt>co_release_contract</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>co_sub_object_type</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Method <tt>get_referenced_apis</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>release_contract</tt> TYPE <tt>if_abap_api_state=>ty_release_contract</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>use_in_cloud_development</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>use_in_key_user_apps</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>omit_released_apis</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>result</tt> TYPE <tt>if_abap_api_state=>ty_t_referenced_api</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_api_state.clas.html">cx_abap_api_state</a></tt><br>
+Method <tt>is_released</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>release_contract</tt> TYPE <tt>if_abap_api_state=>ty_release_contract</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>use_in_cloud_development</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>use_in_key_user_apps</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>result</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_api_state.clas.html">cx_abap_api_state</a></tt><br>
+Method <tt>get_release_info</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>release_contract</tt> TYPE <tt>if_abap_api_state=>ty_release_contract</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>result</tt> TYPE <tt>if_abap_api_state=>ty_s_release_info</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_api_state.clas.html">cx_abap_api_state</a></tt><br>
+Method <tt>release</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>release_contract</tt> TYPE <tt>if_abap_api_state=>ty_release_contract</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>use_in_cloud_development</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>use_in_key_user_apps</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>request</tt> TYPE <tt>if_abap_api_state=>ty_request</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_api_state.clas.html">cx_abap_api_state</a></tt><br>
+Method <tt>delete_release_state</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>release_contract</tt> TYPE <tt>if_abap_api_state=>ty_release_contract</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>request</tt> TYPE <tt>if_abap_api_state=>ty_request</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_api_state.clas.html">cx_abap_api_state</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

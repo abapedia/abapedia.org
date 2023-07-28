@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - /IWBEP/IF_CP_RESPONSE_READ_LST INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF /IWBEP/IF_CP_RESPONSE_READ_LST</h2>
+<a href="https://github.com/abapedia/steampunk-2211-api/blob/mainrc%2F%23iwbep%23if_cp_response_read_lst.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces//iwbep/if_cp_response_read_lst/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="%23iwbep%23if_cp_response_read_01.intf.html">/IWBEP/IF_CP_RESPONSE_READ_01</a></small><br><small>Next Object: <a href="%23iwbep%23if_cp_response_update.intf.html">/IWBEP/IF_CP_RESPONSE_UPDATE</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Method <tt>get_business_data</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_business_data</tt> TYPE <tt>STANDARD TABLE OF any WITH DEFAULT KEY</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+Method <tt>get_count</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_count</tt> TYPE <tt>INT8</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+Method <tt>get_next</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_next_response</tt> TYPE <tt>/iwbep/if_cp_response_read_lst</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+Method <tt>has_delta_link</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_has_delta_link</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+Method <tt>has_next</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_has_next</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+Method <tt>save_delta_link</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_query_id</tt> TYPE <tt>/iwbep/if_cp_runtime_types=>ty_delta_query_id</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_SXML_WRITER INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_SXML_WRITER</h2>
+<a href="https://github.com/abapedia/steampunk-2305-api-intersect-702/blob/mainrc%2Fif_sxml_writer.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_sxml_writer/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_sxml_value_node.intf.html">IF_SXML_VALUE_NODE</a></small><br><small>Next Object: <a href="if_system_uuid.intf.html">IF_SYSTEM_UUID</a></small><br><br><u>Public</u><br>Interface <tt><a href="if_sxml.intf.html">if_sxml</a></tt><br>
+Interface <tt><a href="if_sxml_nsuri_helper.intf.html">if_sxml_nsuri_helper</a></tt><br>
+Constant <tt>co_opt_normalizing</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_opt_no_empty</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_opt_ignore_conv_errros</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_opt_linebreaks</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_opt_indent</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_opt_illegal_char_reject</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_opt_illegal_char_replace</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_opt_illegal_char_replace_by</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_opt_base64_no_lf</tt> TYPE <tt>I</tt><br>
+Static Method <tt>new_open_element</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>nsuri</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>prefix</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>element</tt> TYPE <tt>if_sxml_open_element</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sxml_name_error.clas.html">cx_sxml_name_error</a></tt><br>
+Static Method <tt>new_value</tt><br>
+&nbsp;&nbsp;RETURNING <tt>value</tt> TYPE <tt>if_sxml_value_node</tt><br>
+Static Method <tt>new_close_element</tt><br>
+&nbsp;&nbsp;RETURNING <tt>element</tt> TYPE <tt>if_sxml_close_element</tt><br>
+Method <tt>write_node</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>node</tt> TYPE <tt>if_sxml_node</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sxml_state_error.clas.html">cx_sxml_state_error</a></tt><br>
+Method <tt>open_element</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>nsuri</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>prefix</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sxml_state_error.clas.html">cx_sxml_state_error</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sxml_name_error.clas.html">cx_sxml_name_error</a></tt><br>
+Method <tt>close_element</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sxml_state_error.clas.html">cx_sxml_state_error</a></tt><br>
+Method <tt>write_attribute</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>nsuri</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>prefix</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>value</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sxml_state_error.clas.html">cx_sxml_state_error</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sxml_name_error.clas.html">cx_sxml_name_error</a></tt><br>
+Method <tt>write_attribute_raw</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>nsuri</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>prefix</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>value</tt> TYPE <tt>XSTRING</tt> Optional<br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sxml_state_error.clas.html">cx_sxml_state_error</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sxml_name_error.clas.html">cx_sxml_name_error</a></tt><br>
+Method <tt>write_value</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>value</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sxml_state_error.clas.html">cx_sxml_state_error</a></tt><br>
+Method <tt>write_value_raw</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>value</tt> TYPE <tt>XSTRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sxml_state_error.clas.html">cx_sxml_state_error</a></tt><br>
+Method <tt>write_namespace_declaration</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>nsuri</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>prefix</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sxml_name_error.clas.html">cx_sxml_name_error</a></tt><br>
+Method <tt>set_option</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>option</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>value</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+Method <tt>get_option</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>option</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;RETURNING <tt>value</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>set_vsi</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>vsi</tt> TYPE <tt>not_released</tt><br>
+Method <tt>get_vsi</tt><br>
+&nbsp;&nbsp;RETURNING <tt>vsi</tt> TYPE <tt>not_released</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='green'>true</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

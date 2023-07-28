@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_IAM_BUSINESS_USER INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_IAM_BUSINESS_USER</h2>
+<a href="https://github.com/abapedia/steampunk-2205-api/blob/mainrc%2Fif_iam_business_user.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_iam_business_user/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_iam_business_role_factory.intf.html">IF_IAM_BUSINESS_ROLE_FACTORY</a></small><br><small>Next Object: <a href="if_iam_business_user_badi.intf.html">IF_IAM_BUSINESS_USER_BADI</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ty_user_id</tt> TYPE <tt>if_iam_business_user=>ty_user_id</tt><br>
+Type <tt>ty_user_name</tt> TYPE <tt>if_iam_business_user=>ty_user_name</tt><br>
+Type <tt>ty_bupa_id</tt> TYPE <tt>if_iam_business_user=>ty_bupa_id</tt><br>
+Type <tt>ty_logon_language</tt> TYPE <tt>if_iam_business_user=>ty_logon_language</tt><br>
+Type <tt>ty_decimal_format</tt> TYPE <tt>if_iam_business_user=>ty_decimal_format</tt><br>
+Type <tt>ty_date_format</tt> TYPE <tt>if_iam_business_user=>ty_date_format</tt><br>
+Type <tt>ty_time_format</tt> TYPE <tt>if_iam_business_user=>ty_time_format</tt><br>
+Type <tt>ty_time_zone</tt> TYPE <tt>if_iam_business_user=>ty_time_zone</tt><br>
+Type <tt>ty_date</tt> TYPE <tt>DATS</tt><br>
+Type <tt>ty_lock_status</tt> TYPE <tt>if_iam_business_user=>ty_lock_status</tt><br>
+Type <tt>ty_user_globaluid</tt> TYPE <tt>if_iam_business_user=>ty_user_globaluid</tt><br>
+Type <tt>tt_user_globaluid_history</tt> TYPE <tt>if_iam_business_user=>tt_user_globaluid_history</tt><br>
+Type <tt>tt_user_id</tt> TYPE <tt>if_iam_business_user=>tt_user_id</tt><br>
+Method <tt>lock</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_return</tt> TYPE <tt>BAPIRETTAB</tt><br>
+Method <tt>unlock</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_return</tt> TYPE <tt>BAPIRETTAB</tt><br>
+Method <tt>save</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_return</tt> TYPE <tt>BAPIRETTAB</tt><br>
+Method <tt>delete</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_return</tt> TYPE <tt>BAPIRETTAB</tt><br>
+Method <tt>set_user_name</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_user_name</tt> TYPE <tt>if_iam_business_user=>ty_user_name</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_return</tt> TYPE <tt>BAPIRETTAB</tt><br>
+Method <tt>set_logon_language</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_language</tt> TYPE <tt>if_iam_business_user=>ty_logon_language</tt><br>
+Method <tt>set_decimal_format</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_decimal_format</tt> TYPE <tt>if_iam_business_user=>ty_decimal_format</tt><br>
+Method <tt>set_date_format</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_date_format</tt> TYPE <tt>if_iam_business_user=>ty_date_format</tt><br>
+Method <tt>set_time_format</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_time_format</tt> TYPE <tt>if_iam_business_user=>ty_time_format</tt><br>
+Method <tt>set_time_zone</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_time_zone</tt> TYPE <tt>if_iam_business_user=>ty_time_zone</tt><br>
+Method <tt>set_validity</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_valid_from</tt> TYPE <tt>DATS</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_valid_to</tt> TYPE <tt>DATS</tt> Optional<br>
+Method <tt>set_globaluid</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_globaluid</tt> TYPE <tt>if_iam_business_user=>ty_user_globaluid</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_globaluid_history</tt> TYPE <tt>if_iam_business_user=>tt_user_globaluid_history</tt> Optional<br>
+Method <tt>get_globaluid</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_globaluid</tt> TYPE <tt>if_iam_business_user=>ty_user_globaluid</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_globaluid_history</tt> TYPE <tt>if_iam_business_user=>tt_user_globaluid_history</tt><br>
+Method <tt>get_user_id</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_user_id</tt> TYPE <tt>if_iam_business_user=>ty_user_id</tt><br>
+Method <tt>get_user_name</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_user_name</tt> TYPE <tt>if_iam_business_user=>ty_user_name</tt><br>
+Method <tt>get_logon_language</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_language</tt> TYPE <tt>if_iam_business_user=>ty_logon_language</tt><br>
+Method <tt>get_decimal_format</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_decimal_format</tt> TYPE <tt>if_iam_business_user=>ty_decimal_format</tt><br>
+Method <tt>get_date_format</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_date_format</tt> TYPE <tt>if_iam_business_user=>ty_date_format</tt><br>
+Method <tt>get_time_format</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_time_format</tt> TYPE <tt>if_iam_business_user=>ty_time_format</tt><br>
+Method <tt>get_time_zone</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_time_zone</tt> TYPE <tt>if_iam_business_user=>ty_time_zone</tt><br>
+Method <tt>get_validity</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_valid_from</tt> TYPE <tt>DATS</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_valid_to</tt> TYPE <tt>DATS</tt><br>
+Method <tt>get_lock_status</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_locked</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_lock_status</tt> TYPE <tt>if_iam_business_user=>ty_lock_status</tt><br>
+Method <tt>add_business_roles</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_business_role_id</tt> TYPE <tt>if_iam_business_role=>tt_id</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_return</tt> TYPE <tt>BAPIRETTAB</tt><br>
+Method <tt>remove_business_roles</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_business_role_id</tt> TYPE <tt>if_iam_business_role=>tt_id</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_return</tt> TYPE <tt>BAPIRETTAB</tt><br>
+Method <tt>get_business_roles</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rt_business_role_id</tt> TYPE <tt>if_iam_business_role=>tt_id</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

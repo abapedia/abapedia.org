@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_RSRTS_CDS_READ INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_RSRTS_CDS_READ</h2>
+<a href="https://github.com/abapedia/steampunk-2305-api/blob/mainrc%2Fif_rsrts_cds_read.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_rsrts_cds_read/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_rspo_pdf_merger.intf.html">IF_RSPO_PDF_MERGER</a></small><br><small>Next Object: <a href="if_rsrts_cds_variable_check.intf.html">IF_RSRTS_CDS_VARIABLE_CHECK</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>nt_bool</tt> TYPE <tt>if_rsrts_cds_read=>nt_bool</tt><br>
+Type <tt>nt_objectname</tt> TYPE <tt>if_rsrts_cds_read=>nt_objectname</tt><br>
+Type <tt>ts_properties</tt> TYPE <tt>if_rsrts_cds_read=>ts_properties</tt><br>
+Type <tt>ts_range</tt> TYPE <tt>if_rsrts_cds_read=>ts_range</tt><br>
+Type <tt>tt_range</tt> TYPE <tt>if_rsrts_cds_read=>tt_range</tt><br>
+Type <tt>ttx_range</tt> TYPE <tt>if_rsrts_cds_read=>ttx_range</tt><br>
+Type <tt>ts_dimension</tt> TYPE <tt>if_rsrts_cds_read=>ts_dimension</tt><br>
+Type <tt>tth_dimension</tt> TYPE <tt>if_rsrts_cds_read=>tth_dimension</tt><br>
+Type <tt>ts_measure</tt> TYPE <tt>if_rsrts_cds_read=>ts_measure</tt><br>
+Type <tt>tth_measure</tt> TYPE <tt>if_rsrts_cds_read=>tth_measure</tt><br>
+Type <tt>ts_hierarchy</tt> TYPE <tt>if_rsrts_cds_read=>ts_hierarchy</tt><br>
+Type <tt>tth_hierarchy</tt> TYPE <tt>if_rsrts_cds_read=>tth_hierarchy</tt><br>
+Constant <tt>n_c_false</tt> TYPE <tt>if_rsrts_cds_read=>nt_bool</tt><br>
+Constant <tt>n_c_true</tt> TYPE <tt>if_rsrts_cds_read=>nt_bool</tt><br>
+Static Method <tt>get_properties</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_cds_viewname</tt> TYPE <tt>if_rsrts_cds_read=>nt_objectname</tt><br>
+&nbsp;&nbsp;RETURNING <tt>r_s_properties</tt> TYPE <tt>if_rsrts_cds_read=>ts_properties</tt><br>
+Method <tt>define</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_cds_viewname</tt> TYPE <tt>if_rsrts_cds_read=>nt_objectname</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_th_selected_dimension</tt> TYPE <tt>if_rsrts_cds_read=>tth_dimension</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_th_selected_measure</tt> TYPE <tt>if_rsrts_cds_read=>tth_measure</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_t_range</tt> TYPE <tt>if_rsrts_cds_read=>tt_range</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_ttx_range_tab</tt> TYPE <tt>if_rsrts_cds_read=>ttx_range</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_keydate</tt> TYPE <tt>d</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_maxrows</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_th_additional_dimension</tt> TYPE <tt>if_rsrts_cds_read=>tth_dimension</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_th_used_hierarchy</tt> TYPE <tt>if_rsrts_cds_read=>tth_hierarchy</tt><br>
+Method <tt>read</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_packagesize</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_show_statement</tt> TYPE <tt>if_rsrts_cds_read=>nt_bool</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_end_of_data</tt> TYPE <tt>if_rsrts_cds_read=>nt_bool</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_t_data</tt> TYPE <tt>STANDARD TABLE OF any WITH DEFAULT KEY</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_rs_vcube_read_error.clas.html">cx_rs_vcube_read_error</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>750</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>702</td><td bgcolor='red'>undefined</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_ABAP_OBJECTDESCR CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_ABAP_OBJECTDESCR</h2>
+<a href="https://github.com/abapedia/steampunk-2305-api-intersect-702/blob/mainrc%2Fcl_abap_objectdescr.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_abap_objectdescr/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_abap_message_digest.clas.html">CL_ABAP_MESSAGE_DIGEST</a></small><br><small>Next Object: <a href="cl_abap_random.clas.html">CL_ABAP_RANDOM</a></small><br><br>Superclass: <a href="cl_abap_typedescr.clas.html">cl_abap_typedescr</a><br><br>
+<u>Public</u><br>Attribute <tt>interfaces</tt> TYPE <tt>abap_intfdescr_tab</tt><br>
+Attribute <tt>types</tt> TYPE <tt>abap_typedef_tab</tt><br>
+Attribute <tt>attributes</tt> TYPE <tt>abap_attrdescr_tab</tt><br>
+Attribute <tt>methods</tt> TYPE <tt>abap_methdescr_tab</tt><br>
+Attribute <tt>events</tt> TYPE <tt>abap_evntdescr_tab</tt><br>
+Constant <tt>public</tt> TYPE <tt>abap_visibility</tt><br>
+Constant <tt>protected</tt> TYPE <tt>abap_visibility</tt><br>
+Constant <tt>private</tt> TYPE <tt>abap_visibility</tt><br>
+Constant <tt>importing</tt> TYPE <tt>abap_parmkind</tt><br>
+Constant <tt>exporting</tt> TYPE <tt>abap_parmkind</tt><br>
+Constant <tt>changing</tt> TYPE <tt>abap_parmkind</tt><br>
+Constant <tt>returning</tt> TYPE <tt>abap_parmkind</tt><br>
+Constant <tt>receiving</tt> TYPE <tt>abap_parmkind</tt><br>
+Method <tt>get_interface_type</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_name</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;RETURNING <tt>p_descr_ref</tt> TYPE <tt>cl_abap_intfdescr</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>interface_not_found</tt><br>
+Method <tt>get_type</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_name</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;RETURNING <tt>p_descr_ref</tt> TYPE <tt>cl_abap_typedescr</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>type_not_found</tt><br>
+Method <tt>get_attribute_type</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_name</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;RETURNING <tt>p_descr_ref</tt> TYPE <tt>cl_abap_datadescr</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>attribute_not_found</tt><br>
+Method <tt>get_method_parameter_type</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_method_name</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_parameter_name</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;RETURNING <tt>p_descr_ref</tt> TYPE <tt>cl_abap_datadescr</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>parameter_not_found</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>method_not_found</tt><br>
+Method <tt>get_event_parameter_type</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_event_name</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_parameter_name</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;RETURNING <tt>p_descr_ref</tt> TYPE <tt>cl_abap_datadescr</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>parameter_not_found</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>event_not_found</tt><br>
+Method <tt>applies_to</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_object_ref</tt> TYPE <tt>REF TO object</tt><br>
+&nbsp;&nbsp;RETURNING <tt>p_bool</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>applies_to_class</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_classname</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;RETURNING <tt>p_bool</tt> TYPE <tt>ABAP_BOOL</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='green'>true</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

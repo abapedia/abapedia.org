@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_XCO_TF_CONTENT INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_XCO_TF_CONTENT</h2>
+<a href="https://github.com/abapedia/steampunk-2205-api/blob/mainrc%2Fif_xco_tf_content.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_xco_tf_content/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_xco_text.intf.html">IF_XCO_TEXT</a></small><br><small>Next Object: <a href="if_xco_tf_source_code.intf.html">IF_XCO_TF_SOURCE_CODE</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>tv_short_description</tt> TYPE <tt>if_xco_tf_content=>tv_short_description</tt><br>
+Type <tt>ts_content</tt> TYPE <tt>if_xco_tf_content=>ts_content</tt><br>
+Attribute <tt>transformation</tt> TYPE <tt>if_xco_transformation</tt><br>
+Attribute <tt>state</tt> TYPE <tt>cl_xco_tf_state</tt><br>
+Method <tt>get_short_description</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_origin</tt> TYPE <tt>cl_xco_tf_content_origin</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rv_short_description</tt> TYPE <tt>if_xco_tf_content=>tv_short_description</tt><br>
+Method <tt>get_source_code</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_origin</tt> TYPE <tt>cl_xco_tf_content_origin</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>ro_source_code</tt> TYPE <tt>if_xco_tf_source_code</tt><br>
+Method <tt>get</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_origin</tt> TYPE <tt>cl_xco_tf_content_origin</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rs_content</tt> TYPE <tt>if_xco_tf_content=>ts_content</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

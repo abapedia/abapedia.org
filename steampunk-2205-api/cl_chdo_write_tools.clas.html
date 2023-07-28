@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_CHDO_WRITE_TOOLS CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_CHDO_WRITE_TOOLS</h2>
+<a href="https://github.com/abapedia/steampunk-2205-api/blob/mainrc%2Fcl_chdo_write_tools.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_chdo_write_tools/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_chdo_read_tools.clas.html">CL_CHDO_READ_TOOLS</a></small><br><small>Next Object: <a href="cl_ci_atc_assistant_factory.clas.html">CL_CI_ATC_ASSISTANT_FACTORY</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ty_cdchangenr</tt> TYPE <tt>cl_chdo_write_tools=>ty_cdchangenr</tt><br>
+Type <tt>ty_cdchngindh</tt> TYPE <tt>cl_chdo_write_tools=>ty_cdchngindh</tt><br>
+Type <tt>ty_cddatum</tt> TYPE <tt>cl_chdo_write_tools=>ty_cddatum</tt><br>
+Type <tt>ty_cdflag</tt> TYPE <tt>cl_chdo_write_tools=>ty_cdflag</tt><br>
+Type <tt>ty_cdobjectcl</tt> TYPE <tt>cl_chdo_write_tools=>ty_cdobjectcl</tt><br>
+Type <tt>ty_cdobjectv</tt> TYPE <tt>cl_chdo_write_tools=>ty_cdobjectv</tt><br>
+Type <tt>ty_cdtcode</tt> TYPE <tt>cl_chdo_write_tools=>ty_cdtcode</tt><br>
+Type <tt>ty_cdusername</tt> TYPE <tt>cl_chdo_write_tools=>ty_cdusername</tt><br>
+Type <tt>ty_cduzeit</tt> TYPE <tt>cl_chdo_write_tools=>ty_cduzeit</tt><br>
+Type <tt>ty_planchngnr</tt> TYPE <tt>cl_chdo_write_tools=>ty_planchngnr</tt><br>
+Type <tt>ty_tabname</tt> TYPE <tt>cl_chdo_write_tools=>ty_tabname</tt><br>
+Static Method <tt>changedocument_multiple_case</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>change_indicator</tt> TYPE <tt>cl_chdo_write_tools=>ty_cdflag</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>docu_delete</tt> TYPE <tt>cl_chdo_write_tools=>ty_cdflag</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>docu_insert</tt> TYPE <tt>cl_chdo_write_tools=>ty_cdflag</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>reftablename</tt> TYPE <tt>cl_chdo_write_tools=>ty_tabname</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>tablename</tt> TYPE <tt>cl_chdo_write_tools=>ty_tabname</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>docu_delete_if</tt> TYPE <tt>cl_chdo_write_tools=>ty_cdflag</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>docu_insert_if</tt> TYPE <tt>cl_chdo_write_tools=>ty_cdflag</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>table_new</tt> TYPE <tt>STANDARD TABLE OF any WITH DEFAULT KEY</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>table_old</tt> TYPE <tt>STANDARD TABLE OF any WITH DEFAULT KEY</tt> Optional<br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_chdo_write_error.clas.html">cx_chdo_write_error</a></tt><br>
+Static Method <tt>changedocument_single_case</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>change_indicator</tt> TYPE <tt>cl_chdo_write_tools=>ty_cdflag</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>docu_delete</tt> TYPE <tt>cl_chdo_write_tools=>ty_cdflag</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>docu_insert</tt> TYPE <tt>cl_chdo_write_tools=>ty_cdflag</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>refarea_new</tt> TYPE <tt>any</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>refarea_old</tt> TYPE <tt>any</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>reftablename</tt> TYPE <tt>cl_chdo_write_tools=>ty_tabname</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>tablename</tt> TYPE <tt>cl_chdo_write_tools=>ty_tabname</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>workarea_new</tt> TYPE <tt>any</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>workarea_old</tt> TYPE <tt>any</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>docu_delete_if</tt> TYPE <tt>cl_chdo_write_tools=>ty_cdflag</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>docu_insert_if</tt> TYPE <tt>cl_chdo_write_tools=>ty_cdflag</tt> Optional<br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_chdo_write_error.clas.html">cx_chdo_write_error</a></tt><br>
+Static Method <tt>changedocument_text_case</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>texttable</tt> TYPE <tt>STANDARD TABLE OF any WITH DEFAULT KEY</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_chdo_write_error.clas.html">cx_chdo_write_error</a></tt><br>
+Static Method <tt>changedocument_close</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>date_of_change</tt> TYPE <tt>cl_chdo_write_tools=>ty_cddatum</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>objectclass</tt> TYPE <tt>cl_chdo_write_tools=>ty_cdobjectcl</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>objectid</tt> TYPE <tt>cl_chdo_write_tools=>ty_cdobjectv</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>tcode</tt> TYPE <tt>cl_chdo_write_tools=>ty_cdtcode</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>time_of_change</tt> TYPE <tt>cl_chdo_write_tools=>ty_cduzeit</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>username</tt> TYPE <tt>cl_chdo_write_tools=>ty_cdusername</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>object_change_indicator</tt> TYPE <tt>cl_chdo_write_tools=>ty_cdchngindh</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>planned_or_real_changes</tt> TYPE <tt>cl_chdo_write_tools=>ty_cdchngindh</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>no_change_pointers</tt> TYPE <tt>cl_chdo_write_tools=>ty_cdchngindh</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>changenumber</tt> TYPE <tt>cl_chdo_write_tools=>ty_cdchangenr</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_chdo_write_error.clas.html">cx_chdo_write_error</a></tt><br>
+Static Method <tt>changedocument_open</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>objectclass</tt> TYPE <tt>cl_chdo_write_tools=>ty_cdobjectcl</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>objectid</tt> TYPE <tt>cl_chdo_write_tools=>ty_cdobjectv</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>planned_change_number</tt> TYPE <tt>cl_chdo_write_tools=>ty_planchngnr</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>planned_or_real_changes</tt> TYPE <tt>cl_chdo_write_tools=>ty_cdchngindh</tt> Optional<br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_chdo_write_error.clas.html">cx_chdo_write_error</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

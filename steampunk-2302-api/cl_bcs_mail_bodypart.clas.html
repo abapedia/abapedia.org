@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_BCS_MAIL_BODYPART CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_BCS_MAIL_BODYPART</h2>
+<a href="https://github.com/abapedia/steampunk-2302-api/blob/mainrc%2Fcl_bcs_mail_bodypart.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_bcs_mail_bodypart/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_bcs_mail_binarypart.clas.html">CL_BCS_MAIL_BINARYPART</a></small><br><small>Next Object: <a href="cl_bcs_mail_message.clas.html">CL_BCS_MAIL_MESSAGE</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ty_bodyrole</tt> TYPE <tt>cl_bcs_mail_bodypart=>ty_bodyrole</tt><br>
+Type <tt>ty_content_type</tt> TYPE <tt>cl_bcs_mail_bodypart=>ty_content_type</tt><br>
+Constant <tt>main</tt> TYPE <tt>i</tt><br>
+Constant <tt>alternative</tt> TYPE <tt>i</tt><br>
+Constant <tt>attachment</tt> TYPE <tt>i</tt><br>
+Method <tt>is_valid</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_role</tt> TYPE <tt>cl_bcs_mail_bodypart=>ty_bodyrole</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_is_valid</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>get_filename</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_filename</tt> TYPE <tt>STRING</tt><br>
+Method <tt>set_filename</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_filename</tt> TYPE <tt>STRING</tt><br>
+Method <tt>get_content_type</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_content_type</tt> TYPE <tt>cl_bcs_mail_bodypart=>ty_content_type</tt><br>
+Method <tt>set_content_type</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_content_type</tt> TYPE <tt>cl_bcs_mail_bodypart=>ty_content_type</tt><br>
+<u>Protected</u><br>Method <tt>to_bcom_mime</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_bcom_mime</tt> TYPE <tt>REF TO c LENGTH 64</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

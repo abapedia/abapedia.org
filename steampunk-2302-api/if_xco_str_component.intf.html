@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_XCO_STR_COMPONENT INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_XCO_STR_COMPONENT</h2>
+<a href="https://github.com/abapedia/steampunk-2302-api/blob/mainrc%2Fif_xco_str_component.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_xco_str_component/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_xco_srvd_exposures_factory.intf.html">IF_XCO_SRVD_EXPOSURES_FACTORY</a></small><br><small>Next Object: <a href="if_xco_str_component_content.intf.html">IF_XCO_STR_COMPONENT_CONTENT</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Interface <tt><a href="if_xco_printable.intf.html">if_xco_printable</a></tt><br>
+Type <tt>ts_value_check_additionl_field</tt> TYPE <tt>if_xco_str_component=>ts_value_check_additionl_field</tt><br>
+Type <tt>tt_value_check_additionl_field</tt> TYPE <tt>if_xco_str_component=>tt_value_check_additionl_field</tt><br>
+Attribute <tt>name</tt> TYPE <tt>SXCO_AD_FIELD_NAME</tt><br>
+Attribute <tt>structure</tt> TYPE <tt>if_xco_ad_structure</tt><br>
+Attribute <tt>foreign_key</tt> TYPE <tt>if_xco_str_foreign_key</tt><br>
+Attribute <tt>search_help</tt> TYPE <tt>if_xco_str_search_help</tt><br>
+Method <tt>exists</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_read_state</tt> TYPE <tt>cl_xco_ad_object_read_state</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_origin</tt> TYPE <tt>cl_xco_tab_origin</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rv_exists</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>content</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_read_state</tt> TYPE <tt>cl_xco_ad_object_read_state</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>ro_content</tt> TYPE <tt>if_xco_str_component_content</tt><br>
+Method <tt>proposal</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_read_state</tt> TYPE <tt>cl_xco_ad_object_read_state</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>ro_proposal</tt> TYPE <tt>if_xco_str_component_pr_fctry</tt><br>
+Method <tt>get_value_check</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ia_value</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_additional_fields</tt> TYPE <tt>if_xco_str_component=>tt_value_check_additionl_field</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>ro_value_check</tt> TYPE <tt>if_xco_dp_check</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

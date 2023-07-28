@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - /IWXBE/IF_CONSUMER_EVENT INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF /IWXBE/IF_CONSUMER_EVENT</h2>
+<a href="https://github.com/abapedia/steampunk-2302-api/blob/mainrc%2F%23iwxbe%23if_consumer_event.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces//iwxbe/if_consumer_event/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="%23iwxbe%23if_consumer.intf.html">/IWXBE/IF_CONSUMER</a></small><br><small>Next Object: <a href="%23iwxbe%23if_consumer_topic.intf.html">/IWXBE/IF_CONSUMER_TOPIC</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ty_e_event_uuid</tt> TYPE <tt>/iwxbe/if_consumer_event=>ty_e_event_uuid</tt><br>
+Method <tt>get_arrival_timestamp</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_timestamp</tt> TYPE <tt>TIMESTAMP</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwxbe%23cx_exception.clas.html">/iwxbe/cx_exception</a></tt><br>
+Method <tt>get_business_data</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>es_business_data</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwxbe%23cx_exception.clas.html">/iwxbe/cx_exception</a></tt><br>
+Method <tt>get_cloud_event_source</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_source</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwxbe%23cx_exception.clas.html">/iwxbe/cx_exception</a></tt><br>
+Method <tt>get_cloud_event_type</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_type</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwxbe%23cx_exception.clas.html">/iwxbe/cx_exception</a></tt><br>
+Method <tt>get_cloud_event_id</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_id</tt> TYPE <tt>/iwxbe/if_consumer_event=>ty_e_event_uuid</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwxbe%23cx_exception.clas.html">/iwxbe/cx_exception</a></tt><br>
+Method <tt>get_cloud_event_timestamp</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_timestamp</tt> TYPE <tt>TIMESTAMP</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwxbe%23cx_exception.clas.html">/iwxbe/cx_exception</a></tt><br>
+Method <tt>get_custom_ext_attr_value</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>/iwxbe/if_description_types=>ty_e_type_name</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_custom_extension_attr</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwxbe%23cx_exception.clas.html">/iwxbe/cx_exception</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>750</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>702</td><td bgcolor='red'>undefined</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

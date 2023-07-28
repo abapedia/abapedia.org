@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_XCO_I18N_BCO_TARGET_OBJECT INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_XCO_I18N_BCO_TARGET_OBJECT</h2>
+<a href="https://github.com/abapedia/steampunk-2202-api/blob/mainrc%2Fif_xco_i18n_bco_target_object.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_xco_i18n_bco_target_object/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_xco_i18n_alo_target_subobj.intf.html">IF_XCO_I18N_ALO_TARGET_SUBOBJ</a></small><br><small>Next Object: <a href="if_xco_i18n_dd_ent_target.intf.html">IF_XCO_I18N_DD_ENT_TARGET</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Attribute <tt>business_configuration_object</tt> TYPE <tt>if_xco_business_cnfgrtn_objct</tt><br>
+Method <tt>get_translations</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_text_attributes</tt> TYPE <tt>SXCO_T_BCO_TEXT_ATTRIBUTES</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rt_translations</tt> TYPE <tt>SXCO_T_I18N_TRANSLATIONS</tt><br>
+Method <tt>get_translation</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_language</tt> TYPE <tt>if_xco_language</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_text_attributes</tt> TYPE <tt>SXCO_T_BCO_TEXT_ATTRIBUTES</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_translation</tt> TYPE <tt>if_xco_i18n_translation</tt><br>
+Method <tt>set_translation</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_texts</tt> TYPE <tt>SXCO_T_BCO_TEXTS</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_language</tt> TYPE <tt>if_xco_language</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_change_scenario</tt> TYPE <tt>if_xco_cts_change_scenario</tt><br>
+Method <tt>has_translation</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_language</tt> TYPE <tt>if_xco_language</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_text_attribute</tt> TYPE <tt>cl_xco_bco_text_attribute</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_has_translation</tt> TYPE <tt>ABAP_BOOL</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

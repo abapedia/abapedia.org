@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_HTTP_ENTITY INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_HTTP_ENTITY</h2>
+<a href="https://github.com/open-abap/open-abap-core/blob/mainrc%2Fhttp%2Fif_http_entity.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_http_entity/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_http_client.intf.html">IF_HTTP_CLIENT</a></small><br><small>Next Object: <a href="if_http_extension.intf.html">IF_HTTP_EXTENSION</a></small><br><br><u>Public</u><br>Constant <tt>co_request_method_get</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>co_request_method_post</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>co_body_before_query_string</tt> TYPE <tt>I</tt><br>
+Method <tt>set_cdata</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>data</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>offset</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>length</tt> TYPE <tt>I</tt> Optional<br>
+Method <tt>set_data</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>data</tt> TYPE <tt>XSTRING</tt><br>
+Method <tt>get_header_field</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>value</tt> TYPE <tt>STRING</tt><br>
+Method <tt>set_header_field</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>value</tt> TYPE <tt>STRING</tt><br>
+Method <tt>get_form_fields</tt><br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>fields</tt> TYPE <tt>TIHTTPNVP</tt><br>
+Method <tt>set_compression</tt><br>
+Method <tt>add_multipart</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>suppress_content_length</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>entity</tt> TYPE <tt>if_http_entity</tt><br>
+Method <tt>append_cdata</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>data</tt> TYPE <tt>clike</tt><br>
+Method <tt>get_form_field</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>value</tt> TYPE <tt>STRING</tt><br>
+Method <tt>get_cdata</tt><br>
+&nbsp;&nbsp;RETURNING <tt>data</tt> TYPE <tt>STRING</tt><br>
+Method <tt>get_content_type</tt><br>
+&nbsp;&nbsp;RETURNING <tt>val</tt> TYPE <tt>STRING</tt><br>
+Method <tt>get_serialized_message_length</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>body_length</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>header_length</tt> TYPE <tt>I</tt><br>
+Method <tt>set_content_type</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>content_type</tt> TYPE <tt>STRING</tt><br>
+Method <tt>get_data</tt><br>
+&nbsp;&nbsp;RETURNING <tt>data</tt> TYPE <tt>XSTRING</tt><br>
+Method <tt>get_header_fields</tt><br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>fields</tt> TYPE <tt>TIHTTPNVP</tt><br>
+Method <tt>to_xstring</tt><br>
+&nbsp;&nbsp;RETURNING <tt>data</tt> TYPE <tt>XSTRING</tt><br>
+Method <tt>get_cookies</tt><br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>cookies</tt> TYPE <tt>any</tt><br>
+Method <tt>add_cookie_field</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>cookie_name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>cookie_path</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>field_name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>field_value</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>base64</tt> TYPE <tt>I</tt> Optional<br>
+Method <tt>append_cdata2</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>data</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>encoding</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>offset</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>length</tt> TYPE <tt>I</tt> Optional<br>
+Method <tt>append_data</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>data</tt> TYPE <tt>XSTRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>offset</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>length</tt> TYPE <tt>I</tt> Optional<br>
+Method <tt>delete_cookie_secure</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>path</tt> TYPE <tt>STRING</tt> Optional<br>
+Method <tt>delete_form_field</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+Method <tt>delete_form_field_secure</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+Method <tt>from_xstring</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>data</tt> TYPE <tt>XSTRING</tt><br>
+Method <tt>get_cookie</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>path</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>value</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>domain</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>expires</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>secure</tt> TYPE <tt>I</tt><br>
+Method <tt>get_cookie_field</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>cookie_name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>cookie_path</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>field_name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>base64</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>field_value</tt> TYPE <tt>STRING</tt><br>
+Method <tt>get_data_length</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>data_length</tt> TYPE <tt>I</tt><br>
+Method <tt>get_form_fields_cs</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>formfield_encoding</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>search_option</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>fields</tt> TYPE <tt>TIHTTPNVP</tt><br>
+Method <tt>get_form_field_cs</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>formfield_encoding</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>search_option</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>value</tt> TYPE <tt>STRING</tt><br>
+Method <tt>get_last_error</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rc</tt> TYPE <tt>I</tt><br>
+Method <tt>get_multipart</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>index</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;RETURNING <tt>entity</tt> TYPE <tt>if_http_entity</tt><br>
+Method <tt>get_version</tt><br>
+&nbsp;&nbsp;RETURNING <tt>version</tt> TYPE <tt>I</tt><br>
+Method <tt>num_multiparts</tt><br>
+&nbsp;&nbsp;RETURNING <tt>num</tt> TYPE <tt>I</tt><br>
+Method <tt>set_cookie</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>path</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>value</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>domain</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>expires</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>secure</tt> TYPE <tt>I</tt> Optional<br>
+Method <tt>set_formfield_encoding</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>formfield_encoding</tt> TYPE <tt>I</tt><br>
+Method <tt>set_form_field</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>value</tt> TYPE <tt>STRING</tt><br>
+Method <tt>set_form_fields</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>fields</tt> TYPE <tt>TIHTTPNVP</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>multivalue</tt> TYPE <tt>INT4</tt> Optional<br>
+Method <tt>set_header_fields</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>fields</tt> TYPE <tt>TIHTTPNVP</tt><br>
+Method <tt>suppress_content_type</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>suppress</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+Method <tt>delete_cookie</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>path</tt> TYPE <tt>STRING</tt> Optional<br>
+Method <tt>delete_header_field</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+Method <tt>delete_header_field_secure</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>750</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>702</td><td bgcolor='red'>undefined</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

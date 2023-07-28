@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_ABAP_CONV_OUT_CE CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_ABAP_CONV_OUT_CE</h2>
+<a href="https://github.com/open-abap/open-abap-core/blob/mainrc%2Fconv%2Fcl_abap_conv_out_ce.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_abap_conv_out_ce/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_abap_conv_in_ce.clas.html">CL_ABAP_CONV_IN_CE</a></small><br><small>Next Object: <a href="cl_abap_datadescr.clas.html">CL_ABAP_DATADESCR</a></small><br><br><u>Public</u><br>Type <tt>hex02</tt> TYPE <tt>cl_abap_conv_out_ce=>hex02</tt><br>
+Static Method <tt>create</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>encoding</tt> TYPE <tt>abap_encoding</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ignore_cerr</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>endian</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>replacement</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>ret</tt> TYPE <tt>cl_abap_conv_out_ce</tt><br>
+Static Method <tt>uccpi</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>char</tt> TYPE <tt>clike</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ret</tt> TYPE <tt>I</tt><br>
+Static Method <tt>uccp</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>char</tt> TYPE <tt>clike</tt><br>
+&nbsp;&nbsp;RETURNING <tt>uccp</tt> TYPE <tt>cl_abap_conv_out_ce=>hex02</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_conversion_codepage.clas.html">cx_sy_conversion_codepage</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_codepage_converter_init.clas.html">cx_sy_codepage_converter_init</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_parameter_invalid_range.clas.html">cx_parameter_invalid_range</a></tt><br>
+Method <tt>convert</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>data</tt> TYPE <tt>simple</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>n</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>buffer</tt> TYPE <tt>XSTRING</tt><br>
+Method <tt>write</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>data</tt> TYPE <tt>any</tt><br>
+Method <tt>get_buffer</tt><br>
+&nbsp;&nbsp;RETURNING <tt>buffer</tt> TYPE <tt>XSTRING</tt><br>
+Method <tt>reset</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>750</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>702</td><td bgcolor='red'>undefined</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

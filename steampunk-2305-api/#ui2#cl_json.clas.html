@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - /UI2/CL_JSON CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS /UI2/CL_JSON</h2>
+<a href="https://github.com/abapedia/steampunk-2305-api/blob/mainrc%2F%23ui2%23cl_json.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes//ui2/cl_json/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="%23iwxbe%23cx_exception.clas.html">/IWXBE/CX_EXCEPTION</a></small><br><small>Next Object: <a href="cl_a4c_bc_factory.clas.html">CL_A4C_BC_FACTORY</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>json</tt> TYPE <tt>/ui2/cl_json=>json</tt><br>
+Type <tt>name_mapping</tt> TYPE <tt>/ui2/cl_json=>name_mapping</tt><br>
+Type <tt>name_mappings</tt> TYPE <tt>/ui2/cl_json=>name_mappings</tt><br>
+Type <tt>ref_tab</tt> TYPE <tt>/ui2/cl_json=>ref_tab</tt><br>
+Type <tt>bool</tt> TYPE <tt>/ui2/cl_json=>bool</tt><br>
+Type <tt>tribool</tt> TYPE <tt>/ui2/cl_json=>tribool</tt><br>
+Type <tt>pretty_name_mode</tt> TYPE <tt>/ui2/cl_json=>pretty_name_mode</tt><br>
+Static Attribute <tt>sv_white_space</tt> TYPE <tt>STRING</tt><br>
+Static Attribute <tt>mc_bool_types</tt> TYPE <tt>STRING</tt><br>
+Static Attribute <tt>mc_bool_3state</tt> TYPE <tt>STRING</tt><br>
+Static Attribute <tt>mc_json_type</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>pretty_mode</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>c_bool</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>c_tribool</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>mc_key_separator</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>version</tt> TYPE <tt>I</tt><br>
+Static Method <tt>string_to_xstring</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>in</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>out</tt> TYPE <tt>any</tt><br>
+Static Method <tt>xstring_to_string</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>in</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;RETURNING <tt>out</tt> TYPE <tt>STRING</tt><br>
+Static Method <tt>raw_to_string</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_xstring</tt> TYPE <tt>XSTRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_encoding</tt> TYPE <tt>abap_encoding</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rv_string</tt> TYPE <tt>STRING</tt><br>
+Static Method <tt>string_to_raw</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_string</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_encoding</tt> TYPE <tt>abap_encoding</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rv_xstring</tt> TYPE <tt>XSTRING</tt><br>
+Static Method <tt>dump</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>data</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>compress</tt> TYPE <tt>/ui2/cl_json=>bool</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>type_descr</tt> TYPE <tt>cl_abap_typedescr</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>pretty_name</tt> TYPE <tt>/ui2/cl_json=>pretty_name_mode</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>assoc_arrays</tt> TYPE <tt>/ui2/cl_json=>bool</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ts_as_iso8601</tt> TYPE <tt>/ui2/cl_json=>bool</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>r_json</tt> TYPE <tt>/ui2/cl_json=>json</tt><br>
+Static Method <tt>deserialize</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>json</tt> TYPE <tt>/ui2/cl_json=>json</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>jsonx</tt> TYPE <tt>XSTRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>pretty_name</tt> TYPE <tt>/ui2/cl_json=>pretty_name_mode</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>assoc_arrays</tt> TYPE <tt>/ui2/cl_json=>bool</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>assoc_arrays_opt</tt> TYPE <tt>/ui2/cl_json=>bool</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name_mappings</tt> TYPE <tt>/ui2/cl_json=>name_mappings</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>conversion_exits</tt> TYPE <tt>/ui2/cl_json=>bool</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>hex_as_base64</tt> TYPE <tt>/ui2/cl_json=>bool</tt> Optional<br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>data</tt> TYPE <tt>any</tt><br>
+Static Method <tt>serialize</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>data</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>compress</tt> TYPE <tt>/ui2/cl_json=>bool</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>pretty_name</tt> TYPE <tt>/ui2/cl_json=>pretty_name_mode</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>type_descr</tt> TYPE <tt>cl_abap_typedescr</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>assoc_arrays</tt> TYPE <tt>/ui2/cl_json=>bool</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ts_as_iso8601</tt> TYPE <tt>/ui2/cl_json=>bool</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>expand_includes</tt> TYPE <tt>/ui2/cl_json=>bool</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>assoc_arrays_opt</tt> TYPE <tt>/ui2/cl_json=>bool</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>numc_as_string</tt> TYPE <tt>/ui2/cl_json=>bool</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name_mappings</tt> TYPE <tt>/ui2/cl_json=>name_mappings</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>conversion_exits</tt> TYPE <tt>/ui2/cl_json=>bool</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>format_output</tt> TYPE <tt>/ui2/cl_json=>bool</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>hex_as_base64</tt> TYPE <tt>/ui2/cl_json=>bool</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>r_json</tt> TYPE <tt>/ui2/cl_json=>json</tt><br>
+Method <tt>deserialize_int</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>json</tt> TYPE <tt>/ui2/cl_json=>json</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>jsonx</tt> TYPE <tt>XSTRING</tt> Optional<br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>data</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_move_cast_error.clas.html">cx_sy_move_cast_error</a></tt><br>
+Static Method <tt>generate</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>json</tt> TYPE <tt>/ui2/cl_json=>json</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>pretty_name</tt> TYPE <tt>/ui2/cl_json=>pretty_name_mode</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name_mappings</tt> TYPE <tt>/ui2/cl_json=>name_mappings</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>jsonx</tt> TYPE <tt>XSTRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rr_data</tt> TYPE <tt>REF TO any</tt><br>
+Method <tt>serialize_int</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>data</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>type_descr</tt> TYPE <tt>cl_abap_typedescr</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>r_json</tt> TYPE <tt>/ui2/cl_json=>json</tt><br>
+Method <tt>generate_int</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>json</tt> TYPE <tt>/ui2/cl_json=>json</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>length</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>data</tt> TYPE <tt>REF TO any</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>offset</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_move_cast_error.clas.html">cx_sy_move_cast_error</a></tt><br>
+Method <tt>constructor</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>compress</tt> TYPE <tt>/ui2/cl_json=>bool</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>pretty_name</tt> TYPE <tt>/ui2/cl_json=>pretty_name_mode</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>assoc_arrays</tt> TYPE <tt>/ui2/cl_json=>bool</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ts_as_iso8601</tt> TYPE <tt>/ui2/cl_json=>bool</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>expand_includes</tt> TYPE <tt>/ui2/cl_json=>bool</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>assoc_arrays_opt</tt> TYPE <tt>/ui2/cl_json=>bool</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>strict_mode</tt> TYPE <tt>/ui2/cl_json=>bool</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>numc_as_string</tt> TYPE <tt>/ui2/cl_json=>bool</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name_mappings</tt> TYPE <tt>/ui2/cl_json=>name_mappings</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>conversion_exits</tt> TYPE <tt>/ui2/cl_json=>bool</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>format_output</tt> TYPE <tt>/ui2/cl_json=>bool</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>hex_as_base64</tt> TYPE <tt>/ui2/cl_json=>bool</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>bool_types</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>bool_3state</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>initial_ts</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>initial_date</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>initial_time</tt> TYPE <tt>STRING</tt> Optional<br>
+Static Method <tt>bool_to_tribool</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_bool</tt> TYPE <tt>/ui2/cl_json=>bool</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_tribool</tt> TYPE <tt>/ui2/cl_json=>tribool</tt><br>
+Static Method <tt>tribool_to_bool</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_tribool</tt> TYPE <tt>/ui2/cl_json=>tribool</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_bool</tt> TYPE <tt>/ui2/cl_json=>bool</tt><br>
+<u>Protected</u><br>Type <tt>t_s_field_cache</tt> TYPE <tt>/ui2/cl_json=>t_s_field_cache</tt><br>
+Type <tt>t_s_symbol</tt> TYPE <tt>/ui2/cl_json=>t_s_symbol</tt><br>
+Type <tt>t_t_symbol</tt> TYPE <tt>/ui2/cl_json=>t_t_symbol</tt><br>
+Type <tt>t_t_field_cache</tt> TYPE <tt>/ui2/cl_json=>t_t_field_cache</tt><br>
+Type <tt>name_mappings_ex</tt> TYPE <tt>/ui2/cl_json=>name_mappings_ex</tt><br>
+Type <tt>t_s_name_value</tt> TYPE <tt>/ui2/cl_json=>t_s_name_value</tt><br>
+Type <tt>t_t_name_value</tt> TYPE <tt>/ui2/cl_json=>t_t_name_value</tt><br>
+Type <tt>t_t_json</tt> TYPE <tt>/ui2/cl_json=>t_t_json</tt><br>
+Type <tt>t_s_struct_type</tt> TYPE <tt>/ui2/cl_json=>t_s_struct_type</tt><br>
+Type <tt>t_t_struct_type</tt> TYPE <tt>/ui2/cl_json=>t_t_struct_type</tt><br>
+Type <tt>t_s_struct_cache_res</tt> TYPE <tt>/ui2/cl_json=>t_s_struct_cache_res</tt><br>
+Type <tt>t_s_struct_cache</tt> TYPE <tt>/ui2/cl_json=>t_s_struct_cache</tt><br>
+Type <tt>t_t_struct_cache</tt> TYPE <tt>/ui2/cl_json=>t_t_struct_cache</tt><br>
+Attribute <tt>mv_bool_types</tt> TYPE <tt>STRING</tt><br>
+Attribute <tt>mv_bool_3state</tt> TYPE <tt>STRING</tt><br>
+Attribute <tt>mv_initial_ts</tt> TYPE <tt>STRING</tt><br>
+Attribute <tt>mv_initial_date</tt> TYPE <tt>STRING</tt><br>
+Attribute <tt>mv_initial_time</tt> TYPE <tt>STRING</tt><br>
+Attribute <tt>mv_compress</tt> TYPE <tt>/ui2/cl_json=>bool</tt><br>
+Attribute <tt>mv_pretty_name</tt> TYPE <tt>/ui2/cl_json=>pretty_name_mode</tt><br>
+Attribute <tt>mv_assoc_arrays</tt> TYPE <tt>/ui2/cl_json=>bool</tt><br>
+Attribute <tt>mv_ts_as_iso8601</tt> TYPE <tt>/ui2/cl_json=>bool</tt><br>
+Attribute <tt>mv_expand_includes</tt> TYPE <tt>/ui2/cl_json=>bool</tt><br>
+Attribute <tt>mv_assoc_arrays_opt</tt> TYPE <tt>/ui2/cl_json=>bool</tt><br>
+Attribute <tt>mv_strict_mode</tt> TYPE <tt>/ui2/cl_json=>bool</tt><br>
+Attribute <tt>mv_numc_as_string</tt> TYPE <tt>/ui2/cl_json=>bool</tt><br>
+Attribute <tt>mv_format_output</tt> TYPE <tt>/ui2/cl_json=>bool</tt><br>
+Attribute <tt>mv_conversion_exits</tt> TYPE <tt>/ui2/cl_json=>bool</tt><br>
+Attribute <tt>mv_hex_as_base64</tt> TYPE <tt>/ui2/cl_json=>bool</tt><br>
+Attribute <tt>mt_name_mappings</tt> TYPE <tt>/ui2/cl_json=>name_mappings</tt><br>
+Attribute <tt>mt_name_mappings_ex</tt> TYPE <tt>/ui2/cl_json=>name_mappings_ex</tt><br>
+Attribute <tt>mt_struct_type</tt> TYPE <tt>/ui2/cl_json=>t_t_struct_type</tt><br>
+Attribute <tt>mt_struct_cache</tt> TYPE <tt>/ui2/cl_json=>t_t_struct_cache</tt><br>
+Static Attribute <tt>mc_name_symbols_map</tt> TYPE <tt>STRING</tt><br>
+Static Attribute <tt>so_type_s</tt> TYPE <tt>cl_abap_elemdescr</tt><br>
+Static Attribute <tt>so_type_f</tt> TYPE <tt>cl_abap_elemdescr</tt><br>
+Static Attribute <tt>so_type_p</tt> TYPE <tt>cl_abap_elemdescr</tt><br>
+Static Attribute <tt>so_type_i</tt> TYPE <tt>cl_abap_elemdescr</tt><br>
+Static Attribute <tt>so_type_b</tt> TYPE <tt>cl_abap_elemdescr</tt><br>
+Static Attribute <tt>so_type_t_json</tt> TYPE <tt>cl_abap_tabledescr</tt><br>
+Static Attribute <tt>so_type_t_name_value</tt> TYPE <tt>cl_abap_tabledescr</tt><br>
+Constant <tt>mc_default_indent</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>mc_typekind_utclong</tt> TYPE <tt>abap_typekind</tt><br>
+Constant <tt>mc_typekind_int8</tt> TYPE <tt>abap_typekind</tt><br>
+Static Method <tt>unescape</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>escaped</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>unescaped</tt> TYPE <tt>STRING</tt><br>
+Static Method <tt>get_convexit_func</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>elem_descr</tt> TYPE <tt>cl_abap_elemdescr</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>input</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rv_func</tt> TYPE <tt>STRING</tt><br>
+Method <tt>dump_symbols</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_symbols</tt> TYPE <tt>/ui2/cl_json=>t_t_symbol</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>opt_array</tt> TYPE <tt>/ui2/cl_json=>bool</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>format_scope</tt> TYPE <tt>/ui2/cl_json=>bool</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>level</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;RETURNING <tt>r_json</tt> TYPE <tt>/ui2/cl_json=>json</tt><br>
+Method <tt>get_symbols_struct</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>type_descr</tt> TYPE <tt>cl_abap_structdescr</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>include_aliases</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>data</tt> TYPE <tt>REF TO any</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>level</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>result</tt> TYPE <tt>/ui2/cl_json=>t_s_struct_cache_res</tt><br>
+Method <tt>get_symbols_class</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>type_descr</tt> TYPE <tt>cl_abap_classdescr</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>object</tt> TYPE <tt>REF TO object</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>result</tt> TYPE <tt>/ui2/cl_json=>t_t_symbol</tt><br>
+Method <tt>get_symbols</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>type_descr</tt> TYPE <tt>cl_abap_typedescr</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>data</tt> TYPE <tt>REF TO any</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>object</tt> TYPE <tt>REF TO object</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>include_aliases</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>result</tt> TYPE <tt>/ui2/cl_json=>t_t_symbol</tt><br>
+Method <tt>get_fields</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>type_descr</tt> TYPE <tt>cl_abap_typedescr</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>data</tt> TYPE <tt>REF TO any</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>object</tt> TYPE <tt>REF TO object</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rt_fields</tt> TYPE <tt>/ui2/cl_json=>t_t_field_cache</tt><br>
+Method <tt>dump_int</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>data</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>type_descr</tt> TYPE <tt>cl_abap_typedescr</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>convexit</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>level</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>r_json</tt> TYPE <tt>/ui2/cl_json=>json</tt><br>
+Method <tt>is_compressable</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>type_descr</tt> TYPE <tt>cl_abap_typedescr</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_compress</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>restore</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>json</tt> TYPE <tt>/ui2/cl_json=>json</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>length</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>type_descr</tt> TYPE <tt>cl_abap_typedescr</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>field_cache</tt> TYPE <tt>/ui2/cl_json=>t_t_field_cache</tt> Optional<br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>data</tt> TYPE <tt>any</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>offset</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_move_cast_error.clas.html">cx_sy_move_cast_error</a></tt><br>
+Method <tt>restore_type</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>json</tt> TYPE <tt>/ui2/cl_json=>json</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>length</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>type_descr</tt> TYPE <tt>cl_abap_typedescr</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>field_cache</tt> TYPE <tt>/ui2/cl_json=>t_t_field_cache</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>convexit</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>data</tt> TYPE <tt>any</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>offset</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_move_cast_error.clas.html">cx_sy_move_cast_error</a></tt><br>
+Method <tt>dump_type</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>data</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>type_descr</tt> TYPE <tt>cl_abap_elemdescr</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>convexit</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>r_json</tt> TYPE <tt>/ui2/cl_json=>json</tt><br>
+Method <tt>dump_type_ex</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>data</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;RETURNING <tt>r_json</tt> TYPE <tt>/ui2/cl_json=>json</tt><br>
+Method <tt>pretty_name_ex</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>in</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;RETURNING <tt>out</tt> TYPE <tt>STRING</tt><br>
+Method <tt>generate_int_ex</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>json</tt> TYPE <tt>/ui2/cl_json=>json</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>length</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>data</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>offset</tt> TYPE <tt>I</tt><br>
+Method <tt>pretty_name</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>in</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;RETURNING <tt>out</tt> TYPE <tt>STRING</tt><br>
+Static Method <tt>edm_datetime_to_ts</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ticks</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>offset</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>typekind</tt> TYPE <tt>abap_typekind</tt><br>
+&nbsp;&nbsp;RETURNING <tt>r_data</tt> TYPE <tt>STRING</tt><br>
+Static Method <tt>get_indent</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>level</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>indent</tt> TYPE <tt>STRING</tt><br>
+Method <tt>generate_struct</tt><br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>fields</tt> TYPE <tt>/ui2/cl_json=>t_t_name_value</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>data</tt> TYPE <tt>REF TO any</tt><br>
+Static Method <tt>escape</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>in</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;RETURNING <tt>out</tt> TYPE <tt>STRING</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_SWF_FLEX_IFS_CONDITION_EVAL INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_SWF_FLEX_IFS_CONDITION_EVAL</h2>
+<a href="https://github.com/abapedia/steampunk-2302-api/blob/mainrc%2Fif_swf_flex_ifs_condition_eval.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_swf_flex_ifs_condition_eval/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_swf_flex_ifs_condition_def.intf.html">IF_SWF_FLEX_IFS_CONDITION_DEF</a></small><br><small>Next Object: <a href="if_swf_flex_ifs_wi_forward_cus.intf.html">IF_SWF_FLEX_IFS_WI_FORWARD_CUS</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Interface <tt><a href="if_badi_interface.intf.html">if_badi_interface</a></tt><br>
+Type <tt>ty_execution_context</tt> TYPE <tt>if_swf_flex_ifs_condition_eval=>ty_execution_context</tt><br>
+Type <tt>ty_condition_id</tt> TYPE <tt>if_swf_flex_ifs_condition_eval=>ty_condition_id</tt><br>
+Type <tt>ty_parameter_name</tt> TYPE <tt>if_swf_flex_ifs_condition_eval=>ty_parameter_name</tt><br>
+Type <tt>ty_parameter_value</tt> TYPE <tt>if_swf_flex_ifs_condition_eval=>ty_parameter_value</tt><br>
+Type <tt>ts_condition</tt> TYPE <tt>if_swf_flex_ifs_condition_eval=>ts_condition</tt><br>
+Type <tt>ts_parameter_value</tt> TYPE <tt>if_swf_flex_ifs_condition_eval=>ts_parameter_value</tt><br>
+Type <tt>tt_parameter_value</tt> TYPE <tt>if_swf_flex_ifs_condition_eval=>tt_parameter_value</tt><br>
+Constant <tt>cs_execution_context</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Method <tt>evaluate_condition</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>is_sap_object_node_type</tt> TYPE <tt>SWW_SONT_KEY</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>is_condition</tt> TYPE <tt>if_swf_flex_ifs_condition_eval=>ts_condition</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_parameter_value</tt> TYPE <tt>if_swf_flex_ifs_condition_eval=>tt_parameter_value</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_is_draft</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>cv_is_true</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_ble_runtime_error.clas.html">cx_ble_runtime_error</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

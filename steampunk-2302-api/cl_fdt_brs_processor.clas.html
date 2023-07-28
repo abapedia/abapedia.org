@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_FDT_BRS_PROCESSOR CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_FDT_BRS_PROCESSOR</h2>
+<a href="https://github.com/abapedia/steampunk-2302-api/blob/mainrc%2Fcl_fdt_brs_processor.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_fdt_brs_processor/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_exchange_rates.clas.html">CL_EXCHANGE_RATES</a></small><br><small>Next Object: <a href="cl_fdt_cp_ast_factory.clas.html">CL_FDT_CP_AST_FACTORY</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>data_format</tt> TYPE <tt>cl_fdt_brs_processor=>data_format</tt><br>
+Type <tt>ty_tabname</tt> TYPE <tt>cl_fdt_brs_processor=>ty_tabname</tt><br>
+Type <tt>s_data_object</tt> TYPE <tt>cl_fdt_brs_processor=>s_data_object</tt><br>
+Type <tt>t_data_object</tt> TYPE <tt>cl_fdt_brs_processor=>t_data_object</tt><br>
+Type <tt>s_name_value</tt> TYPE <tt>cl_fdt_brs_processor=>s_name_value</tt><br>
+Type <tt>t_name_value</tt> TYPE <tt>cl_fdt_brs_processor=>t_name_value</tt><br>
+Attribute <tt>mv_processing_timestamp</tt> TYPE <tt>TIMESTAMP</tt><br>
+Static Attribute <tt>gc_result_identifier</tt> TYPE <tt>if_fdt_types=>name</tt><br>
+Constant <tt>gc_data_format_abap</tt> TYPE <tt>cl_fdt_brs_processor=>data_format</tt><br>
+Constant <tt>gc_data_format_brfplus</tt> TYPE <tt>cl_fdt_brs_processor=>data_format</tt><br>
+Static Method <tt>get_instance</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_function_id</tt> TYPE <tt>if_fdt_types=>id</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_processing_timestamp</tt> TYPE <tt>TIMESTAMP</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_trace</tt> TYPE <tt>if_fdt_types=>trace_mode</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_auth_check_for_db_lookup</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_action_in_update_task</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>ro_processor</tt> TYPE <tt>cl_fdt_brs_processor</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_fdt_input.clas.html">cx_fdt_input</a></tt><br>
+Method <tt>clear_trace_buffer</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_only_add_start</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+Method <tt>convert_data_for_processing</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ir_data</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_data_object</tt> TYPE <tt>clike</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_has_ddic_binding</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>er_data</tt> TYPE <tt>REF TO any</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_fdt_input.clas.html">cx_fdt_input</a></tt><br>
+Method <tt>get_context_data_objects</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_data_object</tt> TYPE <tt>cl_fdt_brs_processor=>t_data_object</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_fdt_input.clas.html">cx_fdt_input</a></tt><br>
+Method <tt>get_data_object_reference</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_data_object</tt> TYPE <tt>clike</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_data_object_name</tt> TYPE <tt>if_fdt_types=>name</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>er_data</tt> TYPE <tt>REF TO any</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_fdt_input.clas.html">cx_fdt_input</a></tt><br>
+Method <tt>get_trace_buffer</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_trace_header</tt> TYPE <tt>FDT_BRS_T_TRACE_HEADER</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_trace_record</tt> TYPE <tt>FDT_BRS_T_TRACE_RECORD</tt><br>
+Method <tt>process</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_data_format</tt> TYPE <tt>cl_fdt_brs_processor=>data_format</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_name_value</tt> TYPE <tt>cl_fdt_brs_processor=>t_name_value</tt> Optional<br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ct_name_value</tt> TYPE <tt>cl_fdt_brs_processor=>t_name_value</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ea_result</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_fdt_input.clas.html">cx_fdt_input</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_fdt_processing.clas.html">cx_fdt_processing</a></tt><br>
+Method <tt>save_trace</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_external_id</tt> TYPE <tt>NOT_RELEASED</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_update_task</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_trace_db_table_h</tt> TYPE <tt>cl_fdt_brs_processor=>ty_tabname</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_trace_db_table_r</tt> TYPE <tt>cl_fdt_brs_processor=>ty_tabname</tt> Optional<br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_fdt_input.clas.html">cx_fdt_input</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='green'>true</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

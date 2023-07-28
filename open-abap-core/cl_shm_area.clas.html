@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_SHM_AREA CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_SHM_AREA</h2>
+<a href="https://github.com/open-abap/open-abap-core/blob/mainrc%2Fshma%2Fcl_shm_area.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_shm_area/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_salv_table.clas.html">CL_SALV_TABLE</a></small><br><small>Next Object: <a href="cl_shm_service.clas.html">CL_SHM_SERVICE</a></small><br><br>Superclass: <a href="cx_shm_general_error.clas.html">cx_shm_general_error</a><br><br>
+<u>Public</u><br>Attribute <tt>properties</tt> TYPE <tt>SHM_PROPERTIES</tt><br>
+Attribute <tt>inst_name</tt> TYPE <tt>SHM_INST_NAME</tt><br>
+Attribute <tt>client</tt> TYPE <tt>MANDT</tt><br>
+Constant <tt>default_instance</tt> TYPE <tt>SHM_INST_NAME</tt><br>
+Constant <tt>invocation_mode_explicit</tt> TYPE <tt>SHM_CONSTR_INVOCATION_MODE</tt><br>
+Constant <tt>life_context_appserver</tt> TYPE <tt>SHM_LIFE_CONTEXT</tt><br>
+Constant <tt>attach_mode_default</tt> TYPE <tt>SHM_ATTACH_MODE</tt><br>
+Constant <tt>attach_mode_wait</tt> TYPE <tt>SHM_ATTACH_MODE</tt><br>
+Constant <tt>affect_local_server</tt> TYPE <tt>SHM_AFFECT_SERVER</tt><br>
+Method <tt>detach_commit</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_shm_wrong_handle.clas.html">cx_shm_wrong_handle</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_shm_already_detached.clas.html">cx_shm_already_detached</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_shm_secondary_commit.clas.html">cx_shm_secondary_commit</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_shm_event_execution_failed.clas.html">cx_shm_event_execution_failed</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_shm_completion_error.clas.html">cx_shm_completion_error</a></tt><br>
+Method <tt>detach</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_shm_wrong_handle.clas.html">cx_shm_wrong_handle</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_shm_already_detached.clas.html">cx_shm_already_detached</a></tt><br>
+Method <tt>get_root</tt><br>
+&nbsp;&nbsp;RETURNING <tt>root</tt> TYPE <tt>REF TO object</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_shm_already_detached.clas.html">cx_shm_already_detached</a></tt><br>
+Method <tt>is_valid</tt><br>
+&nbsp;&nbsp;RETURNING <tt>valid</tt> TYPE <tt>ABAP_BOOL</tt><br>
+<u>Protected</u><br>Attribute <tt>inst_trace_active</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Attribute <tt>inst_trace_service</tt> TYPE <tt>if_shm_trace</tt><br>
+Attribute <tt>_lock</tt> TYPE <tt>x LENGTH 8</tt><br>
+Constant <tt>attach_mode_wait_2nd_try</tt> TYPE <tt>SHM_ATTACH_MODE</tt><br>
+Method <tt>_attach_read71</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>sneak_mode</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>area_name</tt> TYPE <tt>SHM_AREA_NAME</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>life_context</tt> TYPE <tt>SHM_LIFE_CONTEXT</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>root</tt> TYPE <tt>REF TO object</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_shm_inconsistent.clas.html">cx_shm_inconsistent</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_shm_no_active_version.clas.html">cx_shm_no_active_version</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_shm_read_lock_active.clas.html">cx_shm_read_lock_active</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_shm_exclusive_lock_active.clas.html">cx_shm_exclusive_lock_active</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_shm_parameter_error.clas.html">cx_shm_parameter_error</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_shm_change_lock_active.clas.html">cx_shm_change_lock_active</a></tt><br>
+Method <tt>_attach_update70</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>area_name</tt> TYPE <tt>SHM_AREA_NAME</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>mode</tt> TYPE <tt>SHM_ATTACH_MODE</tt><br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>wait_time</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>root</tt> TYPE <tt>REF TO object</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_shm_inconsistent.clas.html">cx_shm_inconsistent</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_shm_exclusive_lock_active.clas.html">cx_shm_exclusive_lock_active</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_shm_change_lock_active.clas.html">cx_shm_change_lock_active</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_shm_version_limit_exceeded.clas.html">cx_shm_version_limit_exceeded</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_shm_no_active_version.clas.html">cx_shm_no_active_version</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_shm_parameter_error.clas.html">cx_shm_parameter_error</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_shm_pending_lock_removed.clas.html">cx_shm_pending_lock_removed</a></tt><br>
+Method <tt>_attach_write70</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>area_name</tt> TYPE <tt>SHM_AREA_NAME</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>mode</tt> TYPE <tt>SHM_ATTACH_MODE</tt><br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>wait_time</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>root</tt> TYPE <tt>REF TO object</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_shm_version_limit_exceeded.clas.html">cx_shm_version_limit_exceeded</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_shm_exclusive_lock_active.clas.html">cx_shm_exclusive_lock_active</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_shm_change_lock_active.clas.html">cx_shm_change_lock_active</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_shm_parameter_error.clas.html">cx_shm_parameter_error</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_shm_pending_lock_removed.clas.html">cx_shm_pending_lock_removed</a></tt><br>
+Static Method <tt>_invalidate_area71</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>area_name</tt> TYPE <tt>SHM_AREA_NAME</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>client</tt> TYPE <tt>SHM_CLIENT</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>client_supplied</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>transactional</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>client_dependent</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>terminate_changer</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>affect_server</tt> TYPE <tt>SHM_AFFECT_SERVER</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>life_context</tt> TYPE <tt>SHM_LIFE_CONTEXT</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rc</tt> TYPE <tt>SHM_RC</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_shm_parameter_error.clas.html">cx_shm_parameter_error</a></tt><br>
+Static Method <tt>_invalidate_instance71</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>area_name</tt> TYPE <tt>SHM_AREA_NAME</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>inst_name</tt> TYPE <tt>SHM_INST_NAME</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>client</tt> TYPE <tt>SHM_CLIENT</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>client_supplied</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>transactional</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>client_dependent</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>terminate_changer</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>affect_server</tt> TYPE <tt>SHM_AFFECT_SERVER</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>life_context</tt> TYPE <tt>SHM_LIFE_CONTEXT</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rc</tt> TYPE <tt>SHM_RC</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_shm_parameter_error.clas.html">cx_shm_parameter_error</a></tt><br>
+Method <tt>_set_root</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>root</tt> TYPE <tt>REF TO object</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_shm_wrong_handle.clas.html">cx_shm_wrong_handle</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_shm_initial_reference.clas.html">cx_shm_initial_reference</a></tt><br>
+Static Method <tt>_detach_area71</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>area_name</tt> TYPE <tt>SHM_AREA_NAME</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>client</tt> TYPE <tt>SHM_CLIENT</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>client_supplied</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>client_dependent</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>life_context</tt> TYPE <tt>SHM_LIFE_CONTEXT</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rc</tt> TYPE <tt>SHM_RC</tt><br>
+Static Method <tt>_free_area71</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>area_name</tt> TYPE <tt>SHM_AREA_NAME</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>client</tt> TYPE <tt>SHM_CLIENT</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>client_supplied</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>transactional</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>client_dependent</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>terminate_changer</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>affect_server</tt> TYPE <tt>SHM_AFFECT_SERVER</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>life_context</tt> TYPE <tt>SHM_LIFE_CONTEXT</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rc</tt> TYPE <tt>SHM_RC</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_shm_parameter_error.clas.html">cx_shm_parameter_error</a></tt><br>
+Static Method <tt>_get_instance_infos71</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>area_name</tt> TYPE <tt>SHM_AREA_NAME</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>client</tt> TYPE <tt>SHM_CLIENT</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>client_supplied</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>client_dependent</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>life_context</tt> TYPE <tt>SHM_LIFE_CONTEXT</tt><br>
+&nbsp;&nbsp;RETURNING <tt>infos</tt> TYPE <tt>SHM_INST_INFOS</tt><br>
+Static Method <tt>_free_instance71</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>area_name</tt> TYPE <tt>SHM_AREA_NAME</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>inst_name</tt> TYPE <tt>SHM_INST_NAME</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>client</tt> TYPE <tt>SHM_CLIENT</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>client_supplied</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>transactional</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>client_dependent</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>terminate_changer</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>affect_server</tt> TYPE <tt>SHM_AFFECT_SERVER</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>life_context</tt> TYPE <tt>SHM_LIFE_CONTEXT</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rc</tt> TYPE <tt>SHM_RC</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_shm_parameter_error.clas.html">cx_shm_parameter_error</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>750</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>702</td><td bgcolor='red'>undefined</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

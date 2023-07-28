@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_IXML_NODE INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_IXML_NODE</h2>
+<a href="https://github.com/open-abap/open-abap-core/blob/mainrc%2Fixml%2Fif_ixml_node.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_ixml_node/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_ixml_named_node_map.intf.html">IF_IXML_NAMED_NODE_MAP</a></small><br><small>Next Object: <a href="if_ixml_node_collection.intf.html">IF_IXML_NODE_COLLECTION</a></small><br><br><u>Public</u><br>Constant <tt>co_node_element</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_node_text</tt> TYPE <tt>I</tt><br>
+Method <tt>append_child</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>new_child</tt> TYPE <tt>if_ixml_node</tt><br>
+Method <tt>get_attributes</tt><br>
+&nbsp;&nbsp;RETURNING <tt>map</tt> TYPE <tt>if_ixml_named_node_map</tt><br>
+Method <tt>get_first_child</tt><br>
+&nbsp;&nbsp;RETURNING <tt>node</tt> TYPE <tt>if_ixml_node</tt><br>
+Method <tt>get_children</tt><br>
+&nbsp;&nbsp;RETURNING <tt>val</tt> TYPE <tt>if_ixml_node_list</tt><br>
+Method <tt>query_interface</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>foo</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>if_ixml_unknown</tt><br>
+Method <tt>remove_node</tt><br>
+Method <tt>get_parent</tt><br>
+&nbsp;&nbsp;RETURNING <tt>val</tt> TYPE <tt>if_ixml_node</tt><br>
+Method <tt>replace_child</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>new_child</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>old_child</tt> TYPE <tt>STRING</tt><br>
+Method <tt>get_name</tt><br>
+&nbsp;&nbsp;RETURNING <tt>val</tt> TYPE <tt>STRING</tt><br>
+Method <tt>get_depth</tt><br>
+&nbsp;&nbsp;RETURNING <tt>val</tt> TYPE <tt>I</tt><br>
+Method <tt>is_leaf</tt><br>
+&nbsp;&nbsp;RETURNING <tt>val</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>get_namespace</tt><br>
+&nbsp;&nbsp;RETURNING <tt>val</tt> TYPE <tt>STRING</tt><br>
+Method <tt>get_value</tt><br>
+&nbsp;&nbsp;RETURNING <tt>val</tt> TYPE <tt>STRING</tt><br>
+Method <tt>get_type</tt><br>
+&nbsp;&nbsp;RETURNING <tt>val</tt> TYPE <tt>STRING</tt><br>
+Method <tt>set_name</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+Method <tt>set_namespace_prefix</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>val</tt> TYPE <tt>STRING</tt><br>
+Method <tt>remove_child</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>child</tt> TYPE <tt>if_ixml_node</tt><br>
+Method <tt>set_value</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>value</tt> TYPE <tt>STRING</tt><br>
+Method <tt>get_next</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>if_ixml_node</tt><br>
+Method <tt>get_namespace_prefix</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_prefix</tt> TYPE <tt>STRING</tt><br>
+Method <tt>get_namespace_uri</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>STRING</tt><br>
+Method <tt>get_height</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>I</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='green'>true</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

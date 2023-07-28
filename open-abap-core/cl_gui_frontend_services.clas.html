@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_GUI_FRONTEND_SERVICES CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_GUI_FRONTEND_SERVICES</h2>
+<a href="https://github.com/open-abap/open-abap-core/blob/mainrc%2Fgui%2Fcl_gui_frontend_services.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_gui_frontend_services/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_gui_container.clas.html">CL_GUI_CONTAINER</a></small><br><small>Next Object: <a href="cl_http_client.clas.html">CL_HTTP_CLIENT</a></small><br><br><u>Public</u><br>Constant <tt>filetype_all</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>action_cancel</tt> TYPE <tt>I</tt><br>
+Constant <tt>action_ok</tt> TYPE <tt>I</tt><br>
+Constant <tt>platform_nt351</tt> TYPE <tt>I</tt><br>
+Constant <tt>platform_nt40</tt> TYPE <tt>I</tt><br>
+Constant <tt>platform_nt50</tt> TYPE <tt>I</tt><br>
+Constant <tt>platform_windows95</tt> TYPE <tt>I</tt><br>
+Constant <tt>platform_windows98</tt> TYPE <tt>I</tt><br>
+Constant <tt>platform_windowsxp</tt> TYPE <tt>I</tt><br>
+Static Method <tt>gui_download</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>bin_filesize</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>filename</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>filetype</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>write_lf</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>write_field_separator</tt> TYPE <tt>CHAR1</tt> Optional<br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>data_tab</tt> TYPE <tt>any</tt><br>
+Static Method <tt>file_exist</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>file</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>result</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Static Method <tt>directory_list_files</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>directory</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>file_table</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>count</tt> TYPE <tt>I</tt><br>
+Static Method <tt>gui_upload</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>filename</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>filetype</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>codepage</tt> TYPE <tt>abap_encoding</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>read_by_line</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>data_tab</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>filelength</tt> TYPE <tt>I</tt><br>
+Static Method <tt>file_open_dialog</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>window_title</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>default_filename</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>default_extension</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>multiselection</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>file_filter</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>initial_directory</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>file_table</tt> TYPE <tt>FILETABLE</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>rc</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>user_action</tt> TYPE <tt>I</tt> Optional<br>
+Static Method <tt>get_platform</tt><br>
+&nbsp;&nbsp;RETURNING <tt>platform</tt> TYPE <tt>I</tt><br>
+Static Method <tt>file_save_dialog</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>window_title</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>default_extension</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>default_file_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>file_filter</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>filename</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>path</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>fullpath</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>user_action</tt> TYPE <tt>I</tt> Optional<br>
+Static Method <tt>directory_browse</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>window_title</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>initial_folder</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>selected_folder</tt> TYPE <tt>STRING</tt><br>
+Static Method <tt>execute</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>document</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>application</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>parameter</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>default_directory</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>maximized</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>minimized</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>synchronous</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>operation</tt> TYPE <tt>STRING</tt> Optional<br>
+Static Method <tt>get_file_separator</tt><br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>file_separator</tt> TYPE <tt>STRING</tt><br>
+Static Method <tt>directory_exist</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>directory</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>result</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Static Method <tt>directory_create</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>directory</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>rc</tt> TYPE <tt>I</tt><br>
+Static Method <tt>clipboard_export</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>no_auth_check</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>rc</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>data</tt> TYPE <tt>any</tt><br>
+Static Method <tt>get_system_directory</tt><br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>system_directory</tt> TYPE <tt>STRING</tt><br>
+Static Method <tt>get_gui_version</tt><br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>version_table</tt> TYPE <tt>FILETABLE</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>rc</tt> TYPE <tt>I</tt><br>
+Static Method <tt>clipboard_import</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>data</tt> TYPE <tt>STANDARD TABLE OF any WITH DEFAULT KEY</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>length</tt> TYPE <tt>I</tt><br>
+Static Method <tt>file_delete</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>filename</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>rc</tt> TYPE <tt>I</tt><br>
+Static Method <tt>get_sapgui_workdir</tt><br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>sapworkdir</tt> TYPE <tt>STRING</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>750</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>702</td><td bgcolor='red'>undefined</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

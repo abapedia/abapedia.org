@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - /IWBEP/IF_CP_REQUEST_READ_LIST INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF /IWBEP/IF_CP_REQUEST_READ_LIST</h2>
+<a href="https://github.com/abapedia/steampunk-2205-api/blob/mainrc%2F%23iwbep%23if_cp_request_read_list.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces//iwbep/if_cp_request_read_list/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="%23iwbep%23if_cp_request_read_dlta.intf.html">/IWBEP/IF_CP_REQUEST_READ_DLTA</a></small><br><small>Next Object: <a href="%23iwbep%23if_cp_request_update.intf.html">/IWBEP/IF_CP_REQUEST_UPDATE</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Interface <tt><a href="%23iwbep%23if_cp_request_batch_op.intf.html">/iwbep/if_cp_request_batch_op</a></tt><br>
+Method <tt>check_execution</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_request</tt> TYPE <tt>/iwbep/if_cp_request_read_list</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+Method <tt>create_expand_node</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_expand_node</tt> TYPE <tt>/iwbep/if_cp_expand_node</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+Method <tt>create_filter_factory</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_filter_factory</tt> TYPE <tt>/iwbep/if_cp_filter_factory</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+Method <tt>create_search_node</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_term</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_search_node</tt> TYPE <tt>/iwbep/if_cp_search_node</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+Method <tt>execute</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_response</tt> TYPE <tt>/iwbep/if_cp_response_read_lst</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+Method <tt>get_response</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_response</tt> TYPE <tt>/iwbep/if_cp_response_read_lst</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+Method <tt>request_count</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_request</tt> TYPE <tt>/iwbep/if_cp_request_read_list</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+Method <tt>request_no_business_data</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_request</tt> TYPE <tt>/iwbep/if_cp_request_read_list</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+Method <tt>set_custom_query_options</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_custom_query_option</tt> TYPE <tt>/iwbep/if_cp_runtime_types=>ty_t_custom_query_option</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_request</tt> TYPE <tt>/iwbep/if_cp_request_read_list</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+Method <tt>set_expand</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_expand_root_node</tt> TYPE <tt>/iwbep/if_cp_expand_node</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_request</tt> TYPE <tt>/iwbep/if_cp_request_read_list</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+Method <tt>set_filter</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_filter_node</tt> TYPE <tt>/iwbep/if_cp_filter_node</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_request</tt> TYPE <tt>/iwbep/if_cp_request_read_list</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+Method <tt>set_search</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_search_expression</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_request</tt> TYPE <tt>/iwbep/if_cp_request_read_list</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+Method <tt>set_search_node</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_search_node</tt> TYPE <tt>/iwbep/if_cp_search_node</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_request</tt> TYPE <tt>/iwbep/if_cp_request_read_list</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+Method <tt>set_orderby</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_orderby_property</tt> TYPE <tt>/iwbep/if_cp_runtime_types=>ty_t_sort_order</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_request</tt> TYPE <tt>/iwbep/if_cp_request_read_list</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+Method <tt>set_select_properties</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_select_property</tt> TYPE <tt>/iwbep/if_cp_runtime_types=>ty_t_property_path</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_request</tt> TYPE <tt>/iwbep/if_cp_request_read_list</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+Method <tt>set_skip</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_skip</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_request</tt> TYPE <tt>/iwbep/if_cp_request_read_list</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+Method <tt>set_top</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_top</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_request</tt> TYPE <tt>/iwbep/if_cp_request_read_list</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+Method <tt>track_changes</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_request</tt> TYPE <tt>/iwbep/if_cp_request_read_list</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+Method <tt>use_delta_link</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_query_id</tt> TYPE <tt>/iwbep/if_cp_runtime_types=>ty_delta_query_id</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_request</tt> TYPE <tt>/iwbep/if_cp_request_read_list</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

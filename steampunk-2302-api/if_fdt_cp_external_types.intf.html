@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_FDT_CP_EXTERNAL_TYPES INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_FDT_CP_EXTERNAL_TYPES</h2>
+<a href="https://github.com/abapedia/steampunk-2302-api/blob/mainrc%2Fif_fdt_cp_external_types.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_fdt_cp_external_types/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_fdt_cp_decision_table.intf.html">IF_FDT_CP_DECISION_TABLE</a></small><br><small>Next Object: <a href="if_fdt_cp_factory.intf.html">IF_FDT_CP_FACTORY</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ast_node</tt> TYPE <tt>if_fdt_cp_external_types=>ast_node</tt><br>
+Type <tt>cpbr_object_type</tt> TYPE <tt>if_fdt_cp_external_types=>cpbr_object_type</tt><br>
+Type <tt>id</tt> TYPE <tt>if_fdt_cp_external_types=>id</tt><br>
+Type <tt>ty_label</tt> TYPE <tt>if_fdt_cp_external_types=>ty_label</tt><br>
+Type <tt>tt_label</tt> TYPE <tt>if_fdt_cp_external_types=>tt_label</tt><br>
+Type <tt>ty_description</tt> TYPE <tt>if_fdt_cp_external_types=>ty_description</tt><br>
+Type <tt>tt_description</tt> TYPE <tt>if_fdt_cp_external_types=>tt_description</tt><br>
+Type <tt>ty_annotations</tt> TYPE <tt>if_fdt_cp_external_types=>ty_annotations</tt><br>
+Type <tt>tt_annotations</tt> TYPE <tt>if_fdt_cp_external_types=>tt_annotations</tt><br>
+Type <tt>ty_admin_data</tt> TYPE <tt>if_fdt_cp_external_types=>ty_admin_data</tt><br>
+Type <tt>ty_object_id</tt> TYPE <tt>if_fdt_cp_external_types=>ty_object_id</tt><br>
+Type <tt>tt_object_id</tt> TYPE <tt>if_fdt_cp_external_types=>tt_object_id</tt><br>
+Type <tt>ty_obj_id_sequence</tt> TYPE <tt>if_fdt_cp_external_types=>ty_obj_id_sequence</tt><br>
+Type <tt>tt_obj_id_sequence</tt> TYPE <tt>if_fdt_cp_external_types=>tt_obj_id_sequence</tt><br>
+Type <tt>ty_priority</tt> TYPE <tt>if_fdt_cp_external_types=>ty_priority</tt><br>
+Type <tt>ty_policy</tt> TYPE <tt>if_fdt_cp_external_types=>ty_policy</tt><br>
+Type <tt>ty_ruleset_vocabulary</tt> TYPE <tt>if_fdt_cp_external_types=>ty_ruleset_vocabulary</tt><br>
+Type <tt>ty_ruleset_precondition</tt> TYPE <tt>if_fdt_cp_external_types=>ty_ruleset_precondition</tt><br>
+Type <tt>ty_ruleset_rule</tt> TYPE <tt>if_fdt_cp_external_types=>ty_ruleset_rule</tt><br>
+Type <tt>tt_ruleset_rule</tt> TYPE <tt>if_fdt_cp_external_types=>tt_ruleset_rule</tt><br>
+Type <tt>ty_ruleset</tt> TYPE <tt>if_fdt_cp_external_types=>ty_ruleset</tt><br>
+Type <tt>ty_ruleset_external</tt> TYPE <tt>if_fdt_cp_external_types=>ty_ruleset_external</tt><br>
+Type <tt>ty_ruleservice_vocabulary</tt> TYPE <tt>if_fdt_cp_external_types=>ty_ruleservice_vocabulary</tt><br>
+Type <tt>ty_ruleservice</tt> TYPE <tt>if_fdt_cp_external_types=>ty_ruleservice</tt><br>
+Type <tt>ty_ruleservice_external</tt> TYPE <tt>if_fdt_cp_external_types=>ty_ruleservice_external</tt><br>
+Type <tt>ty_ast_literal_output</tt> TYPE <tt>if_fdt_cp_external_types=>ty_ast_literal_output</tt><br>
+Type <tt>ty_ast_children</tt> TYPE <tt>if_fdt_cp_external_types=>ty_ast_children</tt><br>
+Type <tt>tt_ast_children</tt> TYPE <tt>if_fdt_cp_external_types=>tt_ast_children</tt><br>
+Type <tt>ty_predefined_result</tt> TYPE <tt>if_fdt_cp_external_types=>ty_predefined_result</tt><br>
+Type <tt>tt_predefined_result</tt> TYPE <tt>if_fdt_cp_external_types=>tt_predefined_result</tt><br>
+Type <tt>ty_text_rule_branch_operation</tt> TYPE <tt>if_fdt_cp_external_types=>ty_text_rule_branch_operation</tt><br>
+Type <tt>tt_text_rule_branch_operation</tt> TYPE <tt>if_fdt_cp_external_types=>tt_text_rule_branch_operation</tt><br>
+Type <tt>ty_text_rule_branch</tt> TYPE <tt>if_fdt_cp_external_types=>ty_text_rule_branch</tt><br>
+Type <tt>tt_text_rule_branch</tt> TYPE <tt>if_fdt_cp_external_types=>tt_text_rule_branch</tt><br>
+Type <tt>ty_text_rule_default_branch</tt> TYPE <tt>if_fdt_cp_external_types=>ty_text_rule_default_branch</tt><br>
+Type <tt>ty_text_rule</tt> TYPE <tt>if_fdt_cp_external_types=>ty_text_rule</tt><br>
+Type <tt>ty_hit_policy</tt> TYPE <tt>if_fdt_cp_external_types=>ty_hit_policy</tt><br>
+Type <tt>ty_dt_column_condition</tt> TYPE <tt>if_fdt_cp_external_types=>ty_dt_column_condition</tt><br>
+Type <tt>ty_dt_column_result_cell</tt> TYPE <tt>if_fdt_cp_external_types=>ty_dt_column_result_cell</tt><br>
+Type <tt>ty_dt_column_result</tt> TYPE <tt>if_fdt_cp_external_types=>ty_dt_column_result</tt><br>
+Type <tt>ty_decision_table_column</tt> TYPE <tt>if_fdt_cp_external_types=>ty_decision_table_column</tt><br>
+Type <tt>tt_decision_table_column</tt> TYPE <tt>if_fdt_cp_external_types=>tt_decision_table_column</tt><br>
+Type <tt>ty_decision_table_row</tt> TYPE <tt>if_fdt_cp_external_types=>ty_decision_table_row</tt><br>
+Type <tt>tt_decision_table_row</tt> TYPE <tt>if_fdt_cp_external_types=>tt_decision_table_row</tt><br>
+Type <tt>ty_decision_table_cell</tt> TYPE <tt>if_fdt_cp_external_types=>ty_decision_table_cell</tt><br>
+Type <tt>tt_decision_table_cell</tt> TYPE <tt>if_fdt_cp_external_types=>tt_decision_table_cell</tt><br>
+Constant <tt>ast_nodes</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>project</tt> TYPE <tt>i</tt><br>
+Constant <tt>data_object</tt> TYPE <tt>i</tt><br>
+Constant <tt>ruleservice</tt> TYPE <tt>i</tt><br>
+Constant <tt>ruleset</tt> TYPE <tt>i</tt><br>
+Constant <tt>rule</tt> TYPE <tt>i</tt><br>
+Constant <tt>gcs_business_data_types</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>gcs_data_object_types</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

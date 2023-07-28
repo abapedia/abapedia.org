@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_CDS_TEST_DATA INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_CDS_TEST_DATA</h2>
+<a href="https://github.com/abapedia/steampunk-2305-api/blob/mainrc%2Fif_cds_test_data.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_cds_test_data/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_cds_parameter_values_config.intf.html">IF_CDS_PARAMETER_VALUES_CONFIG</a></small><br><small>Next Object: <a href="if_chdo_delete_tools.intf.html">IF_CHDO_DELETE_TOOLS</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Method <tt>set_data</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_data</tt> TYPE <tt>STANDARD TABLE OF any WITH DEFAULT KEY</tt><br>
+Method <tt>get_data</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>r_data</tt> TYPE <tt>STANDARD TABLE OF any WITH DEFAULT KEY</tt><br>
+Method <tt>for_parameters</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_parameter_values</tt> TYPE <tt>if_cds_parameter_values_config=>ty_parameter_value_pairs</tt><br>
+&nbsp;&nbsp;RETURNING <tt>r_test_data</tt> TYPE <tt>if_cds_test_data</tt><br>
+Method <tt>set_client</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>client</tt> TYPE <tt>MANDT</tt><br>
+&nbsp;&nbsp;RETURNING <tt>r_test_data</tt> TYPE <tt>if_cds_test_data</tt><br>
+Method <tt>get_client</tt><br>
+&nbsp;&nbsp;RETURNING <tt>client</tt> TYPE <tt>MANDT</tt><br>
+Method <tt>set_null_values</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_null_values</tt> TYPE <tt>if_cds_null_values_config=>ty_element_names</tt><br>
+&nbsp;&nbsp;RETURNING <tt>r_test_data</tt> TYPE <tt>if_cds_test_data</tt><br>
+Method <tt>get_null_values_config</tt><br>
+&nbsp;&nbsp;RETURNING <tt>r_config</tt> TYPE <tt>if_cds_null_values_config</tt><br>
+Method <tt>set_null_values_config</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_config</tt> TYPE <tt>if_cds_null_values_config</tt><br>
+&nbsp;&nbsp;RETURNING <tt>r_test_data</tt> TYPE <tt>if_cds_test_data</tt><br>
+Method <tt>get_parameter_values_config</tt><br>
+&nbsp;&nbsp;RETURNING <tt>r_config</tt> TYPE <tt>if_cds_parameter_values_config</tt><br>
+Method <tt>set_parameter_values_config</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_config</tt> TYPE <tt>if_cds_parameter_values_config</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

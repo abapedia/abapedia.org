@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_WEB_HTTP_UTILITY CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_WEB_HTTP_UTILITY</h2>
+<a href="https://github.com/abapedia/steampunk-2302-api/blob/mainrc%2Fcl_web_http_utility.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_web_http_utility/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_web_http_server_utility.clas.html">CL_WEB_HTTP_SERVER_UTILITY</a></small><br><small>Next Object: <a href="cl_web_odata_client_factory.clas.html">CL_WEB_ODATA_CLIENT_FACTORY</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Constant <tt>urlcheck_default</tt> TYPE <tt>x LENGTH 1</tt><br>
+Constant <tt>co_disabled</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_enabled</tt> TYPE <tt>I</tt><br>
+Static Method <tt>decode_utf8</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>encoded</tt> TYPE <tt>XSTRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>unencoded</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_web_http_conversion_failed.clas.html">cx_web_http_conversion_failed</a></tt><br>
+Static Method <tt>encode_utf8</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>unencoded</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>encoded</tt> TYPE <tt>XSTRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_web_http_conversion_failed.clas.html">cx_web_http_conversion_failed</a></tt><br>
+Static Method <tt>encode_x_base64</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>unencoded</tt> TYPE <tt>XSTRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>encoded</tt> TYPE <tt>STRING</tt><br>
+Static Method <tt>decode_x_base64</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>encoded</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>decoded</tt> TYPE <tt>XSTRING</tt><br>
+Static Method <tt>decode_base64</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>encoded</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>decoded</tt> TYPE <tt>STRING</tt><br>
+Static Method <tt>encode_base64</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>unencoded</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>encoded</tt> TYPE <tt>STRING</tt><br>
+Static Method <tt>escape_url</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>unescaped</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>options</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>escaped</tt> TYPE <tt>STRING</tt><br>
+Static Method <tt>get_location</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>protocol</tt> TYPE <tt>csequence</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>application</tt> TYPE <tt>csequence</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>for_domain</tt> TYPE <tt>csequence</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>use_ticket_protocol</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>host</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>port</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>out_protocol</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>vh_switch</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;RETURNING <tt>url_part</tt> TYPE <tt>STRING</tt><br>
+Static Method <tt>server_cache_upload</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>url</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>response</tt> TYPE <tt>if_web_http_response</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>scope</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>virtual_host</tt> TYPE <tt>I</tt> Optional<br>
+Static Method <tt>unescape_url</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>escaped</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>options</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>unescaped</tt> TYPE <tt>STRING</tt><br>
+Static Method <tt>is_valid_url</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>url</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>black_pattern</tt> TYPE <tt>cl_abap_regex</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>white_pattern</tt> TYPE <tt>cl_abap_regex</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>restrictive</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>options</tt> TYPE <tt>x LENGTH 1</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>is_ok</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Static Method <tt>normalize_url</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>unnormalized</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>normalized</tt> TYPE <tt>STRING</tt><br>
+Static Method <tt>get_last_error</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rc</tt> TYPE <tt>I</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

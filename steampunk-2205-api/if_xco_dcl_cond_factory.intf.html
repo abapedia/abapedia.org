@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_XCO_DCL_COND_FACTORY INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_XCO_DCL_COND_FACTORY</h2>
+<a href="https://github.com/abapedia/steampunk-2205-api/blob/mainrc%2Fif_xco_dcl_cond_factory.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_xco_dcl_cond_factory/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_xco_dcl_cond_aspect_f.intf.html">IF_XCO_DCL_COND_ASPECT_F</a></small><br><small>Next Object: <a href="if_xco_dcl_cond_inhert_entty_f.intf.html">IF_XCO_DCL_COND_INHERT_ENTTY_F</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Attribute <tt>pfcg</tt> TYPE <tt>if_xco_dcl_cond_pfcg_f</tt><br>
+Attribute <tt>aspect</tt> TYPE <tt>if_xco_dcl_cond_aspect_f</tt><br>
+Attribute <tt>user</tt> TYPE <tt>if_xco_dcl_cond_user_f</tt><br>
+Attribute <tt>inherit_from_role</tt> TYPE <tt>if_xco_dcl_cond_inhert_role_f</tt><br>
+Attribute <tt>inherit_from_entity</tt> TYPE <tt>if_xco_dcl_cond_inhert_entty_f</tt><br>
+Attribute <tt>inherit_from_super</tt> TYPE <tt>if_xco_dcl_cond_inhert_super_f</tt><br>
+Attribute <tt>true</tt> TYPE <tt>if_xco_dcl_expr_condition</tt><br>
+Attribute <tt>false</tt> TYPE <tt>if_xco_dcl_expr_condition</tt><br>
+Attribute <tt>void</tt> TYPE <tt>if_xco_dcl_expr_condition</tt><br>
+Method <tt>for</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_value</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_condition</tt> TYPE <tt>if_xco_dcl_expr_condition</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

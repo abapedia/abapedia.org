@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_BLE_DYNAMIC_TABLE INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_BLE_DYNAMIC_TABLE</h2>
+<a href="https://github.com/abapedia/steampunk-2202-api/blob/mainrc%2Fif_ble_dynamic_table.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_ble_dynamic_table/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_ble_dt_row_iterator.intf.html">IF_BLE_DT_ROW_ITERATOR</a></small><br><small>Next Object: <a href="if_cds_access_control_data.intf.html">IF_CDS_ACCESS_CONTROL_DATA</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>s_coldef</tt> TYPE <tt>if_ble_dynamic_table=>s_coldef</tt><br>
+Type <tt>t_coldef</tt> TYPE <tt>if_ble_dynamic_table=>t_coldef</tt><br>
+Constant <tt>co_column_type</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Method <tt>add_column</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_type</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_length</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_decimals</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_ble_dynamic_table_error.clas.html">cx_ble_dynamic_table_error</a></tt><br>
+Method <tt>append_row</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_ble_dynamic_table_error.clas.html">cx_ble_dynamic_table_error</a></tt><br>
+Method <tt>get_columns</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rt_columns</tt> TYPE <tt>if_ble_dynamic_table=>t_coldef</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_ble_dynamic_table_error.clas.html">cx_ble_dynamic_table_error</a></tt><br>
+Method <tt>get_iterator</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_reset_current_iteration</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>ro_row_iterator</tt> TYPE <tt>if_ble_dt_row_iterator</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_ble_dynamic_table_error.clas.html">cx_ble_dynamic_table_error</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>750</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>702</td><td bgcolor='red'>undefined</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

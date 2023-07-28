@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_XCO_AO_S_P_EXPORTING_CONTNT INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_XCO_AO_S_P_EXPORTING_CONTNT</h2>
+<a href="https://github.com/abapedia/steampunk-2302-api/blob/mainrc%2Fif_xco_ao_s_p_exporting_contnt.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_xco_ao_s_p_exporting_contnt/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_xco_ao_s_p_exporting.intf.html">IF_XCO_AO_S_P_EXPORTING</a></small><br><small>Next Object: <a href="if_xco_ao_s_p_exportings.intf.html">IF_XCO_AO_S_P_EXPORTINGS</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ts_content</tt> TYPE <tt>if_xco_ao_s_p_exporting_contnt=>ts_content</tt><br>
+Attribute <tt>exporting_parameter</tt> TYPE <tt>if_xco_ao_s_p_exporting</tt><br>
+Attribute <tt>version</tt> TYPE <tt>cl_xco_ao_version</tt><br>
+Method <tt>get_short_description</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_origin</tt> TYPE <tt>cl_xco_ao_origin</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rv_short_description</tt> TYPE <tt>SXCO_AR_SHORT_DESCRIPTION</tt><br>
+Method <tt>get_pass_by_value_indicator</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_origin</tt> TYPE <tt>cl_xco_ao_origin</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rv_pass_by_value_indicator</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>get_typing_method</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_origin</tt> TYPE <tt>cl_xco_ao_origin</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>ro_typing_method</tt> TYPE <tt>cl_xco_ao_typing_method</tt><br>
+Method <tt>get_typing_definition</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_origin</tt> TYPE <tt>cl_xco_ao_origin</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>ro_typing_definition</tt> TYPE <tt>if_xco_ao_typing_definition</tt><br>
+Method <tt>get</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_origin</tt> TYPE <tt>cl_xco_ao_origin</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rs_content</tt> TYPE <tt>if_xco_ao_s_p_exporting_contnt=>ts_content</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

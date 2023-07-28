@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_SALV_TABLE CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_SALV_TABLE</h2>
+<a href="https://github.com/open-abap/open-abap-core/blob/mainrc%2Fgui%2Fcl_salv_table.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_salv_table/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_salv_functions_list.clas.html">CL_SALV_FUNCTIONS_LIST</a></small><br><small>Next Object: <a href="cl_shm_area.clas.html">CL_SHM_AREA</a></small><br><br><u>Public</u><br>Type <tt>ty_rows</tt> TYPE <tt>cl_salv_table=>ty_rows</tt><br>
+Constant <tt>c_functions_all</tt> TYPE <tt>I</tt><br>
+Static Method <tt>factory</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>r_container</tt> TYPE <tt>any</tt> Optional<br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>t_table</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>r_salv_table</tt> TYPE <tt>any</tt><br>
+Method <tt>get_selections</tt><br>
+&nbsp;&nbsp;RETURNING <tt>val</tt> TYPE <tt>cl_salv_table</tt><br>
+Method <tt>set_selected_rows</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>val</tt> TYPE <tt>any</tt><br>
+Method <tt>set_selection_mode</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>val</tt> TYPE <tt>I</tt><br>
+Method <tt>get_selected_rows</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rows</tt> TYPE <tt>cl_salv_table=>ty_rows</tt><br>
+Method <tt>close_screen</tt><br>
+Method <tt>refresh</tt><br>
+Method <tt>display</tt><br>
+Method <tt>is_offline</tt><br>
+&nbsp;&nbsp;RETURNING <tt>value</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>get_metadata</tt><br>
+Method <tt>set_screen_status</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>pfstatus</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>set_functions</tt> TYPE <tt>any</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>report</tt> TYPE <tt>any</tt><br>
+Method <tt>set_screen_popup</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>start_column</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>end_column</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>start_line</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>end_line</tt> TYPE <tt>I</tt><br>
+Method <tt>get_event</tt><br>
+&nbsp;&nbsp;RETURNING <tt>val</tt> TYPE <tt>cl_salv_events_table</tt><br>
+Method <tt>get_display_settings</tt><br>
+&nbsp;&nbsp;RETURNING <tt>val</tt> TYPE <tt>cl_salv_table</tt><br>
+Method <tt>set_striped_pattern</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>val</tt> TYPE <tt>any</tt><br>
+Method <tt>set_list_header</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>val</tt> TYPE <tt>any</tt><br>
+Method <tt>set_top_of_list</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>val</tt> TYPE <tt>any</tt><br>
+Method <tt>get_columns</tt><br>
+&nbsp;&nbsp;RETURNING <tt>val</tt> TYPE <tt>cl_salv_columns_table</tt><br>
+Method <tt>get_functions</tt><br>
+&nbsp;&nbsp;RETURNING <tt>val</tt> TYPE <tt>cl_salv_functions_list</tt><br>
+Method <tt>get_aggregations</tt><br>
+&nbsp;&nbsp;RETURNING <tt>value</tt> TYPE <tt>cl_salv_aggregations</tt><br>
+Method <tt>get_filters</tt><br>
+&nbsp;&nbsp;RETURNING <tt>foo</tt> TYPE <tt>cl_salv_filters</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>750</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>702</td><td bgcolor='red'>undefined</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

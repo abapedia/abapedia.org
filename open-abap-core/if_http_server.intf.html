@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_HTTP_SERVER INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_HTTP_SERVER</h2>
+<a href="https://github.com/open-abap/open-abap-core/blob/mainrc%2Fhttp%2Fif_http_server.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_http_server/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_http_response.intf.html">IF_HTTP_RESPONSE</a></small><br><small>Next Object: <a href="if_http_utility.intf.html">IF_HTTP_UTILITY</a></small><br><br><u>Public</u><br>Attribute <tt>response</tt> TYPE <tt>if_http_response</tt><br>
+Attribute <tt>request</tt> TYPE <tt>if_http_request</tt><br>
+Static Attribute <tt>session_id</tt> TYPE <tt>STRING</tt><br>
+Static Attribute <tt>authentication_method</tt> TYPE <tt>I</tt><br>
+Constant <tt>authmethod_service</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_compress_based_on_mime_type</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_disabled</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_enabled</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_page_error_type</tt> TYPE <tt>c LENGTH 1</tt><br>
+Constant <tt>co_response_page_option</tt> TYPE <tt>c LENGTH 1</tt><br>
+Method <tt>logoff</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>delete_mysapsso2_cookie</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>propagate_logoff</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>redirect_url</tt> TYPE <tt>STRING</tt> Optional<br>
+Method <tt>set_session_stateful</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>stateful</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>path</tt> TYPE <tt>STRING</tt> Optional<br>
+Static Method <tt>append_field_url</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>value</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>url</tt> TYPE <tt>STRING</tt><br>
+Method <tt>create_abs_url</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>protocol</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>post</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>port</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>path</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>querystring</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>url</tt> TYPE <tt>STRING</tt><br>
+Method <tt>create_rel_url</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>path</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>querystring</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>url</tt> TYPE <tt>STRING</tt><br>
+Static Method <tt>decode_base64</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>encoded</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>decoded</tt> TYPE <tt>STRING</tt><br>
+Method <tt>enable_foreign_session_access</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>url_path</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>user_id</tt> TYPE <tt>SYUNAME</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>one_time_access_token</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>session_access_token</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>url_path_is_not_supported</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>user_unknown</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>session_is_not_stateful</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>internal_error</tt><br>
+Static Method <tt>encode_base64</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>unencoded</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>encoded</tt> TYPE <tt>STRING</tt><br>
+Static Method <tt>escape_html</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>unescaped</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>escaped</tt> TYPE <tt>STRING</tt><br>
+Static Method <tt>escape_url</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>unescaped</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>escaped</tt> TYPE <tt>STRING</tt><br>
+Static Method <tt>get_extension_info</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>extension_class</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>urls</tt> TYPE <tt>STRING_TABLE</tt><br>
+Static Method <tt>get_extension_url</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>extension_class</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>urls</tt> TYPE <tt>STRING_TABLE</tt><br>
+Method <tt>get_last_error</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rc</tt> TYPE <tt>I</tt><br>
+Static Method <tt>get_location</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>protocol</tt> TYPE <tt>csequence</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>application</tt> TYPE <tt>csequence</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>for_domain</tt> TYPE <tt>csequence</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>server</tt> TYPE <tt>if_http_server</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>use_ticket_protocol</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>host</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>port</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>out_protocol</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>vh_switch</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;RETURNING <tt>url_part</tt> TYPE <tt>STRING</tt><br>
+Static Method <tt>get_location_exception</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>protocol</tt> TYPE <tt>csequence</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>application</tt> TYPE <tt>csequence</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>for_domain</tt> TYPE <tt>csequence</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>server</tt> TYPE <tt>if_http_server</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>use_ticket_protocol</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>host</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>port</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>out_protocol</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>vh_switch</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;RETURNING <tt>url_part</tt> TYPE <tt>STRING</tt><br>
+Method <tt>get_xsrf_token</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>token</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>internal_error</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>called_by_public_service</tt><br>
+Method <tt>send_page</tt><br>
+Method <tt>set_compression</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>options</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;EXCEPTIONS <tt>compression_not_possible</tt><br>
+Method <tt>set_page</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>response_page_type</tt> TYPE <tt>CHAR1</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>response_option</tt> TYPE <tt>CHAR1</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>response_option_page</tt> TYPE <tt>any</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>response_option_redirect_url</tt> TYPE <tt>any</tt> Optional<br>
+&nbsp;&nbsp;EXCEPTIONS <tt>invalid_parameter</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>document_not_found</tt><br>
+Method <tt>set_session_stateful_via_url</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>stateful</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>rewrite_url</tt> TYPE <tt>STRING</tt> Optional<br>
+Static Method <tt>unescape_url</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>escaped</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>unescaped</tt> TYPE <tt>STRING</tt><br>
+Method <tt>validate_xsrf_token</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>token</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>successful</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>token_not_found</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>cookie_not_found</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>internal_error</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>called_by_public_service</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>750</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>702</td><td bgcolor='red'>undefined</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

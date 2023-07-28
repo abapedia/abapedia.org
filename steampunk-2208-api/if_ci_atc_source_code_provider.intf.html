@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_CI_ATC_SOURCE_CODE_PROVIDER INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_CI_ATC_SOURCE_CODE_PROVIDER</h2>
+<a href="https://github.com/abapedia/steampunk-2208-api/blob/mainrc%2Fif_ci_atc_source_code_provider.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_ci_atc_source_code_provider/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_ci_atc_quickfix.intf.html">IF_CI_ATC_QUICKFIX</a></small><br><small>Next Object: <a href="if_ci_atc_unit_asserter.intf.html">IF_CI_ATC_UNIT_ASSERTER</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ty_object_type</tt> TYPE <tt>if_ci_atc_source_code_provider=>ty_object_type</tt><br>
+Type <tt>ty_compilation_unit_kind</tt> TYPE <tt>if_ci_atc_source_code_provider=>ty_compilation_unit_kind</tt><br>
+Type <tt>ty_compilation_unit_name</tt> TYPE <tt>if_ci_atc_source_code_provider=>ty_compilation_unit_name</tt><br>
+Type <tt>ty_compilation_unit</tt> TYPE <tt>if_ci_atc_source_code_provider=>ty_compilation_unit</tt><br>
+Type <tt>ty_procedure_kind</tt> TYPE <tt>if_ci_atc_source_code_provider=>ty_procedure_kind</tt><br>
+Type <tt>ty_procedure_name</tt> TYPE <tt>if_ci_atc_source_code_provider=>ty_procedure_name</tt><br>
+Type <tt>ty_procedure_id</tt> TYPE <tt>if_ci_atc_source_code_provider=>ty_procedure_id</tt><br>
+Type <tt>ty_keyword</tt> TYPE <tt>if_ci_atc_source_code_provider=>ty_keyword</tt><br>
+Type <tt>ty_lexeme</tt> TYPE <tt>if_ci_atc_source_code_provider=>ty_lexeme</tt><br>
+Type <tt>ty_source_position</tt> TYPE <tt>if_ci_atc_source_code_provider=>ty_source_position</tt><br>
+Type <tt>ty_full_name</tt> TYPE <tt>if_ci_atc_source_code_provider=>ty_full_name</tt><br>
+Type <tt>ty_compiler_reference_tag</tt> TYPE <tt>if_ci_atc_source_code_provider=>ty_compiler_reference_tag</tt><br>
+Type <tt>ty_reference_kind</tt> TYPE <tt>if_ci_atc_source_code_provider=>ty_reference_kind</tt><br>
+Type <tt>ty_compiler_usage_tag</tt> TYPE <tt>if_ci_atc_source_code_provider=>ty_compiler_usage_tag</tt><br>
+Type <tt>ty_usage_grade</tt> TYPE <tt>if_ci_atc_source_code_provider=>ty_usage_grade</tt><br>
+Type <tt>ty_usage_mode</tt> TYPE <tt>if_ci_atc_source_code_provider=>ty_usage_mode</tt><br>
+Type <tt>ty_compiler_reference</tt> TYPE <tt>if_ci_atc_source_code_provider=>ty_compiler_reference</tt><br>
+Type <tt>ty_compiler_references</tt> TYPE <tt>if_ci_atc_source_code_provider=>ty_compiler_references</tt><br>
+Type <tt>ty_token</tt> TYPE <tt>if_ci_atc_source_code_provider=>ty_token</tt><br>
+Type <tt>ty_tokens</tt> TYPE <tt>if_ci_atc_source_code_provider=>ty_tokens</tt><br>
+Type <tt>ty_pseudo_comments</tt> TYPE <tt>if_ci_atc_source_code_provider=>ty_pseudo_comments</tt><br>
+Type <tt>ty_include</tt> TYPE <tt>if_ci_atc_source_code_provider=>ty_include</tt><br>
+Type <tt>ty_statement</tt> TYPE <tt>if_ci_atc_source_code_provider=>ty_statement</tt><br>
+Type <tt>ty_statements</tt> TYPE <tt>if_ci_atc_source_code_provider=>ty_statements</tt><br>
+Type <tt>ty_procedure</tt> TYPE <tt>if_ci_atc_source_code_provider=>ty_procedure</tt><br>
+Type <tt>ty_procedures</tt> TYPE <tt>if_ci_atc_source_code_provider=>ty_procedures</tt><br>
+Type <tt>ty_token_index</tt> TYPE <tt>if_ci_atc_source_code_provider=>ty_token_index</tt><br>
+Constant <tt>compilation_unit_kinds</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>procedure_kinds</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>compiler_reference_kinds</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>usage_grades</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>usage_modes</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Method <tt>get_procedures</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>compilation_unit</tt> TYPE <tt>if_ci_atc_source_code_provider=>ty_compilation_unit</tt><br>
+&nbsp;&nbsp;RETURNING <tt>procedures</tt> TYPE <tt>REF TO STANDARD TABLE OF if_ci_atc_source_code_provider=>ty_procedure WITH DEFAULT KEY</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_ci_atc_invalid_comp_unit.clas.html">cx_ci_atc_invalid_comp_unit</a></tt><br>
+Method <tt>get_called_procedure</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>compilation_unit</tt> TYPE <tt>if_ci_atc_source_code_provider=>ty_compilation_unit</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>calling_token</tt> TYPE <tt>if_ci_atc_source_code_provider=>ty_token</tt><br>
+&nbsp;&nbsp;RETURNING <tt>procedure</tt> TYPE <tt>if_ci_atc_source_code_provider=>ty_procedure</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_ci_atc_token_no_call.clas.html">cx_ci_atc_token_no_call</a></tt><br>
+Method <tt>object_to_comp_unit</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>object</tt> TYPE <tt>if_ci_atc_check=>ty_object</tt><br>
+&nbsp;&nbsp;RETURNING <tt>compilation_unit</tt> TYPE <tt>if_ci_atc_source_code_provider=>ty_compilation_unit</tt><br>
+Method <tt>get_statement_location</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>statement</tt> TYPE <tt>if_ci_atc_source_code_provider=>ty_statement</tt><br>
+&nbsp;&nbsp;RETURNING <tt>location</tt> TYPE <tt>if_ci_atc_check=>ty_location</tt><br>
+Method <tt>get_statement_checksum</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>statement</tt> TYPE <tt>if_ci_atc_source_code_provider=>ty_statement</tt><br>
+&nbsp;&nbsp;RETURNING <tt>checksum</tt> TYPE <tt>INT4</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>750</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>702</td><td bgcolor='red'>undefined</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_ABAP_FORMAT CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_ABAP_FORMAT</h2>
+<a href="https://github.com/abapedia/steampunk-2205-api/blob/mainrc%2Fcl_abap_format.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_abap_format/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_abap_exceptional_values.clas.html">CL_ABAP_EXCEPTIONAL_VALUES</a></small><br><small>Next Object: <a href="cl_abap_gzip.clas.html">CL_ABAP_GZIP</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Constant <tt>exp_preserve</tt> TYPE <tt>I</tt><br>
+Constant <tt>a_left</tt> TYPE <tt>I</tt><br>
+Constant <tt>a_right</tt> TYPE <tt>I</tt><br>
+Constant <tt>a_center</tt> TYPE <tt>I</tt><br>
+Constant <tt>l_raw</tt> TYPE <tt>I</tt><br>
+Constant <tt>l_out</tt> TYPE <tt>I</tt><br>
+Constant <tt>l_in</tt> TYPE <tt>I</tt><br>
+Constant <tt>s_left</tt> TYPE <tt>I</tt><br>
+Constant <tt>s_leftplus</tt> TYPE <tt>I</tt><br>
+Constant <tt>s_leftspace</tt> TYPE <tt>I</tt><br>
+Constant <tt>s_right</tt> TYPE <tt>I</tt><br>
+Constant <tt>s_rightplus</tt> TYPE <tt>I</tt><br>
+Constant <tt>s_rightspace</tt> TYPE <tt>I</tt><br>
+Constant <tt>z_yes</tt> TYPE <tt>I</tt><br>
+Constant <tt>z_no</tt> TYPE <tt>I</tt><br>
+Constant <tt>n_raw</tt> TYPE <tt>I</tt><br>
+Constant <tt>n_user</tt> TYPE <tt>I</tt><br>
+Constant <tt>n_environment</tt> TYPE <tt>I</tt><br>
+Constant <tt>d_raw</tt> TYPE <tt>I</tt><br>
+Constant <tt>d_user</tt> TYPE <tt>I</tt><br>
+Constant <tt>d_environment</tt> TYPE <tt>I</tt><br>
+Constant <tt>d_iso</tt> TYPE <tt>I</tt><br>
+Constant <tt>t_raw</tt> TYPE <tt>I</tt><br>
+Constant <tt>t_user</tt> TYPE <tt>I</tt><br>
+Constant <tt>t_environment</tt> TYPE <tt>I</tt><br>
+Constant <tt>t_iso</tt> TYPE <tt>I</tt><br>
+Constant <tt>ts_raw</tt> TYPE <tt>I</tt><br>
+Constant <tt>ts_space</tt> TYPE <tt>I</tt><br>
+Constant <tt>ts_user</tt> TYPE <tt>I</tt><br>
+Constant <tt>ts_environment</tt> TYPE <tt>I</tt><br>
+Constant <tt>ts_iso</tt> TYPE <tt>I</tt><br>
+Constant <tt>c_raw</tt> TYPE <tt>I</tt><br>
+Constant <tt>c_upper</tt> TYPE <tt>I</tt><br>
+Constant <tt>c_lower</tt> TYPE <tt>I</tt><br>
+Constant <tt>x_no</tt> TYPE <tt>I</tt><br>
+Constant <tt>x_yes</tt> TYPE <tt>I</tt><br>
+Constant <tt>o_simple</tt> TYPE <tt>OUTPUTSTYLE</tt><br>
+Constant <tt>o_sign_as_postfix</tt> TYPE <tt>OUTPUTSTYLE</tt><br>
+Constant <tt>o_scale_preserving</tt> TYPE <tt>OUTPUTSTYLE</tt><br>
+Constant <tt>o_scientific</tt> TYPE <tt>OUTPUTSTYLE</tt><br>
+Constant <tt>o_scientific_with_leading_zero</tt> TYPE <tt>OUTPUTSTYLE</tt><br>
+Constant <tt>o_scale_preserving_scientific</tt> TYPE <tt>OUTPUTSTYLE</tt><br>
+Constant <tt>o_engineering</tt> TYPE <tt>OUTPUTSTYLE</tt><br>
+Constant <tt>e_xml_text</tt> TYPE <tt>I</tt><br>
+Constant <tt>e_xml_attr</tt> TYPE <tt>I</tt><br>
+Constant <tt>e_xml_attr_dq</tt> TYPE <tt>I</tt><br>
+Constant <tt>e_xml_attr_sq</tt> TYPE <tt>I</tt><br>
+Constant <tt>e_html_text</tt> TYPE <tt>I</tt><br>
+Constant <tt>e_html_attr</tt> TYPE <tt>I</tt><br>
+Constant <tt>e_html_attr_dq</tt> TYPE <tt>I</tt><br>
+Constant <tt>e_html_attr_sq</tt> TYPE <tt>I</tt><br>
+Constant <tt>e_html_js</tt> TYPE <tt>I</tt><br>
+Constant <tt>e_html_js_html</tt> TYPE <tt>I</tt><br>
+Constant <tt>e_url</tt> TYPE <tt>I</tt><br>
+Constant <tt>e_url_full</tt> TYPE <tt>I</tt><br>
+Constant <tt>e_uri</tt> TYPE <tt>I</tt><br>
+Constant <tt>e_uri_full</tt> TYPE <tt>I</tt><br>
+Constant <tt>e_uri_1</tt> TYPE <tt>I</tt><br>
+Constant <tt>e_uri_lc</tt> TYPE <tt>I</tt><br>
+Constant <tt>e_uri_full_lc</tt> TYPE <tt>I</tt><br>
+Constant <tt>e_regex</tt> TYPE <tt>I</tt><br>
+Constant <tt>e_string_tpl</tt> TYPE <tt>I</tt><br>
+Constant <tt>e_json_string</tt> TYPE <tt>I</tt><br>
+Constant <tt>e_json_string_nu</tt> TYPE <tt>I</tt><br>
+Constant <tt>e_xss_ml</tt> TYPE <tt>I</tt><br>
+Constant <tt>e_xss_ml_nu</tt> TYPE <tt>I</tt><br>
+Constant <tt>e_xss_js</tt> TYPE <tt>I</tt><br>
+Constant <tt>e_xss_js_nu</tt> TYPE <tt>I</tt><br>
+Constant <tt>e_xss_css</tt> TYPE <tt>I</tt><br>
+Constant <tt>e_xss_css_nu</tt> TYPE <tt>I</tt><br>
+Constant <tt>e_xss_url</tt> TYPE <tt>I</tt><br>
+Constant <tt>e_xss_ml_7b</tt> TYPE <tt>I</tt><br>
+Constant <tt>e_xss_js_7b</tt> TYPE <tt>I</tt><br>
+Constant <tt>e_xss_css_7b</tt> TYPE <tt>I</tt><br>
+Constant <tt>e_xss_url_7b</tt> TYPE <tt>I</tt><br>
+Constant <tt>e_pcre</tt> TYPE <tt>I</tt><br>
+Constant <tt>e_pcre_extended</tt> TYPE <tt>I</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='green'>true</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

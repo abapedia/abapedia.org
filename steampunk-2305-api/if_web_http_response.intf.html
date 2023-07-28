@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_WEB_HTTP_RESPONSE INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_WEB_HTTP_RESPONSE</h2>
+<a href="https://github.com/abapedia/steampunk-2305-api/blob/mainrc%2Fif_web_http_response.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_web_http_response/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_web_http_request.intf.html">IF_WEB_HTTP_REQUEST</a></small><br><small>Next Object: <a href="if_web_http_status.intf.html">IF_WEB_HTTP_STATUS</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>tx_contract</tt> TYPE <tt>if_web_http_response=>tx_contract</tt><br>
+Type <tt>http_status</tt> TYPE <tt>if_web_http_response=>http_status</tt><br>
+Constant <tt>co_compress_based_on_mime_type</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_formfield_encoding_raw</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_formfield_encoding_encoded</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_compress_none</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_compress_in_all_cases</tt> TYPE <tt>I</tt><br>
+Method <tt>set_text</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_text</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_offset</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_length</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>r_value</tt> TYPE <tt>if_web_http_response</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_web_message_error.clas.html">cx_web_message_error</a></tt><br>
+Method <tt>get_text</tt><br>
+&nbsp;&nbsp;RETURNING <tt>r_value</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_web_message_error.clas.html">cx_web_message_error</a></tt><br>
+Method <tt>set_binary</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_data</tt> TYPE <tt>XSTRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_offset</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_length</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>r_value</tt> TYPE <tt>if_web_http_response</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_web_message_error.clas.html">cx_web_message_error</a></tt><br>
+Method <tt>set_header_field</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_value</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>r_value</tt> TYPE <tt>if_web_http_response</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_web_message_error.clas.html">cx_web_message_error</a></tt><br>
+Method <tt>get_binary</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_offset</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_length</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>r_value</tt> TYPE <tt>XSTRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_web_message_error.clas.html">cx_web_message_error</a></tt><br>
+Method <tt>set_header_fields</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_fields</tt> TYPE <tt>if_web_http_request=>name_value_pairs</tt><br>
+&nbsp;&nbsp;RETURNING <tt>r_value</tt> TYPE <tt>if_web_http_response</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_web_message_error.clas.html">cx_web_message_error</a></tt><br>
+Method <tt>get_header_field</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>r_value</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_web_message_error.clas.html">cx_web_message_error</a></tt><br>
+Method <tt>get_header_fields</tt><br>
+&nbsp;&nbsp;RETURNING <tt>r_value</tt> TYPE <tt>if_web_http_request=>name_value_pairs</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_web_message_error.clas.html">cx_web_message_error</a></tt><br>
+Method <tt>set_status</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_code</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_reason</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>r_value</tt> TYPE <tt>if_web_http_response</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_web_message_error.clas.html">cx_web_message_error</a></tt><br>
+Method <tt>get_status</tt><br>
+&nbsp;&nbsp;RETURNING <tt>r_value</tt> TYPE <tt>if_web_http_response=>http_status</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_web_message_error.clas.html">cx_web_message_error</a></tt><br>
+Method <tt>set_cookie</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_path</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_value</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_domain</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_expires</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_secure</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>r_value</tt> TYPE <tt>if_web_http_response</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_web_message_error.clas.html">cx_web_message_error</a></tt><br>
+Method <tt>get_cookie</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_path</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>r_value</tt> TYPE <tt>if_web_http_request=>cookie</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_web_message_error.clas.html">cx_web_message_error</a></tt><br>
+Method <tt>get_cookies</tt><br>
+&nbsp;&nbsp;RETURNING <tt>r_value</tt> TYPE <tt>if_web_http_request=>cookies</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_web_message_error.clas.html">cx_web_message_error</a></tt><br>
+Method <tt>to_xstring</tt><br>
+&nbsp;&nbsp;RETURNING <tt>data</tt> TYPE <tt>XSTRING</tt><br>
+Method <tt>add_multipart</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>suppress_content_length</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>r_value</tt> TYPE <tt>if_web_http_response</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_web_message_error.clas.html">cx_web_message_error</a></tt><br>
+Method <tt>get_multipart</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>index</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;RETURNING <tt>r_value</tt> TYPE <tt>if_web_http_response</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_web_message_error.clas.html">cx_web_message_error</a></tt><br>
+Method <tt>num_multiparts</tt><br>
+&nbsp;&nbsp;RETURNING <tt>num</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>cx_web_message_error</tt><br>
+Method <tt>delete_header_field</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+Method <tt>delete_cookie_at_client</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>path</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>domain</tt> TYPE <tt>STRING</tt> Optional<br>
+Method <tt>get_content_type</tt><br>
+&nbsp;&nbsp;RETURNING <tt>content_type</tt> TYPE <tt>STRING</tt><br>
+Method <tt>set_compression</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>disable_extended_checks</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>options</tt> TYPE <tt>I</tt> Optional<br>
+Method <tt>set_content_type</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>content_type</tt> TYPE <tt>STRING</tt><br>
+Method <tt>suppress_content_type</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>suppress</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+Method <tt>from_xstring</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>data</tt> TYPE <tt>XSTRING</tt><br>
+Method <tt>get_data_length</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>data_length</tt> TYPE <tt>I</tt><br>
+Method <tt>set_formfield_encoding</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>formfield_encoding</tt> TYPE <tt>I</tt><br>
+Method <tt>get_last_error</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rc</tt> TYPE <tt>I</tt><br>
+Method <tt>server_cache_expire_rel</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>expires_rel</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>etag</tt> TYPE <tt>CHAR32</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>browser_dependent</tt> TYPE <tt>BOOLEAN</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>no_ufo_cache</tt> TYPE <tt>BOOLEAN</tt> Optional<br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

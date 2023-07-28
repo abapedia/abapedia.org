@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_ABAP_CORRESPONDING CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_ABAP_CORRESPONDING</h2>
+<a href="https://github.com/abapedia/steampunk-2211-api/blob/mainrc%2Fcl_abap_corresponding.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_abap_corresponding/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_abap_conv_codepage.clas.html">CL_ABAP_CONV_CODEPAGE</a></small><br><small>Next Object: <a href="cl_abap_datadescr.clas.html">CL_ABAP_DATADESCR</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>mapping_info</tt> TYPE <tt>cl_abap_corresponding=>mapping_info</tt><br>
+Type <tt>mapping_info_values</tt> TYPE <tt>cl_abap_corresponding=>mapping_info_values</tt><br>
+Type <tt>mapping_table</tt> TYPE <tt>cl_abap_corresponding=>mapping_table</tt><br>
+Type <tt>mapping_table_value</tt> TYPE <tt>cl_abap_corresponding=>mapping_table_value</tt><br>
+Constant <tt>mapping_component</tt> TYPE <tt>I</tt><br>
+Constant <tt>mapping_except_component</tt> TYPE <tt>I</tt><br>
+Constant <tt>mapping_except_all</tt> TYPE <tt>I</tt><br>
+Constant <tt>using_key</tt> TYPE <tt>I</tt><br>
+Constant <tt>mapping_using_component</tt> TYPE <tt>I</tt><br>
+Constant <tt>mapping_discarding_duplicates</tt> TYPE <tt>I</tt><br>
+Constant <tt>mapping_value</tt> TYPE <tt>I</tt><br>
+Constant <tt>mapping_default_value</tt> TYPE <tt>I</tt><br>
+Static Method <tt>create</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>source</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>destination</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>mapping</tt> TYPE <tt>cl_abap_corresponding=>mapping_table</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>discarding_duplicates</tt> TYPE <tt>SYCHAR01</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>mover</tt> TYPE <tt>cl_abap_corresponding</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_corr_dyn_error.clas.html">cx_corr_dyn_error</a></tt><br>
+Method <tt>execute</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>source</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>keeping_lines</tt> TYPE <tt>SYCHAR01</tt> Optional<br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>destination</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_corr_dyn_error.clas.html">cx_corr_dyn_error</a></tt><br>
+Static Method <tt>create_using</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>destination</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>using</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>mapping</tt> TYPE <tt>cl_abap_corresponding=>mapping_table</tt><br>
+&nbsp;&nbsp;RETURNING <tt>mover</tt> TYPE <tt>cl_abap_corresponding</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_corr_dyn_error.clas.html">cx_corr_dyn_error</a></tt><br>
+Method <tt>execute_using</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>using</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>destination</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_corr_dyn_error.clas.html">cx_corr_dyn_error</a></tt><br>
+Static Method <tt>create_with_value</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>source</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>destination</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>mapping</tt> TYPE <tt>cl_abap_corresponding=>mapping_table_value</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>discarding_duplicates</tt> TYPE <tt>SYCHAR01</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>mover</tt> TYPE <tt>cl_abap_corresponding</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_corr_dyn_error.clas.html">cx_corr_dyn_error</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

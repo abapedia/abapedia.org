@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_XCO_FM_EXCEPTIONS INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_XCO_FM_EXCEPTIONS</h2>
+<a href="https://github.com/abapedia/steampunk-2111-api/blob/mainrc%2Fif_xco_fm_exceptions.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_xco_fm_exceptions/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_xco_fm_exception_content.intf.html">IF_XCO_FM_EXCEPTION_CONTENT</a></small><br><small>Next Object: <a href="if_xco_fm_exceptions_factory.intf.html">IF_XCO_FM_EXCEPTIONS_FACTORY</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Attribute <tt>function_module</tt> TYPE <tt>if_xco_function_module</tt><br>
+Method <tt>get_names</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rt_names</tt> TYPE <tt>SXCO_T_FM_EXCEPTION_NAMES</tt><br>
+Method <tt>get</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rt_exceptions</tt> TYPE <tt>SXCO_T_FM_EXCEPTIONS</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

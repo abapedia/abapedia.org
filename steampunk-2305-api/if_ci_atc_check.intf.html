@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_CI_ATC_CHECK INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_CI_ATC_CHECK</h2>
+<a href="https://github.com/abapedia/steampunk-2305-api/blob/mainrc%2Fif_ci_atc_check.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_ci_atc_check/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_chdo_object_tools_rel.intf.html">IF_CHDO_OBJECT_TOOLS_REL</a></small><br><small>Next Object: <a href="if_ci_atc_check_meta_data.intf.html">IF_CI_ATC_CHECK_META_DATA</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ty_object</tt> TYPE <tt>if_ci_atc_check=>ty_object</tt><br>
+Type <tt>ty_position</tt> TYPE <tt>if_ci_atc_check=>ty_position</tt><br>
+Type <tt>ty_location</tt> TYPE <tt>if_ci_atc_check=>ty_location</tt><br>
+Type <tt>ty_finding_code</tt> TYPE <tt>if_ci_atc_check=>ty_finding_code</tt><br>
+Type <tt>ty_message_parameters</tt> TYPE <tt>if_ci_atc_check=>ty_message_parameters</tt><br>
+Type <tt>ty_finding_severity</tt> TYPE <tt>if_ci_atc_check=>ty_finding_severity</tt><br>
+Type <tt>ty_checksum</tt> TYPE <tt>INT4</tt><br>
+Type <tt>ty_details</tt> TYPE <tt>cl_ci_atc_finding_details</tt><br>
+Type <tt>ty_finding</tt> TYPE <tt>if_ci_atc_check=>ty_finding</tt><br>
+Type <tt>ty_findings</tt> TYPE <tt>if_ci_atc_check=>ty_findings</tt><br>
+Type <tt>ty_data_provider</tt> TYPE <tt>cl_ci_atc_data_provider</tt><br>
+Constant <tt>finding_severities</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Method <tt>run</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>object</tt> TYPE <tt>if_ci_atc_check=>ty_object</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>data_provider</tt> TYPE <tt>cl_ci_atc_data_provider</tt><br>
+&nbsp;&nbsp;RETURNING <tt>findings</tt> TYPE <tt>if_ci_atc_check=>ty_findings</tt><br>
+Method <tt>get_meta_data</tt><br>
+&nbsp;&nbsp;RETURNING <tt>meta_data</tt> TYPE <tt>if_ci_atc_check_meta_data</tt><br>
+Method <tt>set_attributes</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>attributes</tt> TYPE <tt>if_ci_atc_check_meta_data=>ty_attributes</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_ci_atc_check_invalid_attr.clas.html">cx_ci_atc_check_invalid_attr</a></tt><br>
+Method <tt>verify_prerequisites</tt><br>
+&nbsp;&nbsp;RETURNING <tt>verification_findings</tt> TYPE <tt>if_ci_atc_check=>ty_findings</tt><br>
+Method <tt>set_assistant_factory</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>factory</tt> TYPE <tt>cl_ci_atc_assistant_factory</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>750</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>702</td><td bgcolor='red'>undefined</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_BCS_MAIL_SYSTEM_CONFIG CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_BCS_MAIL_SYSTEM_CONFIG</h2>
+<a href="https://github.com/abapedia/steampunk-2211-api/blob/mainrc%2Fcl_bcs_mail_system_config.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_bcs_mail_system_config/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_bcs_mail_message.clas.html">CL_BCS_MAIL_MESSAGE</a></small><br><small>Next Object: <a href="cl_bcs_mail_textpart.clas.html">CL_BCS_MAIL_TEXTPART</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ty_days</tt> TYPE <tt>cl_bcs_mail_system_config=>ty_days</tt><br>
+Type <tt>ty_default_sender_address</tt> TYPE <tt>cl_bcs_mail_system_config=>ty_default_sender_address</tt><br>
+Type <tt>ty_default_sender_name</tt> TYPE <tt>cl_bcs_mail_system_config=>ty_default_sender_name</tt><br>
+Type <tt>ty_recipient_domain</tt> TYPE <tt>cl_bcs_mail_system_config=>ty_recipient_domain</tt><br>
+Type <tt>ty_sender_domain</tt> TYPE <tt>cl_bcs_mail_system_config=>ty_sender_domain</tt><br>
+Type <tt>tyt_recipient_domains</tt> TYPE <tt>cl_bcs_mail_system_config=>tyt_recipient_domains</tt><br>
+Type <tt>tyt_sender_domains</tt> TYPE <tt>cl_bcs_mail_system_config=>tyt_sender_domains</tt><br>
+Static Method <tt>create_instance</tt><br>
+&nbsp;&nbsp;RETURNING <tt>result</tt> TYPE <tt>cl_bcs_mail_system_config</tt><br>
+Method <tt>set_address_check_active</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_address_check_active</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bcs_mail_config.clas.html">cx_bcs_mail_config</a></tt><br>
+Method <tt>get_address_check_active</tt><br>
+&nbsp;&nbsp;RETURNING <tt>address_check_active</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>add_allowed_recipient_domains</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_allowed_rec_domains</tt> TYPE <tt>cl_bcs_mail_system_config=>tyt_recipient_domains</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bcs_mail_config.clas.html">cx_bcs_mail_config</a></tt><br>
+Method <tt>add_allowed_sender_domains</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_allowed_sender_domains</tt> TYPE <tt>cl_bcs_mail_system_config=>tyt_sender_domains</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bcs_mail_config.clas.html">cx_bcs_mail_config</a></tt><br>
+Method <tt>modify_default_sender_address</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_default_address</tt> TYPE <tt>cl_bcs_mail_system_config=>ty_default_sender_address</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_default_name</tt> TYPE <tt>cl_bcs_mail_system_config=>ty_default_sender_name</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bcs_mail_config.clas.html">cx_bcs_mail_config</a></tt><br>
+Method <tt>read_allowed_recipient_domains</tt><br>
+&nbsp;&nbsp;RETURNING <tt>allowed_recipient_domains</tt> TYPE <tt>cl_bcs_mail_system_config=>tyt_recipient_domains</tt><br>
+Method <tt>read_allowed_sender_domains</tt><br>
+&nbsp;&nbsp;RETURNING <tt>allowed_sender_domains</tt> TYPE <tt>cl_bcs_mail_system_config=>tyt_sender_domains</tt><br>
+Method <tt>read_default_sender_address</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_default_sender_address</tt> TYPE <tt>cl_bcs_mail_system_config=>ty_default_sender_address</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_default_sender_name</tt> TYPE <tt>cl_bcs_mail_system_config=>ty_default_sender_name</tt><br>
+Method <tt>delete_allowed_rec_domains</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_deletable_rec_domains</tt> TYPE <tt>cl_bcs_mail_system_config=>tyt_recipient_domains</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bcs_mail_config.clas.html">cx_bcs_mail_config</a></tt><br>
+Method <tt>delete_allowed_sender_domains</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_deletable_sender_domains</tt> TYPE <tt>cl_bcs_mail_system_config=>tyt_sender_domains</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bcs_mail_config.clas.html">cx_bcs_mail_config</a></tt><br>
+Method <tt>delete_default_sender_addr</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_default_sender_address</tt> TYPE <tt>cl_bcs_mail_system_config=>ty_default_sender_address</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bcs_mail_config.clas.html">cx_bcs_mail_config</a></tt><br>
+Method <tt>set_days_until_mail_expires</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_number_of_days</tt> TYPE <tt>cl_bcs_mail_system_config=>ty_days</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bcs_mail_config.clas.html">cx_bcs_mail_config</a></tt><br>
+Method <tt>get_days_until_mail_expires</tt><br>
+&nbsp;&nbsp;RETURNING <tt>number_of_days</tt> TYPE <tt>cl_bcs_mail_system_config=>ty_days</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bcs_mail_config.clas.html">cx_bcs_mail_config</a></tt><br>
+Method <tt>delete_days_until_mail_expires</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bcs_mail_config.clas.html">cx_bcs_mail_config</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>750</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>702</td><td bgcolor='red'>undefined</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

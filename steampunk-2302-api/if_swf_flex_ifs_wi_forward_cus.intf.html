@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_SWF_FLEX_IFS_WI_FORWARD_CUS INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_SWF_FLEX_IFS_WI_FORWARD_CUS</h2>
+<a href="https://github.com/abapedia/steampunk-2302-api/blob/mainrc%2Fif_swf_flex_ifs_wi_forward_cus.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_swf_flex_ifs_wi_forward_cus/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_swf_flex_ifs_condition_eval.intf.html">IF_SWF_FLEX_IFS_CONDITION_EVAL</a></small><br><small>Next Object: <a href="if_sxml.intf.html">IF_SXML</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Interface <tt><a href="if_badi_interface.intf.html">if_badi_interface</a></tt><br>
+Type <tt>t_sont_key</tt> TYPE <tt>if_swf_flex_ifs_wi_forward_cus=>t_sont_key</tt><br>
+Type <tt>tt_agent</tt> TYPE <tt>if_swf_flex_ifs_wi_forward_cus=>tt_agent</tt><br>
+Type <tt>t_agent</tt> TYPE <tt>SWF_PBL_AGENT</tt><br>
+Type <tt>t_step_id</tt> TYPE <tt>if_swf_flex_ifs_wi_forward_cus=>t_step_id</tt><br>
+Type <tt>t_task</tt> TYPE <tt>if_swf_flex_ifs_wi_forward_cus=>t_task</tt><br>
+Type <tt>t_user</tt> TYPE <tt>if_swf_flex_ifs_wi_forward_cus=>t_user</tt><br>
+Type <tt>t_wi_id</tt> TYPE <tt>if_swf_flex_ifs_wi_forward_cus=>t_wi_id</tt><br>
+Type <tt>t_wi_status</tt> TYPE <tt>if_swf_flex_ifs_wi_forward_cus=>t_wi_status</tt><br>
+Type <tt>t_workflow_id</tt> TYPE <tt>if_swf_flex_ifs_wi_forward_cus=>t_workflow_id</tt><br>
+Method <tt>get_agents_for_forwarding</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_wi_task</tt> TYPE <tt>if_swf_flex_ifs_wi_forward_cus=>t_task</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_workflow_id</tt> TYPE <tt>if_swf_flex_ifs_wi_forward_cus=>t_workflow_id</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_step_id</tt> TYPE <tt>if_swf_flex_ifs_wi_forward_cus=>t_step_id</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_wi_id</tt> TYPE <tt>if_swf_flex_ifs_wi_forward_cus=>t_wi_id</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_wi_status</tt> TYPE <tt>if_swf_flex_ifs_wi_forward_cus=>t_wi_status</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_current_user</tt> TYPE <tt>if_swf_flex_ifs_wi_forward_cus=>t_user</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>is_sap_object_node_key</tt> TYPE <tt>if_swf_flex_ifs_wi_forward_cus=>t_sont_key</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_excluded_agents</tt> TYPE <tt>if_swf_flex_ifs_wi_forward_cus=>tt_agent</tt><br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ct_possible_agents</tt> TYPE <tt>if_swf_flex_ifs_wi_forward_cus=>tt_agent</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>cv_all_users</tt> TYPE <tt>SWF_ALL_USERS</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_ble_runtime_error.clas.html">cx_ble_runtime_error</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

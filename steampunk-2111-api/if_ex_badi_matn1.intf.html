@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_EX_BADI_MATN1 INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_EX_BADI_MATN1</h2>
+<a href="https://github.com/abapedia/steampunk-2111-api/blob/mainrc%2Fif_ex_badi_matn1.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_ex_badi_matn1/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_constraint.intf.html">IF_CONSTRAINT</a></small><br><small>Next Object: <a href="if_fdt_cp_actions.intf.html">IF_FDT_CP_ACTIONS</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Interface <tt><a href="if_badi_interface.intf.html">if_badi_interface</a></tt><br>
+Method <tt>matn1_input_001</tt><br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>matnr</tt> TYPE <tt>c LENGTH 1</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>ignore_rest</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>length_error</tt><br>
+Method <tt>matn1_input_002</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>matnr_orig</tt> TYPE <tt>c LENGTH 1</tt><br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>matnr</tt> TYPE <tt>c LENGTH 1</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>length_error</tt><br>
+Method <tt>matn1_output_001</tt><br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>matnr</tt> TYPE <tt>c LENGTH 1</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>ignore_rest</tt><br>
+Method <tt>matn1_output_002</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>matnr_orig</tt> TYPE <tt>c LENGTH 1</tt><br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>matnr</tt> TYPE <tt>c LENGTH 1</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='green'>true</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

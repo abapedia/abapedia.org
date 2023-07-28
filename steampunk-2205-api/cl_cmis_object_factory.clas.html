@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_CMIS_OBJECT_FACTORY CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_CMIS_OBJECT_FACTORY</h2>
+<a href="https://github.com/abapedia/steampunk-2205-api/blob/mainrc%2Fcl_cmis_object_factory.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_cmis_object_factory/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_cmis_constants.clas.html">CL_CMIS_CONSTANTS</a></small><br><small>Next Object: <a href="cl_cmis_property_ids.clas.html">CL_CMIS_PROPERTY_IDS</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Static Method <tt>create_boolean_prop_multi</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_property_id</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_value</tt> TYPE <tt>CMIS_T_BOOLEAN</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_local_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_display_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_query_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rs_property</tt> TYPE <tt>CMIS_S_PROPERTY</tt><br>
+Static Method <tt>create_boolean_prop_notset</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_property_id</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_local_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_display_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_query_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rs_property</tt> TYPE <tt>CMIS_S_PROPERTY</tt><br>
+Static Method <tt>create_boolean_prop_single</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_property_id</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_value</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_local_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_display_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_query_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rs_property</tt> TYPE <tt>CMIS_S_PROPERTY</tt><br>
+Static Method <tt>create_datetime_prop_multi</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_property_id</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_local_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_display_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_query_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_value</tt> TYPE <tt>CMIS_T_DATE_TIME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rs_property</tt> TYPE <tt>CMIS_S_PROPERTY</tt><br>
+Static Method <tt>create_datetime_prop_notset</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_property_id</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_local_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_display_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_query_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rs_property</tt> TYPE <tt>CMIS_S_PROPERTY</tt><br>
+Static Method <tt>create_datetime_prop_single</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_property_id</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_timestamp</tt> TYPE <tt>TIMESTAMPL</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_timezone</tt> TYPE <tt>TIMEZONE</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_local_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_display_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_query_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rs_property</tt> TYPE <tt>CMIS_S_PROPERTY</tt><br>
+Static Method <tt>create_decimal_prop_multi</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_property_id</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_value</tt> TYPE <tt>CMIS_T_DECIMAL</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_local_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_display_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_query_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rs_property</tt> TYPE <tt>CMIS_S_PROPERTY</tt><br>
+Static Method <tt>create_decimal_prop_notset</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_property_id</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_local_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_display_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_query_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rs_property</tt> TYPE <tt>CMIS_S_PROPERTY</tt><br>
+Static Method <tt>create_decimal_prop_single</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_property_id</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_value</tt> TYPE <tt>CMIS_DECIMAL</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_local_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_display_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_query_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rs_property</tt> TYPE <tt>CMIS_S_PROPERTY</tt><br>
+Static Method <tt>create_document_type</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_custom_properties</tt> TYPE <tt>CMIS_T_PROPERTY_DEFINITION</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rs_type</tt> TYPE <tt>CMIS_S_TYPE_DEFINITION</tt><br>
+Static Method <tt>create_folder_type</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_custom_properties</tt> TYPE <tt>CMIS_T_PROPERTY_DEFINITION</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rs_type</tt> TYPE <tt>CMIS_S_TYPE_DEFINITION</tt><br>
+Static Method <tt>create_html_prop_multi</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_property_id</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_value</tt> TYPE <tt>CMIS_T_STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_local_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_display_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_query_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rs_property</tt> TYPE <tt>CMIS_S_PROPERTY</tt><br>
+Static Method <tt>create_html_prop_notset</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_property_id</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_local_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_display_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_query_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rs_property</tt> TYPE <tt>CMIS_S_PROPERTY</tt><br>
+Static Method <tt>create_html_prop_single</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_property_id</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_value</tt> TYPE <tt>CMIS_STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_local_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_display_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_query_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rs_property</tt> TYPE <tt>CMIS_S_PROPERTY</tt><br>
+Static Method <tt>create_id_prop_multi</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_property_id</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_value</tt> TYPE <tt>CMIS_T_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_local_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_display_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_query_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rs_property</tt> TYPE <tt>CMIS_S_PROPERTY</tt><br>
+Static Method <tt>create_id_prop_notset</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_property_id</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_local_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_display_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_query_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rs_property</tt> TYPE <tt>CMIS_S_PROPERTY</tt><br>
+Static Method <tt>create_id_prop_single</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_property_id</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_value</tt> TYPE <tt>CMIS_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_local_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_display_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_query_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rs_property</tt> TYPE <tt>CMIS_S_PROPERTY</tt><br>
+Static Method <tt>create_integer_prop_multi</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_property_id</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_value</tt> TYPE <tt>CMIS_T_LONG</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_local_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_display_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_query_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rs_property</tt> TYPE <tt>CMIS_S_PROPERTY</tt><br>
+Static Method <tt>create_integer_prop_notset</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_property_id</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_local_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_display_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_query_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rs_property</tt> TYPE <tt>CMIS_S_PROPERTY</tt><br>
+Static Method <tt>create_integer_prop_single</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_property_id</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_value</tt> TYPE <tt>CMIS_LONG</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_local_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_display_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_query_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rs_property</tt> TYPE <tt>CMIS_S_PROPERTY</tt><br>
+Static Method <tt>create_string_prop_multi</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_property_id</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_value</tt> TYPE <tt>CMIS_T_STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_local_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_display_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_query_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rs_property</tt> TYPE <tt>CMIS_S_PROPERTY</tt><br>
+Static Method <tt>create_string_prop_notset</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_property_id</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_local_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_display_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_query_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rs_property</tt> TYPE <tt>CMIS_S_PROPERTY</tt><br>
+Static Method <tt>create_string_prop_single</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_property_id</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_value</tt> TYPE <tt>CMIS_STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_local_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_display_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_query_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rs_property</tt> TYPE <tt>CMIS_S_PROPERTY</tt><br>
+Static Method <tt>create_uri_prop_multi</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_property_id</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_value</tt> TYPE <tt>CMIS_T_STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_local_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_display_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_query_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rs_property</tt> TYPE <tt>CMIS_S_PROPERTY</tt><br>
+Static Method <tt>create_uri_prop_notset</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_property_id</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_local_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_display_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_query_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rs_property</tt> TYPE <tt>CMIS_S_PROPERTY</tt><br>
+Static Method <tt>create_uri_prop_single</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_property_id</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_value</tt> TYPE <tt>CMIS_STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_local_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_display_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_query_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rs_property</tt> TYPE <tt>CMIS_S_PROPERTY</tt><br>
+Static Method <tt>create_empty_prop</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_property_id</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_property_type</tt> TYPE <tt>CMIS_ENUM</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_local_name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_display_name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_query_name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rs_property</tt> TYPE <tt>CMIS_S_PROPERTY</tt><br>
+Static Method <tt>create_repository_info_read</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_description</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_id</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_vendor</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_product_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_product_version</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_root_folder_id</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_acl_supported</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rs_repository_info</tt> TYPE <tt>CMIS_S_REPOSITORY_INFO</tt><br>
+Static Method <tt>get_document_base_type</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rs_type</tt> TYPE <tt>CMIS_S_TYPE_DEFINITION</tt><br>
+Static Method <tt>get_folder_base_type</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rs_type</tt> TYPE <tt>CMIS_S_TYPE_DEFINITION</tt><br>
+Static Method <tt>get_common_prop_defs</tt><br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>cs_property_defs</tt> TYPE <tt>CMIS_T_PROPERTY_DEFINITION</tt><br>
+Static Method <tt>create_date_time_value</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_timezone</tt> TYPE <tt>TIMEZONE</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_timestamp</tt> TYPE <tt>TIMESTAMPL</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rs_date_time</tt> TYPE <tt>CMIS_S_DATE_TIME</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+Static Method <tt>get_secondary_base_type</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rs_type</tt> TYPE <tt>CMIS_S_TYPE_DEFINITION</tt><br>
+Static Method <tt>get_relationship_base_type</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rs_type</tt> TYPE <tt>CMIS_S_TYPE_DEFINITION</tt><br>
+Static Method <tt>get_item_base_type</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rs_type</tt> TYPE <tt>CMIS_S_TYPE_DEFINITION</tt><br>
+Static Method <tt>get_mcm_value_help_base_type</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rs_type</tt> TYPE <tt>CMIS_S_TYPE_DEFINITION</tt><br>
+Static Method <tt>get_mcm_link_base_type</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rs_type</tt> TYPE <tt>CMIS_S_TYPE_DEFINITION</tt><br>
+Static Method <tt>get_secondary_template_type</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rs_type</tt> TYPE <tt>CMIS_S_TYPE_DEFINITION</tt><br>
+Static Method <tt>get_sap_link_base_type</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rs_type</tt> TYPE <tt>CMIS_S_TYPE_DEFINITION</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

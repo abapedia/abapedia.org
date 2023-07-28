@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_SOAP_DESTINATION INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_SOAP_DESTINATION</h2>
+<a href="https://github.com/abapedia/steampunk-2302-api/blob/mainrc%2Fif_soap_destination.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_soap_destination/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_slin_gov_dbtab_access.intf.html">IF_SLIN_GOV_DBTAB_ACCESS</a></small><br><small>Next Object: <a href="if_swf_cp_json.intf.html">IF_SWF_CP_JSON</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Interface <tt><a href="if_proxy_destination.intf.html">if_proxy_destination</a></tt><br>
+Type <tt>tv_operation</tt> TYPE <tt>if_soap_destination=>tv_operation</tt><br>
+Constant <tt>soap_version_11</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>soap_version_12</tt> TYPE <tt>STRING</tt><br>
+Method <tt>set_soap_version</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_soap_version</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_soap_destination_error.clas.html">cx_soap_destination_error</a></tt><br>
+Method <tt>set_url</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_url</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_soap_destination_error.clas.html">cx_soap_destination_error</a></tt><br>
+Method <tt>set_soap_action</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_operation</tt> TYPE <tt>if_soap_destination=>tv_operation</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_action</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_soap_destination_error.clas.html">cx_soap_destination_error</a></tt><br>
+Method <tt>set_max_wait_time</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_max_wait_time</tt> TYPE <tt>INT4</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_soap_destination_error.clas.html">cx_soap_destination_error</a></tt><br>
+Method <tt>set_compress_message</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_compress_message</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_soap_destination_error.clas.html">cx_soap_destination_error</a></tt><br>
+Method <tt>set_basic_authentication</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_user</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_password</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_soap_destination_error.clas.html">cx_soap_destination_error</a></tt><br>
+Method <tt>set_scc</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_location_id</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_soap_destination_error.clas.html">cx_soap_destination_error</a></tt><br>
+Method <tt>use_client_certificate</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_soap_destination_error.clas.html">cx_soap_destination_error</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

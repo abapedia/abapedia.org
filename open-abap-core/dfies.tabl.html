@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - DFIES TABL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>TABL DFIES</h2>
+<a href="https://github.com/open-abap/open-abap-core/blob/mainrc%2Frtti%2Fdfies.tabl.xml">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/ddic/structures/dfies">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="bapireturn.tabl.html">BAPIRETURN</a></small><br><small>Next Object: <a href="file_table.tabl.html">FILE_TABLE</a></small><br><br>Category: Structure<br><br><table border="1">
+<tr>
+      <td><u>Field</u></td>
+      <td><u>DDIC</u></td>
+      <td><u>Type</u></td>
+      </tr>
+<tr>
+        <td><tt>TABNAME</tt></td>
+        <td></td>
+        <td>```c LENGTH 30```</td>
+        </tr>
+<tr>
+        <td><tt>FIELDNAME</tt></td>
+        <td></td>
+        <td>```c LENGTH 30```</td>
+        </tr>
+<tr>
+        <td><tt>LANGU</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>POSITION</tt></td>
+        <td></td>
+        <td>```n LENGTH 4```</td>
+        </tr>
+<tr>
+        <td><tt>OFFSET</tt></td>
+        <td></td>
+        <td>```n LENGTH 6```</td>
+        </tr>
+<tr>
+        <td><tt>DOMNAME</tt></td>
+        <td></td>
+        <td>```c LENGTH 30```</td>
+        </tr>
+<tr>
+        <td><tt>ROLLNAME</tt></td>
+        <td></td>
+        <td>```c LENGTH 30```</td>
+        </tr>
+<tr>
+        <td><tt>CHECKTABLE</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>LENG</tt></td>
+        <td></td>
+        <td>```n LENGTH 6```</td>
+        </tr>
+<tr>
+        <td><tt>INTLEN</tt></td>
+        <td></td>
+        <td>```n LENGTH 6```</td>
+        </tr>
+<tr>
+        <td><tt>OUTPUTLEN</tt></td>
+        <td></td>
+        <td>```n LENGTH 6```</td>
+        </tr>
+<tr>
+        <td><tt>DECIMALS</tt></td>
+        <td></td>
+        <td>```n LENGTH 6```</td>
+        </tr>
+<tr>
+        <td><tt>DATATYPE</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>INTTYPE</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>REFTABLE</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>REFFIELD</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>PRECFIELD</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>AUTHORID</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>MEMORYID</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>LOGFLAG</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>MASK</tt></td>
+        <td></td>
+        <td>```c LENGTH 20```</td>
+        </tr>
+<tr>
+        <td><tt>MASKLEN</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>CONVEXIT</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>HEADLEN</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>SCRLEN1</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>SCRLEN2</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>SCRLEN3</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>FIELDTEXT</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>REPTEXT</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>SCRTEXT_S</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>SCRTEXT_M</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>SCRTEXT_L</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>KEYFLAG</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>LOWERCASE</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>MAC</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>GENKEY</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>NOFORKEY</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>VALEXI</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>NOAUTHCH</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>SIGN</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>DYNPFLD</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>F4AVAILABL</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>COMPTYPE</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>OUTPUTSTYLE</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>LFIELDNAME</tt></td>
+        <td></td>
+        <td>```c LENGTH 132```</td>
+        </tr>
+</table>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>750</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>702</td><td bgcolor='red'>undefined</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

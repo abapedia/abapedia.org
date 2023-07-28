@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_FHC_ID_MAPPER INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_FHC_ID_MAPPER</h2>
+<a href="https://github.com/abapedia/steampunk-2208-api/blob/mainrc%2Fif_fhc_id_mapper.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_fhc_id_mapper/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_fhc_holiday_runtime.intf.html">IF_FHC_HOLIDAY_RUNTIME</a></small><br><small>Next Object: <a href="if_fp_fdp_api.intf.html">IF_FP_FDP_API</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ty_wfcid</tt> TYPE <tt>if_fhc_id_mapper=>ty_wfcid</tt><br>
+Type <tt>ty_fhc_fcalid</tt> TYPE <tt>if_fhc_id_mapper=>ty_fhc_fcalid</tt><br>
+Type <tt>ty_hident</tt> TYPE <tt>if_fhc_id_mapper=>ty_hident</tt><br>
+Type <tt>ty_fhc_hcalid</tt> TYPE <tt>if_fhc_id_mapper=>ty_fhc_hcalid</tt><br>
+Type <tt>ty_ftgid</tt> TYPE <tt>if_fhc_id_mapper=>ty_ftgid</tt><br>
+Type <tt>ty_fhc_holid</tt> TYPE <tt>if_fhc_id_mapper=>ty_fhc_holid</tt><br>
+Method <tt>mapping_fcal_legacyid_to_id</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_legacy_id</tt> TYPE <tt>if_fhc_id_mapper=>ty_wfcid</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_factorycalendar_id</tt> TYPE <tt>if_fhc_id_mapper=>ty_fhc_fcalid</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_fhc_runtime.clas.html">cx_fhc_runtime</a></tt><br>
+Method <tt>mapping_hcal_legacyid_to_id</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_legacy_id</tt> TYPE <tt>if_fhc_id_mapper=>ty_hident</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_holidaycalendar_id</tt> TYPE <tt>if_fhc_id_mapper=>ty_fhc_hcalid</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_fhc_runtime.clas.html">cx_fhc_runtime</a></tt><br>
+Method <tt>mapping_hol_legacyid_to_id</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_legacy_id</tt> TYPE <tt>if_fhc_id_mapper=>ty_ftgid</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_holiday_id</tt> TYPE <tt>if_fhc_id_mapper=>ty_fhc_holid</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_fhc_runtime.clas.html">cx_fhc_runtime</a></tt><br>
+Method <tt>mapping_fcal_id_to_legacyid</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_factorycalendar_id</tt> TYPE <tt>if_fhc_id_mapper=>ty_fhc_fcalid</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_legacy_id</tt> TYPE <tt>if_fhc_id_mapper=>ty_wfcid</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_fhc_runtime.clas.html">cx_fhc_runtime</a></tt><br>
+Method <tt>mapping_hcal_id_to_legacyid</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_holidaycalendar_id</tt> TYPE <tt>if_fhc_id_mapper=>ty_fhc_hcalid</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_legacy_id</tt> TYPE <tt>if_fhc_id_mapper=>ty_hident</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_fhc_runtime.clas.html">cx_fhc_runtime</a></tt><br>
+Method <tt>mapping_hol_id_to_legacyid</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_holiday_id</tt> TYPE <tt>if_fhc_id_mapper=>ty_fhc_holid</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_legacy_id</tt> TYPE <tt>if_fhc_id_mapper=>ty_ftgid</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_fhc_runtime.clas.html">cx_fhc_runtime</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>750</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>702</td><td bgcolor='red'>undefined</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

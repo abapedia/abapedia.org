@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_XCO_APS_COMPONENT_TYPE INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_XCO_APS_COMPONENT_TYPE</h2>
+<a href="https://github.com/abapedia/steampunk-2302-api/blob/mainrc%2Fif_xco_aps_component_type.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_xco_aps_component_type/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_xco_aps_component_content.intf.html">IF_XCO_APS_COMPONENT_CONTENT</a></small><br><small>Next Object: <a href="if_xco_aps_components.intf.html">IF_XCO_APS_COMPONENTS</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Interface <tt><a href="if_xco_printable.intf.html">if_xco_printable</a></tt><br>
+Method <tt>is_built_in_type</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_is_built_in_type</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>get_built_in_type</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_built_in_type</tt> TYPE <tt>cl_xco_ad_built_in_type</tt><br>
+Method <tt>is_data_element</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_is_data_element</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>get_data_element</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_data_element</tt> TYPE <tt>if_xco_ad_data_element</tt><br>
+Method <tt>is_structure</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_is_structure</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>get_structure</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_structure</tt> TYPE <tt>if_xco_ad_structure</tt><br>
+Method <tt>is_table_type</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_is_table_type</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>get_table_type</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_table_type</tt> TYPE <tt>if_xco_ad_table_type</tt><br>
+Method <tt>is_built_in_type_reference</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_is_built_in_type_reference</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>get_built_in_type_reference</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_built_in_type_reference</tt> TYPE <tt>if_xco_ad_built_in_type_rfrnc</tt><br>
+Method <tt>is_data_type_reference</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_is_data_type_reference</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>get_data_type_reference</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_data_type_reference</tt> TYPE <tt>if_xco_ad_data_type_reference</tt><br>
+Method <tt>is_interface</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_is_interface</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>get_interface</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_interface</tt> TYPE <tt>if_xco_ao_interface</tt><br>
+Method <tt>is_class</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_is_class</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>get_class</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_class</tt> TYPE <tt>if_xco_ao_class</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

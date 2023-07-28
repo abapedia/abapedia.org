@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_CHDO_OBJECT_TOOLS_REL INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_CHDO_OBJECT_TOOLS_REL</h2>
+<a href="https://github.com/abapedia/steampunk-2305-api/blob/mainrc%2Fif_chdo_object_tools_rel.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_chdo_object_tools_rel/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_chdo_enhancements.intf.html">IF_CHDO_ENHANCEMENTS</a></small><br><small>Next Object: <a href="if_ci_atc_check.intf.html">IF_CI_ATC_CHECK</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ty_tcdgen</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_tcdgen</tt><br>
+Type <tt>ty_tcdobdef</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_tcdobdef</tt><br>
+Type <tt>ty_tcdobtext</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_tcdobtext</tt><br>
+Type <tt>ty_tcdobtext_tab</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_tcdobtext_tab</tt><br>
+Type <tt>ty_tcdobdef_tab</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_tcdobdef_tab</tt><br>
+Type <tt>tv_cddevclass</tt> TYPE <tt>if_chdo_object_tools_rel=>tv_cddevclass</tt><br>
+Type <tt>ty_cdchngind</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_cdchngind</tt><br>
+Type <tt>ty_cdtxt_line</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_cdtxt_line</tt><br>
+Type <tt>ty_cdtxt_tab</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_cdtxt_tab</tt><br>
+Type <tt>ty_icdind</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_icdind</tt><br>
+Type <tt>ty_cdchangenr</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_cdchangenr</tt><br>
+Type <tt>ty_cdchngindh</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_cdchngindh</tt><br>
+Type <tt>ty_cddatum</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_cddatum</tt><br>
+Type <tt>ty_cdflag</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_cdflag</tt><br>
+Type <tt>ty_cdobjectv</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_cdobjectv</tt><br>
+Type <tt>ty_cdtcode</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_cdtcode</tt><br>
+Type <tt>ty_cdusername</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_cdusername</tt><br>
+Type <tt>ty_cduzeit</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_cduzeit</tt><br>
+Type <tt>ty_planchngnr</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_planchngnr</tt><br>
+Type <tt>ty_tcdrp</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_tcdrp</tt><br>
+Type <tt>tv_trkorr</tt> TYPE <tt>if_chdo_object_tools_rel=>tv_trkorr</tt><br>
+Type <tt>ty_cdfgrp</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_cdfgrp</tt><br>
+Type <tt>ty_cdobjectcl</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_cdobjectcl</tt><br>
+Type <tt>ty_cdprefix</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_cdprefix</tt><br>
+Type <tt>ty_cdreport</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_cdreport</tt><br>
+Type <tt>ty_fieldname</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_fieldname</tt><br>
+Type <tt>ty_rslinltab_line</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_rslinltab_line</tt><br>
+Type <tt>ty_rslinltab</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_rslinltab</tt><br>
+Type <tt>ty_rsyntmsgs_line</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_rsyntmsgs_line</tt><br>
+Type <tt>ty_rsyntmsgs</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_rsyntmsgs</tt><br>
+Type <tt>ty_tcdobt_line</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_tcdobt_line</tt><br>
+Type <tt>ty_tcdobt_tabtyp</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_tcdobt_tabtyp</tt><br>
+Type <tt>ty_tcdob_line</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_tcdob_line</tt><br>
+Type <tt>ty_tcdob_tt</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_tcdob_tt</tt><br>
+Type <tt>tv_activ_auth</tt> TYPE <tt>if_chdo_object_tools_rel=>tv_activ_auth</tt><br>
+Type <tt>ty_tr_error</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_tr_error</tt><br>
+Type <tt>ty_tr_error_tab</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_tr_error_tab</tt><br>
+Type <tt>ty_object_info</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_object_info</tt><br>
+Type <tt>tty_object_info</tt> TYPE <tt>if_chdo_object_tools_rel=>tty_object_info</tt><br>
+Type <tt>ty_attributes</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_attributes</tt><br>
+Static Method <tt>check_authorization</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_object</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_cdobjectcl</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_activity</tt> TYPE <tt>if_chdo_object_tools_rel=>tv_activ_auth</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_devclass</tt> TYPE <tt>if_chdo_object_tools_rel=>tv_cddevclass</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_is_authorized</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Static Method <tt>create_and_generate_object</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_object</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_cdobjectcl</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_cd_object_def</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_tcdobdef_tab</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_cd_object_text</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_tcdobtext_tab</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>is_cd_object_gen</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_tcdgen</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_cl_overwrite</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_corrnr</tt> TYPE <tt>if_chdo_object_tools_rel=>tv_trkorr</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_errors</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_tr_error_tab</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_synt_errors</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_rsyntmsgs</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_synt_error_long</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_rslinltab</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_chdo_generation_error.clas.html">cx_chdo_generation_error</a></tt><br>
+Static Method <tt>update_object</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_object</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_cdobjectcl</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_cd_object_def</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_tcdobdef_tab</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_cd_object_text</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_tcdobtext_tab</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>is_cd_object_gen</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_tcdgen</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_cl_overwrite</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_corrnr</tt> TYPE <tt>if_chdo_object_tools_rel=>tv_trkorr</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_errors</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_tr_error_tab</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_synt_errors</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_rsyntmsgs</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_synt_error_long</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_rslinltab</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_chdo_generation_error.clas.html">cx_chdo_generation_error</a></tt><br>
+Static Method <tt>delete_object</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_object</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_cdobjectcl</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_corrnr</tt> TYPE <tt>if_chdo_object_tools_rel=>tv_trkorr</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_del_cl_when_used</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_errors</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_tr_error_tab</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_chdo_generation_error.clas.html">cx_chdo_generation_error</a></tt><br>
+Static Method <tt>read_object</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_object</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_cdobjectcl</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_object_info</tt> TYPE <tt>if_chdo_object_tools_rel=>tty_object_info</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_chdo_generation_error.clas.html">cx_chdo_generation_error</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

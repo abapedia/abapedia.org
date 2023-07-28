@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_BAL_LOGGER INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_BAL_LOGGER</h2>
+<a href="https://github.com/abapedia/steampunk-2111-api/blob/mainrc%2Fif_bal_logger.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_bal_logger/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_badi_interface.intf.html">IF_BADI_INTERFACE</a></small><br><small>Next Object: <a href="if_bali_constants.intf.html">IF_BALI_CONSTANTS</a></small><br><br>Status: DEPRECATED, use <a href="if_bali_log.intf.html">IF_BALI_LOG</a> or <a href="if_bali_log_db.intf.html">IF_BALI_LOG_DB</a> instead<br><br><u>Public</u><br>Type <tt>tv_repid</tt> TYPE <tt>if_bal_logger=>tv_repid</tt><br>
+Type <tt>tv_tcode</tt> TYPE <tt>if_bal_logger=>tv_tcode</tt><br>
+Type <tt>tv_username</tt> TYPE <tt>if_bal_logger=>tv_username</tt><br>
+Type <tt>tv_prob_class</tt> TYPE <tt>if_bal_logger=>tv_prob_class</tt><br>
+Type <tt>tt_lognumbers</tt> TYPE <tt>BAL_T_LGNM</tt><br>
+Type <tt>tv_loghandle</tt> TYPE <tt>if_bal_logger=>tv_loghandle</tt><br>
+Type <tt>tv_detlevel</tt> TYPE <tt>if_bal_logger=>tv_detlevel</tt><br>
+Type <tt>tv_log_object</tt> TYPE <tt>if_bal_logger=>tv_log_object</tt><br>
+Type <tt>tv_log_subobject</tt> TYPE <tt>if_bal_logger=>tv_log_subobject</tt><br>
+Type <tt>tv_external_id</tt> TYPE <tt>if_bal_logger=>tv_external_id</tt><br>
+Attribute <tt>mv_loghandle</tt> TYPE <tt>if_bal_logger=>tv_loghandle</tt><br>
+Attribute <tt>mv_batch_mode</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Attribute <tt>mv_max_message_memory</tt> TYPE <tt>I</tt><br>
+Attribute <tt>mv_detlevel</tt> TYPE <tt>if_bal_logger=>tv_detlevel</tt><br>
+Attribute <tt>mv_logobject</tt> TYPE <tt>if_bal_logger=>tv_log_object</tt><br>
+Attribute <tt>mv_log_suboject</tt> TYPE <tt>if_bal_logger=>tv_log_subobject</tt><br>
+Attribute <tt>mv_log_debug_suboject</tt> TYPE <tt>if_bal_logger=>tv_log_subobject</tt><br>
+Attribute <tt>mv_message_count</tt> TYPE <tt>I</tt><br>
+Constant <tt>c_probclass_low</tt> TYPE <tt>if_bal_logger=>tv_prob_class</tt><br>
+Constant <tt>c_probclass_medium</tt> TYPE <tt>if_bal_logger=>tv_prob_class</tt><br>
+Constant <tt>c_probclass_high</tt> TYPE <tt>if_bal_logger=>tv_prob_class</tt><br>
+Constant <tt>c_probclass_vhigh</tt> TYPE <tt>if_bal_logger=>tv_prob_class</tt><br>
+Constant <tt>c_probclass_none</tt> TYPE <tt>if_bal_logger=>tv_prob_class</tt><br>
+Method <tt>add_exception</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_exception</tt> TYPE <tt>cx_root</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bal_exception.clas.html">cx_bal_exception</a></tt><br>
+Method <tt>add_message</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_probclass</tt> TYPE <tt>if_bal_logger=>tv_prob_class</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bal_exception.clas.html">cx_bal_exception</a></tt><br>
+Method <tt>add_errortext</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_error_text</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bal_exception.clas.html">cx_bal_exception</a></tt><br>
+Method <tt>add_statustext</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_status_text</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bal_exception.clas.html">cx_bal_exception</a></tt><br>
+Method <tt>set_detlevel</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_detlevel</tt> TYPE <tt>I</tt><br>
+Method <tt>get_detlevel</tt><br>
+&nbsp;&nbsp;RETURNING <tt>r_detlevel</tt> TYPE <tt>I</tt><br>
+Method <tt>save_to_db</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_in_update_task</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_2th_connection</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_2th_connect_commit</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_link2job</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_save_all</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rt_lognumbers</tt> TYPE <tt>BAL_T_LGNM</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bal_exception.clas.html">cx_bal_exception</a></tt><br>
+Method <tt>refresh</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bal_exception.clas.html">cx_bal_exception</a></tt><br>
+Method <tt>add_debug_message</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_msgv3</tt> TYPE <tt>any</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_msgv4</tt> TYPE <tt>any</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_msgv2</tt> TYPE <tt>any</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_msgv1</tt> TYPE <tt>any</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_headertext</tt> TYPE <tt>c LENGTH 1</tt> Optional<br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bal_exception.clas.html">cx_bal_exception</a></tt><br>
+Method <tt>get_loghandle</tt><br>
+&nbsp;&nbsp;RETURNING <tt>r_loghandle</tt> TYPE <tt>if_bal_logger=>tv_loghandle</tt><br>
+Method <tt>refresh_messages</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bal_exception.clas.html">cx_bal_exception</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

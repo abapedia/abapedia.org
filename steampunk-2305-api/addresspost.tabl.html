@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - ADDRESSPOST TABL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>TABL ADDRESSPOST</h2>
+<a href="https://github.com/abapedia/steampunk-2305-api/blob/mainrc%2Faddresspost.tabl.xml">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/ddic/structures/addresspost">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="address_printform_line.tabl.html">ADDRESS_PRINTFORM_LINE</a></small><br><small>Next Object: <a href="arch_stat.tabl.html">ARCH_STAT</a></small><br><br>Status: RELEASED<br><br>Category: Structure<br><br><table border="1">
+<tr>
+      <td><u>Field</u></td>
+      <td><u>DDIC</u></td>
+      <td><u>Type</u></td>
+      </tr>
+<tr>
+        <td><tt>NAME_CO</tt></td>
+        <td></td>
+        <td>```c LENGTH 40```</td>
+        </tr>
+<tr>
+        <td><tt>STREET</tt></td>
+        <td></td>
+        <td>```c LENGTH 60```</td>
+        </tr>
+<tr>
+        <td><tt>HOUSE_NUM1</tt></td>
+        <td></td>
+        <td>```c LENGTH 10```</td>
+        </tr>
+<tr>
+        <td><tt>HOUSE_NUM2</tt></td>
+        <td></td>
+        <td>```c LENGTH 10```</td>
+        </tr>
+<tr>
+        <td><tt>STR_SUPPL1</tt></td>
+        <td></td>
+        <td>```c LENGTH 40```</td>
+        </tr>
+<tr>
+        <td><tt>STR_SUPPL2</tt></td>
+        <td></td>
+        <td>```c LENGTH 40```</td>
+        </tr>
+<tr>
+        <td><tt>STR_SUPPL3</tt></td>
+        <td></td>
+        <td>```c LENGTH 40```</td>
+        </tr>
+<tr>
+        <td><tt>CITY1</tt></td>
+        <td></td>
+        <td>```c LENGTH 40```</td>
+        </tr>
+<tr>
+        <td><tt>CITY2</tt></td>
+        <td></td>
+        <td>```c LENGTH 40```</td>
+        </tr>
+<tr>
+        <td><tt>HOME_CITY</tt></td>
+        <td></td>
+        <td>```c LENGTH 40```</td>
+        </tr>
+<tr>
+        <td><tt>POST_CODE1</tt></td>
+        <td><a href="ad_pstcd1.dtel.html">AD_PSTCD1</a></td>
+        <td>```c LENGTH 10```</td>
+        </tr>
+<tr>
+        <td><tt>POST_CODE2</tt></td>
+        <td></td>
+        <td>```c LENGTH 10```</td>
+        </tr>
+<tr>
+        <td><tt>POST_CODE3</tt></td>
+        <td></td>
+        <td>```c LENGTH 10```</td>
+        </tr>
+<tr>
+        <td><tt>PO_BOX</tt></td>
+        <td></td>
+        <td>```c LENGTH 10```</td>
+        </tr>
+<tr>
+        <td><tt>PO_BOX_NUM</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>PO_BOX_LOC</tt></td>
+        <td></td>
+        <td>```c LENGTH 40```</td>
+        </tr>
+<tr>
+        <td><tt>PO_BOX_REG</tt></td>
+        <td></td>
+        <td>```c LENGTH 3```</td>
+        </tr>
+<tr>
+        <td><tt>PO_BOX_CTY</tt></td>
+        <td></td>
+        <td>```c LENGTH 3```</td>
+        </tr>
+<tr>
+        <td><tt>LOCATION</tt></td>
+        <td></td>
+        <td>```c LENGTH 40```</td>
+        </tr>
+<tr>
+        <td><tt>REGION</tt></td>
+        <td><a href="regio.dtel.html">REGIO</a></td>
+        <td>```c LENGTH 3```</td>
+        </tr>
+<tr>
+        <td><tt>COUNTRY</tt></td>
+        <td><a href="land1.dtel.html">LAND1</a></td>
+        <td>```c LENGTH 3```</td>
+        </tr>
+<tr>
+        <td><tt>PO_BOX_LOBBY</tt></td>
+        <td></td>
+        <td>```c LENGTH 40```</td>
+        </tr>
+<tr>
+        <td><tt>DELI_SERV_TYPE</tt></td>
+        <td></td>
+        <td>```c LENGTH 4```</td>
+        </tr>
+<tr>
+        <td><tt>DELI_SERV_NUMBER</tt></td>
+        <td></td>
+        <td>```c LENGTH 10```</td>
+        </tr>
+<tr>
+        <td><tt>COUNTY</tt></td>
+        <td></td>
+        <td>```c LENGTH 40```</td>
+        </tr>
+<tr>
+        <td><tt>TOWNSHIP</tt></td>
+        <td></td>
+        <td>```c LENGTH 40```</td>
+        </tr>
+</table>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>750</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>702</td><td bgcolor='red'>undefined</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

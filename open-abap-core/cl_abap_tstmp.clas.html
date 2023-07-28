@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_ABAP_TSTMP CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_ABAP_TSTMP</h2>
+<a href="https://github.com/open-abap/open-abap-core/blob/mainrc%2Fdate_time%2Fcl_abap_tstmp.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_abap_tstmp/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_abap_tabledescr.clas.html">CL_ABAP_TABLEDESCR</a></small><br><small>Next Object: <a href="cl_abap_typedescr.clas.html">CL_ABAP_TYPEDESCR</a></small><br><br><u>Public</u><br>Static Method <tt>subtract</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>tstmp1</tt> TYPE <tt>p LENGTH 1 DECIMALS 0</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>tstmp2</tt> TYPE <tt>p LENGTH 1 DECIMALS 0</tt><br>
+&nbsp;&nbsp;RETURNING <tt>r_secs</tt> TYPE <tt>I</tt><br>
+Static Method <tt>add</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>tstmp</tt> TYPE <tt>p LENGTH 1 DECIMALS 0</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>secs</tt> TYPE <tt>numeric</tt><br>
+&nbsp;&nbsp;RETURNING <tt>time</tt> TYPE <tt>TIMESTAMP</tt><br>
+Static Method <tt>subtractsecs</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>tstmp</tt> TYPE <tt>p LENGTH 1 DECIMALS 0</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>secs</tt> TYPE <tt>numeric</tt><br>
+&nbsp;&nbsp;RETURNING <tt>time</tt> TYPE <tt>TIMESTAMP</tt><br>
+Static Method <tt>td_add</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>date</tt> TYPE <tt>D</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>time</tt> TYPE <tt>T</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>secs</tt> TYPE <tt>numeric</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>res_date</tt> TYPE <tt>D</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>res_time</tt> TYPE <tt>T</tt><br>
+Static Method <tt>move</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>tstmp_src</tt> TYPE <tt>p LENGTH 1 DECIMALS 0</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>tstmp_tgt</tt> TYPE <tt>p LENGTH 1 DECIMALS 0</tt><br>
+Static Method <tt>systemtstmp_syst2utc</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>syst_date</tt> TYPE <tt>D</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>syst_time</tt> TYPE <tt>T</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>utc_tstmp</tt> TYPE <tt>p LENGTH 1 DECIMALS 0</tt><br>
+Static Method <tt>move_to_short</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>tstmp_src</tt> TYPE <tt>TZNTSTMPL</tt><br>
+&nbsp;&nbsp;RETURNING <tt>tstmp_out</tt> TYPE <tt>TZNTSTMPS</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_parameter_invalid_type.clas.html">cx_parameter_invalid_type</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_parameter_invalid_range.clas.html">cx_parameter_invalid_range</a></tt><br>
+Static Method <tt>td_subtract</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>date1</tt> TYPE <tt>D</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>time1</tt> TYPE <tt>T</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>date2</tt> TYPE <tt>D</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>time2</tt> TYPE <tt>T</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>res_secs</tt> TYPE <tt>numeric</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_parameter_invalid_type.clas.html">cx_parameter_invalid_type</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_parameter_invalid_range.clas.html">cx_parameter_invalid_range</a></tt><br>
+Static Method <tt>systemtstmp_utc2syst</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>utc_tstmp</tt> TYPE <tt>TIMESTAMP</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>syst_date</tt> TYPE <tt>D</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>syst_time</tt> TYPE <tt>T</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_parameter_invalid_range.clas.html">cx_parameter_invalid_range</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='green'>true</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

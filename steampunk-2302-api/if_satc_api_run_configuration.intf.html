@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_SATC_API_RUN_CONFIGURATION INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_SATC_API_RUN_CONFIGURATION</h2>
+<a href="https://github.com/abapedia/steampunk-2302-api/blob/mainrc%2Fif_satc_api_run_configuration.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_satc_api_run_configuration/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_satc_api_run.intf.html">IF_SATC_API_RUN</a></small><br><small>Next Object: <a href="if_satc_object_set.intf.html">IF_SATC_OBJECT_SET</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ty_description</tt> TYPE <tt>if_satc_api_run_configuration=>ty_description</tt><br>
+Type <tt>ty_behavior_for_pragmas</tt> TYPE <tt>if_satc_api_run_configuration=>ty_behavior_for_pragmas</tt><br>
+Constant <tt>behavior_for_pragmas</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Method <tt>get_object_set</tt><br>
+&nbsp;&nbsp;RETURNING <tt>object_set</tt> TYPE <tt>if_satc_object_set</tt><br>
+Method <tt>get_check_variant</tt><br>
+&nbsp;&nbsp;RETURNING <tt>check_variant</tt> TYPE <tt>cl_satc_api_check_variant</tt><br>
+Method <tt>get_description</tt><br>
+&nbsp;&nbsp;RETURNING <tt>description</tt> TYPE <tt>if_satc_api_run_configuration=>ty_description</tt><br>
+Method <tt>get_behavior_for_pragmas</tt><br>
+&nbsp;&nbsp;RETURNING <tt>behavior_for_pragmas</tt> TYPE <tt>if_satc_api_run_configuration=>ty_behavior_for_pragmas</tt><br>
+Method <tt>set_check_variant</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>check_variant</tt> TYPE <tt>cl_satc_api_check_variant</tt><br>
+&nbsp;&nbsp;RETURNING <tt>self</tt> TYPE <tt>if_satc_api_run_configuration</tt><br>
+Method <tt>set_description</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>description</tt> TYPE <tt>if_satc_api_run_configuration=>ty_description</tt><br>
+&nbsp;&nbsp;RETURNING <tt>self</tt> TYPE <tt>if_satc_api_run_configuration</tt><br>
+Method <tt>set_behavior_for_pragmas</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>behavior_for_pragmas</tt> TYPE <tt>if_satc_api_run_configuration=>ty_behavior_for_pragmas</tt><br>
+&nbsp;&nbsp;RETURNING <tt>self</tt> TYPE <tt>if_satc_api_run_configuration</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>750</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>702</td><td bgcolor='red'>undefined</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

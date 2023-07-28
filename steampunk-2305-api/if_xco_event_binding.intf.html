@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_XCO_EVENT_BINDING INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_XCO_EVENT_BINDING</h2>
+<a href="https://github.com/abapedia/steampunk-2305-api/blob/mainrc%2Fif_xco_event_binding.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_xco_event_binding/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_xco_eb_event_versions_fctry.intf.html">IF_XCO_EB_EVENT_VERSIONS_FCTRY</a></small><br><small>Next Object: <a href="if_xco_event_bindings.intf.html">IF_XCO_EVENT_BINDINGS</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Interface <tt><a href="if_xco_ar_object.intf.html">if_xco_ar_object</a></tt><br>
+Type <tt>list</tt> TYPE <tt>if_xco_event_binding=>list</tt><br>
+Type <tt>tv_name</tt> TYPE <tt>if_xco_event_binding=>tv_name</tt><br>
+Type <tt>tt_names</tt> TYPE <tt>if_xco_event_binding=>tt_names</tt><br>
+Type <tt>tv_short_description</tt> TYPE <tt>if_xco_event_binding=>tv_short_description</tt><br>
+Type <tt>tt_short_descriptions</tt> TYPE <tt>if_xco_event_binding=>tt_short_descriptions</tt><br>
+Type <tt>tv_type_namespace</tt> TYPE <tt>if_xco_event_binding=>tv_type_namespace</tt><br>
+Type <tt>tt_type_namespaces</tt> TYPE <tt>if_xco_event_binding=>tt_type_namespaces</tt><br>
+Type <tt>tv_operation</tt> TYPE <tt>if_xco_event_binding=>tv_operation</tt><br>
+Type <tt>tt_operations</tt> TYPE <tt>if_xco_event_binding=>tt_operations</tt><br>
+Type <tt>tv_type</tt> TYPE <tt>if_xco_event_binding=>tv_type</tt><br>
+Type <tt>tt_types</tt> TYPE <tt>if_xco_event_binding=>tt_types</tt><br>
+Attribute <tt>name</tt> TYPE <tt>if_xco_event_binding=>tv_name</tt><br>
+Attribute <tt>event_versions</tt> TYPE <tt>if_xco_eb_event_versions_fctry</tt><br>
+Method <tt>exists</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_version</tt> TYPE <tt>cl_xco_eb_version</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_origin</tt> TYPE <tt>cl_xco_eb_origin</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rv_exists</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>content</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_version</tt> TYPE <tt>cl_xco_eb_version</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>ro_content</tt> TYPE <tt>if_xco_eb_content</tt><br>
+Method <tt>event_version</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_major_version</tt> TYPE <tt>if_xco_eb_event_version=>tv_major_version</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_event_version</tt> TYPE <tt>if_xco_eb_event_version</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>750</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>702</td><td bgcolor='red'>undefined</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

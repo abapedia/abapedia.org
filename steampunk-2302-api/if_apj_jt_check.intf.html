@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_APJ_JT_CHECK INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_APJ_JT_CHECK</h2>
+<a href="https://github.com/abapedia/steampunk-2302-api/blob/mainrc%2Fif_apj_jt_check.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_apj_jt_check/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_apj_dt_exec_object.intf.html">IF_APJ_DT_EXEC_OBJECT</a></small><br><small>Next Object: <a href="if_apj_rt_exec_object.intf.html">IF_APJ_RT_EXEC_OBJECT</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ty_template_name</tt> TYPE <tt>if_apj_jt_check=>ty_template_name</tt><br>
+Type <tt>ty_job_parameter_name</tt> TYPE <tt>if_apj_jt_check=>ty_job_parameter_name</tt><br>
+Type <tt>ty_catalog_name</tt> TYPE <tt>if_apj_jt_check=>ty_catalog_name</tt><br>
+Type <tt>ty_jobname</tt> TYPE <tt>if_apj_jt_check=>ty_jobname</tt><br>
+Type <tt>ty_check_mode</tt> TYPE <tt>if_apj_jt_check=>ty_check_mode</tt><br>
+Type <tt>ty_check_phase</tt> TYPE <tt>if_apj_jt_check=>ty_check_phase</tt><br>
+Type <tt>ty_paramter_key</tt> TYPE <tt>if_apj_jt_check=>ty_paramter_key</tt><br>
+Type <tt>ty_param_metadata</tt> TYPE <tt>if_apj_jt_check=>ty_param_metadata</tt><br>
+Type <tt>tt_param_metadata</tt> TYPE <tt>if_apj_jt_check=>tt_param_metadata</tt><br>
+Type <tt>ty_local_param_metadata</tt> TYPE <tt>if_apj_jt_check=>ty_local_param_metadata</tt><br>
+Type <tt>tts_local_param_metadata</tt> TYPE <tt>if_apj_jt_check=>tts_local_param_metadata</tt><br>
+Type <tt>ts_local_add_param_metadata</tt> TYPE <tt>if_apj_jt_check=>ts_local_add_param_metadata</tt><br>
+Type <tt>tt_local_add_param_metadata</tt> TYPE <tt>if_apj_jt_check=>tt_local_add_param_metadata</tt><br>
+Type <tt>ts_dynamic_property</tt> TYPE <tt>if_apj_jt_check=>ts_dynamic_property</tt><br>
+Type <tt>tts_dynamic_property</tt> TYPE <tt>if_apj_jt_check=>tts_dynamic_property</tt><br>
+Constant <tt>cs_check_mode</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>cs_check_phase</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Method <tt>check_and_adjust</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_hidden_param_value</tt> TYPE <tt>if_apj_types=>tt_jt_selopt</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_param_metadata</tt> TYPE <tt>if_apj_jt_check=>tt_param_metadata</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_check_mode</tt> TYPE <tt>if_apj_jt_check=>ty_check_mode</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_job_catalog_entry_name</tt> TYPE <tt>if_apj_jt_check=>ty_catalog_name</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_parameter_name</tt> TYPE <tt>if_apj_jt_check=>ty_job_parameter_name</tt> Optional<br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ct_value</tt> TYPE <tt>if_apj_types=>tt_jt_selopt</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_successful</tt> TYPE <tt>BOOLEAN</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_msg</tt> TYPE <tt>BAPIRETTAB</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cm_apj_base.clas.html">cm_apj_base</a></tt><br>
+Method <tt>initialize</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_hidden_param_value</tt> TYPE <tt>if_apj_types=>tt_jt_selopt</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_param_metadata</tt> TYPE <tt>if_apj_jt_check=>tt_param_metadata</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_job_catalog_entry_name</tt> TYPE <tt>if_apj_jt_check=>ty_catalog_name</tt><br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ct_value</tt> TYPE <tt>if_apj_types=>tt_jt_selopt</tt><br>
+Method <tt>check_before_schedule</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_job_name</tt> TYPE <tt>if_apj_jt_check=>ty_jobname</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_job_catalog_entry_name</tt> TYPE <tt>if_apj_jt_check=>ty_catalog_name</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_username</tt> TYPE <tt>UNAME</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_start_date</tt> TYPE <tt>TIMESTAMP</tt> Optional<br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ct_value</tt> TYPE <tt>if_apj_types=>tt_jt_selopt</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_successful</tt> TYPE <tt>BOOLEAN</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_msg</tt> TYPE <tt>BAPIRETTAB</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cm_apj_base.clas.html">cm_apj_base</a></tt><br>
+Method <tt>adjust_metadata</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_job_catalog_entry_name</tt> TYPE <tt>if_apj_jt_check=>ty_catalog_name</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_param_metadata</tt> TYPE <tt>if_apj_jt_check=>tt_param_metadata</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rts_param_metadata</tt> TYPE <tt>if_apj_jt_check=>tts_local_param_metadata</tt><br>
+Method <tt>get_additional_parameters</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_job_catalog_entry_name</tt> TYPE <tt>if_apj_jt_check=>ty_catalog_name</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rt_parameter_metadata</tt> TYPE <tt>if_apj_jt_check=>tt_local_add_param_metadata</tt><br>
+Method <tt>get_dynamic_properties</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_value</tt> TYPE <tt>if_apj_types=>tt_jt_selopt</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_job_catalog_entry_name</tt> TYPE <tt>if_apj_jt_check=>ty_catalog_name</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rts_dynamic_property</tt> TYPE <tt>if_apj_jt_check=>tts_dynamic_property</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

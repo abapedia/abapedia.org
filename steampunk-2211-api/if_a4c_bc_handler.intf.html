@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_A4C_BC_HANDLER INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_A4C_BC_HANDLER</h2>
+<a href="https://github.com/abapedia/steampunk-2211-api/blob/mainrc%2Fif_a4c_bc_handler.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_a4c_bc_handler/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="%23iwxbe%23if_description_types.intf.html">/IWXBE/IF_DESCRIPTION_TYPES</a></small><br><small>Next Object: <a href="if_a4c_cp_service.intf.html">IF_A4C_CP_SERVICE</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ts_object_list</tt> TYPE <tt>if_a4c_bc_handler=>ts_object_list</tt><br>
+Type <tt>transport_type</tt> TYPE <tt>if_a4c_bc_handler=>transport_type</tt><br>
+Type <tt>tv_transport_request</tt> TYPE <tt>if_a4c_bc_handler=>tv_transport_request</tt><br>
+Type <tt>tv_request_owner</tt> TYPE <tt>if_a4c_bc_handler=>tv_request_owner</tt><br>
+Type <tt>tv_target_system</tt> TYPE <tt>if_a4c_bc_handler=>tv_target_system</tt><br>
+Type <tt>ts_message</tt> TYPE <tt>SYMSG</tt><br>
+Type <tt>tt_object_tables</tt> TYPE <tt>if_a4c_bc_handler=>tt_object_tables</tt><br>
+Type <tt>tt_message</tt> TYPE <tt>if_a4c_bc_handler=>tt_message</tt><br>
+Constant <tt>w</tt> TYPE <tt>i</tt><br>
+Constant <tt>k</tt> TYPE <tt>i</tt><br>
+Method <tt>create_transport_request</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_target_system</tt> TYPE <tt>if_a4c_bc_handler=>tv_target_system</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_target_default</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_request_owner</tt> TYPE <tt>if_a4c_bc_handler=>tv_request_owner</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_transport_type</tt> TYPE <tt>if_a4c_bc_handler=>transport_type</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_trkorr</tt> TYPE <tt>if_a4c_bc_handler=>tv_transport_request</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_a4c_bc_exception.clas.html">cx_a4c_bc_exception</a></tt><br>
+Method <tt>release_customizing_request</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_transport_request</tt> TYPE <tt>if_a4c_bc_handler=>tv_transport_request</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_released_successfully</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_a4c_bc_exception.clas.html">cx_a4c_bc_exception</a></tt><br>
+Method <tt>delete_customizing_request</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_transport_request</tt> TYPE <tt>if_a4c_bc_handler=>tv_transport_request</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_deleted_successfully</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_a4c_bc_exception.clas.html">cx_a4c_bc_exception</a></tt><br>
+Method <tt>get_customizing_content</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_transport_request</tt> TYPE <tt>if_a4c_bc_handler=>tv_transport_request</tt><br>
+Method <tt>add_to_transport_request</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_check_mode</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_transport_request</tt> TYPE <tt>if_a4c_bc_handler=>tv_transport_request</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_object_tables</tt> TYPE <tt>if_a4c_bc_handler=>tt_object_tables</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_mandant_field_name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>rt_messages</tt> TYPE <tt>if_a4c_bc_handler=>tt_message</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>rv_success</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>rv_transport_request</tt> TYPE <tt>if_a4c_bc_handler=>tv_transport_request</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_a4c_bc_exception.clas.html">cx_a4c_bc_exception</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

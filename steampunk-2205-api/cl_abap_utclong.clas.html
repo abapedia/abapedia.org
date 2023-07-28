@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_ABAP_UTCLONG CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_ABAP_UTCLONG</h2>
+<a href="https://github.com/abapedia/steampunk-2205-api/blob/mainrc%2Fcl_abap_utclong.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_abap_utclong/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_abap_unit_assert.clas.html">CL_ABAP_UNIT_ASSERT</a></small><br><small>Next Object: <a href="cl_abap_x_writer.clas.html">CL_ABAP_X_WRITER</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Constant <tt>min</tt> TYPE <tt>utclong</tt><br>
+Constant <tt>max</tt> TYPE <tt>utclong</tt><br>
+Constant <tt>timezone_utc</tt> TYPE <tt>TIMEZONE</tt><br>
+Static Method <tt>diff</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>low</tt> TYPE <tt>utclong</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>high</tt> TYPE <tt>utclong</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>days</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>hours</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>minutes</tt> TYPE <tt>INT8</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>seconds</tt> TYPE <tt>decfloat34</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_conversion_no_date_time.clas.html">cx_sy_conversion_no_date_time</a></tt><br>
+Static Method <tt>read</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>string</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>timezone</tt> TYPE <tt>TIMEZONE</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>daylight_saving_time</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>is_24_allowed</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>is_leap_sec_allowed</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>value</tt> TYPE <tt>utclong</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_utclong_invalid.clas.html">cx_abap_utclong_invalid</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_conversion_no_date_time.clas.html">cx_sy_conversion_no_date_time</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_parameter_invalid_range.clas.html">cx_parameter_invalid_range</a></tt><br>
+Static Method <tt>read_iso_format</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>string</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>timezone</tt> TYPE <tt>TIMEZONE</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>daylight_saving_time</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>value</tt> TYPE <tt>utclong</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_utclong_invalid.clas.html">cx_abap_utclong_invalid</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_conversion_no_date_time.clas.html">cx_sy_conversion_no_date_time</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_parameter_invalid_range.clas.html">cx_parameter_invalid_range</a></tt><br>
+Static Method <tt>write_iso_format_with_offset</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>utclong</tt> TYPE <tt>utclong</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>timezone</tt> TYPE <tt>TIMEZONE</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>decimals</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>string</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_conversion_no_date_time.clas.html">cx_sy_conversion_no_date_time</a></tt><br>
+Static Method <tt>to_system_timestamp</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>utc_tstmp</tt> TYPE <tt>utclong</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>system_date</tt> TYPE <tt>D</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>system_time</tt> TYPE <tt>T</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_conversion_no_date_time.clas.html">cx_sy_conversion_no_date_time</a></tt><br>
+Static Method <tt>from_system_timestamp</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>system_date</tt> TYPE <tt>D</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>system_time</tt> TYPE <tt>T</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>utc_tstmp</tt> TYPE <tt>utclong</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_conversion_no_date_time.clas.html">cx_sy_conversion_no_date_time</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

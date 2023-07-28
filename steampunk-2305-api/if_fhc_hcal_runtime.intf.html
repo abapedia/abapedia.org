@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_FHC_HCAL_RUNTIME INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_FHC_HCAL_RUNTIME</h2>
+<a href="https://github.com/abapedia/steampunk-2305-api/blob/mainrc%2Fif_fhc_hcal_runtime.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_fhc_hcal_runtime/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_fhc_fcal_runtime.intf.html">IF_FHC_FCAL_RUNTIME</a></small><br><small>Next Object: <a href="if_fhc_holiday_runtime.intf.html">IF_FHC_HOLIDAY_RUNTIME</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ty_fhc_date</tt> TYPE <tt>if_fhc_hcal_runtime=>ty_fhc_date</tt><br>
+Type <tt>ty_fhc_description</tt> TYPE <tt>if_fhc_hcal_runtime=>ty_fhc_description</tt><br>
+Type <tt>ty_fhc_hcalid</tt> TYPE <tt>if_fhc_hcal_runtime=>ty_fhc_hcalid</tt><br>
+Type <tt>ty_fhc_t_hol_if</tt> TYPE <tt>NOT_RELEASED_TTYP</tt><br>
+Type <tt>ts_holiday_occurrence</tt> TYPE <tt>if_fhc_hcal_runtime=>ts_holiday_occurrence</tt><br>
+Type <tt>tt_holiday_occurrences</tt> TYPE <tt>if_fhc_hcal_runtime=>tt_holiday_occurrences</tt><br>
+Method <tt>is_holiday</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_date</tt> TYPE <tt>if_fhc_hcal_runtime=>ty_fhc_date</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_holiday</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>get_holiday</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_date</tt> TYPE <tt>if_fhc_hcal_runtime=>ty_fhc_date</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_holiday_runtime</tt> TYPE <tt>if_fhc_holiday_runtime</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_fhc_runtime.clas.html">cx_fhc_runtime</a></tt><br>
+Method <tt>calc_holidays_between_dates</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_start</tt> TYPE <tt>if_fhc_hcal_runtime=>ty_fhc_date</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_end</tt> TYPE <tt>if_fhc_hcal_runtime=>ty_fhc_date</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_holidays</tt> TYPE <tt>if_fhc_hcal_runtime=>tt_holiday_occurrences</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_fhc_runtime.clas.html">cx_fhc_runtime</a></tt><br>
+Method <tt>get_validity_start</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_validity_start</tt> TYPE <tt>if_fhc_hcal_runtime=>ty_fhc_date</tt><br>
+Method <tt>get_validity_end</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_validity_end</tt> TYPE <tt>if_fhc_hcal_runtime=>ty_fhc_date</tt><br>
+Method <tt>get_description</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_language</tt> TYPE <tt>SPRAS</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rv_description</tt> TYPE <tt>if_fhc_hcal_runtime=>ty_fhc_description</tt><br>
+Method <tt>get_holiday_assignments</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rt_holidays</tt> TYPE <tt>NOT_RELEASED_TTYP</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_fhc_runtime.clas.html">cx_fhc_runtime</a></tt><br>
+Method <tt>get_id</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_id</tt> TYPE <tt>if_fhc_hcal_runtime=>ty_fhc_hcalid</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>750</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>702</td><td bgcolor='red'>undefined</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

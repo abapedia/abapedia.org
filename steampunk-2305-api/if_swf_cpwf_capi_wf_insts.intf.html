@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_SWF_CPWF_CAPI_WF_INSTS INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_SWF_CPWF_CAPI_WF_INSTS</h2>
+<a href="https://github.com/abapedia/steampunk-2305-api/blob/mainrc%2Fif_swf_cpwf_capi_wf_insts.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_swf_cpwf_capi_wf_insts/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_swf_cpwf_capi_wf_inst_ctxt.intf.html">IF_SWF_CPWF_CAPI_WF_INST_CTXT</a></small><br><small>Next Object: <a href="if_swf_flex_ifs_condition_def.intf.html">IF_SWF_FLEX_IFS_CONDITION_DEF</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>cpwf_handle</tt> TYPE <tt>if_swf_cpwf_capi_wf_insts=>cpwf_handle</tt><br>
+Type <tt>tt_workflow_instance</tt> TYPE <tt>if_swf_cpwf_capi_wf_insts=>tt_workflow_instance</tt><br>
+Type <tt>ty__orderby</tt> TYPE <tt>if_swf_cpwf_capi_wf_insts=>ty__orderby</tt><br>
+Type <tt>ty__inlinecount</tt> TYPE <tt>if_swf_cpwf_capi_wf_insts=>ty__inlinecount</tt><br>
+Type <tt>ty__expand</tt> TYPE <tt>if_swf_cpwf_capi_wf_insts=>ty__expand</tt><br>
+Type <tt>ty_status</tt> TYPE <tt>if_swf_cpwf_capi_wf_insts=>ty_status</tt><br>
+Constant <tt>cs__orderby</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>cs__inlinecount</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>cs__expand</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>cs_status</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Method <tt>query_instances</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv__orderby</tt> TYPE <tt>if_swf_cpwf_capi_wf_insts=>ty__orderby</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv__skip</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv__top</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv__inlinecount</tt> TYPE <tt>if_swf_cpwf_capi_wf_insts=>ty__inlinecount</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv__expand</tt> TYPE <tt>if_swf_cpwf_capi_wf_insts=>ty__expand</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_cpwf_handle</tt> TYPE <tt>if_swf_cpwf_capi_wf_insts=>cpwf_handle</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_definition_id</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_definition_version</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_status</tt> TYPE <tt>if_swf_cpwf_capi_wf_insts=>ty_status</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_started_at</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_started_from</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_started_up_to</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_completed_at</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_completed_from</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_completed_up_to</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_started_by</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_subject</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_contains_text</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_business_key</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_root_instance_id</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_parent_instance_id</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>result</tt> TYPE <tt>if_swf_cpwf_capi_wf_insts=>tt_workflow_instance</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_swf_cpwf_api.clas.html">cx_swf_cpwf_api</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>750</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>702</td><td bgcolor='red'>undefined</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

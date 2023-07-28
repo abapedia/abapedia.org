@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_WEB_HTTP_CLIENT INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_WEB_HTTP_CLIENT</h2>
+<a href="https://github.com/abapedia/steampunk-2111-api/blob/mainrc%2Fif_web_http_client.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_web_http_client/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_t100_message.intf.html">IF_T100_MESSAGE</a></small><br><small>Next Object: <a href="if_web_http_header.intf.html">IF_WEB_HTTP_HEADER</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>method</tt> TYPE <tt>if_web_http_client=>method</tt><br>
+Attribute <tt>path_prefix</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>get</tt> TYPE <tt>i</tt><br>
+Constant <tt>post</tt> TYPE <tt>i</tt><br>
+Constant <tt>put</tt> TYPE <tt>i</tt><br>
+Constant <tt>delete</tt> TYPE <tt>i</tt><br>
+Constant <tt>head</tt> TYPE <tt>i</tt><br>
+Constant <tt>options</tt> TYPE <tt>i</tt><br>
+Constant <tt>patch</tt> TYPE <tt>i</tt><br>
+Constant <tt>trace</tt> TYPE <tt>i</tt><br>
+Constant <tt>connect</tt> TYPE <tt>i</tt><br>
+Method <tt>execute</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_method</tt> TYPE <tt>if_web_http_client=>method</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_timeout</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>r_response</tt> TYPE <tt>if_web_http_response</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_web_http_client_error.clas.html">cx_web_http_client_error</a></tt><br>
+Method <tt>get_http_request</tt><br>
+&nbsp;&nbsp;RETURNING <tt>r_http_request</tt> TYPE <tt>if_web_http_request</tt><br>
+Method <tt>close</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_web_http_client_error.clas.html">cx_web_http_client_error</a></tt><br>
+Method <tt>set_csrf_token</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_web_http_client_error.clas.html">cx_web_http_client_error</a></tt><br>
+Method <tt>accept_cookies</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_allow</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_web_http_client_error.clas.html">cx_web_http_client_error</a></tt><br>
+Method <tt>set_authn_mode</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_authn_mode</tt> TYPE <tt>if_a4c_cp_service=>authn_mode</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

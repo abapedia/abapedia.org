@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_BCS CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_BCS</h2>
+<a href="https://github.com/open-abap/open-abap-core/blob/mainrc%2Fbcs%2Fcl_bcs.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_bcs/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_apc_wsp_ext_stateless_base.clas.html">CL_APC_WSP_EXT_STATELESS_BASE</a></small><br><small>Next Object: <a href="cl_bcs_convert.clas.html">CL_BCS_CONVERT</a></small><br><br><u>Public</u><br>Static Method <tt>create_persistent</tt><br>
+&nbsp;&nbsp;RETURNING <tt>result</tt> TYPE <tt>cl_bcs</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bcs.clas.html">cx_bcs</a></tt><br>
+Method <tt>add_recipient</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_recipient</tt> TYPE <tt>if_recipient_bcs</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_express</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_copy</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_blind_copy</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_no_forward</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bcs.clas.html">cx_bcs</a></tt><br>
+Method <tt>set_sender</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_sender</tt> TYPE <tt>if_sender_bcs</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bcs.clas.html">cx_bcs</a></tt><br>
+Method <tt>set_status_attributes</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_requested_status</tt> TYPE <tt>any</tt><br>
+Method <tt>set_document</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_document</tt> TYPE <tt>if_document_bcs</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bcs.clas.html">cx_bcs</a></tt><br>
+Method <tt>set_message_subject</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ip_subject</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bcs.clas.html">cx_bcs</a></tt><br>
+Method <tt>send</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_with_error_screen</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>result</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bcs.clas.html">cx_bcs</a></tt><br>
+Method <tt>set_send_immediately</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_send_immediately</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bcs.clas.html">cx_bcs</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>750</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>702</td><td bgcolor='red'>undefined</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

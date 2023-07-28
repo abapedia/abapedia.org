@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_SCAL_UTILS CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_SCAL_UTILS</h2>
+<a href="https://github.com/abapedia/steampunk-2305-api/blob/mainrc%2Fcl_scal_utils.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_scal_utils/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_scal_api.clas.html">CL_SCAL_API</a></small><br><small>Next Object: <a href="cl_soap_destination_provider.clas.html">CL_SOAP_DESTINATION_PROVIDER</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>scalv_returncode</tt> TYPE <tt>i</tt><br>
+Type <tt>scalv_date</tt> TYPE <tt>d</tt><br>
+Type <tt>scalv_year_week</tt> TYPE <tt>cl_scal_utils=>scalv_year_week</tt><br>
+Type <tt>scalv_year</tt> TYPE <tt>cl_scal_utils=>scalv_year</tt><br>
+Type <tt>scalv_week</tt> TYPE <tt>cl_scal_utils=>scalv_week</tt><br>
+Type <tt>scals_month_name</tt> TYPE <tt>cl_scal_utils=>scals_month_name</tt><br>
+Type <tt>scalt_month_names</tt> TYPE <tt>cl_scal_utils=>scalt_month_names</tt><br>
+Static Method <tt>month_names_get</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_language</tt> TYPE <tt>SPRAS</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_month_names</tt> TYPE <tt>cl_scal_utils=>scalt_month_names</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_returncode</tt> TYPE <tt>i</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_scal.clas.html">cx_scal</a></tt><br>
+Static Method <tt>week_get_first_day</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_year_week</tt> TYPE <tt>cl_scal_utils=>scalv_year_week</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_year</tt> TYPE <tt>cl_scal_utils=>scalv_year</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_week</tt> TYPE <tt>cl_scal_utils=>scalv_week</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_date</tt> TYPE <tt>d</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_scal.clas.html">cx_scal</a></tt><br>
+Static Method <tt>date_get_week</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_date</tt> TYPE <tt>d</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_year_week</tt> TYPE <tt>cl_scal_utils=>scalv_year_week</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_year</tt> TYPE <tt>cl_scal_utils=>scalv_year</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_week</tt> TYPE <tt>cl_scal_utils=>scalv_week</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_scal.clas.html">cx_scal</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

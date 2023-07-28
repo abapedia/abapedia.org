@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_FP_ADS_UTIL CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_FP_ADS_UTIL</h2>
+<a href="https://github.com/abapedia/steampunk-2205-api/blob/mainrc%2Fcl_fp_ads_util.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_fp_ads_util/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_fhc_calendar_runtime.clas.html">CL_FHC_CALENDAR_RUNTIME</a></small><br><small>Next Object: <a href="cl_fp_fdp_services.clas.html">CL_FP_FDP_SERVICES</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ty_pdf_initview</tt> TYPE <tt>cl_fp_ads_util=>ty_pdf_initview</tt><br>
+Type <tt>ty_pq_name</tt> TYPE <tt>cl_fp_ads_util=>ty_pq_name</tt><br>
+Type <tt>ty_pdf_change_restr</tt> TYPE <tt>cl_fp_ads_util=>ty_pdf_change_restr</tt><br>
+Type <tt>ty_fontmap_str</tt> TYPE <tt>cl_fp_ads_util=>ty_fontmap_str</tt><br>
+Type <tt>ty_fontmap_tab</tt> TYPE <tt>cl_fp_ads_util=>ty_fontmap_tab</tt><br>
+Type <tt>ty_gs_options_pdf</tt> TYPE <tt>cl_fp_ads_util=>ty_gs_options_pdf</tt><br>
+Type <tt>ty_gs_options_pdl</tt> TYPE <tt>cl_fp_ads_util=>ty_gs_options_pdl</tt><br>
+Constant <tt>c_inv_layout_default</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>c_inv_layout_single</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>c_inv_layout_continuous</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>c_inv_layout_facing</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>c_inv_layout_cont_facing</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>c_inv_magnif_default</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>c_inv_magnif_fitpage</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>c_inv_magnif_fitwidth</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>c_inv_magnif_fitvisible</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>c_inv_magnif_percentage</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>c_inv_show_default</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>c_inv_show_pages</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>c_inv_show_bookmarks</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>c_inv_show_thumbnails</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>c_inv_show_layers</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>c_inv_show_attachments</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>c_pdf_ch_restr_add</tt> TYPE <tt>c LENGTH 1</tt><br>
+Constant <tt>c_pdf_ch_restr_no</tt> TYPE <tt>c LENGTH 1</tt><br>
+Static Method <tt>render_pdf</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_xml_data</tt> TYPE <tt>XSTRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_xdp_layout</tt> TYPE <tt>XSTRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_locale</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>is_options</tt> TYPE <tt>cl_fp_ads_util=>ty_gs_options_pdf</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_pdf</tt> TYPE <tt>XSTRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_pages</tt> TYPE <tt>INT4</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_trace_string</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_fp_ads_util.clas.html">cx_fp_ads_util</a></tt><br>
+Static Method <tt>render_4_pq</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_xml_data</tt> TYPE <tt>XSTRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_xdp_layout</tt> TYPE <tt>XSTRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_locale</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_pq_name</tt> TYPE <tt>cl_fp_ads_util=>ty_pq_name</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>is_options</tt> TYPE <tt>cl_fp_ads_util=>ty_gs_options_pdl</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_pdl</tt> TYPE <tt>XSTRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_pages</tt> TYPE <tt>INT4</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_trace_string</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_pdf_trace</tt> TYPE <tt>XSTRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_fp_ads_util.clas.html">cx_fp_ads_util</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

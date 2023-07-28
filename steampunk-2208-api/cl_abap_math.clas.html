@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_ABAP_MATH CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_ABAP_MATH</h2>
+<a href="https://github.com/abapedia/steampunk-2208-api/blob/mainrc%2Fcl_abap_math.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_abap_math/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_abap_matcher.clas.html">CL_ABAP_MATCHER</a></small><br><small>Next Object: <a href="cl_abap_memory_c_reader.clas.html">CL_ABAP_MEMORY_C_READER</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Constant <tt>round_half_up</tt> TYPE <tt>I</tt><br>
+Constant <tt>round_half_down</tt> TYPE <tt>I</tt><br>
+Constant <tt>round_half_even</tt> TYPE <tt>I</tt><br>
+Constant <tt>round_up</tt> TYPE <tt>I</tt><br>
+Constant <tt>round_down</tt> TYPE <tt>I</tt><br>
+Constant <tt>round_ceiling</tt> TYPE <tt>I</tt><br>
+Constant <tt>round_floor</tt> TYPE <tt>I</tt><br>
+Constant <tt>simple</tt> TYPE <tt>OUTPUTSTYLE</tt><br>
+Constant <tt>sign_as_postfix</tt> TYPE <tt>OUTPUTSTYLE</tt><br>
+Constant <tt>scale_preserving</tt> TYPE <tt>OUTPUTSTYLE</tt><br>
+Constant <tt>scientific</tt> TYPE <tt>OUTPUTSTYLE</tt><br>
+Constant <tt>scientific_with_leading_zero</tt> TYPE <tt>OUTPUTSTYLE</tt><br>
+Constant <tt>scale_preserving_scientific</tt> TYPE <tt>OUTPUTSTYLE</tt><br>
+Constant <tt>engineering</tt> TYPE <tt>OUTPUTSTYLE</tt><br>
+Constant <tt>max_decfloat34</tt> TYPE <tt>decfloat34</tt><br>
+Constant <tt>max_decfloat16</tt> TYPE <tt>decfloat16</tt><br>
+Constant <tt>min_decfloat34</tt> TYPE <tt>decfloat34</tt><br>
+Constant <tt>min_decfloat16</tt> TYPE <tt>decfloat16</tt><br>
+Constant <tt>max_int4</tt> TYPE <tt>I</tt><br>
+Constant <tt>min_int4</tt> TYPE <tt>I</tt><br>
+Constant <tt>max_int8</tt> TYPE <tt>INT8</tt><br>
+Constant <tt>min_int8</tt> TYPE <tt>INT8</tt><br>
+Static Method <tt>round_f_to_15_decs</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>f_in</tt> TYPE <tt>F</tt><br>
+&nbsp;&nbsp;RETURNING <tt>f_out</tt> TYPE <tt>F</tt><br>
+Static Method <tt>normalize</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>val</tt> TYPE <tt>decfloat</tt><br>
+&nbsp;&nbsp;RETURNING <tt>norm_val</tt> TYPE <tt>decfloat34</tt><br>
+Static Method <tt>get_scale</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>val</tt> TYPE <tt>decfloat</tt><br>
+&nbsp;&nbsp;RETURNING <tt>scale</tt> TYPE <tt>I</tt><br>
+Static Method <tt>get_number_of_digits</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>val</tt> TYPE <tt>decfloat</tt><br>
+&nbsp;&nbsp;RETURNING <tt>num_of_digits</tt> TYPE <tt>I</tt><br>
+Static Method <tt>get_scale_normalized</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>val</tt> TYPE <tt>decfloat</tt><br>
+&nbsp;&nbsp;RETURNING <tt>scale</tt> TYPE <tt>I</tt><br>
+Static Method <tt>get_exponent</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>val</tt> TYPE <tt>decfloat</tt><br>
+&nbsp;&nbsp;RETURNING <tt>exponent</tt> TYPE <tt>I</tt><br>
+Static Method <tt>get_max_db_value</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>in</tt> TYPE <tt>decfloat</tt><br>
+&nbsp;&nbsp;RETURNING <tt>max_value</tt> TYPE <tt>decfloat34</tt><br>
+Static Method <tt>get_db_length_decs</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>in</tt> TYPE <tt>decfloat</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>length</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>decimals</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_parameter_invalid_type.clas.html">cx_parameter_invalid_type</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='green'>true</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

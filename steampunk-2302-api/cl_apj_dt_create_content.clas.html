@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_APJ_DT_CREATE_CONTENT CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_APJ_DT_CREATE_CONTENT</h2>
+<a href="https://github.com/abapedia/steampunk-2302-api/blob/mainrc%2Fcl_apj_dt_create_content.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_apj_dt_create_content/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_address_format.clas.html">CL_ADDRESS_FORMAT</a></small><br><small>Next Object: <a href="cl_apj_jt_check_base.clas.html">CL_APJ_JT_CHECK_BASE</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ty_ret</tt> TYPE <tt>cl_apj_dt_create_content=>ty_ret</tt><br>
+Type <tt>ty_notif_class_name</tt> TYPE <tt>cl_apj_dt_create_content=>ty_notif_class_name</tt><br>
+Type <tt>ty_abap_language_version</tt> TYPE <tt>cl_apj_dt_create_content=>ty_abap_language_version</tt><br>
+Type <tt>ty_activity</tt> TYPE <tt>cl_apj_dt_create_content=>ty_activity</tt><br>
+Type <tt>ty_object_type</tt> TYPE <tt>cl_apj_dt_create_content=>ty_object_type</tt><br>
+Type <tt>ty_scoping_relevant</tt> TYPE <tt>cl_apj_dt_create_content=>ty_scoping_relevant</tt><br>
+Type <tt>ty_check_class_name</tt> TYPE <tt>cl_apj_dt_create_content=>ty_check_class_name</tt><br>
+Type <tt>ty_package</tt> TYPE <tt>cl_apj_dt_create_content=>ty_package</tt><br>
+Type <tt>ty_template_name</tt> TYPE <tt>cl_apj_dt_create_content=>ty_template_name</tt><br>
+Type <tt>ty_catalog_entry_type</tt> TYPE <tt>cl_apj_dt_create_content=>ty_catalog_entry_type</tt><br>
+Type <tt>ty_transport_request</tt> TYPE <tt>cl_apj_dt_create_content=>ty_transport_request</tt><br>
+Type <tt>ty_text</tt> TYPE <tt>cl_apj_dt_create_content=>ty_text</tt><br>
+Type <tt>ty_class_name</tt> TYPE <tt>cl_apj_dt_create_content=>ty_class_name</tt><br>
+Type <tt>ty_catalog_name</tt> TYPE <tt>cl_apj_dt_create_content=>ty_catalog_name</tt><br>
+Constant <tt>class_based</tt> TYPE <tt>i</tt><br>
+Static Method <tt>get_instance</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_instance</tt> TYPE <tt>cl_apj_dt_create_content</tt><br>
+Method <tt>create_job_cat_entry</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_catalog_name</tt> TYPE <tt>cl_apj_dt_create_content=>ty_catalog_name</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_class_name</tt> TYPE <tt>cl_apj_dt_create_content=>ty_class_name</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_text</tt> TYPE <tt>cl_apj_dt_create_content=>ty_text</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_catalog_entry_type</tt> TYPE <tt>cl_apj_dt_create_content=>ty_catalog_entry_type</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_check_class_name</tt> TYPE <tt>cl_apj_dt_create_content=>ty_check_class_name</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_transport_request</tt> TYPE <tt>cl_apj_dt_create_content=>ty_transport_request</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_package</tt> TYPE <tt>cl_apj_dt_create_content=>ty_package</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_successfull</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_apj_dt_content.clas.html">cx_apj_dt_content</a></tt><br>
+Method <tt>create_job_template_entry</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_template_name</tt> TYPE <tt>cl_apj_dt_create_content=>ty_template_name</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_catalog_name</tt> TYPE <tt>cl_apj_dt_create_content=>ty_catalog_name</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_text</tt> TYPE <tt>cl_apj_dt_create_content=>ty_text</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_parameters</tt> TYPE <tt>if_apj_dt_exec_object=>tt_templ_val</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_transport_request</tt> TYPE <tt>cl_apj_dt_create_content=>ty_transport_request</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_package</tt> TYPE <tt>cl_apj_dt_create_content=>ty_package</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_successfull</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_apj_dt_content.clas.html">cx_apj_dt_content</a></tt><br>
+Method <tt>delete_job_cat_entry</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_catalog_name</tt> TYPE <tt>cl_apj_dt_create_content=>ty_catalog_name</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_transport_request</tt> TYPE <tt>cl_apj_dt_create_content=>ty_transport_request</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_successfull</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_apj_dt_content.clas.html">cx_apj_dt_content</a></tt><br>
+Method <tt>delete_job_template_entry</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_template_name</tt> TYPE <tt>cl_apj_dt_create_content=>ty_template_name</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_transport_request</tt> TYPE <tt>cl_apj_dt_create_content=>ty_transport_request</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_successfull</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_apj_dt_content.clas.html">cx_apj_dt_content</a></tt><br>
+Static Method <tt>exists_job_cat_entry</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_catalog_name</tt> TYPE <tt>cl_apj_dt_create_content=>ty_catalog_name</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_exists</tt> TYPE <tt>cl_apj_dt_create_content=>ty_ret</tt><br>
+Static Method <tt>exists_job_template_entry</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_template_name</tt> TYPE <tt>cl_apj_dt_create_content=>ty_template_name</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_exists</tt> TYPE <tt>cl_apj_dt_create_content=>ty_ret</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

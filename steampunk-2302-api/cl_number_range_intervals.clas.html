@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_NUMBER_RANGE_INTERVALS CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_NUMBER_RANGE_INTERVALS</h2>
+<a href="https://github.com/abapedia/steampunk-2302-api/blob/mainrc%2Fcl_number_range_intervals.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_number_range_intervals/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_message_helper.clas.html">CL_MESSAGE_HELPER</a></small><br><small>Next Object: <a href="cl_number_range_objects.clas.html">CL_NUMBER_RANGE_OBJECTS</a></small><br><br>Status: DEPRECATED, use <a href="cl_numberrange_intervals.clas.html">CL_NUMBERRANGE_INTERVALS</a> instead<br><br><u>Public</u><br>Type <tt>nr_date</tt> TYPE <tt>d</tt><br>
+Type <tt>nr_delete</tt> TYPE <tt>cl_number_range_intervals=>nr_delete</tt><br>
+Type <tt>nr_display</tt> TYPE <tt>cl_number_range_intervals=>nr_display</tt><br>
+Type <tt>nr_error</tt> TYPE <tt>cl_number_range_intervals=>nr_error</tt><br>
+Type <tt>nr_error_inf</tt> TYPE <tt>cl_number_range_intervals=>nr_error_inf</tt><br>
+Type <tt>nr_inriv</tt> TYPE <tt>cl_number_range_intervals=>nr_inriv</tt><br>
+Type <tt>nr_error_iv</tt> TYPE <tt>cl_number_range_intervals=>nr_error_iv</tt><br>
+Type <tt>nr_gaps_line</tt> TYPE <tt>cl_number_range_intervals=>nr_gaps_line</tt><br>
+Type <tt>nr_gaps_tt</tt> TYPE <tt>cl_number_range_intervals=>nr_gaps_tt</tt><br>
+Type <tt>nr_inst</tt> TYPE <tt>cl_number_range_intervals=>nr_inst</tt><br>
+Type <tt>nr_interval</tt> TYPE <tt>cl_number_range_intervals=>nr_interval</tt><br>
+Type <tt>nr_interval_ext</tt> TYPE <tt>cl_number_range_intervals=>nr_interval_ext</tt><br>
+Type <tt>nr_interval_int</tt> TYPE <tt>cl_number_range_intervals=>nr_interval_int</tt><br>
+Type <tt>nr_lokal</tt> TYPE <tt>cl_number_range_intervals=>nr_lokal</tt><br>
+Type <tt>nr_object</tt> TYPE <tt>cl_number_range_intervals=>nr_object</tt><br>
+Type <tt>nr_object_range_line</tt> TYPE <tt>cl_number_range_intervals=>nr_object_range_line</tt><br>
+Type <tt>nr_object_range</tt> TYPE <tt>cl_number_range_intervals=>nr_object_range</tt><br>
+Type <tt>nr_paral</tt> TYPE <tt>cl_number_range_intervals=>nr_paral</tt><br>
+Type <tt>nr_repair</tt> TYPE <tt>cl_number_range_intervals=>nr_repair</tt><br>
+Type <tt>nr_subobject</tt> TYPE <tt>cl_number_range_intervals=>nr_subobject</tt><br>
+Type <tt>nr_test</tt> TYPE <tt>cl_number_range_intervals=>nr_test</tt><br>
+Type <tt>nr_toyear</tt> TYPE <tt>cl_number_range_intervals=>nr_toyear</tt><br>
+Type <tt>nr_user</tt> TYPE <tt>cl_number_range_intervals=>nr_user</tt><br>
+Type <tt>nr_warning</tt> TYPE <tt>cl_number_range_intervals=>nr_warning</tt><br>
+Type <tt>nr_wpnr</tt> TYPE <tt>cl_number_range_intervals=>nr_wpnr</tt><br>
+Method <tt>create</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>object</tt> TYPE <tt>cl_number_range_intervals=>nr_object</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>interval</tt> TYPE <tt>cl_number_range_intervals=>nr_interval</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>subobject</tt> TYPE <tt>cl_number_range_intervals=>nr_subobject</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>error</tt> TYPE <tt>cl_number_range_intervals=>nr_error</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>error_iv</tt> TYPE <tt>cl_number_range_intervals=>nr_error_iv</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>warning</tt> TYPE <tt>cl_number_range_intervals=>nr_warning</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>error_inf</tt> TYPE <tt>cl_number_range_intervals=>nr_error_inf</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>object_not_found</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>no_changes_made</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>invalid_indicator</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>foreign_lock</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>lock_error</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>create_error</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>lock_system_failure</tt><br>
+Method <tt>delete</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>object</tt> TYPE <tt>cl_number_range_intervals=>nr_object</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>interval</tt> TYPE <tt>cl_number_range_intervals=>nr_interval</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>subobject</tt> TYPE <tt>cl_number_range_intervals=>nr_subobject</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>error</tt> TYPE <tt>cl_number_range_intervals=>nr_error</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>error_iv</tt> TYPE <tt>cl_number_range_intervals=>nr_error_iv</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>error_inf</tt> TYPE <tt>cl_number_range_intervals=>nr_error_inf</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>warning</tt> TYPE <tt>cl_number_range_intervals=>nr_warning</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>invalid_indicator</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>no_changes_made</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>object_not_found</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>object_already_locked</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>delete_error</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>lock_error</tt><br>
+Method <tt>read</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>object</tt> TYPE <tt>cl_number_range_intervals=>nr_object</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>subobject</tt> TYPE <tt>cl_number_range_intervals=>nr_subobject</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>nr_range_nr1</tt> TYPE <tt>cl_number_range_intervals=>nr_interval_int</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>nr_range_nr2</tt> TYPE <tt>cl_number_range_intervals=>nr_interval_ext</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>interval</tt> TYPE <tt>cl_number_range_intervals=>nr_interval</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>object_not_found</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>nr_range_nr1_not_found</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>nr_range_nr1_not_intern</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>nr_range_nr2_must_be_space</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>nr_range_nr2_not_extern</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>nr_range_nr2_not_found</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>subobject_must_be_space</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>subobject_not_found</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>read_error</tt><br>
+Method <tt>update</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>object</tt> TYPE <tt>cl_number_range_intervals=>nr_object</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>interval</tt> TYPE <tt>cl_number_range_intervals=>nr_interval</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>subobject</tt> TYPE <tt>cl_number_range_intervals=>nr_subobject</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>error</tt> TYPE <tt>cl_number_range_intervals=>nr_error</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>error_iv</tt> TYPE <tt>cl_number_range_intervals=>nr_error_iv</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>error_inf</tt> TYPE <tt>cl_number_range_intervals=>nr_error_inf</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>warning</tt> TYPE <tt>cl_number_range_intervals=>nr_warning</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>object_not_found</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>no_changes_made</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>invalid_indicator</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>object_already_locked</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>lock_error</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>update_error</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>lock_system_failure</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

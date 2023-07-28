@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_APJ_SCP_TOOLS CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_APJ_SCP_TOOLS</h2>
+<a href="https://github.com/abapedia/steampunk-2305-api/blob/mainrc%2Fcl_apj_scp_tools.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_apj_scp_tools/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_apj_rt_api.clas.html">CL_APJ_RT_API</a></small><br><small>Next Object: <a href="cl_aps_bc_scope_change_api.clas.html">CL_APS_BC_SCOPE_CHANGE_API</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ty_ctxttyp</tt> TYPE <tt>cl_apj_scp_tools=>ty_ctxttyp</tt><br>
+Type <tt>ty_jobcount</tt> TYPE <tt>cl_apj_scp_tools=>ty_jobcount</tt><br>
+Type <tt>ty_ctxt</tt> TYPE <tt>cl_apj_scp_tools=>ty_ctxt</tt><br>
+Type <tt>ty_jobname</tt> TYPE <tt>cl_apj_scp_tools=>ty_jobname</tt><br>
+Type <tt>ty_new_job_info</tt> TYPE <tt>cl_apj_scp_tools=>ty_new_job_info</tt><br>
+Constant <tt>restart_type</tt> TYPE <tt>cl_apj_scp_tools=>ty_ctxttyp</tt><br>
+Constant <tt>restart_val</tt> TYPE <tt>cl_apj_scp_tools=>ty_ctxt</tt><br>
+Static Method <tt>is_restart_required</tt><br>
+&nbsp;&nbsp;RETURNING <tt>restart_required</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Static Method <tt>schedule_me_again</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_min_offset</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_force_reschedule</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_self_termination</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>es_new_job</tt> TYPE <tt>cl_apj_scp_tools=>ty_new_job_info</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_successfull</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Static Method <tt>get_own_restart_number</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_length</tt> TYPE <tt>I</tt><br>
+Static Method <tt>terminate_me</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

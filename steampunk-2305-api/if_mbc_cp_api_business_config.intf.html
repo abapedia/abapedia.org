@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_MBC_CP_API_BUSINESS_CONFIG INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_MBC_CP_API_BUSINESS_CONFIG</h2>
+<a href="https://github.com/abapedia/steampunk-2305-api/blob/mainrc%2Fif_mbc_cp_api_business_config.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_mbc_cp_api_business_config/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_mail_address.intf.html">IF_MAIL_ADDRESS</a></small><br><small>Next Object: <a href="if_mbc_cp_app_configuration.intf.html">IF_MBC_CP_APP_CONFIGURATION</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ty_identifier</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_identifier</tt><br>
+Type <tt>ty_technical_id</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_technical_id</tt><br>
+Type <tt>ty_namespace</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_namespace</tt><br>
+Type <tt>ty_name</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_name</tt><br>
+Type <tt>ty_description</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_description</tt><br>
+Type <tt>ty_application_component</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_application_component</tt><br>
+Type <tt>ty_application_component_long</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_application_component_long</tt><br>
+Type <tt>ty_service_binding</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_service_binding</tt><br>
+Type <tt>ty_service_name</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_service_name</tt><br>
+Type <tt>ty_service_version</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_service_version</tt><br>
+Type <tt>ty_root_entity_set</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_root_entity_set</tt><br>
+Type <tt>ty_transport</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_transport</tt><br>
+Type <tt>ty_skip_root_entity_list_rep</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_skip_root_entity_list_rep</tt><br>
+Type <tt>ty_configuration_group</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_configuration_group</tt><br>
+Type <tt>ts_business_configuration</tt> TYPE <tt>if_mbc_cp_api_business_config=>ts_business_configuration</tt><br>
+Attribute <tt>identifier</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_identifier</tt><br>
+Attribute <tt>namespace</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_namespace</tt><br>
+Attribute <tt>technical_id</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_technical_id</tt><br>
+Method <tt>exists</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_exists</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_mbc_api_exception.clas.html">cx_mbc_api_exception</a></tt><br>
+Method <tt>read</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rs_business_configuration</tt> TYPE <tt>if_mbc_cp_api_business_config=>ts_business_configuration</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_mbc_api_exception.clas.html">cx_mbc_api_exception</a></tt><br>
+Method <tt>read_app_configuration</tt><br>
+&nbsp;&nbsp;RETURNING <tt>result</tt> TYPE <tt>if_mbc_cp_app_configuration=>settings</tt><br>
+Method <tt>create</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_name</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_description</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_description</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_service_binding</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_service_binding</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_service_name</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_service_name</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_service_version</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_service_version</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_root_entity_set</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_root_entity_set</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_transport</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_transport</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_configuration_group</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_configuration_group</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_skip_root_entity_list_rep</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_skip_root_entity_list_rep</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>app_configuration</tt> TYPE <tt>if_mbc_cp_app_configuration=>settings</tt> Optional<br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_mbc_api_exception.clas.html">cx_mbc_api_exception</a></tt><br>
+Method <tt>update_configuration_group</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>configuration_group</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_configuration_group</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>transport</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_transport</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_mbc_api_exception.clas.html">cx_mbc_api_exception</a></tt><br>
+Method <tt>update_name</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_name</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_transport</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_transport</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_mbc_api_exception.clas.html">cx_mbc_api_exception</a></tt><br>
+Method <tt>update_description</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_description</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_description</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_transport</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_transport</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_mbc_api_exception.clas.html">cx_mbc_api_exception</a></tt><br>
+Method <tt>update_app_configuration</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>app_configuration</tt> TYPE <tt>if_mbc_cp_app_configuration=>settings</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>transport</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_transport</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_mbc_api_exception.clas.html">cx_mbc_api_exception</a></tt><br>
+Method <tt>update_service_configuration</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>root_entity_set</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_root_entity_set</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>service_binding</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_service_binding</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>service_name</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_service_name</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>service_version</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_service_version</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>transport</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_transport</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_mbc_api_exception.clas.html">cx_mbc_api_exception</a></tt><br>
+Method <tt>delete</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_transport</tt> TYPE <tt>if_mbc_cp_api_business_config=>ty_transport</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_mbc_api_exception.clas.html">cx_mbc_api_exception</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

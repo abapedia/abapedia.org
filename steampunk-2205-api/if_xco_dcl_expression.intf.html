@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_XCO_DCL_EXPRESSION INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_XCO_DCL_EXPRESSION</h2>
+<a href="https://github.com/abapedia/steampunk-2205-api/blob/mainrc%2Fif_xco_dcl_expression.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_xco_dcl_expression/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_xco_dcl_expr_field.intf.html">IF_XCO_DCL_EXPR_FIELD</a></small><br><small>Next Object: <a href="if_xco_dcl_expression_factory.intf.html">IF_XCO_DCL_EXPRESSION_FACTORY</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Interface <tt><a href="if_xco_text.intf.html">if_xco_text</a></tt><br>
+Method <tt>is_initial</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_is_initial_expression</tt> TYPE <tt>if_xco_dcl_expr_condition</tt><br>
+Method <tt>is_not_initial</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_is_not_initial_expression</tt> TYPE <tt>if_xco_dcl_expr_condition</tt><br>
+Method <tt>is_null</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_is_null_expression</tt> TYPE <tt>if_xco_dcl_expr_condition</tt><br>
+Method <tt>is_not_null</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_is_not_null_expression</tt> TYPE <tt>if_xco_dcl_expr_condition</tt><br>
+Method <tt>eq</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_operand</tt> TYPE <tt>if_xco_dcl_expression</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_eq_expression</tt> TYPE <tt>if_xco_dcl_expr_condition</tt><br>
+Method <tt>ne</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_operand</tt> TYPE <tt>if_xco_dcl_expression</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_ne_expression</tt> TYPE <tt>if_xco_dcl_expr_condition</tt><br>
+Method <tt>lt</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_operand</tt> TYPE <tt>if_xco_dcl_expression</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_lt_expression</tt> TYPE <tt>if_xco_dcl_expr_condition</tt><br>
+Method <tt>gt</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_operand</tt> TYPE <tt>if_xco_dcl_expression</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_gt_expression</tt> TYPE <tt>if_xco_dcl_expr_condition</tt><br>
+Method <tt>le</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_operand</tt> TYPE <tt>if_xco_dcl_expression</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_le_expression</tt> TYPE <tt>if_xco_dcl_expr_condition</tt><br>
+Method <tt>ge</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_operand</tt> TYPE <tt>if_xco_dcl_expression</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_ge_expression</tt> TYPE <tt>if_xco_dcl_expr_condition</tt><br>
+Method <tt>like</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_operand</tt> TYPE <tt>if_xco_dcl_expression</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_like_expression</tt> TYPE <tt>if_xco_dcl_expr_condition</tt><br>
+Method <tt>not_like</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_operand</tt> TYPE <tt>if_xco_dcl_expression</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_like_expression</tt> TYPE <tt>if_xco_dcl_expr_condition</tt><br>
+Method <tt>between</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_operand_1</tt> TYPE <tt>if_xco_dcl_expression</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_operand_2</tt> TYPE <tt>if_xco_dcl_expression</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_between_expression</tt> TYPE <tt>if_xco_dcl_expr_condition</tt><br>
+Method <tt>not_between</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_operand_1</tt> TYPE <tt>if_xco_dcl_expression</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_operand_2</tt> TYPE <tt>if_xco_dcl_expression</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_between_expression</tt> TYPE <tt>if_xco_dcl_expr_condition</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - /IWBEP/CX_GATEWAY CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS /IWBEP/CX_GATEWAY</h2>
+<a href="https://github.com/abapedia/steampunk-2111-api/blob/mainrc%2F%23iwbep%23cx_gateway.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes//iwbep/cx_gateway/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Next Object: <a href="%23ui2%23cl_json.clas.html">/UI2/CL_JSON</a></small><br><br>Status: RELEASED<br><br>Superclass: <a href="cx_static_check.clas.html">cx_static_check</a><br><br>
+<u>Public</u><br>Interface <tt><a href="if_t100_message.intf.html">IF_T100_MESSAGE</a></tt><br>
+Type <tt>ty_message_info</tt> TYPE <tt>/iwbep/cx_gateway=>ty_message_info</tt><br>
+Type <tt>ty_t_message_target</tt> TYPE <tt>/iwbep/cx_gateway=>ty_t_message_target</tt><br>
+Type <tt>ty_exception_category</tt> TYPE <tt>/iwbep/cx_gateway=>ty_exception_category</tt><br>
+Type <tt>ty_http_status_code</tt> TYPE <tt>NUMC3</tt><br>
+Type <tt>ty_sap_note_id</tt> TYPE <tt>/iwbep/cx_gateway=>ty_sap_note_id</tt><br>
+Attribute <tt>batch_content_id</tt> TYPE <tt>STRING</tt><br>
+Attribute <tt>exception_category</tt> TYPE <tt>/iwbep/cx_gateway=>ty_exception_category</tt><br>
+Attribute <tt>http_status_code</tt> TYPE <tt>NUMC3</tt><br>
+Attribute <tt>is_for_user</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Attribute <tt>message_container</tt> TYPE <tt>REF TO c LENGTH 64</tt><br>
+Attribute <tt>message_target</tt> TYPE <tt>STRING</tt><br>
+Attribute <tt>message_targets</tt> TYPE <tt>/iwbep/cx_gateway=>ty_t_message_target</tt><br>
+Attribute <tt>sap_note_id</tt> TYPE <tt>/iwbep/cx_gateway=>ty_sap_note_id</tt><br>
+Attribute <tt>v4_response_info</tt> TYPE <tt>REF TO object</tt><br>
+Constant <tt>gcs_default_text</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>invalid_skiptoken</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>set_skiptoken_forbidden</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>gcs_excep_categories</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>gcs_http_status_codes</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>gcs_message_type</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Method <tt>constructor</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>textid</tt> TYPE <tt>SCX_T100KEY</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>previous</tt> TYPE <tt>cx_root</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>batch_content_id</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>exception_category</tt> TYPE <tt>/iwbep/cx_gateway=>ty_exception_category</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>http_status_code</tt> TYPE <tt>NUMC3</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>is_for_user</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>message_container</tt> TYPE <tt>REF TO c LENGTH 64</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>message_target</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>message_targets</tt> TYPE <tt>/iwbep/cx_gateway=>ty_t_message_target</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>sap_note_id</tt> TYPE <tt>/iwbep/cx_gateway=>ty_sap_note_id</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>v4_response_info</tt> TYPE <tt>REF TO object</tt> Optional<br>
+Method <tt>get_message_container</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_message_container</tt> TYPE <tt>REF TO c LENGTH 64</tt><br>
+Method <tt>if_message~get_text</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

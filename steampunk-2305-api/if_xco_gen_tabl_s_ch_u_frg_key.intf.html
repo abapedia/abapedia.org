@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_XCO_GEN_TABL_S_CH_U_FRG_KEY INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_XCO_GEN_TABL_S_CH_U_FRG_KEY</h2>
+<a href="https://github.com/abapedia/steampunk-2305-api/blob/mainrc%2Fif_xco_gen_tabl_s_ch_u_frg_key.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_xco_gen_tabl_s_ch_u_frg_key/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_xco_gen_tabl_s_ch_u_cur_qun.intf.html">IF_XCO_GEN_TABL_S_CH_U_CUR_QUN</a></small><br><small>Next Object: <a href="if_xco_gen_tabl_s_ch_u_sch_hlp.intf.html">IF_XCO_GEN_TABL_S_CH_U_SCH_HLP</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Attribute <tt>field_name</tt> TYPE <tt>SXCO_AD_FIELD_NAME</tt><br>
+Method <tt>set_check_table</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_table_name</tt> TYPE <tt>SXCO_DBT_OBJECT_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_me</tt> TYPE <tt>if_xco_gen_tabl_s_ch_u_frg_key</tt><br>
+Method <tt>set_field_assignments</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_field_assignments</tt> TYPE <tt>if_xco_tab_foreign_key_content=>tt_field_assignment</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_me</tt> TYPE <tt>if_xco_gen_tabl_s_ch_u_frg_key</tt><br>
+Method <tt>set_screen_check</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_check_indicator</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>ro_me</tt> TYPE <tt>if_xco_gen_tabl_s_ch_u_frg_key</tt><br>
+Method <tt>set_key_type</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_key_type</tt> TYPE <tt>cl_xco_tab_fkey_field_type</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_me</tt> TYPE <tt>if_xco_gen_tabl_s_ch_u_frg_key</tt><br>
+Method <tt>set_cardinality</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_left_cardinality</tt> TYPE <tt>if_xco_gen_tabl_fkey_card_left</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_right_cardinality</tt> TYPE <tt>if_xco_gen_tabl_fkey_card_rght</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_me</tt> TYPE <tt>if_xco_gen_tabl_s_ch_u_frg_key</tt><br>
+Method <tt>set_error_message</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_message_number</tt> TYPE <tt>if_xco_tab_foreign_key_content=>ts_error_message-message_number</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_application_area</tt> TYPE <tt>if_xco_tab_foreign_key_content=>ts_error_message-application_area</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_me</tt> TYPE <tt>if_xco_gen_tabl_s_ch_u_frg_key</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>750</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>702</td><td bgcolor='red'>undefined</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

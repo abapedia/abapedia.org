@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_SCAL_API CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_SCAL_API</h2>
+<a href="https://github.com/abapedia/steampunk-2305-api/blob/mainrc%2Fcl_scal_api.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_scal_api/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_satc_api_check_variant.clas.html">CL_SATC_API_CHECK_VARIANT</a></small><br><small>Next Object: <a href="cl_scal_utils.clas.html">CL_SCAL_UTILS</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>scalv_correct_option</tt> TYPE <tt>cl_scal_api=>scalv_correct_option</tt><br>
+Type <tt>scalv_duration</tt> TYPE <tt>cl_scal_api=>scalv_duration</tt><br>
+Type <tt>scalv_fatcory_date</tt> TYPE <tt>cl_scal_api=>scalv_fatcory_date</tt><br>
+Type <tt>scalv_time</tt> TYPE <tt>t</tt><br>
+Type <tt>scalv_unit</tt> TYPE <tt>cl_scal_api=>scalv_unit</tt><br>
+Type <tt>scalv_weekday_name</tt> TYPE <tt>cl_scal_api=>scalv_weekday_name</tt><br>
+Type <tt>scalv_weekday_number</tt> TYPE <tt>cl_scal_api=>scalv_weekday_number</tt><br>
+Type <tt>scalv_workday_indicator</tt> TYPE <tt>cl_scal_api=>scalv_workday_indicator</tt><br>
+Type <tt>scals_day_attribs</tt> TYPE <tt>cl_scal_api=>scals_day_attribs</tt><br>
+Type <tt>scalt_day_attribs</tt> TYPE <tt>cl_scal_api=>scalt_day_attribs</tt><br>
+Type <tt>scalv_date</tt> TYPE <tt>d</tt><br>
+Type <tt>scalv_holiday_cal_id</tt> TYPE <tt>cl_scal_api=>scalv_holiday_cal_id</tt><br>
+Type <tt>scals_holiday_calendar</tt> TYPE <tt>cl_scal_api=>scals_holiday_calendar</tt><br>
+Type <tt>scalt_holiday_calendars</tt> TYPE <tt>cl_scal_api=>scalt_holiday_calendars</tt><br>
+Type <tt>scals_factory_cal_attrib</tt> TYPE <tt>cl_scal_api=>scals_factory_cal_attrib</tt><br>
+Type <tt>scals_factory_calendar</tt> TYPE <tt>cl_scal_api=>scals_factory_calendar</tt><br>
+Type <tt>scalt_factory_calendars</tt> TYPE <tt>cl_scal_api=>scalt_factory_calendars</tt><br>
+Type <tt>scalv_factory_cal_id</tt> TYPE <tt>cl_scal_api=>scalv_factory_cal_id</tt><br>
+Type <tt>scalv_returncode</tt> TYPE <tt>i</tt><br>
+Static Method <tt>day_attributes_get</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_factory_calendar</tt> TYPE <tt>cl_scal_api=>scalv_factory_cal_id</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_holiday_calendar</tt> TYPE <tt>cl_scal_api=>scalv_holiday_cal_id</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_date_from</tt> TYPE <tt>d</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_date_to</tt> TYPE <tt>d</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_language</tt> TYPE <tt>SPRAS</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_returncode</tt> TYPE <tt>i</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_day_attributes</tt> TYPE <tt>cl_scal_api=>scalt_day_attribs</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_scal.clas.html">cx_scal</a></tt><br>
+Static Method <tt>date_compute_day</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_date</tt> TYPE <tt>d</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_weekday_number</tt> TYPE <tt>cl_scal_api=>scalv_weekday_number</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_weekday_name</tt> TYPE <tt>cl_scal_api=>scalv_weekday_name</tt><br>
+Static Method <tt>factory_calendar_get</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_language</tt> TYPE <tt>SPRAS</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_returncode</tt> TYPE <tt>i</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_factory_calendars</tt> TYPE <tt>cl_scal_api=>scalt_factory_calendars</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_scal.clas.html">cx_scal</a></tt><br>
+Static Method <tt>holiday_calendar_get</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_language</tt> TYPE <tt>SPRAS</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_returncode</tt> TYPE <tt>i</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_holiday_calendars</tt> TYPE <tt>cl_scal_api=>scalt_holiday_calendars</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_scal.clas.html">cx_scal</a></tt><br>
+Static Method <tt>date_convert_to_factorydate</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_correct_option</tt> TYPE <tt>cl_scal_api=>scalv_correct_option</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_date</tt> TYPE <tt>d</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_factory_calendar</tt> TYPE <tt>cl_scal_api=>scalv_factory_cal_id</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_date</tt> TYPE <tt>d</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_factory_date</tt> TYPE <tt>cl_scal_api=>scalv_fatcory_date</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_workday_indicator</tt> TYPE <tt>cl_scal_api=>scalv_workday_indicator</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_scal.clas.html">cx_scal</a></tt><br>
+Static Method <tt>factorydate_convert_to_date</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_factory_date</tt> TYPE <tt>cl_scal_api=>scalv_fatcory_date</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_factory_calendar</tt> TYPE <tt>cl_scal_api=>scalv_factory_cal_id</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_date</tt> TYPE <tt>d</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_scal.clas.html">cx_scal</a></tt><br>
+Static Method <tt>factory_calendar_attribute_get</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_factory_calendar</tt> TYPE <tt>cl_scal_api=>scalv_factory_cal_id</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_language</tt> TYPE <tt>SPRAS</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rs_factory_calendar_attrib</tt> TYPE <tt>cl_scal_api=>scals_factory_cal_attrib</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_scal.clas.html">cx_scal</a></tt><br>
+Static Method <tt>end_time_determine</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_duration</tt> TYPE <tt>cl_scal_api=>scalv_duration</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_unit</tt> TYPE <tt>cl_scal_api=>scalv_unit</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_factory_calendar</tt> TYPE <tt>cl_scal_api=>scalv_factory_cal_id</tt> Optional<br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>cv_start_date</tt> TYPE <tt>d</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>cv_start_time</tt> TYPE <tt>t</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_end_date</tt> TYPE <tt>d</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_end_time</tt> TYPE <tt>t</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_scal.clas.html">cx_scal</a></tt><br>
+Static Method <tt>start_time_determine</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_duration</tt> TYPE <tt>cl_scal_api=>scalv_duration</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_unit</tt> TYPE <tt>cl_scal_api=>scalv_unit</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_factory_calendar</tt> TYPE <tt>cl_scal_api=>scalv_factory_cal_id</tt> Optional<br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>cv_end_date</tt> TYPE <tt>d</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>cv_end_time</tt> TYPE <tt>t</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_start_date</tt> TYPE <tt>d</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_start_time</tt> TYPE <tt>t</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_scal.clas.html">cx_scal</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

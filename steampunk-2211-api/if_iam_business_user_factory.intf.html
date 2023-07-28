@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_IAM_BUSINESS_USER_FACTORY INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_IAM_BUSINESS_USER_FACTORY</h2>
+<a href="https://github.com/abapedia/steampunk-2211-api/blob/mainrc%2Fif_iam_business_user_factory.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_iam_business_user_factory/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_iam_business_user_badi.intf.html">IF_IAM_BUSINESS_USER_BADI</a></small><br><small>Next Object: <a href="if_ixml_att_list_decl.intf.html">IF_IXML_ATT_LIST_DECL</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>tt_user_id</tt> TYPE <tt>if_iam_business_user=>tt_user_id</tt><br>
+Type <tt>tt_user_name</tt> TYPE <tt>if_iam_business_user_factory=>tt_user_name</tt><br>
+Type <tt>tt_business_user</tt> TYPE <tt>if_iam_business_user_factory=>tt_business_user</tt><br>
+Method <tt>create_business_user</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_bupa_id</tt> TYPE <tt>if_iam_business_user=>ty_bupa_id</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_user_name</tt> TYPE <tt>if_iam_business_user=>ty_user_name</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>eo_business_user</tt> TYPE <tt>if_iam_business_user</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_return</tt> TYPE <tt>BAPIRETTAB</tt><br>
+Method <tt>get_business_user</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_user_id</tt> TYPE <tt>if_iam_business_user=>ty_user_id</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_user_name</tt> TYPE <tt>if_iam_business_user=>ty_user_name</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>eo_business_user</tt> TYPE <tt>if_iam_business_user</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_return</tt> TYPE <tt>BAPIRETTAB</tt><br>
+Method <tt>get_business_users</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_user_id</tt> TYPE <tt>if_iam_business_user=>tt_user_id</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_user_name</tt> TYPE <tt>if_iam_business_user_factory=>tt_user_name</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_business_user</tt> TYPE <tt>if_iam_business_user_factory=>tt_business_user</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_return</tt> TYPE <tt>BAPIRETTAB</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

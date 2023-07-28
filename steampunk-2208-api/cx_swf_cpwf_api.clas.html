@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CX_SWF_CPWF_API CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CX_SWF_CPWF_API</h2>
+<a href="https://github.com/abapedia/steampunk-2208-api/blob/mainrc%2Fcx_swf_cpwf_api.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cx_swf_cpwf_api/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cx_stream_state_error.clas.html">CX_STREAM_STATE_ERROR</a></small><br><small>Next Object: <a href="cx_swf_cpwf_callback.clas.html">CX_SWF_CPWF_CALLBACK</a></small><br><br>Status: RELEASED<br><br>Superclass: <a href="cx_static_check.clas.html">cx_static_check</a><br><br>
+<u>Public</u><br>Interface <tt><a href="if_t100_message.intf.html">IF_T100_MESSAGE</a></tt><br>
+Interface <tt><a href="if_t100_dyn_msg.intf.html">IF_T100_DYN_MSG</a></tt><br>
+Attribute <tt>id</tt> TYPE <tt>STRING</tt><br>
+Attribute <tt>error_code</tt> TYPE <tt>STRING</tt><br>
+Attribute <tt>error_message</tt> TYPE <tt>STRING</tt><br>
+Attribute <tt>error_logid</tt> TYPE <tt>STRING</tt><br>
+Attribute <tt>valid_consumer_type</tt> TYPE <tt>SWF_CPWF_CONSUMER</tt><br>
+Attribute <tt>http_code</tt> TYPE <tt>NUMC3</tt><br>
+Constant <tt>wrong_callback_class</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>wrong_status</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>wrong_status_found</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>request_not_found</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>invalid_bgrfc_destination</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>invalid_retention_time</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>request_alrdy_locked</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>request_lock_failed</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>instance_not_found</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>workflow_definitions_fails</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>http_error</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>start_alrdy_sched</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>wrong_operation</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>wrong_operation_retry_start</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>consumer_not_found</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>consumer_invalid</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>consumer_empty</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>http_error_start</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>error_user_tasks</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>error_wf_log</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>error_wf_data</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>error_wf_context</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>error_raising_event</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Method <tt>constructor</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>textid</tt> TYPE <tt>SCX_T100KEY</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>previous</tt> TYPE <tt>cx_root</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>id</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>error_code</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>error_message</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>error_logid</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>valid_consumer_type</tt> TYPE <tt>SWF_CPWF_CONSUMER</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>http_code</tt> TYPE <tt>NUMC3</tt> Optional<br>
+Method <tt>get_attribute_value</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_attr_name</tt> TYPE <tt>SCX_ATTRNAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_attr_value</tt> TYPE <tt>STRING</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

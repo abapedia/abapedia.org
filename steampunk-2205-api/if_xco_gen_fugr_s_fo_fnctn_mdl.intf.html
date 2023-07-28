@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_XCO_GEN_FUGR_S_FO_FNCTN_MDL INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_XCO_GEN_FUGR_S_FO_FNCTN_MDL</h2>
+<a href="https://github.com/abapedia/steampunk-2205-api/blob/mainrc%2Fif_xco_gen_fugr_s_fo_fnctn_mdl.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_xco_gen_fugr_s_fo_fnctn_mdl/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_xco_gen_fugr_s_fo_fm_p_imp.intf.html">IF_XCO_GEN_FUGR_S_FO_FM_P_IMP</a></small><br><small>Next Object: <a href="if_xco_gen_fugr_s_up_fnctn_mdl.intf.html">IF_XCO_GEN_FUGR_S_UP_FNCTN_MDL</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>tv_short_text</tt> TYPE <tt>if_xco_gen_fugr_s_fo_fnctn_mdl=>tv_short_text</tt><br>
+Attribute <tt>name</tt> TYPE <tt>SXCO_FM_NAME</tt><br>
+Method <tt>set_short_text</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_short_text</tt> TYPE <tt>if_xco_gen_fugr_s_fo_fnctn_mdl=>tv_short_text</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_me</tt> TYPE <tt>if_xco_gen_fugr_s_fo_fnctn_mdl</tt><br>
+Method <tt>add_importing_parameter</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_FM_PARAMETER_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_importing_parameter</tt> TYPE <tt>if_xco_gen_fugr_s_fo_fm_p_imp</tt><br>
+Method <tt>get_importing_parameter</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_FM_PARAMETER_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_importing_parameter</tt> TYPE <tt>if_xco_gen_fugr_s_fo_fm_p_imp</tt><br>
+Method <tt>remove_importing_parameter</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_FM_PARAMETER_NAME</tt><br>
+Method <tt>add_exporting_parameter</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_FM_PARAMETER_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_exporting_parameter</tt> TYPE <tt>if_xco_gen_fugr_s_fo_fm_p_exp</tt><br>
+Method <tt>get_exporting_parameter</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_FM_PARAMETER_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_exporting_parameter</tt> TYPE <tt>if_xco_gen_fugr_s_fo_fm_p_exp</tt><br>
+Method <tt>remove_exporting_parameter</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_FM_PARAMETER_NAME</tt><br>
+Method <tt>add_changing_parameter</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_FM_PARAMETER_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_changing_parameter</tt> TYPE <tt>if_xco_gen_fugr_s_fo_fm_p_cha</tt><br>
+Method <tt>get_changing_parameter</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_FM_PARAMETER_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_changing_parameter</tt> TYPE <tt>if_xco_gen_fugr_s_fo_fm_p_cha</tt><br>
+Method <tt>remove_changing_parameter</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_FM_PARAMETER_NAME</tt><br>
+Method <tt>add_exception</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_FM_EXCEPTION_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_exception</tt> TYPE <tt>if_xco_gen_fugr_s_fo_fm_excptn</tt><br>
+Method <tt>get_exception</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_FM_EXCEPTION_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_exception</tt> TYPE <tt>if_xco_gen_fugr_s_fo_fm_excptn</tt><br>
+Method <tt>remove_exception</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_FM_EXCEPTION_NAME</tt><br>
+Method <tt>set_source_code</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_source_code</tt> TYPE <tt>if_xco_text</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_me</tt> TYPE <tt>if_xco_gen_fugr_s_fo_fnctn_mdl</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

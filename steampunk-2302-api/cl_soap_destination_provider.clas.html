@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_SOAP_DESTINATION_PROVIDER CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_SOAP_DESTINATION_PROVIDER</h2>
+<a href="https://github.com/abapedia/steampunk-2302-api/blob/mainrc%2Fcl_soap_destination_provider.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_soap_destination_provider/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_scal_utils.clas.html">CL_SCAL_UTILS</a></small><br><small>Next Object: <a href="cl_swf_cpwf_api_factory_a4c.clas.html">CL_SWF_CPWF_API_FACTORY_A4C</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Static Method <tt>create_by_cloud_destination</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_service_instance_name</tt> TYPE <tt>if_a4c_cp_service=>ty_service_instance_name</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>r_soap_destination</tt> TYPE <tt>if_soap_destination</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_soap_destination_error.clas.html">cx_soap_destination_error</a></tt><br>
+Static Method <tt>create_by_url</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_url</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>r_soap_destination</tt> TYPE <tt>if_soap_destination</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_soap_destination_error.clas.html">cx_soap_destination_error</a></tt><br>
+Static Method <tt>create_by_comm_arrangement</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>comm_scenario</tt> TYPE <tt>if_com_management=>ty_cscn_id</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>service_id</tt> TYPE <tt>if_com_management=>ty_cscn_outb_srv_id</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>comm_system_id</tt> TYPE <tt>if_com_management=>ty_cs_id</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>r_destination</tt> TYPE <tt>if_proxy_destination</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_soap_destination_error.clas.html">cx_soap_destination_error</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

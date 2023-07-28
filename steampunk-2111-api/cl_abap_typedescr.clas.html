@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_ABAP_TYPEDESCR CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_ABAP_TYPEDESCR</h2>
+<a href="https://github.com/abapedia/steampunk-2111-api/blob/mainrc%2Fcl_abap_typedescr.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_abap_typedescr/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_abap_tstmp.clas.html">CL_ABAP_TSTMP</a></small><br><small>Next Object: <a href="cl_abap_ungzip_binary_stream.clas.html">CL_ABAP_UNGZIP_BINARY_STREAM</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Attribute <tt>absolute_name</tt> TYPE <tt>abap_abstypename</tt><br>
+Attribute <tt>decimals</tt> TYPE <tt>I</tt><br>
+Attribute <tt>kind</tt> TYPE <tt>abap_typecategory</tt><br>
+Attribute <tt>length</tt> TYPE <tt>I</tt><br>
+Attribute <tt>type_kind</tt> TYPE <tt>abap_typekind</tt><br>
+Constant <tt>false</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Constant <tt>kind_class</tt> TYPE <tt>abap_typecategory</tt><br>
+Constant <tt>kind_elem</tt> TYPE <tt>abap_typecategory</tt><br>
+Constant <tt>kind_intf</tt> TYPE <tt>abap_typecategory</tt><br>
+Constant <tt>kind_ref</tt> TYPE <tt>abap_typecategory</tt><br>
+Constant <tt>kind_struct</tt> TYPE <tt>abap_typecategory</tt><br>
+Constant <tt>kind_table</tt> TYPE <tt>abap_typecategory</tt><br>
+Constant <tt>true</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Constant <tt>typekind_any</tt> TYPE <tt>abap_typekind</tt><br>
+Constant <tt>typekind_char</tt> TYPE <tt>abap_typekind</tt><br>
+Constant <tt>typekind_class</tt> TYPE <tt>abap_typekind</tt><br>
+Constant <tt>typekind_clike</tt> TYPE <tt>abap_typekind</tt><br>
+Constant <tt>typekind_csequence</tt> TYPE <tt>abap_typekind</tt><br>
+Constant <tt>typekind_data</tt> TYPE <tt>abap_typekind</tt><br>
+Constant <tt>typekind_date</tt> TYPE <tt>abap_typekind</tt><br>
+Constant <tt>typekind_decfloat</tt> TYPE <tt>abap_typekind</tt><br>
+Constant <tt>typekind_decfloat16</tt> TYPE <tt>abap_typekind</tt><br>
+Constant <tt>typekind_decfloat34</tt> TYPE <tt>abap_typekind</tt><br>
+Constant <tt>typekind_dref</tt> TYPE <tt>abap_typekind</tt><br>
+Constant <tt>typekind_float</tt> TYPE <tt>abap_typekind</tt><br>
+Constant <tt>typekind_hex</tt> TYPE <tt>abap_typekind</tt><br>
+Constant <tt>typekind_int</tt> TYPE <tt>abap_typekind</tt><br>
+Constant <tt>typekind_int1</tt> TYPE <tt>abap_typekind</tt><br>
+Constant <tt>typekind_int8</tt> TYPE <tt>abap_typekind</tt><br>
+Constant <tt>typekind_int2</tt> TYPE <tt>abap_typekind</tt><br>
+Constant <tt>typekind_intf</tt> TYPE <tt>abap_typekind</tt><br>
+Constant <tt>typekind_iref</tt> TYPE <tt>abap_typekind</tt><br>
+Constant <tt>typekind_num</tt> TYPE <tt>abap_typekind</tt><br>
+Constant <tt>typekind_numeric</tt> TYPE <tt>abap_typekind</tt><br>
+Constant <tt>typekind_oref</tt> TYPE <tt>abap_typekind</tt><br>
+Constant <tt>typekind_packed</tt> TYPE <tt>abap_typekind</tt><br>
+Constant <tt>typekind_simple</tt> TYPE <tt>abap_typekind</tt><br>
+Constant <tt>typekind_string</tt> TYPE <tt>abap_typekind</tt><br>
+Constant <tt>typekind_struct1</tt> TYPE <tt>abap_typekind</tt><br>
+Constant <tt>typekind_struct2</tt> TYPE <tt>abap_typekind</tt><br>
+Constant <tt>typekind_table</tt> TYPE <tt>abap_typekind</tt><br>
+Constant <tt>typekind_time</tt> TYPE <tt>abap_typekind</tt><br>
+Constant <tt>typekind_utclong</tt> TYPE <tt>abap_typekind</tt><br>
+Constant <tt>typekind_w</tt> TYPE <tt>abap_typekind</tt><br>
+Constant <tt>typekind_xsequence</tt> TYPE <tt>abap_typekind</tt><br>
+Constant <tt>typekind_xstring</tt> TYPE <tt>abap_typekind</tt><br>
+Constant <tt>typekind_bref</tt> TYPE <tt>abap_typekind</tt><br>
+Constant <tt>typekind_enum</tt> TYPE <tt>abap_typekind</tt><br>
+Constant <tt>typepropkind_dbmaxlen</tt> TYPE <tt>abap_typepropkind</tt><br>
+Constant <tt>typepropkind_hasclient</tt> TYPE <tt>abap_typepropkind</tt><br>
+Constant <tt>undefined</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Static Method <tt>describe_by_data</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_data</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;RETURNING <tt>p_descr_ref</tt> TYPE <tt>cl_abap_typedescr</tt><br>
+Static Method <tt>describe_by_name</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_name</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;RETURNING <tt>p_descr_ref</tt> TYPE <tt>cl_abap_typedescr</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>type_not_found</tt><br>
+Static Method <tt>describe_by_object_ref</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_object_ref</tt> TYPE <tt>REF TO object</tt><br>
+&nbsp;&nbsp;RETURNING <tt>p_descr_ref</tt> TYPE <tt>cl_abap_typedescr</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>reference_is_initial</tt><br>
+Static Method <tt>describe_by_data_ref</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_data_ref</tt> TYPE <tt>REF TO any</tt><br>
+&nbsp;&nbsp;RETURNING <tt>p_descr_ref</tt> TYPE <tt>cl_abap_typedescr</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>reference_is_initial</tt><br>
+Method <tt>get_property</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_property_kind</tt> TYPE <tt>abap_typepropkind</tt><br>
+&nbsp;&nbsp;RETURNING <tt>p_value</tt> TYPE <tt>REF TO any</tt><br>
+Method <tt>get_relative_name</tt><br>
+&nbsp;&nbsp;RETURNING <tt>p_relative_name</tt> TYPE <tt>STRING</tt><br>
+Method <tt>is_ddic_type</tt><br>
+&nbsp;&nbsp;RETURNING <tt>p_abap_bool</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>get_ddic_header</tt><br>
+&nbsp;&nbsp;RETURNING <tt>p_header</tt> TYPE <tt>NOT_RELEASED</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>not_found</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>no_ddic_type</tt><br>
+Method <tt>get_ddic_object</tt><br>
+&nbsp;&nbsp;RETURNING <tt>p_object</tt> TYPE <tt>NOT_RELEASED_TTYP</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>not_found</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>no_ddic_type</tt><br>
+Method <tt>has_property</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_property_kind</tt> TYPE <tt>abap_typepropkind</tt><br>
+&nbsp;&nbsp;RETURNING <tt>p_abap_bool</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>is_instantiatable</tt><br>
+&nbsp;&nbsp;RETURNING <tt>p_result</tt> TYPE <tt>ABAP_BOOL</tt><br>
+<u>Protected</u><br>Type <tt>xtype_type</tt> TYPE <tt>cl_abap_typedescr=>xtype_type</tt><br>
+Constant <tt>kind_enum</tt> TYPE <tt>abap_typecategory</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='green'>true</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

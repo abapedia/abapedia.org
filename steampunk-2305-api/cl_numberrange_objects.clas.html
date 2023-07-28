@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_NUMBERRANGE_OBJECTS CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_NUMBERRANGE_OBJECTS</h2>
+<a href="https://github.com/abapedia/steampunk-2305-api/blob/mainrc%2Fcl_numberrange_objects.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_numberrange_objects/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_numberrange_intervals.clas.html">CL_NUMBERRANGE_INTERVALS</a></small><br><small>Next Object: <a href="cl_numberrange_runtime.clas.html">CL_NUMBERRANGE_RUNTIME</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>nr_activity</tt> TYPE <tt>cl_numberrange_objects=>nr_activity</tt><br>
+Type <tt>nr_version</tt> TYPE <tt>cl_numberrange_objects=>nr_version</tt><br>
+Type <tt>nr_devclass</tt> TYPE <tt>cl_numberrange_objects=>nr_devclass</tt><br>
+Type <tt>nr_trkorr</tt> TYPE <tt>cl_numberrange_objects=>nr_trkorr</tt><br>
+Type <tt>nr_attribute</tt> TYPE <tt>cl_numberrange_objects=>nr_attribute</tt><br>
+Type <tt>nr_attributes</tt> TYPE <tt>cl_numberrange_objects=>nr_attribute</tt><br>
+Type <tt>nr_errors_line</tt> TYPE <tt>cl_numberrange_objects=>nr_errors_line</tt><br>
+Type <tt>nr_errors</tt> TYPE <tt>cl_numberrange_objects=>nr_errors</tt><br>
+Type <tt>nr_language</tt> TYPE <tt>cl_numberrange_objects=>nr_language</tt><br>
+Type <tt>nr_object</tt> TYPE <tt>cl_numberrange_objects=>nr_object</tt><br>
+Type <tt>nr_obj_text</tt> TYPE <tt>cl_numberrange_objects=>nr_obj_text</tt><br>
+Type <tt>nr_returncode</tt> TYPE <tt>cl_numberrange_objects=>nr_returncode</tt><br>
+Type <tt>nr_interval_exists</tt> TYPE <tt>cl_numberrange_objects=>nr_interval_exists</tt><br>
+Type <tt>nr_flag</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Static Method <tt>create</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>attributes</tt> TYPE <tt>cl_numberrange_objects=>nr_attribute</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>obj_text</tt> TYPE <tt>cl_numberrange_objects=>nr_obj_text</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>errors</tt> TYPE <tt>cl_numberrange_objects=>nr_errors</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>returncode</tt> TYPE <tt>cl_numberrange_objects=>nr_returncode</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_number_ranges.clas.html">cx_number_ranges</a></tt><br>
+Static Method <tt>get_abap_language_version</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_devclass</tt> TYPE <tt>cl_numberrange_objects=>nr_devclass</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_activity</tt> TYPE <tt>cl_numberrange_objects=>nr_activity</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_abap_language_version</tt> TYPE <tt>cl_numberrange_objects=>nr_version</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_error</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_invalid_activity</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Static Method <tt>delete</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>object</tt> TYPE <tt>cl_numberrange_objects=>nr_object</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>corrnr</tt> TYPE <tt>cl_numberrange_objects=>nr_trkorr</tt> Optional<br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_nr_object_not_found.clas.html">cx_nr_object_not_found</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_number_ranges.clas.html">cx_number_ranges</a></tt><br>
+Static Method <tt>read</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>language</tt> TYPE <tt>cl_numberrange_objects=>nr_language</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>object</tt> TYPE <tt>cl_numberrange_objects=>nr_object</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>attributes</tt> TYPE <tt>cl_numberrange_objects=>nr_attribute</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>interval_exists</tt> TYPE <tt>cl_numberrange_objects=>nr_interval_exists</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>obj_text</tt> TYPE <tt>cl_numberrange_objects=>nr_obj_text</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_nr_object_not_found.clas.html">cx_nr_object_not_found</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_number_ranges.clas.html">cx_number_ranges</a></tt><br>
+Static Method <tt>update</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>attributes</tt> TYPE <tt>cl_numberrange_objects=>nr_attribute</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>obj_text</tt> TYPE <tt>cl_numberrange_objects=>nr_obj_text</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>errors</tt> TYPE <tt>cl_numberrange_objects=>nr_errors</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>returncode</tt> TYPE <tt>cl_numberrange_objects=>nr_returncode</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_nr_object_not_found.clas.html">cx_nr_object_not_found</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_number_ranges.clas.html">cx_number_ranges</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

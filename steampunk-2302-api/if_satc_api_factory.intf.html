@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_SATC_API_FACTORY INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_SATC_API_FACTORY</h2>
+<a href="https://github.com/abapedia/steampunk-2302-api/blob/mainrc%2Fif_satc_api_factory.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_satc_api_factory/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_sadl_exit_calc_element_read.intf.html">IF_SADL_EXIT_CALC_ELEMENT_READ</a></small><br><small>Next Object: <a href="if_satc_api_result.intf.html">IF_SATC_API_RESULT</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ty_transport_id</tt> TYPE <tt>if_satc_api_factory=>ty_transport_id</tt><br>
+Type <tt>ty_check_variant_name</tt> TYPE <tt>if_satc_api_factory=>ty_check_variant_name</tt><br>
+Method <tt>create_run_configuration</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>object_set</tt> TYPE <tt>if_satc_object_set</tt><br>
+&nbsp;&nbsp;RETURNING <tt>run_configuration</tt> TYPE <tt>if_satc_api_run_configuration</tt><br>
+Method <tt>create_run</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>run_configuration</tt> TYPE <tt>if_satc_api_run_configuration</tt><br>
+&nbsp;&nbsp;RETURNING <tt>run</tt> TYPE <tt>if_satc_api_run</tt><br>
+Method <tt>create_object_set_fr_transport</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>transport</tt> TYPE <tt>if_satc_api_factory=>ty_transport_id</tt><br>
+&nbsp;&nbsp;RETURNING <tt>object_set</tt> TYPE <tt>if_satc_object_set</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_satc_api.clas.html">cx_satc_api</a></tt><br>
+Method <tt>create_object_set_for_list</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>object_keys</tt> TYPE <tt>if_satc_object_set=>ty_object_keys</tt><br>
+&nbsp;&nbsp;RETURNING <tt>object_set</tt> TYPE <tt>if_satc_object_set</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_satc_api.clas.html">cx_satc_api</a></tt><br>
+Method <tt>get_result_by_id</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>result_id</tt> TYPE <tt>if_satc_api_result=>ty_result_id</tt><br>
+&nbsp;&nbsp;RETURNING <tt>atc_result</tt> TYPE <tt>if_satc_api_result</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_satc_api.clas.html">cx_satc_api</a></tt><br>
+Method <tt>get_check_variant_by_name</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>if_satc_api_factory=>ty_check_variant_name</tt><br>
+&nbsp;&nbsp;RETURNING <tt>check_variant</tt> TYPE <tt>cl_satc_api_check_variant</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_satc_api.clas.html">cx_satc_api</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>750</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>702</td><td bgcolor='red'>undefined</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

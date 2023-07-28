@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_BCFG_CD_TRANSPORT_MANAGER INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_BCFG_CD_TRANSPORT_MANAGER</h2>
+<a href="https://github.com/abapedia/steampunk-2111-api/blob/mainrc%2Fif_bcfg_cd_transport_manager.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_bcfg_cd_transport_manager/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_bcfg_cd_cust_object_service.intf.html">IF_BCFG_CD_CUST_OBJECT_SERVICE</a></small><br><small>Next Object: <a href="if_bcfg_cd_transport_recorder.intf.html">IF_BCFG_CD_TRANSPORT_RECORDER</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ty_transport_request</tt> TYPE <tt>if_bcfg_cd_transport_manager=>ty_transport_request</tt><br>
+Type <tt>ty_task</tt> TYPE <tt>if_bcfg_cd_transport_manager=>ty_task</tt><br>
+Type <tt>ty_request_owner</tt> TYPE <tt>if_bcfg_cd_transport_manager=>ty_request_owner</tt><br>
+Type <tt>ty_description</tt> TYPE <tt>if_bcfg_cd_transport_manager=>ty_description</tt><br>
+Type <tt>request_type</tt> TYPE <tt>if_bcfg_cd_transport_manager=>request_type</tt><br>
+Type <tt>ty_transport</tt> TYPE <tt>if_bcfg_cd_transport_manager=>ty_transport</tt><br>
+Type <tt>ty_t_transport</tt> TYPE <tt>if_bcfg_cd_transport_manager=>ty_t_transport</tt><br>
+Constant <tt>cross_client_customizing</tt> TYPE <tt>i</tt><br>
+Constant <tt>customizing</tt> TYPE <tt>i</tt><br>
+Method <tt>get_task</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_task</tt> TYPE <tt>if_bcfg_cd_transport_manager=>ty_task</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bcfg_transport_request.clas.html">cx_bcfg_transport_request</a></tt><br>
+Method <tt>set_transport</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_transport_request</tt> TYPE <tt>if_bcfg_cd_transport_manager=>ty_transport_request</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bcfg_transport_request.clas.html">cx_bcfg_transport_request</a></tt><br>
+Method <tt>get_open_requests</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_username</tt> TYPE <tt>if_bcfg_cd_transport_manager=>ty_request_owner</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rt_requests</tt> TYPE <tt>if_bcfg_cd_transport_manager=>ty_t_transport</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bcfg_transport_request.clas.html">cx_bcfg_transport_request</a></tt><br>
+Method <tt>get_default_open_request</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rs_request</tt> TYPE <tt>if_bcfg_cd_transport_manager=>ty_transport</tt><br>
+Method <tt>create</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_description</tt> TYPE <tt>if_bcfg_cd_transport_manager=>ty_description</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_request</tt> TYPE <tt>if_bcfg_cd_transport_manager=>ty_transport_request</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bcfg_transport_request.clas.html">cx_bcfg_transport_request</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

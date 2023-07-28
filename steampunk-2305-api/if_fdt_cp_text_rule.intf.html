@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_FDT_CP_TEXT_RULE INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_FDT_CP_TEXT_RULE</h2>
+<a href="https://github.com/abapedia/steampunk-2305-api/blob/mainrc%2Fif_fdt_cp_text_rule.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_fdt_cp_text_rule/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_fdt_cp_ruleset.intf.html">IF_FDT_CP_RULESET</a></small><br><small>Next Object: <a href="if_fdt_cp_validation_operation.intf.html">IF_FDT_CP_VALIDATION_OPERATION</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Interface <tt><a href="if_fdt_cp_rule.intf.html">if_fdt_cp_rule</a></tt><br>
+Interface <tt><a href="if_fdt_cp_actions.intf.html">if_fdt_cp_actions</a></tt><br>
+Interface <tt><a href="if_fdt_cp_admin_data.intf.html">if_fdt_cp_admin_data</a></tt><br>
+Method <tt>set_no_default_result</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_no_default_result</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>get_no_default_result</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_no_default_result</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>get_predefined_results</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rt_predefined_results</tt> TYPE <tt>if_fdt_cp_external_types=>tt_predefined_result</tt><br>
+Method <tt>set_predefined_results</tt><br>
+&nbsp;&nbsp;RETURNING <tt>it_predefined_results</tt> TYPE <tt>if_fdt_cp_external_types=>tt_predefined_result</tt><br>
+Method <tt>add_predefined_result</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>is_predefined_result</tt> TYPE <tt>if_fdt_cp_external_types=>ty_predefined_result</tt><br>
+Method <tt>remove_predefined_result</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_id</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_sequence_number</tt> TYPE <tt>I</tt> Optional<br>
+Method <tt>add_branch</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>is_text_rule_branch</tt> TYPE <tt>if_fdt_cp_external_types=>ty_text_rule_branch</tt><br>
+Method <tt>remove_branch</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_id</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_sequence_number</tt> TYPE <tt>I</tt> Optional<br>
+Method <tt>get_branches</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rt_branches</tt> TYPE <tt>if_fdt_cp_external_types=>tt_text_rule_branch</tt><br>
+Method <tt>set_branches</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_branches</tt> TYPE <tt>if_fdt_cp_external_types=>tt_text_rule_branch</tt><br>
+Method <tt>get_default_branch</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rs_default_branch</tt> TYPE <tt>if_fdt_cp_external_types=>ty_text_rule_default_branch</tt><br>
+Method <tt>add_default_branch</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>is_default_branch</tt> TYPE <tt>if_fdt_cp_external_types=>ty_text_rule_default_branch</tt><br>
+Method <tt>remove_default_branch</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

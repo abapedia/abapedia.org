@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_MR_API INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_MR_API</h2>
+<a href="https://github.com/open-abap/open-abap-core/blob/mainrc%2Fsmim%2Fif_mr_api.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_mr_api/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_message.intf.html">IF_MESSAGE</a></small><br><small>Next Object: <a href="if_oo_adt_classrun.intf.html">IF_OO_ADT_CLASSRUN</a></small><br><br><u>Public</u><br>Static Method <tt>get_api</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_prefix</tt> TYPE <tt>csequence</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>r_mr_api</tt> TYPE <tt>if_mr_api</tt><br>
+Method <tt>get</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_url</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_check_authority</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>c_language</tt> TYPE <tt>LANGU</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_is_folder</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_content</tt> TYPE <tt>XSTRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_mime_type</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_loio</tt> TYPE <tt>SKWF_IO</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>parameter_missing</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>error_occured</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>not_found</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>permission_failure</tt><br>
+Method <tt>create_folder</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_url</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_language</tt> TYPE <tt>LANGU</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_description</tt> TYPE <tt>csequence</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_check_authority</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_suppress_package_dialog</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_dev_package</tt> TYPE <tt>DEVCLASS</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_genflag</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_corr_number</tt> TYPE <tt>TRKORR</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_folder_loio</tt> TYPE <tt>SKWF_IO</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_suppress_dialogs</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_folder_io</tt> TYPE <tt>SKWF_IO</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>parameter_missing</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>error_occured</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>cancelled</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>permission_failure</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>folder_exists</tt><br>
+Method <tt>put</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_url</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_content</tt> TYPE <tt>XSTRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_language</tt> TYPE <tt>LANGU</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_description</tt> TYPE <tt>csequence</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_check_authority</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_suppress_package_dialog</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_dev_package</tt> TYPE <tt>DEVCLASS</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_genflag</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_corr_number</tt> TYPE <tt>TRKORR</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_new_loio</tt> TYPE <tt>SKWF_IO</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_suppress_dialogs</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;EXCEPTIONS <tt>parameter_missing</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>error_occured</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>cancelled</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>permission_failure</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>data_inconsistency</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>new_loio_already_exists</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>is_folder</tt><br>
+Method <tt>delete</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_url</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_delete_children</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_check_authority</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_corr_number</tt> TYPE <tt>TRKORR</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_suppress_dialogs</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;EXCEPTIONS <tt>parameter_missing</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>error_occured</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>cancelled</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>permission_failure</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>not_found</tt><br>
+Method <tt>file_list</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_url</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_recursive_call</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_check_authority</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_files</tt> TYPE <tt>STRING_TABLE</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>parameter_missing</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>error_occured</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>not_found</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>permission_failure</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>is_not_folder</tt><br>
+Method <tt>properties</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_url</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_check_authority</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_is_folder</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_mime_type</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_size</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_bin_data</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_loio</tt> TYPE <tt>SKWF_IO</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_phio</tt> TYPE <tt>SKWF_IO</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_language</tt> TYPE <tt>LANGU</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_phio_last_changed</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>parameter_missing</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>error_occured</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>not_found</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>permission_failure</tt><br>
+Method <tt>get_io_for_url</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_url</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_is_folder</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_loio</tt> TYPE <tt>SKWF_IO</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>parameter_missing</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>error_occured</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>not_found</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>750</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>702</td><td bgcolor='red'>undefined</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

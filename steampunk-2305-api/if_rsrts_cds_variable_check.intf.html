@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_RSRTS_CDS_VARIABLE_CHECK INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_RSRTS_CDS_VARIABLE_CHECK</h2>
+<a href="https://github.com/abapedia/steampunk-2305-api/blob/mainrc%2Fif_rsrts_cds_variable_check.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_rsrts_cds_variable_check/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_rsrts_cds_read.intf.html">IF_RSRTS_CDS_READ</a></small><br><small>Next Object: <a href="if_sadl_exit_calc_element_read.intf.html">IF_SADL_EXIT_CALC_ELEMENT_READ</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>nt_periv</tt> TYPE <tt>if_rsrts_cds_variable_check=>nt_periv</tt><br>
+Type <tt>nt_date</tt> TYPE <tt>d</tt><br>
+Type <tt>nt_s_range</tt> TYPE <tt>if_rsrts_cds_variable_check=>nt_s_range</tt><br>
+Type <tt>nt_t_range</tt> TYPE <tt>if_rsrts_cds_variable_check=>nt_t_range</tt><br>
+Type <tt>nt_s_msg</tt> TYPE <tt>if_rsrts_cds_variable_check=>nt_s_msg</tt><br>
+Type <tt>nt_t_msg</tt> TYPE <tt>if_rsrts_cds_variable_check=>nt_t_msg</tt><br>
+Type <tt>nt_objectname</tt> TYPE <tt>if_rsrts_cds_variable_check=>nt_objectname</tt><br>
+Type <tt>nt_cdstype</tt> TYPE <tt>if_rsrts_cds_variable_check=>nt_cdstype</tt><br>
+Type <tt>nt_sx_value</tt> TYPE <tt>if_rsrts_cds_variable_check=>nt_sx_value</tt><br>
+Type <tt>nt_thx_value</tt> TYPE <tt>if_rsrts_cds_variable_check=>nt_thx_value</tt><br>
+Type <tt>nt_sx_msg</tt> TYPE <tt>if_rsrts_cds_variable_check=>nt_sx_msg</tt><br>
+Type <tt>nt_thx_msg</tt> TYPE <tt>if_rsrts_cds_variable_check=>nt_thx_msg</tt><br>
+Constant <tt>n_c_cdstype</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Static Method <tt>get_instance</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_query_cds_viewname</tt> TYPE <tt>if_rsrts_cds_variable_check=>nt_objectname</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_provider_cds_viewname</tt> TYPE <tt>if_rsrts_cds_variable_check=>nt_objectname</tt><br>
+&nbsp;&nbsp;RETURNING <tt>r_instance</tt> TYPE <tt>if_rsrts_cds_variable_check</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_rs_not_found.clas.html">cx_rs_not_found</a></tt><br>
+Method <tt>check_variables</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_thx_value</tt> TYPE <tt>if_rsrts_cds_variable_check=>nt_thx_value</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_periv</tt> TYPE <tt>if_rsrts_cds_variable_check=>nt_periv</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_keydate</tt> TYPE <tt>d</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_thx_msg_for_object</tt> TYPE <tt>if_rsrts_cds_variable_check=>nt_thx_msg</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_t_msg_general</tt> TYPE <tt>if_rsrts_cds_variable_check=>nt_t_msg</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>750</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>702</td><td bgcolor='red'>undefined</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

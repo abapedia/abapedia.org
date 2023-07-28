@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_CHDO_ENHANCEMENTS INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_CHDO_ENHANCEMENTS</h2>
+<a href="https://github.com/abapedia/steampunk-2111-api/blob/mainrc%2Fif_chdo_enhancements.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_chdo_enhancements/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_cds_test_data.intf.html">IF_CDS_TEST_DATA</a></small><br><small>Next Object: <a href="if_chdo_object_tools_rel.intf.html">IF_CHDO_OBJECT_TOOLS_REL</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Static Method <tt>authority_check</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_objectclass</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_cdobjectcl</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_objectid</tt> TYPE <tt>cl_chdo_read_tools=>tt_r_objectid</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rv_is_authorized</tt> TYPE <tt>ABAP_BOOL</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

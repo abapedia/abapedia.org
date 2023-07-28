@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_FHC_FCAL_RUNTIME INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_FHC_FCAL_RUNTIME</h2>
+<a href="https://github.com/abapedia/steampunk-2208-api/blob/mainrc%2Fif_fhc_fcal_runtime.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_fhc_fcal_runtime/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_fdt_types.intf.html">IF_FDT_TYPES</a></small><br><small>Next Object: <a href="if_fhc_hcal_runtime.intf.html">IF_FHC_HCAL_RUNTIME</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ty_fhc_date</tt> TYPE <tt>if_fhc_fcal_runtime=>ty_fhc_date</tt><br>
+Type <tt>ty_fhc_factorydate</tt> TYPE <tt>if_fhc_fcal_runtime=>ty_fhc_factorydate</tt><br>
+Type <tt>ty_fhc_number_of_days</tt> TYPE <tt>if_fhc_fcal_runtime=>ty_fhc_number_of_days</tt><br>
+Type <tt>ty_fhc_weekday</tt> TYPE <tt>if_fhc_fcal_runtime=>ty_fhc_weekday</tt><br>
+Type <tt>ty_fhc_description</tt> TYPE <tt>if_fhc_fcal_runtime=>ty_fhc_description</tt><br>
+Type <tt>ty_fhc_fcalid</tt> TYPE <tt>if_fhc_fcal_runtime=>ty_fhc_fcalid</tt><br>
+Type <tt>te_correct_option</tt> TYPE <tt>if_fhc_fcal_runtime=>te_correct_option</tt><br>
+Constant <tt>gc_correct_option_plus</tt> TYPE <tt>i</tt><br>
+Constant <tt>gc_correct_option_minus</tt> TYPE <tt>i</tt><br>
+Method <tt>convert_date_to_factorydate</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_date</tt> TYPE <tt>if_fhc_fcal_runtime=>ty_fhc_date</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_correct_option</tt> TYPE <tt>if_fhc_fcal_runtime=>te_correct_option</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rv_factorydate</tt> TYPE <tt>if_fhc_fcal_runtime=>ty_fhc_factorydate</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_fhc_runtime.clas.html">cx_fhc_runtime</a></tt><br>
+Method <tt>convert_factorydate_to_date</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_factorydate</tt> TYPE <tt>if_fhc_fcal_runtime=>ty_fhc_factorydate</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_date</tt> TYPE <tt>if_fhc_fcal_runtime=>ty_fhc_date</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_fhc_runtime.clas.html">cx_fhc_runtime</a></tt><br>
+Method <tt>get_last_factorydate</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_last_factory_date</tt> TYPE <tt>if_fhc_fcal_runtime=>ty_fhc_factorydate</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_fhc_runtime.clas.html">cx_fhc_runtime</a></tt><br>
+Method <tt>calc_workingdays_between_dates</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_start</tt> TYPE <tt>if_fhc_fcal_runtime=>ty_fhc_date</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_end</tt> TYPE <tt>if_fhc_fcal_runtime=>ty_fhc_date</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_number_of_working_days</tt> TYPE <tt>if_fhc_fcal_runtime=>ty_fhc_number_of_days</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_fhc_runtime.clas.html">cx_fhc_runtime</a></tt><br>
+Method <tt>add_workingdays_to_date</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_start</tt> TYPE <tt>if_fhc_fcal_runtime=>ty_fhc_date</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_number_of_workingdays</tt> TYPE <tt>if_fhc_fcal_runtime=>ty_fhc_number_of_days</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_end</tt> TYPE <tt>if_fhc_fcal_runtime=>ty_fhc_date</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_fhc_runtime.clas.html">cx_fhc_runtime</a></tt><br>
+Method <tt>subtract_workingdays_from_date</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_start</tt> TYPE <tt>if_fhc_fcal_runtime=>ty_fhc_date</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_number_of_workingdays</tt> TYPE <tt>if_fhc_fcal_runtime=>ty_fhc_number_of_days</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_end</tt> TYPE <tt>if_fhc_fcal_runtime=>ty_fhc_date</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_fhc_runtime.clas.html">cx_fhc_runtime</a></tt><br>
+Method <tt>get_validity_start</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_validity_start</tt> TYPE <tt>if_fhc_fcal_runtime=>ty_fhc_date</tt><br>
+Method <tt>get_validity_end</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_validity_end</tt> TYPE <tt>if_fhc_fcal_runtime=>ty_fhc_date</tt><br>
+Method <tt>is_workingday</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_weekday</tt> TYPE <tt>if_fhc_fcal_runtime=>ty_fhc_weekday</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_workingday</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>is_holiday_workingday</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_workingday</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>get_description</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_language</tt> TYPE <tt>SPRAS</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rv_description</tt> TYPE <tt>if_fhc_fcal_runtime=>ty_fhc_description</tt><br>
+Method <tt>get_hcal_assignment</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_holidaycalendar</tt> TYPE <tt>if_fhc_hcal_runtime</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_fhc_runtime.clas.html">cx_fhc_runtime</a></tt><br>
+Method <tt>get_id</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_id</tt> TYPE <tt>if_fhc_fcal_runtime=>ty_fhc_fcalid</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>750</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>702</td><td bgcolor='red'>undefined</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

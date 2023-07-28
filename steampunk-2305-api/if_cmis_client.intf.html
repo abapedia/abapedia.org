@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_CMIS_CLIENT INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_CMIS_CLIENT</h2>
+<a href="https://github.com/abapedia/steampunk-2305-api/blob/mainrc%2Fif_cmis_client.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_cmis_client/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_ci_atc_unit_asserter.intf.html">IF_CI_ATC_UNIT_ASSERTER</a></small><br><small>Next Object: <a href="if_com_management.intf.html">IF_COM_MANAGEMENT</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Method <tt>append_content_stream</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_repository_id</tt> TYPE <tt>CMIS_REPOSITORY_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_object_id</tt> TYPE <tt>CMIS_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>is_content</tt> TYPE <tt>CMIS_S_CONTENT_RAW</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_change_token</tt> TYPE <tt>CMIS_STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_last_chunk</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>es_object</tt> TYPE <tt>CMIS_S_OBJECT</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_permission_denied.clas.html">cx_cmis_permission_denied</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_runtime.clas.html">cx_cmis_runtime</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_not_supported.clas.html">cx_cmis_not_supported</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_object_not_found.clas.html">cx_cmis_object_not_found</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_constraint.clas.html">cx_cmis_constraint</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_name_constraint.clas.html">cx_cmis_name_constraint</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_storage.clas.html">cx_cmis_storage</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_stream_not_supported.clas.html">cx_cmis_stream_not_supported</a></tt><br>
+Method <tt>apply_acl</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_repository_id</tt> TYPE <tt>CMIS_REPOSITORY_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_object_id</tt> TYPE <tt>CMIS_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_add_aces</tt> TYPE <tt>CMIS_T_KEY_VALUES</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_remove_aces</tt> TYPE <tt>CMIS_T_KEY_VALUES</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_acl_propagation</tt> TYPE <tt>CMIS_ENUM</tt> Optional<br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_permission_denied.clas.html">cx_cmis_permission_denied</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_runtime.clas.html">cx_cmis_runtime</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_not_supported.clas.html">cx_cmis_not_supported</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_object_not_found.clas.html">cx_cmis_object_not_found</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_constraint.clas.html">cx_cmis_constraint</a></tt><br>
+Method <tt>get_repositories</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_repository_infos</tt> TYPE <tt>CMIS_T_REPOSITORY_INFO</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_permission_denied.clas.html">cx_cmis_permission_denied</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_runtime.clas.html">cx_cmis_runtime</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_not_supported.clas.html">cx_cmis_not_supported</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_object_not_found.clas.html">cx_cmis_object_not_found</a></tt><br>
+Method <tt>get_repository_info</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_repository_id</tt> TYPE <tt>CMIS_STRING</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>es_repository_info</tt> TYPE <tt>CMIS_S_REPOSITORY_INFO</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_permission_denied.clas.html">cx_cmis_permission_denied</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_runtime.clas.html">cx_cmis_runtime</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_not_supported.clas.html">cx_cmis_not_supported</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_object_not_found.clas.html">cx_cmis_object_not_found</a></tt><br>
+Method <tt>get_type_children</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_repository_id</tt> TYPE <tt>CMIS_REPOSITORY_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_type_id</tt> TYPE <tt>CMIS_ID</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_include_prop_definitions</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_max_items</tt> TYPE <tt>INT4</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_skip_count</tt> TYPE <tt>INT4</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>es_types</tt> TYPE <tt>CMIS_S_TYPE_LIST</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_permission_denied.clas.html">cx_cmis_permission_denied</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_runtime.clas.html">cx_cmis_runtime</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_not_supported.clas.html">cx_cmis_not_supported</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_object_not_found.clas.html">cx_cmis_object_not_found</a></tt><br>
+Method <tt>get_children</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_repository_id</tt> TYPE <tt>CMIS_REPOSITORY_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_folder_id</tt> TYPE <tt>CMIS_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_max_items</tt> TYPE <tt>INT4</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_skip_count</tt> TYPE <tt>INT4</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_order_by</tt> TYPE <tt>CMIS_STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_filter</tt> TYPE <tt>CMIS_STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_include_relationships</tt> TYPE <tt>CMIS_ENUM</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_rendition_filter</tt> TYPE <tt>CMIS_STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_include_allowable_actions</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_include_path_segment</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>es_children</tt> TYPE <tt>CMIS_S_OBJECT_IN_FOLDER_LIST</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_permission_denied.clas.html">cx_cmis_permission_denied</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_runtime.clas.html">cx_cmis_runtime</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_not_supported.clas.html">cx_cmis_not_supported</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_object_not_found.clas.html">cx_cmis_object_not_found</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_filter_not_valid.clas.html">cx_cmis_filter_not_valid</a></tt><br>
+Method <tt>get_folder_parent</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_repository_id</tt> TYPE <tt>CMIS_REPOSITORY_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_folder_id</tt> TYPE <tt>CMIS_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_filter</tt> TYPE <tt>CMIS_STRING</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>es_parent</tt> TYPE <tt>CMIS_S_OBJECT</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_permission_denied.clas.html">cx_cmis_permission_denied</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_runtime.clas.html">cx_cmis_runtime</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_not_supported.clas.html">cx_cmis_not_supported</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_object_not_found.clas.html">cx_cmis_object_not_found</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_filter_not_valid.clas.html">cx_cmis_filter_not_valid</a></tt><br>
+Method <tt>get_object_parents</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_repository_id</tt> TYPE <tt>CMIS_REPOSITORY_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_object_id</tt> TYPE <tt>CMIS_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_filter</tt> TYPE <tt>CMIS_STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_include_relationships</tt> TYPE <tt>CMIS_ENUM</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_rendition_filter</tt> TYPE <tt>CMIS_STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_include_allowable_actions</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_include_rel_path_segment</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_object_parents</tt> TYPE <tt>CMIS_T_OBJECT_PARENT</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_permission_denied.clas.html">cx_cmis_permission_denied</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_runtime.clas.html">cx_cmis_runtime</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_not_supported.clas.html">cx_cmis_not_supported</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_object_not_found.clas.html">cx_cmis_object_not_found</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_filter_not_valid.clas.html">cx_cmis_filter_not_valid</a></tt><br>
+Method <tt>get_type_definition</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_repository_id</tt> TYPE <tt>CMIS_REPOSITORY_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_type_id</tt> TYPE <tt>CMIS_ID</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>es_type</tt> TYPE <tt>CMIS_S_TYPE_DEFINITION</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_permission_denied.clas.html">cx_cmis_permission_denied</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_not_supported.clas.html">cx_cmis_not_supported</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_object_not_found.clas.html">cx_cmis_object_not_found</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_runtime.clas.html">cx_cmis_runtime</a></tt><br>
+Method <tt>get_type_descendants</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_repository_id</tt> TYPE <tt>CMIS_REPOSITORY_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_type_id</tt> TYPE <tt>CMIS_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_depth</tt> TYPE <tt>INT4</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_include_prop_definitions</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_types</tt> TYPE <tt>CMIS_T_TYPE_CONTAINER</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_permission_denied.clas.html">cx_cmis_permission_denied</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_runtime.clas.html">cx_cmis_runtime</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_not_supported.clas.html">cx_cmis_not_supported</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_object_not_found.clas.html">cx_cmis_object_not_found</a></tt><br>
+Method <tt>get_object</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_repository_id</tt> TYPE <tt>CMIS_REPOSITORY_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_object_id</tt> TYPE <tt>CMIS_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_include_acl</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_filter</tt> TYPE <tt>CMIS_STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_include_relationships</tt> TYPE <tt>CMIS_ENUM</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_rendition_filter</tt> TYPE <tt>CMIS_STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_include_allowable_actions</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_include_policy_ids</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>es_object</tt> TYPE <tt>CMIS_S_OBJECT</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_permission_denied.clas.html">cx_cmis_permission_denied</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_not_supported.clas.html">cx_cmis_not_supported</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_object_not_found.clas.html">cx_cmis_object_not_found</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_filter_not_valid.clas.html">cx_cmis_filter_not_valid</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_runtime.clas.html">cx_cmis_runtime</a></tt><br>
+Method <tt>get_object_by_path</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_repository_id</tt> TYPE <tt>CMIS_REPOSITORY_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_path</tt> TYPE <tt>CMIS_STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_include_acl</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_filter</tt> TYPE <tt>CMIS_STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_include_relationships</tt> TYPE <tt>CMIS_ENUM</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_rendition_filter</tt> TYPE <tt>CMIS_STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_include_allowable_actions</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_include_policy_ids</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>es_object</tt> TYPE <tt>CMIS_S_OBJECT</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_permission_denied.clas.html">cx_cmis_permission_denied</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_not_supported.clas.html">cx_cmis_not_supported</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_object_not_found.clas.html">cx_cmis_object_not_found</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_filter_not_valid.clas.html">cx_cmis_filter_not_valid</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_runtime.clas.html">cx_cmis_runtime</a></tt><br>
+Method <tt>create_document</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_repository_id</tt> TYPE <tt>CMIS_REPOSITORY_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_properties</tt> TYPE <tt>CMIS_T_CLIENT_PROPERTY</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_folder_id</tt> TYPE <tt>CMIS_ID</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_policies</tt> TYPE <tt>CMIS_T_ID</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_add_aces</tt> TYPE <tt>CMIS_T_KEY_VALUES</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_remove_aces</tt> TYPE <tt>CMIS_T_KEY_VALUES</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>is_content</tt> TYPE <tt>CMIS_S_CONTENT_RAW</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_versioning_state</tt> TYPE <tt>CMIS_ENUM</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>es_object</tt> TYPE <tt>CMIS_S_OBJECT</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_permission_denied.clas.html">cx_cmis_permission_denied</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_runtime.clas.html">cx_cmis_runtime</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_not_supported.clas.html">cx_cmis_not_supported</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_object_not_found.clas.html">cx_cmis_object_not_found</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_constraint.clas.html">cx_cmis_constraint</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_name_constraint.clas.html">cx_cmis_name_constraint</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_storage.clas.html">cx_cmis_storage</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_stream_not_supported.clas.html">cx_cmis_stream_not_supported</a></tt><br>
+Method <tt>create_folder</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_repository_id</tt> TYPE <tt>CMIS_REPOSITORY_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_properties</tt> TYPE <tt>CMIS_T_CLIENT_PROPERTY</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_folder_id</tt> TYPE <tt>CMIS_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_policies</tt> TYPE <tt>CMIS_T_ID</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_add_aces</tt> TYPE <tt>CMIS_T_KEY_VALUES</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_remove_aces</tt> TYPE <tt>CMIS_T_KEY_VALUES</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>es_object</tt> TYPE <tt>CMIS_S_OBJECT</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_permission_denied.clas.html">cx_cmis_permission_denied</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_runtime.clas.html">cx_cmis_runtime</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_not_supported.clas.html">cx_cmis_not_supported</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_object_not_found.clas.html">cx_cmis_object_not_found</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_constraint.clas.html">cx_cmis_constraint</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_name_constraint.clas.html">cx_cmis_name_constraint</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_storage.clas.html">cx_cmis_storage</a></tt><br>
+Method <tt>create_item</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_repository_id</tt> TYPE <tt>CMIS_REPOSITORY_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_properties</tt> TYPE <tt>CMIS_T_CLIENT_PROPERTY</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_folder_id</tt> TYPE <tt>CMIS_ID</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_policies</tt> TYPE <tt>CMIS_T_ID</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_add_aces</tt> TYPE <tt>CMIS_T_KEY_VALUES</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_remove_aces</tt> TYPE <tt>CMIS_T_KEY_VALUES</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>es_object</tt> TYPE <tt>CMIS_S_OBJECT</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_runtime.clas.html">cx_cmis_runtime</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_permission_denied.clas.html">cx_cmis_permission_denied</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_not_supported.clas.html">cx_cmis_not_supported</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_object_not_found.clas.html">cx_cmis_object_not_found</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_name_constraint.clas.html">cx_cmis_name_constraint</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_storage.clas.html">cx_cmis_storage</a></tt><br>
+Method <tt>query</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_repository_id</tt> TYPE <tt>CMIS_REPOSITORY_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_statement</tt> TYPE <tt>CMIS_STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_search_all_versions</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_include_relationships</tt> TYPE <tt>CMIS_ENUM</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_rendition_filter</tt> TYPE <tt>CMIS_STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_include_allowable_actions</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_max_items</tt> TYPE <tt>INT4</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_skip_count</tt> TYPE <tt>INT4</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>es_query_result</tt> TYPE <tt>CMIS_S_OBJECT_LIST</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_permission_denied.clas.html">cx_cmis_permission_denied</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_runtime.clas.html">cx_cmis_runtime</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_not_supported.clas.html">cx_cmis_not_supported</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_object_not_found.clas.html">cx_cmis_object_not_found</a></tt><br>
+Method <tt>get_properties</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_repository_id</tt> TYPE <tt>CMIS_REPOSITORY_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_object_id</tt> TYPE <tt>CMIS_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_filter</tt> TYPE <tt>CMIS_STRING</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>es_properties</tt> TYPE <tt>CMIS_S_PROPERTIES</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_runtime.clas.html">cx_cmis_runtime</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_permission_denied.clas.html">cx_cmis_permission_denied</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_not_supported.clas.html">cx_cmis_not_supported</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_object_not_found.clas.html">cx_cmis_object_not_found</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_filter_not_valid.clas.html">cx_cmis_filter_not_valid</a></tt><br>
+Method <tt>get_allowable_actions</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_repository_id</tt> TYPE <tt>CMIS_REPOSITORY_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_object_id</tt> TYPE <tt>CMIS_ID</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>es_allowable_actions</tt> TYPE <tt>CMIS_S_ALLOWABLE_ACTIONS</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_runtime.clas.html">cx_cmis_runtime</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_permission_denied.clas.html">cx_cmis_permission_denied</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_not_supported.clas.html">cx_cmis_not_supported</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_object_not_found.clas.html">cx_cmis_object_not_found</a></tt><br>
+Method <tt>get_renditions</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_repository_id</tt> TYPE <tt>CMIS_REPOSITORY_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_object_id</tt> TYPE <tt>CMIS_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_rendition_filter</tt> TYPE <tt>CMIS_STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_max_items</tt> TYPE <tt>INT4</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_skip_count</tt> TYPE <tt>INT4</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_renditions</tt> TYPE <tt>CMIS_T_RENDITION</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_runtime.clas.html">cx_cmis_runtime</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_permission_denied.clas.html">cx_cmis_permission_denied</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_not_supported.clas.html">cx_cmis_not_supported</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_object_not_found.clas.html">cx_cmis_object_not_found</a></tt><br>
+Method <tt>delete</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_repository_id</tt> TYPE <tt>CMIS_REPOSITORY_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_object_id</tt> TYPE <tt>CMIS_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_all_versions</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_runtime.clas.html">cx_cmis_runtime</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_permission_denied.clas.html">cx_cmis_permission_denied</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_not_supported.clas.html">cx_cmis_not_supported</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_object_not_found.clas.html">cx_cmis_object_not_found</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_constraint.clas.html">cx_cmis_constraint</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_update_conflict.clas.html">cx_cmis_update_conflict</a></tt><br>
+Method <tt>delete_tree</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_repository_id</tt> TYPE <tt>CMIS_REPOSITORY_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_object_id</tt> TYPE <tt>CMIS_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_all_versions</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_unfiled_objects</tt> TYPE <tt>CMIS_ENUM</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_continue_on_failure</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_failed_to_delete</tt> TYPE <tt>CMIS_T_ID</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_runtime.clas.html">cx_cmis_runtime</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_permission_denied.clas.html">cx_cmis_permission_denied</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_not_supported.clas.html">cx_cmis_not_supported</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_object_not_found.clas.html">cx_cmis_object_not_found</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_constraint.clas.html">cx_cmis_constraint</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_update_conflict.clas.html">cx_cmis_update_conflict</a></tt><br>
+Method <tt>add_object_to_folder</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_repository_id</tt> TYPE <tt>CMIS_REPOSITORY_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_object_id</tt> TYPE <tt>CMIS_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_folder_id</tt> TYPE <tt>CMIS_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_all_versions</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_permission_denied.clas.html">cx_cmis_permission_denied</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_runtime.clas.html">cx_cmis_runtime</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_not_supported.clas.html">cx_cmis_not_supported</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_object_not_found.clas.html">cx_cmis_object_not_found</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_constraint.clas.html">cx_cmis_constraint</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_name_constraint.clas.html">cx_cmis_name_constraint</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_storage.clas.html">cx_cmis_storage</a></tt><br>
+Method <tt>remove_object_from_folder</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_repository_id</tt> TYPE <tt>CMIS_REPOSITORY_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_object_id</tt> TYPE <tt>CMIS_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_folder_id</tt> TYPE <tt>CMIS_ID</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_permission_denied.clas.html">cx_cmis_permission_denied</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_runtime.clas.html">cx_cmis_runtime</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_not_supported.clas.html">cx_cmis_not_supported</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_object_not_found.clas.html">cx_cmis_object_not_found</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_constraint.clas.html">cx_cmis_constraint</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_name_constraint.clas.html">cx_cmis_name_constraint</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_storage.clas.html">cx_cmis_storage</a></tt><br>
+Method <tt>create_type</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_repository_id</tt> TYPE <tt>CMIS_REPOSITORY_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>is_type</tt> TYPE <tt>CMIS_S_TYPE_DEFINITION</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>es_type</tt> TYPE <tt>CMIS_S_TYPE_DEFINITION</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_runtime.clas.html">cx_cmis_runtime</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_permission_denied.clas.html">cx_cmis_permission_denied</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_not_supported.clas.html">cx_cmis_not_supported</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_object_not_found.clas.html">cx_cmis_object_not_found</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_constraint.clas.html">cx_cmis_constraint</a></tt><br>
+Method <tt>update_type</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_repository_id</tt> TYPE <tt>CMIS_REPOSITORY_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>is_type</tt> TYPE <tt>CMIS_S_TYPE_DEFINITION</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>es_type</tt> TYPE <tt>CMIS_S_TYPE_DEFINITION</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_runtime.clas.html">cx_cmis_runtime</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_permission_denied.clas.html">cx_cmis_permission_denied</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_not_supported.clas.html">cx_cmis_not_supported</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_object_not_found.clas.html">cx_cmis_object_not_found</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_constraint.clas.html">cx_cmis_constraint</a></tt><br>
+Method <tt>delete_type</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_repository_id</tt> TYPE <tt>CMIS_REPOSITORY_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_type_id</tt> TYPE <tt>CMIS_ID</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_runtime.clas.html">cx_cmis_runtime</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_permission_denied.clas.html">cx_cmis_permission_denied</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_not_supported.clas.html">cx_cmis_not_supported</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_object_not_found.clas.html">cx_cmis_object_not_found</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_constraint.clas.html">cx_cmis_constraint</a></tt><br>
+Method <tt>get_content_stream</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_repository_id</tt> TYPE <tt>CMIS_REPOSITORY_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_object_id</tt> TYPE <tt>CMIS_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_stream_id</tt> TYPE <tt>CMIS_ID</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_offset</tt> TYPE <tt>CMIS_LONG</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_length</tt> TYPE <tt>CMIS_LONG</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_mime_type</tt> TYPE <tt>CMIS_ID</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>es_content</tt> TYPE <tt>CMIS_S_CONTENT_RAW</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_permission_denied.clas.html">cx_cmis_permission_denied</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_runtime.clas.html">cx_cmis_runtime</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_not_supported.clas.html">cx_cmis_not_supported</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_object_not_found.clas.html">cx_cmis_object_not_found</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_constraint.clas.html">cx_cmis_constraint</a></tt><br>
+Method <tt>check_in</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_repository_id</tt> TYPE <tt>CMIS_REPOSITORY_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_object_id</tt> TYPE <tt>CMIS_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_major</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>is_content</tt> TYPE <tt>CMIS_S_CONTENT_RAW</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_checkin_comment</tt> TYPE <tt>CMIS_STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_policies</tt> TYPE <tt>CMIS_T_ID</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_properties</tt> TYPE <tt>CMIS_T_CLIENT_PROPERTY</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_add_ace</tt> TYPE <tt>CMIS_T_KEY_VALUES</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_remove_ace</tt> TYPE <tt>CMIS_T_KEY_VALUES</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>es_object</tt> TYPE <tt>CMIS_S_OBJECT</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_runtime.clas.html">cx_cmis_runtime</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_permission_denied.clas.html">cx_cmis_permission_denied</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_not_supported.clas.html">cx_cmis_not_supported</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_object_not_found.clas.html">cx_cmis_object_not_found</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_constraint.clas.html">cx_cmis_constraint</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_storage.clas.html">cx_cmis_storage</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_update_conflict.clas.html">cx_cmis_update_conflict</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_stream_not_supported.clas.html">cx_cmis_stream_not_supported</a></tt><br>
+Method <tt>check_out</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_repository_id</tt> TYPE <tt>CMIS_REPOSITORY_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_object_id</tt> TYPE <tt>CMIS_ID</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>es_object</tt> TYPE <tt>CMIS_S_OBJECT</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_runtime.clas.html">cx_cmis_runtime</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_permission_denied.clas.html">cx_cmis_permission_denied</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_not_supported.clas.html">cx_cmis_not_supported</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_object_not_found.clas.html">cx_cmis_object_not_found</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_constraint.clas.html">cx_cmis_constraint</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_storage.clas.html">cx_cmis_storage</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_update_conflict.clas.html">cx_cmis_update_conflict</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_versioning.clas.html">cx_cmis_versioning</a></tt><br>
+Method <tt>cancel_check_out</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_repository_id</tt> TYPE <tt>CMIS_REPOSITORY_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_object_id</tt> TYPE <tt>CMIS_ID</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_runtime.clas.html">cx_cmis_runtime</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_permission_denied.clas.html">cx_cmis_permission_denied</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_not_supported.clas.html">cx_cmis_not_supported</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_object_not_found.clas.html">cx_cmis_object_not_found</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_update_conflict.clas.html">cx_cmis_update_conflict</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_constraint.clas.html">cx_cmis_constraint</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_versioning.clas.html">cx_cmis_versioning</a></tt><br>
+Method <tt>move_object</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_repository_id</tt> TYPE <tt>CMIS_REPOSITORY_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_object_id</tt> TYPE <tt>CMIS_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_target_folder_id</tt> TYPE <tt>CMIS_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_source_folder_id</tt> TYPE <tt>CMIS_ID</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>es_object</tt> TYPE <tt>CMIS_S_OBJECT</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_runtime.clas.html">cx_cmis_runtime</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_permission_denied.clas.html">cx_cmis_permission_denied</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_not_supported.clas.html">cx_cmis_not_supported</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_object_not_found.clas.html">cx_cmis_object_not_found</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_constraint.clas.html">cx_cmis_constraint</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_name_constraint.clas.html">cx_cmis_name_constraint</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_storage.clas.html">cx_cmis_storage</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_update_conflict.clas.html">cx_cmis_update_conflict</a></tt><br>
+Method <tt>bulk_update_properties</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_repository_id</tt> TYPE <tt>CMIS_REPOSITORY_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_id_and_change_token</tt> TYPE <tt>CMIS_T_ID_AND_CHANGE_TOKEN</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_properties</tt> TYPE <tt>CMIS_T_CLIENT_PROPERTY</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_add_secondary_type_ids</tt> TYPE <tt>CMIS_T_ID</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_remove_secondary_type_ids</tt> TYPE <tt>CMIS_T_ID</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_id_and_change_token</tt> TYPE <tt>CMIS_T_ID_AND_CHANGE_TOKEN</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_runtime.clas.html">cx_cmis_runtime</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_permission_denied.clas.html">cx_cmis_permission_denied</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_not_supported.clas.html">cx_cmis_not_supported</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_object_not_found.clas.html">cx_cmis_object_not_found</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_constraint.clas.html">cx_cmis_constraint</a></tt><br>
+Method <tt>set_content_stream</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_repository_id</tt> TYPE <tt>CMIS_REPOSITORY_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_object_id</tt> TYPE <tt>CMIS_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>is_content</tt> TYPE <tt>CMIS_S_CONTENT_RAW</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_change_token</tt> TYPE <tt>CMIS_STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_overwrite_flag</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>es_object</tt> TYPE <tt>CMIS_S_OBJECT</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_permission_denied.clas.html">cx_cmis_permission_denied</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_runtime.clas.html">cx_cmis_runtime</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_not_supported.clas.html">cx_cmis_not_supported</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_object_not_found.clas.html">cx_cmis_object_not_found</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_constraint.clas.html">cx_cmis_constraint</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_name_constraint.clas.html">cx_cmis_name_constraint</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_storage.clas.html">cx_cmis_storage</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_stream_not_supported.clas.html">cx_cmis_stream_not_supported</a></tt><br>
+Method <tt>update_properties</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_repository_id</tt> TYPE <tt>CMIS_REPOSITORY_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_object_id</tt> TYPE <tt>CMIS_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_properties</tt> TYPE <tt>CMIS_T_CLIENT_PROPERTY</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_change_token</tt> TYPE <tt>CMIS_STRING</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>es_object</tt> TYPE <tt>CMIS_S_OBJECT</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_runtime.clas.html">cx_cmis_runtime</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_permission_denied.clas.html">cx_cmis_permission_denied</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_not_supported.clas.html">cx_cmis_not_supported</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_object_not_found.clas.html">cx_cmis_object_not_found</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_name_constraint.clas.html">cx_cmis_name_constraint</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_constraint.clas.html">cx_cmis_constraint</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_storage.clas.html">cx_cmis_storage</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_update_conflict.clas.html">cx_cmis_update_conflict</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_versioning.clas.html">cx_cmis_versioning</a></tt><br>
+Method <tt>get_properties_latest_version</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_repository_id</tt> TYPE <tt>CMIS_REPOSITORY_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_object_id</tt> TYPE <tt>CMIS_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_filter</tt> TYPE <tt>CMIS_STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_major</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>es_properties</tt> TYPE <tt>CMIS_S_PROPERTIES</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_runtime.clas.html">cx_cmis_runtime</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_permission_denied.clas.html">cx_cmis_permission_denied</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_not_supported.clas.html">cx_cmis_not_supported</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_object_not_found.clas.html">cx_cmis_object_not_found</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_filter_not_valid.clas.html">cx_cmis_filter_not_valid</a></tt><br>
+Method <tt>get_object_latest_version</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_repository_id</tt> TYPE <tt>CMIS_REPOSITORY_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_object_id</tt> TYPE <tt>CMIS_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_include_acl</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_filter</tt> TYPE <tt>CMIS_STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_include_relationships</tt> TYPE <tt>CMIS_ENUM</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_rendition_filter</tt> TYPE <tt>CMIS_STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_include_allowable_actions</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_major</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_include_policy_ids</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>es_object</tt> TYPE <tt>CMIS_S_OBJECT</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_permission_denied.clas.html">cx_cmis_permission_denied</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_not_supported.clas.html">cx_cmis_not_supported</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_object_not_found.clas.html">cx_cmis_object_not_found</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_filter_not_valid.clas.html">cx_cmis_filter_not_valid</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_runtime.clas.html">cx_cmis_runtime</a></tt><br>
+Method <tt>get_all_versions</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_repository_id</tt> TYPE <tt>CMIS_REPOSITORY_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_object_id</tt> TYPE <tt>CMIS_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_filter</tt> TYPE <tt>CMIS_STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_include_allowable_actions</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_object</tt> TYPE <tt>CMIS_T_OBJECT</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_runtime.clas.html">cx_cmis_runtime</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_permission_denied.clas.html">cx_cmis_permission_denied</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_not_supported.clas.html">cx_cmis_not_supported</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_object_not_found.clas.html">cx_cmis_object_not_found</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_filter_not_valid.clas.html">cx_cmis_filter_not_valid</a></tt><br>
+Method <tt>create_document_from_source</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_repository_id</tt> TYPE <tt>CMIS_REPOSITORY_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_source_id</tt> TYPE <tt>CMIS_ID</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_properties</tt> TYPE <tt>CMIS_T_CLIENT_PROPERTY</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_folder_id</tt> TYPE <tt>CMIS_ID</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_policies</tt> TYPE <tt>CMIS_T_ID</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_add_aces</tt> TYPE <tt>CMIS_T_KEY_VALUES</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_remove_aces</tt> TYPE <tt>CMIS_T_KEY_VALUES</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_versioning_state</tt> TYPE <tt>CMIS_ENUM</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>es_object</tt> TYPE <tt>CMIS_S_OBJECT</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_permission_denied.clas.html">cx_cmis_permission_denied</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_runtime.clas.html">cx_cmis_runtime</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_invalid_argument.clas.html">cx_cmis_invalid_argument</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_not_supported.clas.html">cx_cmis_not_supported</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_object_not_found.clas.html">cx_cmis_object_not_found</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_constraint.clas.html">cx_cmis_constraint</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_name_constraint.clas.html">cx_cmis_name_constraint</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_storage.clas.html">cx_cmis_storage</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_cmis_stream_not_supported.clas.html">cx_cmis_stream_not_supported</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

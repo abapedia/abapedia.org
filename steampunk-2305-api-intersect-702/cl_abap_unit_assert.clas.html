@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_ABAP_UNIT_ASSERT CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_ABAP_UNIT_ASSERT</h2>
+<a href="https://github.com/abapedia/steampunk-2305-api-intersect-702/blob/mainrc%2Fcl_abap_unit_assert.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_abap_unit_assert/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_abap_ungzip_text_stream.clas.html">CL_ABAP_UNGZIP_TEXT_STREAM</a></small><br><small>Next Object: <a href="cl_abap_x_writer.clas.html">CL_ABAP_X_WRITER</a></small><br><br><u>Public</u><br>Type <tt>n1</tt> TYPE <tt>cl_abap_unit_assert=>n1</tt><br>
+Constant <tt>rtol_default</tt> TYPE <tt>F</tt><br>
+Static Method <tt>abort</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>msg</tt> TYPE <tt>csequence</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>detail</tt> TYPE <tt>csequence</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>quit</tt> TYPE <tt>INT1</tt> Optional<br>
+Static Method <tt>assert_bound</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>act</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>msg</tt> TYPE <tt>csequence</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>level</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>quit</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>assertion_failed</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Static Method <tt>assert_char_cp</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>act</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>exp</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>msg</tt> TYPE <tt>csequence</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>level</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>quit</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>assertion_failed</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Static Method <tt>assert_char_np</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>act</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>exp</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>msg</tt> TYPE <tt>csequence</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>level</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>quit</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>assertion_failed</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Static Method <tt>assert_differs</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>act</tt> TYPE <tt>simple</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>exp</tt> TYPE <tt>simple</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>tol</tt> TYPE <tt>F</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>msg</tt> TYPE <tt>csequence</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>level</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>quit</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>assertion_failed</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Static Method <tt>assert_equals</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>act</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>exp</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ignore_hash_sequence</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>tol</tt> TYPE <tt>F</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>msg</tt> TYPE <tt>csequence</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>level</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>quit</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>assertion_failed</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Static Method <tt>assert_equals_float</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>act</tt> TYPE <tt>numeric</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>exp</tt> TYPE <tt>numeric</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>atol</tt> TYPE <tt>numeric</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>rtol</tt> TYPE <tt>numeric</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>msg</tt> TYPE <tt>csequence</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>level</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>quit</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>assertion_failed</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Static Method <tt>assert_false</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>act</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>msg</tt> TYPE <tt>csequence</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>level</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>quit</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>assertion_failed</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Static Method <tt>assert_initial</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>act</tt> TYPE <tt>any</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>msg</tt> TYPE <tt>csequence</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>level</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>quit</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>assertion_failed</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Static Method <tt>assert_not_bound</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>act</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>msg</tt> TYPE <tt>csequence</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>level</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>quit</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>assertion_failed</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Static Method <tt>assert_not_initial</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>act</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>msg</tt> TYPE <tt>csequence</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>level</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>quit</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>assertion_failed</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Static Method <tt>assert_number_between</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>lower</tt> TYPE <tt>numeric</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>upper</tt> TYPE <tt>numeric</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>number</tt> TYPE <tt>numeric</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>msg</tt> TYPE <tt>csequence</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>level</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>quit</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>assertion_failed</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Static Method <tt>assert_return_code</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>exp</tt> TYPE <tt>numeric</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>act</tt> TYPE <tt>numeric</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>msg</tt> TYPE <tt>csequence</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>level</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>quit</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>symsg</tt> TYPE <tt>SYMSG</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>assertion_failed</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Static Method <tt>assert_subrc</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>exp</tt> TYPE <tt>SYSUBRC</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>act</tt> TYPE <tt>SYSUBRC</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>msg</tt> TYPE <tt>csequence</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>level</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>quit</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>symsg</tt> TYPE <tt>SYMSG</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>assertion_failed</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Static Method <tt>assert_table_contains</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>line</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>table</tt> TYPE <tt>STANDARD TABLE OF any WITH DEFAULT KEY</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>msg</tt> TYPE <tt>csequence</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>level</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>quit</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>assertion_failed</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Static Method <tt>assert_table_not_contains</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>line</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>table</tt> TYPE <tt>STANDARD TABLE OF any WITH DEFAULT KEY</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>msg</tt> TYPE <tt>csequence</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>level</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>quit</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>assertion_failed</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Static Method <tt>assert_text_matches</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>pattern</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>text</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>full</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>msg</tt> TYPE <tt>csequence</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>level</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>quit</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>assertion_failed</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Static Method <tt>assert_text_not_matches</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>pattern</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>text</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>full</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>msg</tt> TYPE <tt>csequence</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>level</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>quit</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>assertion_failed</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Static Method <tt>assert_that</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>act</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>act_as_text</tt> TYPE <tt>csequence</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>exp</tt> TYPE <tt>if_constraint</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>msg</tt> TYPE <tt>csequence</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>level</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>quit</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>assertion_failed</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Static Method <tt>assert_true</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>act</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>msg</tt> TYPE <tt>csequence</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>level</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>quit</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>assertion_failed</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Static Method <tt>assume_false</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>act</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>msg</tt> TYPE <tt>csequence</tt><br>
+Static Method <tt>assume_return_code</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>exp</tt> TYPE <tt>numeric</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>act</tt> TYPE <tt>numeric</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>msg</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>symsg</tt> TYPE <tt>SYMSG</tt> Optional<br>
+Static Method <tt>assume_that</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>act</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>act_as_text</tt> TYPE <tt>csequence</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>exp</tt> TYPE <tt>if_constraint</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>msg</tt> TYPE <tt>csequence</tt> Optional<br>
+Static Method <tt>assume_true</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>act</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>msg</tt> TYPE <tt>csequence</tt><br>
+Static Method <tt>fail</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>msg</tt> TYPE <tt>csequence</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>level</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>quit</tt> TYPE <tt>INT1</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>detail</tt> TYPE <tt>csequence</tt> Optional<br>
+Static Method <tt>skip</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>msg</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>detail</tt> TYPE <tt>csequence</tt> Optional<br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='green'>true</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

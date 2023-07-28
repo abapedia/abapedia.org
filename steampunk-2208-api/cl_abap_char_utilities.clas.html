@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_ABAP_CHAR_UTILITIES CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_ABAP_CHAR_UTILITIES</h2>
+<a href="https://github.com/abapedia/steampunk-2208-api/blob/mainrc%2Fcl_abap_char_utilities.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_abap_char_utilities/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_abap_c_writer.clas.html">CL_ABAP_C_WRITER</a></small><br><small>Next Object: <a href="cl_abap_classdescr.clas.html">CL_ABAP_CLASSDESCR</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ty_number_format</tt> TYPE <tt>cl_abap_char_utilities=>ty_number_format</tt><br>
+Constant <tt>byte_order_mark_little</tt> TYPE <tt>abap_byte_order_mark</tt><br>
+Constant <tt>byte_order_mark_big</tt> TYPE <tt>abap_byte_order_mark</tt><br>
+Constant <tt>byte_order_mark_utf8</tt> TYPE <tt>abap_byte_order_utf8</tt><br>
+Constant <tt>charsize</tt> TYPE <tt>I</tt><br>
+Constant <tt>endian</tt> TYPE <tt>abap_endian</tt><br>
+Constant <tt>minchar</tt> TYPE <tt>abap_char1</tt><br>
+Constant <tt>maxchar</tt> TYPE <tt>abap_char1</tt><br>
+Constant <tt>horizontal_tab</tt> TYPE <tt>abap_char1</tt><br>
+Constant <tt>vertical_tab</tt> TYPE <tt>abap_char1</tt><br>
+Constant <tt>newline</tt> TYPE <tt>abap_char1</tt><br>
+Constant <tt>cr_lf</tt> TYPE <tt>abap_cr_lf</tt><br>
+Constant <tt>form_feed</tt> TYPE <tt>abap_char1</tt><br>
+Constant <tt>backspace</tt> TYPE <tt>abap_char1</tt><br>
+Static Method <tt>endian_to_number_format</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>endian</tt> TYPE <tt>abap_endian</tt><br>
+&nbsp;&nbsp;RETURNING <tt>number_format</tt> TYPE <tt>cl_abap_char_utilities=>ty_number_format</tt><br>
+Static Method <tt>number_format_to_endian</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>number_format</tt> TYPE <tt>cl_abap_char_utilities=>ty_number_format</tt><br>
+&nbsp;&nbsp;RETURNING <tt>endian</tt> TYPE <tt>abap_endian</tt><br>
+Static Method <tt>get_simple_spaces_for_cur_cp</tt><br>
+&nbsp;&nbsp;RETURNING <tt>s_str</tt> TYPE <tt>STRING</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='green'>true</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_IAM_BUSINESS_ROLE INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_IAM_BUSINESS_ROLE</h2>
+<a href="https://github.com/abapedia/steampunk-2111-api/blob/mainrc%2Fif_iam_business_role.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_iam_business_role/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_http_service_extension.intf.html">IF_HTTP_SERVICE_EXTENSION</a></small><br><small>Next Object: <a href="if_iam_business_role_factory.intf.html">IF_IAM_BUSINESS_ROLE_FACTORY</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ty_id</tt> TYPE <tt>if_iam_business_role=>ty_id</tt><br>
+Type <tt>ty_uuid</tt> TYPE <tt>if_iam_business_role=>ty_uuid</tt><br>
+Type <tt>ty_description</tt> TYPE <tt>if_iam_business_role=>ty_description</tt><br>
+Type <tt>ty_long_text</tt> TYPE <tt>if_iam_business_role=>ty_long_text</tt><br>
+Type <tt>ty_admin_data</tt> TYPE <tt>if_iam_business_role=>ty_admin_data</tt><br>
+Type <tt>ty_brt_id</tt> TYPE <tt>if_iam_business_role=>ty_brt_id</tt><br>
+Type <tt>ty_flp_space_id</tt> TYPE <tt>if_iam_business_role=>ty_flp_space_id</tt><br>
+Type <tt>ty_bu_catalog_id</tt> TYPE <tt>if_iam_business_role=>ty_bu_catalog_id</tt><br>
+Type <tt>ty_user_id</tt> TYPE <tt>if_iam_business_role=>ty_user_id</tt><br>
+Type <tt>ty_access_category_code</tt> TYPE <tt>if_iam_business_role=>ty_access_category_code</tt><br>
+Type <tt>ty_access_restriction_code</tt> TYPE <tt>if_iam_business_role=>ty_access_restriction_code</tt><br>
+Type <tt>ty_restriction_type</tt> TYPE <tt>if_iam_business_role=>ty_restriction_type</tt><br>
+Type <tt>ty_restriction_field</tt> TYPE <tt>if_iam_business_role=>ty_restriction_field</tt><br>
+Type <tt>ty_restriction_value</tt> TYPE <tt>if_iam_business_role=>ty_restriction_value</tt><br>
+Type <tt>ty_restriction_field_value</tt> TYPE <tt>if_iam_business_role=>ty_restriction_field_value</tt><br>
+Type <tt>tt_restriction_field_value</tt> TYPE <tt>if_iam_business_role=>tt_restriction_field_value</tt><br>
+Type <tt>ty_restriction</tt> TYPE <tt>if_iam_business_role=>ty_restriction</tt><br>
+Type <tt>tt_restriction</tt> TYPE <tt>if_iam_business_role=>tt_restriction</tt><br>
+Type <tt>tt_uuid</tt> TYPE <tt>if_iam_business_role=>tt_uuid</tt><br>
+Type <tt>tt_id</tt> TYPE <tt>if_iam_business_role=>tt_id</tt><br>
+Type <tt>tt_bu_catalog_id</tt> TYPE <tt>if_iam_business_role=>tt_bu_catalog_id</tt><br>
+Type <tt>tt_user_id</tt> TYPE <tt>if_iam_business_role=>tt_user_id</tt><br>
+Type <tt>tt_flp_space_id</tt> TYPE <tt>if_iam_business_role=>tt_flp_space_id</tt><br>
+Constant <tt>co_restriction_type_general</tt> TYPE <tt>if_iam_business_role=>ty_restriction_type</tt><br>
+Constant <tt>co_access_category_code</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>co_access_restriction_code</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Method <tt>save</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_return</tt> TYPE <tt>BAPIRETTAB</tt><br>
+Method <tt>delete</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_return</tt> TYPE <tt>BAPIRETTAB</tt><br>
+Method <tt>get_uuid</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_uuid</tt> TYPE <tt>if_iam_business_role=>ty_uuid</tt><br>
+Method <tt>get_id</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_id</tt> TYPE <tt>if_iam_business_role=>ty_id</tt><br>
+Method <tt>get_description</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_description</tt> TYPE <tt>if_iam_business_role=>ty_description</tt><br>
+Method <tt>get_long_text</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_text</tt> TYPE <tt>if_iam_business_role=>ty_long_text</tt><br>
+Method <tt>get_template_id</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_brt_id</tt> TYPE <tt>if_iam_business_role=>ty_brt_id</tt><br>
+Method <tt>set_description</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_description</tt> TYPE <tt>if_iam_business_role=>ty_description</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_return</tt> TYPE <tt>BAPIRETTAB</tt><br>
+Method <tt>set_long_text</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_text</tt> TYPE <tt>if_iam_business_role=>ty_long_text</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_return</tt> TYPE <tt>BAPIRETTAB</tt><br>
+Method <tt>get_admin_data</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rs_admin_data</tt> TYPE <tt>if_iam_business_role=>ty_admin_data</tt><br>
+Method <tt>get_business_catalogs</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rt_bu_catalog</tt> TYPE <tt>if_iam_business_role=>tt_bu_catalog_id</tt><br>
+Method <tt>add_business_catalog</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_bu_catalog_id</tt> TYPE <tt>if_iam_business_role=>ty_bu_catalog_id</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_return</tt> TYPE <tt>BAPIRETTAB</tt><br>
+Method <tt>remove_business_catalog</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_bu_catalog_id</tt> TYPE <tt>if_iam_business_role=>ty_bu_catalog_id</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_return</tt> TYPE <tt>BAPIRETTAB</tt><br>
+Method <tt>get_flp_spaces</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rt_flp_space</tt> TYPE <tt>if_iam_business_role=>tt_flp_space_id</tt><br>
+Method <tt>add_flp_space</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_flp_space_id</tt> TYPE <tt>if_iam_business_role=>ty_flp_space_id</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_return</tt> TYPE <tt>BAPIRETTAB</tt><br>
+Method <tt>add_flp_space_from_template</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_flp_space_template_id</tt> TYPE <tt>if_iam_business_role=>ty_flp_space_id</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_flp_space_id</tt> TYPE <tt>if_iam_business_role=>ty_flp_space_id</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_return</tt> TYPE <tt>BAPIRETTAB</tt><br>
+Method <tt>remove_flp_space</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_flp_space_id</tt> TYPE <tt>if_iam_business_role=>ty_flp_space_id</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_return</tt> TYPE <tt>BAPIRETTAB</tt><br>
+Method <tt>get_users</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rt_users</tt> TYPE <tt>if_iam_business_role=>tt_user_id</tt><br>
+Method <tt>add_user</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_user_id</tt> TYPE <tt>if_iam_business_role=>ty_user_id</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_return</tt> TYPE <tt>BAPIRETTAB</tt><br>
+Method <tt>remove_user</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_user_id</tt> TYPE <tt>if_iam_business_role=>ty_user_id</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_return</tt> TYPE <tt>BAPIRETTAB</tt><br>
+Method <tt>set_access_restriction</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_write</tt> TYPE <tt>if_iam_business_role=>ty_access_restriction_code</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_read</tt> TYPE <tt>if_iam_business_role=>ty_access_restriction_code</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_f4</tt> TYPE <tt>if_iam_business_role=>ty_access_restriction_code</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_return</tt> TYPE <tt>BAPIRETTAB</tt><br>
+Method <tt>get_access_restriction</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_write</tt> TYPE <tt>if_iam_business_role=>ty_access_restriction_code</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_read</tt> TYPE <tt>if_iam_business_role=>ty_access_restriction_code</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_f4</tt> TYPE <tt>if_iam_business_role=>ty_access_restriction_code</tt><br>
+Method <tt>get_restrictions</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_access_category</tt> TYPE <tt>if_iam_business_role=>ty_access_category_code</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rt_restriction</tt> TYPE <tt>if_iam_business_role=>tt_restriction</tt><br>
+Method <tt>create_restriction</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>is_restriction</tt> TYPE <tt>if_iam_business_role=>ty_restriction</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>es_restriction</tt> TYPE <tt>if_iam_business_role=>ty_restriction</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_return</tt> TYPE <tt>BAPIRETTAB</tt><br>
+Method <tt>update_restriction</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_uuid</tt> TYPE <tt>if_iam_business_role=>ty_uuid</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_restriction_field_values</tt> TYPE <tt>if_iam_business_role=>tt_restriction_field_value</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_return</tt> TYPE <tt>BAPIRETTAB</tt><br>
+Method <tt>remove_restriction</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_uuid</tt> TYPE <tt>if_iam_business_role=>ty_uuid</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_restriction_type</tt> TYPE <tt>if_iam_business_role=>ty_restriction_type</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_access_category</tt> TYPE <tt>if_iam_business_role=>ty_access_category_code</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_return</tt> TYPE <tt>BAPIRETTAB</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

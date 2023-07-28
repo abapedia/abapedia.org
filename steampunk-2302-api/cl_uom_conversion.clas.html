@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_UOM_CONVERSION CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_UOM_CONVERSION</h2>
+<a href="https://github.com/abapedia/steampunk-2302-api/blob/mainrc%2Fcl_uom_conversion.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_uom_conversion/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_system_uuid.clas.html">CL_SYSTEM_UUID</a></small><br><small>Next Object: <a href="cl_uom_dim_maintenance.clas.html">CL_UOM_DIM_MAINTENANCE</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ty_addko</tt> TYPE <tt>cl_uom_conversion=>ty_addko</tt><br>
+Type <tt>ty_andec</tt> TYPE <tt>cl_uom_conversion=>ty_andec</tt><br>
+Type <tt>ty_decan</tt> TYPE <tt>cl_uom_conversion=>ty_decan</tt><br>
+Type <tt>ty_dimid</tt> TYPE <tt>cl_uom_conversion=>ty_dimid</tt><br>
+Type <tt>ty_dzaehl</tt> TYPE <tt>cl_uom_conversion=>ty_dzaehl</tt><br>
+Type <tt>ty_exp10</tt> TYPE <tt>cl_uom_conversion=>ty_exp10</tt><br>
+Type <tt>ty_famunit</tt> TYPE <tt>cl_uom_conversion=>ty_famunit</tt><br>
+Type <tt>ty_msehi</tt> TYPE <tt>cl_uom_conversion=>ty_msehi</tt><br>
+Type <tt>ty_nennr</tt> TYPE <tt>cl_uom_conversion=>ty_nennr</tt><br>
+Type <tt>ty_buffer_ctr</tt> TYPE <tt>cl_uom_conversion=>ty_buffer_ctr</tt><br>
+Type <tt>ty_context_switch</tt> TYPE <tt>cl_uom_conversion=>ty_context_switch</tt><br>
+Static Method <tt>create</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>buffer_control</tt> TYPE <tt>cl_uom_conversion=>ty_buffer_ctr</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>context_switch</tt> TYPE <tt>cl_uom_conversion=>ty_context_switch</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>uom</tt> TYPE <tt>cl_uom_conversion</tt><br>
+Method <tt>constructor</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>buffer_control</tt> TYPE <tt>cl_uom_conversion=>ty_buffer_ctr</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>context_switch</tt> TYPE <tt>cl_uom_conversion=>ty_context_switch</tt> Optional<br>
+Method <tt>si_unit_get</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>dimension</tt> TYPE <tt>cl_uom_conversion=>ty_dimid</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>unit</tt> TYPE <tt>cl_uom_conversion=>ty_msehi</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>si_unit</tt> TYPE <tt>cl_uom_conversion=>ty_msehi</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>dimension_not_found</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>unit_not_found</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>si_unit_not_found</tt><br>
+Method <tt>unit_conversion_simple</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>input</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>no_type_check</tt> TYPE <tt>any</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>round_sign</tt> TYPE <tt>any</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>unit_in</tt> TYPE <tt>cl_uom_conversion=>ty_msehi</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>unit_out</tt> TYPE <tt>cl_uom_conversion=>ty_msehi</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>add_const</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>decimals</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>denominator</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>numerator</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>output</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>conversion_not_found</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>division_by_zero</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>input_invalid</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>output_invalid</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>overflow</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>type_invalid</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>units_missing</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>unit_in_not_found</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>unit_out_not_found</tt><br>
+Method <tt>unit_parameters_get</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>unit</tt> TYPE <tt>cl_uom_conversion=>ty_msehi</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>decimals</tt> TYPE <tt>cl_uom_conversion=>ty_andec</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>dimension</tt> TYPE <tt>cl_uom_conversion=>ty_dimid</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>numerator</tt> TYPE <tt>cl_uom_conversion=>ty_dzaehl</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>denominator</tt> TYPE <tt>cl_uom_conversion=>ty_nennr</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>exponent</tt> TYPE <tt>cl_uom_conversion=>ty_exp10</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>add_const</tt> TYPE <tt>cl_uom_conversion=>ty_addko</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>decan</tt> TYPE <tt>cl_uom_conversion=>ty_decan</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>famunit</tt> TYPE <tt>cl_uom_conversion=>ty_famunit</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>unit_not_found</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>
