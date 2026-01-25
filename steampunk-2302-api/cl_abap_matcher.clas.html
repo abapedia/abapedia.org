@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_ABAP_MATCHER CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_ABAP_MATCHER</h2>
+<a href="https://github.com/abapedia/steampunk-2302-api/blob/mainrc%2Fcl_abap_matcher.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_abap_matcher/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_abap_lock_object_factory.clas.html">CL_ABAP_LOCK_OBJECT_FACTORY</a></small><br><small>Next Object: <a href="cl_abap_math.clas.html">CL_ABAP_MATH</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Attribute <tt>regex</tt> TYPE <tt>cl_abap_regex</tt><br>
+Attribute <tt>table</tt> TYPE <tt>STRING_TABLE</tt><br>
+Attribute <tt>TEXT</tt> TYPE <tt>STRING</tt><br>
+Static Method <tt>contains_posix</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>pattern</tt> TYPE <tt>clike</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>text</tt> TYPE <tt>clike</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>table</tt> TYPE <tt>STANDARD TABLE OF any WITH DEFAULT KEY</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ignore_case</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>simple_regex</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>no_submatches</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>success</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_matcher.clas.html">cx_sy_matcher</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_regex.clas.html">cx_sy_regex</a></tt><br>
+Static Method <tt>contains</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>pattern</tt> TYPE <tt>clike</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>text</tt> TYPE <tt>clike</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>table</tt> TYPE <tt>STANDARD TABLE OF any WITH DEFAULT KEY</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ignore_case</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>simple_regex</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>no_submatches</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>success</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_matcher.clas.html">cx_sy_matcher</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_regex.clas.html">cx_sy_regex</a></tt><br>
+Static Method <tt>create_xsd</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>pattern</tt> TYPE <tt>clike</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>text</tt> TYPE <tt>clike</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>table</tt> TYPE <tt>STANDARD TABLE OF any WITH DEFAULT KEY</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ignore_case</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>enable_jit</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>enable_multiline</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>no_submatches</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>newline_mode</tt> TYPE <tt>cl_abap_regex=>newline_mode</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>unicode_handling</tt> TYPE <tt>cl_abap_regex=>unicode_handling</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>relaxed_escapes</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>matcher</tt> TYPE <tt>cl_abap_matcher</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_regex.clas.html">cx_sy_regex</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_matcher.clas.html">cx_sy_matcher</a></tt><br>
+Static Method <tt>create_xpath2</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>pattern</tt> TYPE <tt>clike</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>text</tt> TYPE <tt>clike</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>table</tt> TYPE <tt>STANDARD TABLE OF any WITH DEFAULT KEY</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ignore_case</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>enable_jit</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>enable_multiline</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>no_submatches</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>newline_mode</tt> TYPE <tt>cl_abap_regex=>newline_mode</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>unicode_handling</tt> TYPE <tt>cl_abap_regex=>unicode_handling</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>relaxed_escapes</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>matcher</tt> TYPE <tt>cl_abap_matcher</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_regex.clas.html">cx_sy_regex</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_matcher.clas.html">cx_sy_matcher</a></tt><br>
+Static Method <tt>create_pcre</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>pattern</tt> TYPE <tt>clike</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>text</tt> TYPE <tt>clike</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>table</tt> TYPE <tt>STANDARD TABLE OF any WITH DEFAULT KEY</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ignore_case</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>enable_jit</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>enable_multiline</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>no_submatches</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>newline_mode</tt> TYPE <tt>cl_abap_regex=>newline_mode</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>unicode_handling</tt> TYPE <tt>cl_abap_regex=>unicode_handling</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>extended</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>matcher</tt> TYPE <tt>cl_abap_matcher</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_regex.clas.html">cx_sy_regex</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_matcher.clas.html">cx_sy_matcher</a></tt><br>
+Static Method <tt>create_posix</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>pattern</tt> TYPE <tt>clike</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>text</tt> TYPE <tt>clike</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>table</tt> TYPE <tt>STANDARD TABLE OF any WITH DEFAULT KEY</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ignore_case</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>simple_regex</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>no_submatches</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>matcher</tt> TYPE <tt>cl_abap_matcher</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_regex.clas.html">cx_sy_regex</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_matcher.clas.html">cx_sy_matcher</a></tt><br>
+Static Method <tt>create</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>pattern</tt> TYPE <tt>clike</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>text</tt> TYPE <tt>clike</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>table</tt> TYPE <tt>STANDARD TABLE OF any WITH DEFAULT KEY</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ignore_case</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>simple_regex</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>no_submatches</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>matcher</tt> TYPE <tt>cl_abap_matcher</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_regex.clas.html">cx_sy_regex</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_matcher.clas.html">cx_sy_matcher</a></tt><br>
+Static Method <tt>get_object</tt><br>
+&nbsp;&nbsp;RETURNING <tt>matcher</tt> TYPE <tt>cl_abap_matcher</tt><br>
+Static Method <tt>matches_posix</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>pattern</tt> TYPE <tt>clike</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>text</tt> TYPE <tt>clike</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ignore_case</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>simple_regex</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>no_submatches</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>success</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_regex.clas.html">cx_sy_regex</a></tt><br>
+Static Method <tt>matches</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>pattern</tt> TYPE <tt>clike</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>text</tt> TYPE <tt>clike</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ignore_case</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>simple_regex</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>no_submatches</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>success</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_regex.clas.html">cx_sy_regex</a></tt><br>
+Method <tt>constructor</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>regex</tt> TYPE <tt>cl_abap_regex</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>text</tt> TYPE <tt>clike</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>table</tt> TYPE <tt>STANDARD TABLE OF any WITH DEFAULT KEY</tt> Optional<br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_matcher.clas.html">cx_sy_matcher</a></tt><br>
+Method <tt>find_all</tt><br>
+&nbsp;&nbsp;RETURNING <tt>matches</tt> TYPE <tt>MATCH_RESULT_TAB</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_matcher.clas.html">cx_sy_matcher</a></tt><br>
+Method <tt>find_next</tt><br>
+&nbsp;&nbsp;RETURNING <tt>success</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_matcher.clas.html">cx_sy_matcher</a></tt><br>
+Method <tt>get_length</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>index</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>length</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_matcher.clas.html">cx_sy_matcher</a></tt><br>
+Method <tt>get_line</tt><br>
+&nbsp;&nbsp;RETURNING <tt>line</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_matcher.clas.html">cx_sy_matcher</a></tt><br>
+Method <tt>get_match</tt><br>
+&nbsp;&nbsp;RETURNING <tt>match</tt> TYPE <tt>MATCH_RESULT</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_matcher.clas.html">cx_sy_matcher</a></tt><br>
+Method <tt>get_offset</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>index</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>offset</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_matcher.clas.html">cx_sy_matcher</a></tt><br>
+Method <tt>get_submatch</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>index</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;RETURNING <tt>submatch</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_matcher.clas.html">cx_sy_matcher</a></tt><br>
+Method <tt>get_mark</tt><br>
+&nbsp;&nbsp;RETURNING <tt>mark</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_matcher.clas.html">cx_sy_matcher</a></tt><br>
+Method <tt>match</tt><br>
+&nbsp;&nbsp;RETURNING <tt>success</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_matcher.clas.html">cx_sy_matcher</a></tt><br>
+Method <tt>replace_all</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>newtext</tt> TYPE <tt>clike</tt><br>
+&nbsp;&nbsp;RETURNING <tt>count</tt> TYPE <tt>INT4</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_matcher.clas.html">cx_sy_matcher</a></tt><br>
+Method <tt>replace_found</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>newtext</tt> TYPE <tt>clike</tt><br>
+&nbsp;&nbsp;RETURNING <tt>success</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_matcher.clas.html">cx_sy_matcher</a></tt><br>
+Method <tt>replace_next</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>newtext</tt> TYPE <tt>clike</tt><br>
+&nbsp;&nbsp;RETURNING <tt>success</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_matcher.clas.html">cx_sy_matcher</a></tt><br>
+Method <tt>set_callout</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>callout</tt> TYPE <tt>if_abap_matcher_callout</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_matcher.clas.html">cx_sy_matcher</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='green'>true</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

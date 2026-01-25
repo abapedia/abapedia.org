@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_FDT_CP_DATA_OBJ_ELEMENT INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_FDT_CP_DATA_OBJ_ELEMENT</h2>
+<a href="https://github.com/abapedia/steampunk-2202-api/blob/mainrc%2Fif_fdt_cp_data_obj_element.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_fdt_cp_data_obj_element/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_fdt_cp_ast_reference_node.intf.html">IF_FDT_CP_AST_REFERENCE_NODE</a></small><br><small>Next Object: <a href="if_fdt_cp_data_obj_structure.intf.html">IF_FDT_CP_DATA_OBJ_STRUCTURE</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Interface <tt><a href="if_fdt_cp_admin_data.intf.html">if_fdt_cp_admin_data</a></tt><br>
+Interface <tt><a href="if_fdt_cp_data_object.intf.html">if_fdt_cp_data_object</a></tt><br>
+Type <tt>ty_element_attributes</tt> TYPE <tt>if_fdt_cp_data_obj_element=>ty_element_attributes</tt><br>
+Type <tt>ty_value_list</tt> TYPE <tt>if_fdt_cp_data_obj_element=>ty_value_list</tt><br>
+Type <tt>tt_value_list</tt> TYPE <tt>if_fdt_cp_data_obj_element=>tt_value_list</tt><br>
+Type <tt>ty_value_service</tt> TYPE <tt>if_fdt_cp_data_obj_element=>ty_value_service</tt><br>
+Method <tt>set_attributes</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>is_attributes</tt> TYPE <tt>if_fdt_cp_data_obj_element=>ty_element_attributes</tt><br>
+Method <tt>get_attributes</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rs_attributes</tt> TYPE <tt>if_fdt_cp_data_obj_element=>ty_element_attributes</tt><br>
+Method <tt>set_value_help</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_value_list</tt> TYPE <tt>if_fdt_cp_data_obj_element=>tt_value_list</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>is_value_service</tt> TYPE <tt>if_fdt_cp_data_obj_element=>ty_value_service</tt> Optional<br>
+Method <tt>get_value_help</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_value_list</tt> TYPE <tt>if_fdt_cp_data_obj_element=>tt_value_list</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>es_value_service</tt> TYPE <tt>if_fdt_cp_data_obj_element=>ty_value_service</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

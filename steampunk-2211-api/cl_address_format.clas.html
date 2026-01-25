@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_ADDRESS_FORMAT CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_ADDRESS_FORMAT</h2>
+<a href="https://github.com/abapedia/steampunk-2211-api/blob/mainrc%2Fcl_address_format.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_address_format/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_abap_zip.clas.html">CL_ABAP_ZIP</a></small><br><small>Next Object: <a href="cl_apj_dt_create_content.clas.html">CL_APJ_DT_CREATE_CONTENT</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>tt_printform_table</tt> TYPE <tt>NOT_RELEASED_TTYP</tt><br>
+Static Method <tt>get_instance</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_instance</tt> TYPE <tt>cl_address_format</tt><br>
+Method <tt>formatted_name_and_postal_addr</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_address_type</tt> TYPE <tt>AD_ADRTYPE</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_address_number</tt> TYPE <tt>AD_ADDRNUM</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_address_handle</tt> TYPE <tt>AD_HANDLE</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_person_number</tt> TYPE <tt>AD_PERSNUM</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_person_handle</tt> TYPE <tt>AD_HANDLE</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>is_address_data</tt> TYPE <tt>ADDRESS_DATA_S</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_formatted_address_descr</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_formatted_address_lines</tt> TYPE <tt>NOT_RELEASED_TTYP</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_formatted_address_char</tt> TYPE <tt>AD_LINE_S</tt><br>
+Method <tt>formatted_postal_addr</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_address_type</tt> TYPE <tt>AD_ADRTYPE</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_address_number</tt> TYPE <tt>AD_ADDRNUM</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_address_handle</tt> TYPE <tt>AD_HANDLE</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_person_number</tt> TYPE <tt>AD_PERSNUM</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_person_handle</tt> TYPE <tt>AD_HANDLE</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>is_address_data</tt> TYPE <tt>ADDRESS_DATA_S</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_formatted_postal_addr_descr</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_formatted_postal_addr_lines</tt> TYPE <tt>NOT_RELEASED_TTYP</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_formatted_postal_addr_char</tt> TYPE <tt>AD_LINE_S</tt><br>
+Method <tt>printform_postal_addr</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_address_type</tt> TYPE <tt>AD_ADRTYPE</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_address_number</tt> TYPE <tt>AD_ADDRNUM</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_person_number</tt> TYPE <tt>AD_PERSNUM</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>is_address_data</tt> TYPE <tt>ADDRESS_DATA_S</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_street_has_priority</tt> TYPE <tt>AD_STRPRIO</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_language_of_country_field</tt> TYPE <tt>SPRAS</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_number_of_lines</tt> TYPE <tt>ANZEI</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_receiver_language</tt> TYPE <tt>SPRAS</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_sender_country</tt> TYPE <tt>AD_CTRY_FR</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_formatted_to_one_line</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_formatted_all_lines</tt> TYPE <tt>STRING_TABLE</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

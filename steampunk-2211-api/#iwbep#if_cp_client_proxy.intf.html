@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - /IWBEP/IF_CP_CLIENT_PROXY INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF /IWBEP/IF_CP_CLIENT_PROXY</h2>
+<a href="https://github.com/abapedia/steampunk-2211-api/blob/mainrc%2F%23iwbep%23if_cp_client_proxy.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces//iwbep/if_cp_client_proxy/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="xsduuid_raw.dtel.html">XSDUUID_RAW</a></small><br><small>Next Object: <a href="%23iwbep%23if_cp_data_desc_node.intf.html">/IWBEP/IF_CP_DATA_DESC_NODE</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ty_service_id_v2</tt> TYPE <tt>/iwbep/if_cp_client_proxy=>ty_service_id_v2</tt><br>
+Type <tt>ty_service_id_v4</tt> TYPE <tt>/iwbep/if_cp_client_proxy=>ty_service_id_v4</tt><br>
+Type <tt>ty_service_repository_id_v4</tt> TYPE <tt>/iwbep/if_cp_client_proxy=>ty_service_repository_id_v4</tt><br>
+Type <tt>ty_service_version_v2</tt> TYPE <tt>/iwbep/if_cp_client_proxy=>ty_service_version_v2</tt><br>
+Type <tt>ty_service_version_v4</tt> TYPE <tt>/iwbep/if_cp_client_proxy=>ty_service_version_v4</tt><br>
+Type <tt>ty_s_service_key_v2</tt> TYPE <tt>/iwbep/if_cp_client_proxy=>ty_s_service_key_v2</tt><br>
+Type <tt>ty_s_service_key_v4</tt> TYPE <tt>/iwbep/if_cp_client_proxy=>ty_s_service_key_v4</tt><br>
+Method <tt>create_request_for_batch</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_request</tt> TYPE <tt>/iwbep/if_cp_request_batch</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+Method <tt>create_request_for_delta</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_query_id</tt> TYPE <tt>/iwbep/if_cp_runtime_types=>ty_delta_query_id</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_request</tt> TYPE <tt>/iwbep/if_cp_request_read_dlta</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+Method <tt>can_delta_request_be_created</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_query_id</tt> TYPE <tt>/iwbep/if_cp_runtime_types=>ty_delta_query_id</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_delt_request_can_be_created</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+Method <tt>create_resource_for_action</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_action_import_name</tt> TYPE <tt>/iwbep/if_cp_runtime_types=>ty_internal_name</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_action_resource</tt> TYPE <tt>/iwbep/if_cp_resource_action</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+Method <tt>create_resource_for_entity_set</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_entity_set_name</tt> TYPE <tt>/iwbep/if_cp_runtime_types=>ty_entity_set_name</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_root_resource</tt> TYPE <tt>/iwbep/if_cp_resource_list</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+Method <tt>create_resource_for_function</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_function_name</tt> TYPE <tt>/iwbep/if_cp_runtime_types=>ty_operation_name</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_function_resource</tt> TYPE <tt>/iwbep/if_cp_resource_function</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+Method <tt>does_delta_link_exist</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_query_id</tt> TYPE <tt>/iwbep/if_cp_runtime_types=>ty_delta_query_id</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_does_exist</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

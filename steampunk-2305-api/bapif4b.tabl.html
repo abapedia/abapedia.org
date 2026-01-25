@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - BAPIF4B TABL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>TABL BAPIF4B</h2>
+<a href="https://github.com/abapedia/steampunk-2305-api/blob/mainrc%2Fbapif4b.tabl.xml">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/ddic/structures/bapif4b">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="bapif4a.tabl.html">BAPIF4A</a></small><br><small>Next Object: <a href="bapif4c.tabl.html">BAPIF4C</a></small><br><br>Status: RELEASED<br><br>Category: Structure<br><br><table border="1">
+<tr>
+      <td><u>Field</u></td>
+      <td><u>DDIC</u></td>
+      <td><u>Type</u></td>
+      </tr>
+<tr>
+        <td><tt>SELECT_FLD</tt></td>
+        <td></td>
+        <td>```c LENGTH 30```</td>
+        </tr>
+<tr>
+        <td><tt>SIGN</tt></td>
+        <td><a href="bapi_sign.dtel.html">BAPI_SIGN</a></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>OPTION</tt></td>
+        <td><a href="bapioption.dtel.html">BAPIOPTION</a></td>
+        <td>```c LENGTH 2```</td>
+        </tr>
+<tr>
+        <td><tt>LOW</tt></td>
+        <td><a href="bapi_low.dtel.html">BAPI_LOW</a></td>
+        <td>```c LENGTH 30```</td>
+        </tr>
+<tr>
+        <td><tt>HIGH</tt></td>
+        <td><a href="bapi_high.dtel.html">BAPI_HIGH</a></td>
+        <td>```c LENGTH 30```</td>
+        </tr>
+</table>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='green'>true</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

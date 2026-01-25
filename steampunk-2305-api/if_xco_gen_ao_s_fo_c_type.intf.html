@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_XCO_GEN_AO_S_FO_C_TYPE INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_XCO_GEN_AO_S_FO_C_TYPE</h2>
+<a href="https://github.com/abapedia/steampunk-2305-api/blob/mainrc%2Fif_xco_gen_ao_s_fo_c_type.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_xco_gen_ao_s_fo_c_type/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_xco_gen_ao_s_fo_c_method.intf.html">IF_XCO_GEN_AO_S_FO_C_METHOD</a></small><br><small>Next Object: <a href="if_xco_gen_ao_s_fo_component.intf.html">IF_XCO_GEN_AO_S_FO_COMPONENT</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Interface <tt><a href="if_xco_gen_ao_s_fo_component.intf.html">if_xco_gen_ao_s_fo_component</a></tt><br>
+Type <tt>ts_component</tt> TYPE <tt>if_xco_gen_ao_s_fo_c_type=>ts_component</tt><br>
+Type <tt>tt_component</tt> TYPE <tt>if_xco_gen_ao_s_fo_c_type=>tt_component</tt><br>
+Method <tt>set_short_description</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_short_description</tt> TYPE <tt>SXCO_AO_SHORT_DESCRIPTION</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_me</tt> TYPE <tt>if_xco_gen_ao_s_fo_c_type</tt><br>
+Method <tt>for</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_declaration</tt> TYPE <tt>if_xco_gen_ao_type_declaration</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_me</tt> TYPE <tt>if_xco_gen_ao_s_fo_c_type</tt><br>
+Method <tt>for_structure</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_components</tt> TYPE <tt>if_xco_gen_ao_s_fo_c_type=>tt_component</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_me</tt> TYPE <tt>if_xco_gen_ao_s_fo_c_type</tt><br>
+Method <tt>for_table_type</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_row_type</tt> TYPE <tt>if_xco_gen_ao_type_d_tab_row</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_initial_number_of_rows</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_access</tt> TYPE <tt>cl_xco_tt_access</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_primary_key</tt> TYPE <tt>if_xco_tt_primary_key</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_secondary_keys</tt> TYPE <tt>SXCO_T_TT_SECONDARY_KEYS</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>ro_me</tt> TYPE <tt>if_xco_gen_ao_s_fo_c_type</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

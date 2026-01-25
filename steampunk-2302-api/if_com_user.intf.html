@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_COM_USER INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_COM_USER</h2>
+<a href="https://github.com/abapedia/steampunk-2302-api/blob/mainrc%2Fif_com_user.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_com_user/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_com_scenario_factory.intf.html">IF_COM_SCENARIO_FACTORY</a></small><br><small>Next Object: <a href="if_com_user_factory.intf.html">IF_COM_USER_FACTORY</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ty_cu</tt> TYPE <tt>if_com_user=>ty_cu</tt><br>
+Type <tt>tt_cu</tt> TYPE <tt>if_com_user=>tt_cu</tt><br>
+Constant <tt>co_lock_status</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Method <tt>get_id</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_id</tt> TYPE <tt>if_com_user=>ty_cu-id</tt><br>
+Method <tt>get_name</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_name</tt> TYPE <tt>if_com_user=>ty_cu-name</tt><br>
+Method <tt>get_description</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_description</tt> TYPE <tt>if_com_user=>ty_cu-description</tt><br>
+Method <tt>get_lock_status</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_lock_status</tt> TYPE <tt>if_com_user=>ty_cu-lock_status</tt><br>
+Method <tt>get_changed_by</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_changed_by</tt> TYPE <tt>if_com_user=>ty_cu-changed_by</tt><br>
+Method <tt>get_changed_at</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_changed_at</tt> TYPE <tt>if_com_user=>ty_cu-changed_at</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

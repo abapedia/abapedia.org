@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_XCO_CP_TM_TIME INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_XCO_CP_TM_TIME</h2>
+<a href="https://github.com/abapedia/steampunk-2111-api/blob/mainrc%2Fif_xco_cp_tm_time.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_xco_cp_tm_time/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_xco_cp_tm_moment_interval.intf.html">IF_XCO_CP_TM_MOMENT_INTERVAL</a></small><br><small>Next Object: <a href="if_xco_cp_tm_time_format.intf.html">IF_XCO_CP_TM_TIME_FORMAT</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>tv_hour</tt> TYPE <tt>NUMC2</tt><br>
+Type <tt>tv_minute</tt> TYPE <tt>NUMC2</tt><br>
+Type <tt>tv_second</tt> TYPE <tt>NUMC2</tt><br>
+Attribute <tt>hour</tt> TYPE <tt>NUMC2</tt><br>
+Attribute <tt>minute</tt> TYPE <tt>NUMC2</tt><br>
+Attribute <tt>second</tt> TYPE <tt>NUMC2</tt><br>
+Method <tt>as</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_format</tt> TYPE <tt>if_xco_cp_tm_time_format</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_string</tt> TYPE <tt>if_xco_string</tt><br>
+Method <tt>add</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_hour</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_minute</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_second</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>ro_time</tt> TYPE <tt>if_xco_cp_tm_time</tt><br>
+Method <tt>subtract</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_hour</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_minute</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_second</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>ro_time</tt> TYPE <tt>if_xco_cp_tm_time</tt><br>
+Method <tt>overwrite</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_hour</tt> TYPE <tt>NUMC2</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_minute</tt> TYPE <tt>NUMC2</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_second</tt> TYPE <tt>NUMC2</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>ro_time</tt> TYPE <tt>if_xco_cp_tm_time</tt><br>
+Method <tt>get_moment</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_year</tt> TYPE <tt>NUMC4</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_month</tt> TYPE <tt>NUMC2</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_day</tt> TYPE <tt>NUMC2</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_moment</tt> TYPE <tt>if_xco_cp_tm_moment</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

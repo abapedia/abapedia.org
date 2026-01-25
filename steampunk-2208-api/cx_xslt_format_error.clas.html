@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CX_XSLT_FORMAT_ERROR CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CX_XSLT_FORMAT_ERROR</h2>
+<a href="https://github.com/abapedia/steampunk-2208-api/blob/mainrc%2Fcx_xslt_format_error.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cx_xslt_format_error/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cx_xslt_exception.clas.html">CX_XSLT_EXCEPTION</a></small><br><small>Next Object: <a href="cx_xslt_id_href_error.clas.html">CX_XSLT_ID_HREF_ERROR</a></small><br><br>Status: RELEASED<br><br>Superclass: <a href="cx_xslt_system_error.clas.html">cx_xslt_system_error</a><br><br>
+<u>Public</u><br>Attribute <tt>node_type</tt> TYPE <tt>STRING</tt><br>
+Attribute <tt>uri</tt> TYPE <tt>STRING</tt><br>
+Attribute <tt>local_name</tt> TYPE <tt>STRING</tt><br>
+Attribute <tt>tree_position</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>cx_xslt_format_error</tt> TYPE <tt>c LENGTH 32</tt><br>
+Constant <tt>missing_element</tt> TYPE <tt>c LENGTH 32</tt><br>
+Constant <tt>illegal_text</tt> TYPE <tt>c LENGTH 32</tt><br>
+Constant <tt>unexpected_text</tt> TYPE <tt>c LENGTH 32</tt><br>
+Constant <tt>illegal_element</tt> TYPE <tt>c LENGTH 32</tt><br>
+Constant <tt>illegal_element_nouri</tt> TYPE <tt>c LENGTH 32</tt><br>
+Constant <tt>unexpected_element</tt> TYPE <tt>c LENGTH 32</tt><br>
+Constant <tt>unexpected_element_nouri</tt> TYPE <tt>c LENGTH 32</tt><br>
+Constant <tt>unsupported_element</tt> TYPE <tt>c LENGTH 32</tt><br>
+Constant <tt>unsupported_element_nouri</tt> TYPE <tt>c LENGTH 32</tt><br>
+Constant <tt>unsupported_element_none</tt> TYPE <tt>c LENGTH 32</tt><br>
+Constant <tt>invalid_element</tt> TYPE <tt>c LENGTH 32</tt><br>
+Constant <tt>invalid_element_nouri</tt> TYPE <tt>c LENGTH 32</tt><br>
+Constant <tt>inapplicable_element</tt> TYPE <tt>c LENGTH 32</tt><br>
+Constant <tt>illegal_uri_element</tt> TYPE <tt>c LENGTH 32</tt><br>
+Constant <tt>nonstandard_element</tt> TYPE <tt>c LENGTH 32</tt><br>
+Constant <tt>nonstandard_element_nouri</tt> TYPE <tt>c LENGTH 32</tt><br>
+Constant <tt>undefined_element</tt> TYPE <tt>c LENGTH 32</tt><br>
+Constant <tt>illegal_attribute</tt> TYPE <tt>c LENGTH 32</tt><br>
+Constant <tt>illegal_attribute_nouri</tt> TYPE <tt>c LENGTH 32</tt><br>
+Constant <tt>invalid_attribute</tt> TYPE <tt>c LENGTH 32</tt><br>
+Constant <tt>invalid_attribute_nouri</tt> TYPE <tt>c LENGTH 32</tt><br>
+Constant <tt>inapplicable_attribute_nouri</tt> TYPE <tt>c LENGTH 32</tt><br>
+Constant <tt>unexpected_attribute_nouri</tt> TYPE <tt>c LENGTH 32</tt><br>
+Constant <tt>missing_attribute_nouri</tt> TYPE <tt>c LENGTH 32</tt><br>
+Constant <tt>nonstandard_value_nouri</tt> TYPE <tt>c LENGTH 32</tt><br>
+Constant <tt>unsupported_version_nouri</tt> TYPE <tt>c LENGTH 32</tt><br>
+Constant <tt>illegal_value_nouri</tt> TYPE <tt>c LENGTH 32</tt><br>
+Constant <tt>illegal_document</tt> TYPE <tt>c LENGTH 32</tt><br>
+Constant <tt>unexpected_attribute</tt> TYPE <tt>c LENGTH 32</tt><br>
+Constant <tt>nonstandard_value</tt> TYPE <tt>c LENGTH 32</tt><br>
+Constant <tt>missing_attribute</tt> TYPE <tt>c LENGTH 32</tt><br>
+Method <tt>constructor</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>textid</tt> TYPE <tt>c LENGTH 32</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>previous</tt> TYPE <tt>cx_root</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>node_type</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>uri</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>local_name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>tree_position</tt> TYPE <tt>STRING</tt> Optional<br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='green'>true</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

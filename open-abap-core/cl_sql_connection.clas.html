@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_SQL_CONNECTION CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_SQL_CONNECTION</h2>
+<a href="https://github.com/open-abap/open-abap-core/blob/mainrc%2Fadbc%2Fcl_sql_connection.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_sql_connection/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_shm_service.clas.html">CL_SHM_SERVICE</a></small><br><small>Next Object: <a href="cl_sql_result_set.clas.html">CL_SQL_RESULT_SET</a></small><br><br><u>Public</u><br>Static Method <tt>get_connection</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>con_name</tt> TYPE <tt>clike</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>sharable</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>connection</tt> TYPE <tt>cl_sql_connection</tt><br>
+Static Method <tt>get_abap_connection</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>con_name</tt> TYPE <tt>clike</tt><br>
+&nbsp;&nbsp;RETURNING <tt>connection</tt> TYPE <tt>cl_sql_connection</tt><br>
+Method <tt>create_statement</tt><br>
+&nbsp;&nbsp;RETURNING <tt>statement</tt> TYPE <tt>cl_sql_statement</tt><br>
+Method <tt>get_con_name</tt><br>
+&nbsp;&nbsp;RETURNING <tt>con_name</tt> TYPE <tt>STRING</tt><br>
+Method <tt>close</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>750</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>702</td><td bgcolor='red'>undefined</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

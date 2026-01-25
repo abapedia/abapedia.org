@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_ABAP_HMAC CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_ABAP_HMAC</h2>
+<a href="https://github.com/abapedia/steampunk-2305-api/blob/mainrc%2Fcl_abap_hmac.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_abap_hmac/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_abap_gzip_text_stream.clas.html">CL_ABAP_GZIP_TEXT_STREAM</a></small><br><small>Next Object: <a href="cl_abap_intfdescr.clas.html">CL_ABAP_INTFDESCR</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Method <tt>constructor</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>if_algorithm</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>if_key</tt> TYPE <tt>XSTRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_message_digest.clas.html">cx_abap_message_digest</a></tt><br>
+Static Method <tt>get_instance</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>if_algorithm</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>if_key</tt> TYPE <tt>XSTRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_object</tt> TYPE <tt>cl_abap_hmac</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_message_digest.clas.html">cx_abap_message_digest</a></tt><br>
+Method <tt>get_algorithm</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rf_algorithm</tt> TYPE <tt>STRING</tt><br>
+Method <tt>get_hmac_length</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ri_length</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_message_digest.clas.html">cx_abap_message_digest</a></tt><br>
+Method <tt>get_hmac</tt><br>
+&nbsp;&nbsp;RETURNING <tt>er_hmac</tt> TYPE <tt>XSTRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_message_digest.clas.html">cx_abap_message_digest</a></tt><br>
+Method <tt>init</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>if_key</tt> TYPE <tt>XSTRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_message_digest.clas.html">cx_abap_message_digest</a></tt><br>
+Method <tt>update</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>if_data</tt> TYPE <tt>XSTRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>if_offset</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>if_length</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_message_digest.clas.html">cx_abap_message_digest</a></tt><br>
+Method <tt>final</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>if_data</tt> TYPE <tt>XSTRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>if_offset</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>if_length</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ef_hmacstring</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ef_hmacxstring</tt> TYPE <tt>XSTRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ef_hmacb64string</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_message_digest.clas.html">cx_abap_message_digest</a></tt><br>
+Method <tt>reset</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_message_digest.clas.html">cx_abap_message_digest</a></tt><br>
+Method <tt>to_string</tt><br>
+&nbsp;&nbsp;RETURNING <tt>er_hmacstring</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_message_digest.clas.html">cx_abap_message_digest</a></tt><br>
+Method <tt>to_base64</tt><br>
+&nbsp;&nbsp;RETURNING <tt>er_hmacb64string</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_message_digest.clas.html">cx_abap_message_digest</a></tt><br>
+Static Method <tt>is_equal</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>if_hmaca</tt> TYPE <tt>XSTRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>if_hmacb</tt> TYPE <tt>XSTRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>er_equal</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Static Method <tt>calculate_hmac_for_char</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>if_algorithm</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>if_key</tt> TYPE <tt>XSTRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>if_data</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>if_length</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ef_hmacstring</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ef_hmacxstring</tt> TYPE <tt>XSTRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ef_hmacb64string</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_message_digest.clas.html">cx_abap_message_digest</a></tt><br>
+Static Method <tt>calculate_hmac_for_raw</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>if_algorithm</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>if_key</tt> TYPE <tt>XSTRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>if_data</tt> TYPE <tt>XSTRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>if_length</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ef_hmacstring</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ef_hmacxstring</tt> TYPE <tt>XSTRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ef_hmacb64string</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_message_digest.clas.html">cx_abap_message_digest</a></tt><br>
+Static Method <tt>string_to_xstring</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>if_input</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>er_output</tt> TYPE <tt>XSTRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_message_digest.clas.html">cx_abap_message_digest</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='green'>true</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

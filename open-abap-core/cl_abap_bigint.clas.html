@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_ABAP_BIGINT CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_ABAP_BIGINT</h2>
+<a href="https://github.com/open-abap/open-abap-core/blob/mainrc%2Fbigint%2Fcl_abap_bigint.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_abap_bigint/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="%23ui2%23cl_json.clas.html">/UI2/CL_JSON</a></small><br><small>Next Object: <a href="cl_abap_char_utilities.clas.html">CL_ABAP_CHAR_UTILITIES</a></small><br><br><u>Public</u><br>Static Method <tt>factory_from_int4</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_value</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>ro_bigint</tt> TYPE <tt>cl_abap_bigint</tt><br>
+Method <tt>add_int4</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_value</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_myself</tt> TYPE <tt>cl_abap_bigint</tt><br>
+Method <tt>to_string</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_string</tt> TYPE <tt>STRING</tt><br>
+Method <tt>sub</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_bigint</tt> TYPE <tt>cl_abap_bigint</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_myself</tt> TYPE <tt>cl_abap_bigint</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_ref_is_initial.clas.html">cx_sy_ref_is_initial</a></tt><br>
+Method <tt>mul</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_bigint</tt> TYPE <tt>cl_abap_bigint</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_myself</tt> TYPE <tt>cl_abap_bigint</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_ref_is_initial.clas.html">cx_sy_ref_is_initial</a></tt><br>
+Method <tt>mod</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_bigint</tt> TYPE <tt>cl_abap_bigint</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_myself</tt> TYPE <tt>cl_abap_bigint</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_ref_is_initial.clas.html">cx_sy_ref_is_initial</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_zerodivide.clas.html">cx_sy_zerodivide</a></tt><br>
+Method <tt>clone</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_bigint</tt> TYPE <tt>cl_abap_bigint</tt><br>
+Method <tt>sqrt</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_myself</tt> TYPE <tt>cl_abap_bigint</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_arg_out_of_domain.clas.html">cx_sy_arg_out_of_domain</a></tt><br>
+Method <tt>is_equal</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_bigint</tt> TYPE <tt>cl_abap_bigint</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_equal</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_ref_is_initial.clas.html">cx_sy_ref_is_initial</a></tt><br>
+Method <tt>is_larger</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_bigint</tt> TYPE <tt>cl_abap_bigint</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_larger</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_ref_is_initial.clas.html">cx_sy_ref_is_initial</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>750</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>702</td><td bgcolor='red'>undefined</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

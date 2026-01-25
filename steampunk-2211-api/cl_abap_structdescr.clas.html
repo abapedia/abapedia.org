@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_ABAP_STRUCTDESCR CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_ABAP_STRUCTDESCR</h2>
+<a href="https://github.com/abapedia/steampunk-2211-api/blob/mainrc%2Fcl_abap_structdescr.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_abap_structdescr/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_abap_struct_utilities.clas.html">CL_ABAP_STRUCT_UTILITIES</a></small><br><small>Next Object: <a href="cl_abap_tabledescr.clas.html">CL_ABAP_TABLEDESCR</a></small><br><br>Status: RELEASED<br><br>Superclass: <a href="cl_abap_complexdescr.clas.html">cl_abap_complexdescr</a><br><br>
+<u>Public</u><br>Type <tt>component</tt> TYPE <tt>abap_componentdescr</tt><br>
+Type <tt>component_table</tt> TYPE <tt>abap_component_tab</tt><br>
+Type <tt>symbol_table</tt> TYPE <tt>abap_component_symbol_tab</tt><br>
+Type <tt>included_view</tt> TYPE <tt>abap_component_view_tab</tt><br>
+Attribute <tt>struct_kind</tt> TYPE <tt>abap_structkind</tt><br>
+Attribute <tt>components</tt> TYPE <tt>abap_compdescr_tab</tt><br>
+Attribute <tt>has_include</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Constant <tt>structkind_flat</tt> TYPE <tt>abap_structkind</tt><br>
+Constant <tt>structkind_nested</tt> TYPE <tt>abap_structkind</tt><br>
+Constant <tt>structkind_mesh</tt> TYPE <tt>abap_structkind</tt><br>
+Static Method <tt>load_class</tt><br>
+Method <tt>get_ddic_field_list</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_langu</tt> TYPE <tt>LANGU</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_including_substructres</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>p_field_list</tt> TYPE <tt>NOT_RELEASED_TTYP</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>not_found</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>no_ddic_type</tt><br>
+Static Method <tt>get</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_components</tt> TYPE <tt>abap_component_tab</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_strict</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>p_result</tt> TYPE <tt>cl_abap_structdescr</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_struct_creation.clas.html">cx_sy_struct_creation</a></tt><br>
+Static Method <tt>create</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_components</tt> TYPE <tt>abap_component_tab</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_strict</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>p_result</tt> TYPE <tt>cl_abap_structdescr</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_struct_creation.clas.html">cx_sy_struct_creation</a></tt><br>
+Method <tt>get_components</tt><br>
+&nbsp;&nbsp;RETURNING <tt>p_result</tt> TYPE <tt>abap_component_tab</tt><br>
+Method <tt>get_included_view</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_level</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>p_result</tt> TYPE <tt>abap_component_view_tab</tt><br>
+Method <tt>get_symbols</tt><br>
+&nbsp;&nbsp;RETURNING <tt>p_result</tt> TYPE <tt>abap_component_symbol_tab</tt><br>
+Method <tt>get_component_type</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_name</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;RETURNING <tt>p_descr_ref</tt> TYPE <tt>cl_abap_datadescr</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>component_not_found</tt><br>
+&nbsp;&nbsp;EXCEPTIONS <tt>unsupported_input_type</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='green'>true</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

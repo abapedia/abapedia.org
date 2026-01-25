@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_XCO_FM_PRM_CHA_CONTENT INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_XCO_FM_PRM_CHA_CONTENT</h2>
+<a href="https://github.com/abapedia/steampunk-2208-api/blob/mainrc%2Fif_xco_fm_prm_cha_content.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_xco_fm_prm_cha_content/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_xco_fm_parameters.intf.html">IF_XCO_FM_PARAMETERS</a></small><br><small>Next Object: <a href="if_xco_fm_prm_cha_type.intf.html">IF_XCO_FM_PRM_CHA_TYPE</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>tv_short_text</tt> TYPE <tt>if_xco_fm_prm_cha_content=>tv_short_text</tt><br>
+Type <tt>tv_default_value</tt> TYPE <tt>if_xco_fm_prm_cha_content=>tv_default_value</tt><br>
+Type <tt>ts_content</tt> TYPE <tt>if_xco_fm_prm_cha_content=>ts_content</tt><br>
+Attribute <tt>changing_parameter</tt> TYPE <tt>if_xco_fm_prm_changing</tt><br>
+Attribute <tt>state</tt> TYPE <tt>cl_xco_fm_state</tt><br>
+Method <tt>get_short_text</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_origin</tt> TYPE <tt>cl_xco_fm_origin</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rv_short_text</tt> TYPE <tt>if_xco_fm_prm_cha_content=>tv_short_text</tt><br>
+Method <tt>get_pass_by_value_indicator</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_origin</tt> TYPE <tt>cl_xco_fm_origin</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rv_pass_by_value_indicator</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>get_type</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_origin</tt> TYPE <tt>cl_xco_fm_origin</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>ro_type</tt> TYPE <tt>if_xco_fm_prm_cha_type</tt><br>
+Method <tt>get_optional_indicator</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_origin</tt> TYPE <tt>cl_xco_fm_origin</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rv_optional_indicator</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>get_default_value</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_origin</tt> TYPE <tt>cl_xco_fm_origin</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rv_default_value</tt> TYPE <tt>if_xco_fm_prm_cha_content=>tv_default_value</tt><br>
+Method <tt>get</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_origin</tt> TYPE <tt>cl_xco_fm_origin</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rs_content</tt> TYPE <tt>if_xco_fm_prm_cha_content=>ts_content</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

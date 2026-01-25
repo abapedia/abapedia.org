@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_AUNIT_AUTHORITY_OBJSET INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_AUNIT_AUTHORITY_OBJSET</h2>
+<a href="https://github.com/abapedia/steampunk-2205-api/blob/mainrc%2Fif_aunit_authority_objset.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_aunit_authority_objset/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_aunit_auth_check_result_log.intf.html">IF_AUNIT_AUTH_CHECK_RESULT_LOG</a></small><br><small>Next Object: <a href="if_aunit_constants.intf.html">IF_AUNIT_CONSTANTS</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Method <tt>clone</tt><br>
+&nbsp;&nbsp;RETURNING <tt>clone</tt> TYPE <tt>if_aunit_authority_objset</tt><br>
+Method <tt>append_auth_objset</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>auth_objset</tt> TYPE <tt>if_aunit_authority_objset</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_auth_check_exception.clas.html">cx_abap_auth_check_exception</a></tt><br>
+Method <tt>add_authobj</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>object</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>users</tt> TYPE <tt>cl_aunit_auth_check_types_def=>auth_users</tt> Optional<br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_auth_check_exception.clas.html">cx_abap_auth_check_exception</a></tt><br>
+Method <tt>add_authobj_with_fldval</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>object</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>field</tt> TYPE <tt>cl_aunit_auth_check_types_def=>authfield_values</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>users</tt> TYPE <tt>cl_aunit_auth_check_types_def=>auth_users</tt> Optional<br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_auth_check_exception.clas.html">cx_abap_auth_check_exception</a></tt><br>
+Method <tt>add_authobj_with_fldvals</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>object</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>fields</tt> TYPE <tt>cl_aunit_auth_check_types_def=>authorizations</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>users</tt> TYPE <tt>cl_aunit_auth_check_types_def=>auth_users</tt> Optional<br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_auth_check_exception.clas.html">cx_abap_auth_check_exception</a></tt><br>
+Method <tt>add_authobjs_with_fldvals</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>role_authorizations</tt> TYPE <tt>cl_aunit_auth_check_types_def=>role_auth_objects</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>users</tt> TYPE <tt>cl_aunit_auth_check_types_def=>auth_users</tt> Optional<br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_auth_check_exception.clas.html">cx_abap_auth_check_exception</a></tt><br>
+Method <tt>add_role_auths_for_users</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>user_role_authorizations</tt> TYPE <tt>cl_aunit_auth_check_types_def=>user_role_authorizations</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_auth_check_exception.clas.html">cx_abap_auth_check_exception</a></tt><br>
+Method <tt>remove_authobj</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>object</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>users</tt> TYPE <tt>cl_aunit_auth_check_types_def=>auth_users</tt> Optional<br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_auth_check_exception.clas.html">cx_abap_auth_check_exception</a></tt><br>
+Method <tt>remove_authobj_with_fldval</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>object</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>field</tt> TYPE <tt>cl_aunit_auth_check_types_def=>authfield_values</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>users</tt> TYPE <tt>cl_aunit_auth_check_types_def=>auth_users</tt> Optional<br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_auth_check_exception.clas.html">cx_abap_auth_check_exception</a></tt><br>
+Method <tt>remove_authobj_with_fldvals</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>object</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>fields</tt> TYPE <tt>cl_aunit_auth_check_types_def=>authorizations</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>users</tt> TYPE <tt>cl_aunit_auth_check_types_def=>auth_users</tt> Optional<br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_auth_check_exception.clas.html">cx_abap_auth_check_exception</a></tt><br>
+Method <tt>remove_authobjs_with_fldvals</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>role_authorizations</tt> TYPE <tt>cl_aunit_auth_check_types_def=>role_auth_objects</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>users</tt> TYPE <tt>cl_aunit_auth_check_types_def=>auth_users</tt> Optional<br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_auth_check_exception.clas.html">cx_abap_auth_check_exception</a></tt><br>
+Method <tt>remove_role_auths_for_users</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>user_role_authorizations</tt> TYPE <tt>cl_aunit_auth_check_types_def=>user_role_authorizations</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_auth_check_exception.clas.html">cx_abap_auth_check_exception</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

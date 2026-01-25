@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_XCO_CP_BAL_LOG_HEADER INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_XCO_CP_BAL_LOG_HEADER</h2>
+<a href="https://github.com/abapedia/steampunk-2305-api/blob/mainrc%2Fif_xco_cp_bal_log_header.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_xco_cp_bal_log_header/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_xco_cp_bal_log_filter_fctry.intf.html">IF_XCO_CP_BAL_LOG_FILTER_FCTRY</a></small><br><small>Next Object: <a href="if_xco_cp_bal_log_message.intf.html">IF_XCO_CP_BAL_LOG_MESSAGE</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>tv_external_id</tt> TYPE <tt>if_xco_cp_bal_log_header=>tv_external_id</tt><br>
+Type <tt>ts_header</tt> TYPE <tt>if_xco_cp_bal_log_header=>ts_header</tt><br>
+Attribute <tt>log</tt> TYPE <tt>if_xco_cp_bal_log</tt><br>
+Method <tt>get_object</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_object</tt> TYPE <tt>if_xco_application_log_object</tt><br>
+Method <tt>get_subobject</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_subobject</tt> TYPE <tt>if_xco_aplo_subobject</tt><br>
+Method <tt>get_external_id</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_external_id</tt> TYPE <tt>if_xco_cp_bal_log_header=>tv_external_id</tt><br>
+Method <tt>get_created_on</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_created_on</tt> TYPE <tt>if_xco_cp_tm_moment</tt><br>
+Method <tt>get_created_by</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_created_by</tt> TYPE <tt>if_xco_cp_user</tt><br>
+Method <tt>get_expiry_date</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_expiry_date</tt> TYPE <tt>if_xco_cp_tm_date</tt><br>
+Method <tt>get_keep_until_expiry</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_keep_until_expiry</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>get</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rs_header</tt> TYPE <tt>if_xco_cp_bal_log_header=>ts_header</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

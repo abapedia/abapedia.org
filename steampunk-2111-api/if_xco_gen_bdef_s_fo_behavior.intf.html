@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_XCO_GEN_BDEF_S_FO_BEHAVIOR INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_XCO_GEN_BDEF_S_FO_BEHAVIOR</h2>
+<a href="https://github.com/abapedia/steampunk-2111-api/blob/mainrc%2Fif_xco_gen_bdef_s_fo_behavior.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_xco_gen_bdef_s_fo_behavior/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_xco_gen_bdef_s_fo_b_validtn.intf.html">IF_XCO_GEN_BDEF_S_FO_B_VALIDTN</a></small><br><small>Next Object: <a href="if_xco_gen_cds_cardinality.intf.html">IF_XCO_GEN_CDS_CARDINALITY</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Attribute <tt>name</tt> TYPE <tt>SXCO_CDS_OBJECT_NAME</tt><br>
+Attribute <tt>characteristics</tt> TYPE <tt>if_xco_gen_bdef_s_fo_b_chara</tt><br>
+Method <tt>add_field</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_CDS_FIELD_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_field</tt> TYPE <tt>if_xco_gen_bdef_s_fo_b_field</tt><br>
+Method <tt>get_field</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_CDS_FIELD_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_field</tt> TYPE <tt>if_xco_gen_bdef_s_fo_b_field</tt><br>
+Method <tt>remove_field</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_CDS_FIELD_NAME</tt><br>
+Method <tt>add_standard_operation</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_standard_operation</tt> TYPE <tt>cl_xco_bdef_standard_operation</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_standard_operation</tt> TYPE <tt>if_xco_gen_bdef_s_fo_b_std_op</tt><br>
+Method <tt>get_standard_operation</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_standard_operation</tt> TYPE <tt>cl_xco_bdef_standard_operation</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_standard_operation</tt> TYPE <tt>if_xco_gen_bdef_s_fo_b_std_op</tt><br>
+Method <tt>remove_standard_operation</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_standard_operation</tt> TYPE <tt>cl_xco_bdef_standard_operation</tt><br>
+Method <tt>add_action</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_BDEF_ACTION_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_action</tt> TYPE <tt>if_xco_gen_bdef_s_fo_b_action</tt><br>
+Method <tt>get_action</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_BDEF_ACTION_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_action</tt> TYPE <tt>if_xco_gen_bdef_s_fo_b_action</tt><br>
+Method <tt>remove_action</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_BDEF_ACTION_NAME</tt><br>
+Method <tt>add_association</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_CDS_ASSOCIATION_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_association</tt> TYPE <tt>if_xco_gen_bdef_s_fo_b_assoctn</tt><br>
+Method <tt>get_association</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_CDS_ASSOCIATION_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_association</tt> TYPE <tt>if_xco_gen_bdef_s_fo_b_assoctn</tt><br>
+Method <tt>remove_association</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_CDS_ASSOCIATION_NAME</tt><br>
+Method <tt>add_mapping_for</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_database_table</tt> TYPE <tt>clike</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_mapping</tt> TYPE <tt>if_xco_gen_bdef_s_fo_b_mapping</tt><br>
+Method <tt>get_mapping_for</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_database_table</tt> TYPE <tt>clike</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_mapping</tt> TYPE <tt>if_xco_gen_bdef_s_fo_b_mapping</tt><br>
+Method <tt>remove_mapping_for</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_database_table</tt> TYPE <tt>clike</tt><br>
+Method <tt>add_validation</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_BDEF_EVALUATION_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_validation</tt> TYPE <tt>if_xco_gen_bdef_s_fo_b_validtn</tt><br>
+Method <tt>get_validation</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_BDEF_EVALUATION_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_validation</tt> TYPE <tt>if_xco_gen_bdef_s_fo_b_validtn</tt><br>
+Method <tt>remove_validation</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_BDEF_EVALUATION_NAME</tt><br>
+Method <tt>add_determination</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_BDEF_EVALUATION_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_determination</tt> TYPE <tt>if_xco_gen_bdef_s_fo_b_detrmtn</tt><br>
+Method <tt>get_determination</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_BDEF_EVALUATION_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_determination</tt> TYPE <tt>if_xco_gen_bdef_s_fo_b_detrmtn</tt><br>
+Method <tt>remove_determination</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_BDEF_EVALUATION_NAME</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

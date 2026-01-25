@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_ABAP_DYN_PRG CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_ABAP_DYN_PRG</h2>
+<a href="https://github.com/abapedia/steampunk-2205-api/blob/mainrc%2Fcl_abap_dyn_prg.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_abap_dyn_prg/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_abap_decfloat.clas.html">CL_ABAP_DECFLOAT</a></small><br><small>Next Object: <a href="cl_abap_elemdescr.clas.html">CL_ABAP_ELEMDESCR</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ty_col_check</tt> TYPE <tt>cl_abap_dyn_prg=>ty_col_check</tt><br>
+Type <tt>ty_dialect</tt> TYPE <tt>cl_abap_dyn_prg=>ty_dialect</tt><br>
+Constant <tt>col_check_normal</tt> TYPE <tt>cl_abap_dyn_prg=>ty_col_check</tt><br>
+Constant <tt>col_check_strict</tt> TYPE <tt>cl_abap_dyn_prg=>ty_col_check</tt><br>
+Constant <tt>col_check_cds</tt> TYPE <tt>cl_abap_dyn_prg=>ty_col_check</tt><br>
+Constant <tt>dialect_open_sql</tt> TYPE <tt>cl_abap_dyn_prg=>ty_dialect</tt><br>
+Constant <tt>dialect_native_sql</tt> TYPE <tt>cl_abap_dyn_prg=>ty_dialect</tt><br>
+Static Method <tt>check_int_value</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>val</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;RETURNING <tt>val_str</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_not_an_integer.clas.html">cx_abap_not_an_integer</a></tt><br>
+Static Method <tt>escape_quotes</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>val</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;RETURNING <tt>out</tt> TYPE <tt>STRING</tt><br>
+Static Method <tt>escape_quotes_str</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>val</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;RETURNING <tt>out</tt> TYPE <tt>STRING</tt><br>
+Static Method <tt>quote</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>val</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;RETURNING <tt>out</tt> TYPE <tt>STRING</tt><br>
+Static Method <tt>quote_str</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>val</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;RETURNING <tt>out</tt> TYPE <tt>STRING</tt><br>
+Static Method <tt>quote_dbl</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>val</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;RETURNING <tt>out</tt> TYPE <tt>STRING</tt><br>
+Static Method <tt>check_column_name</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>val</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>strict</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>val_str</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_invalid_name.clas.html">cx_abap_invalid_name</a></tt><br>
+Static Method <tt>check_variable_name</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>val</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>strict</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>val_str</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_invalid_name.clas.html">cx_abap_invalid_name</a></tt><br>
+Static Method <tt>check_table_name_str</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>val</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>packages</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>incl_sub_packages</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>bypass_buffer</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>val_str</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_not_a_table.clas.html">cx_abap_not_a_table</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_not_in_package.clas.html">cx_abap_not_in_package</a></tt><br>
+Static Method <tt>check_table_name_tab</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>val</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>packages</tt> TYPE <tt>STRING_HASHED_TABLE</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>incl_sub_packages</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>bypass_buffer</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>val_str</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_not_a_table.clas.html">cx_abap_not_a_table</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_not_in_package.clas.html">cx_abap_not_in_package</a></tt><br>
+Static Method <tt>check_table_or_view_name_str</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>val</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>packages</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>incl_sub_packages</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>bypass_buffer</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>dialect</tt> TYPE <tt>cl_abap_dyn_prg=>ty_dialect</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>val_str</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_not_a_table.clas.html">cx_abap_not_a_table</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_not_in_package.clas.html">cx_abap_not_in_package</a></tt><br>
+Static Method <tt>check_whitelist_str</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>val</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>whitelist</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;RETURNING <tt>val_str</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_not_in_whitelist.clas.html">cx_abap_not_in_whitelist</a></tt><br>
+Static Method <tt>check_whitelist_tab</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>val</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>whitelist</tt> TYPE <tt>STRING_HASHED_TABLE</tt><br>
+&nbsp;&nbsp;RETURNING <tt>val_str</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_not_in_whitelist.clas.html">cx_abap_not_in_whitelist</a></tt><br>
+Static Method <tt>check_table_or_view_name_tab</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>val</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>packages</tt> TYPE <tt>STRING_HASHED_TABLE</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>incl_sub_packages</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>bypass_buffer</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>dialect</tt> TYPE <tt>cl_abap_dyn_prg=>ty_dialect</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>val_str</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_not_a_table.clas.html">cx_abap_not_a_table</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_not_in_package.clas.html">cx_abap_not_in_package</a></tt><br>
+Static Method <tt>escape_xss_xml_html</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>val</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>above_ff</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>out</tt> TYPE <tt>STRING</tt><br>
+Static Method <tt>escape_xss_javascript</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>val</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>above_ff</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>out</tt> TYPE <tt>STRING</tt><br>
+Static Method <tt>escape_xss_css</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>val</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>above_ff</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>out</tt> TYPE <tt>STRING</tt><br>
+Static Method <tt>escape_xss_url</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>val</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;RETURNING <tt>out</tt> TYPE <tt>STRING</tt><br>
+Static Method <tt>refresh_buffers</tt><br>
+Static Method <tt>check_char_literal</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>val</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;RETURNING <tt>val_str</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_invalid_value.clas.html">cx_abap_invalid_value</a></tt><br>
+Static Method <tt>check_string_literal</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>val</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;RETURNING <tt>val_str</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_invalid_value.clas.html">cx_abap_invalid_value</a></tt><br>
+Static Method <tt>mass_check_whitelist_tab</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>values</tt> TYPE <tt>STRING_TABLE</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>whitelist</tt> TYPE <tt>STRING_HASHED_TABLE</tt><br>
+&nbsp;&nbsp;RETURNING <tt>values_ret</tt> TYPE <tt>STRING_TABLE</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_not_in_whitelist.clas.html">cx_abap_not_in_whitelist</a></tt><br>
+Static Method <tt>mass_check_whitelist_str</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>values</tt> TYPE <tt>STRING_TABLE</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>whitelist</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;RETURNING <tt>values_ret</tt> TYPE <tt>STRING_TABLE</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_not_in_whitelist.clas.html">cx_abap_not_in_whitelist</a></tt><br>
+Static Method <tt>check_program_name_tab</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>val</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>packages</tt> TYPE <tt>STRING_HASHED_TABLE</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>incl_sub_packages</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>bypass_buffer</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>val_str</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_not_a_program.clas.html">cx_abap_not_a_program</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_not_in_package.clas.html">cx_abap_not_in_package</a></tt><br>
+Static Method <tt>check_program_name_str</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>val</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>packages</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>incl_sub_packages</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>bypass_buffer</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>val_str</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_not_a_program.clas.html">cx_abap_not_a_program</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_not_in_package.clas.html">cx_abap_not_in_package</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='green'>true</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_OSQL_TEST_ENVIRONMENT INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_OSQL_TEST_ENVIRONMENT</h2>
+<a href="https://github.com/abapedia/steampunk-2111-api/blob/mainrc%2Fif_osql_test_environment.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_osql_test_environment/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_osql_test_data.intf.html">IF_OSQL_TEST_DATA</a></small><br><small>Next Object: <a href="if_proxy_client.intf.html">IF_PROXY_CLIENT</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ty_qlast_double</tt> TYPE <tt>if_osql_test_environment=>ty_qlast_double</tt><br>
+Type <tt>ty_qlast_doubles</tt> TYPE <tt>if_osql_test_environment=>ty_qlast_doubles</tt><br>
+Type <tt>ty_s_sobjname</tt> TYPE <tt>if_osql_test_environment=>ty_s_sobjname</tt><br>
+Type <tt>ty_t_sobjnames</tt> TYPE <tt>if_osql_test_environment=>ty_t_sobjnames</tt><br>
+Type <tt>ty_double_dependency_info</tt> TYPE <tt>if_osql_test_environment=>ty_double_dependency_info</tt><br>
+Type <tt>tty_double_dependency_info</tt> TYPE <tt>if_osql_test_environment=>tty_double_dependency_info</tt><br>
+Type <tt>ty_double_tdc_info</tt> TYPE <tt>if_osql_test_environment=>ty_double_tdc_info</tt><br>
+Type <tt>tty_double_tdc_info</tt> TYPE <tt>if_osql_test_environment=>tty_double_tdc_info</tt><br>
+Constant <tt>duration_short</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>duration_meduim</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>duration_long</tt> TYPE <tt>STRING</tt><br>
+Method <tt>insert_from_tdc</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_double_tdc_data</tt> TYPE <tt>if_osql_test_environment=>tty_double_tdc_info</tt><br>
+Method <tt>destroy</tt><br>
+Method <tt>clear_doubles</tt><br>
+Method <tt>get_double</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_name</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;RETURNING <tt>r_result</tt> TYPE <tt>if_osql_stub</tt><br>
+Method <tt>enable_double_redirection</tt><br>
+Method <tt>disable_double_redirection</tt><br>
+Method <tt>insert_test_data</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_data</tt> TYPE <tt>STANDARD TABLE OF any WITH DEFAULT KEY</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_parameter_values</tt> TYPE <tt>if_osql_param_values_config=>ty_parameter_value_pairs</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_null_values</tt> TYPE <tt>if_osql_null_values_config=>ty_element_names</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_client</tt> TYPE <tt>MANDT</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>r_result</tt> TYPE <tt>if_osql_stub</tt><br>
+Method <tt>get_access_control_double</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_access_control_double</tt> TYPE <tt>if_cds_access_control_double</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

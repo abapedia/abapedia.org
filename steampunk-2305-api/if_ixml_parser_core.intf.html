@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_IXML_PARSER_CORE INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_IXML_PARSER_CORE</h2>
+<a href="https://github.com/abapedia/steampunk-2305-api/blob/mainrc%2Fif_ixml_parser_core.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_ixml_parser_core/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_ixml_parse_error_core.intf.html">IF_IXML_PARSE_ERROR_CORE</a></small><br><small>Next Object: <a href="if_ixml_pi.intf.html">IF_IXML_PI</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Constant <tt>co_mark_element</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_mark_entity_ref</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_mark_lexical</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_namespace_aware</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_namespace_checking</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_namespace_unaware</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_no_mark</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_no_resolve</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_no_strict</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_no_validation</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_prefix_aware</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_resolve</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_strict</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_validate</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_validate_if_dtd</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_warn_all</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_warn_dup_attrib_decl</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_warn_dup_att_list</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_warn_dup_entity_decl</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_warn_forward_decl</tt> TYPE <tt>I</tt><br>
+Method <tt>add_preserve_space_element</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>uri</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>add_strip_space_element</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>uri</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>get_error</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>index</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>min_severity</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>if_ixml_parse_error_core</tt><br>
+Method <tt>get_event_subscription</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>I</tt><br>
+Method <tt>get_namespace_mode</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>I</tt><br>
+Method <tt>has_event_subscription</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>event</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>is_dom_generating</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>is_normalizing</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>is_supply_attr_defaults</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>is_validating</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>is_xml_space_aware</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>num_errors</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>min_severity</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>I</tt><br>
+Method <tt>parse</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>I</tt><br>
+Method <tt>parse_event</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>if_ixml_event</tt><br>
+Method <tt>set_dom_generating</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>is_generating</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>set_event_subscription</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>events</tt> TYPE <tt>I</tt><br>
+Method <tt>set_namespace_mode</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>mode</tt> TYPE <tt>I</tt><br>
+Method <tt>set_normalizing</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>is_normalizing</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>set_resolve_mode</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>flags</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>set_supply_attr_defaults</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>supply</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+Method <tt>set_validating</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>mode</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>set_xml_space_aware</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>is_xml_space_aware</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+Method <tt>is_attribute_normalizing</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>set_attribute_normalizing</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>is_normalizing</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>ABAP_BOOL</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_CHDO_READ_TOOLS CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_CHDO_READ_TOOLS</h2>
+<a href="https://github.com/abapedia/steampunk-2205-api/blob/mainrc%2Fcl_chdo_read_tools.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_chdo_read_tools/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_chdo_object_tools_rel.clas.html">CL_CHDO_OBJECT_TOOLS_REL</a></small><br><small>Next Object: <a href="cl_chdo_write_tools.clas.html">CL_CHDO_WRITE_TOOLS</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ty_r_objectid_line</tt> TYPE <tt>cl_chdo_read_tools=>ty_r_objectid_line</tt><br>
+Type <tt>ty_cdreaddd_line</tt> TYPE <tt>cl_chdo_read_tools=>ty_cdreaddd_line</tt><br>
+Type <tt>tt_cdredadd_tab</tt> TYPE <tt>cl_chdo_read_tools=>tt_cdredadd_tab</tt><br>
+Type <tt>tt_r_objectid</tt> TYPE <tt>cl_chdo_read_tools=>tt_r_objectid</tt><br>
+Type <tt>ty_r_user_line</tt> TYPE <tt>cl_chdo_read_tools=>ty_r_user_line</tt><br>
+Type <tt>tt_r_user</tt> TYPE <tt>cl_chdo_read_tools=>tt_r_user</tt><br>
+Type <tt>ty_attributes</tt> TYPE <tt>cl_chdo_read_tools=>ty_attributes</tt><br>
+Static Method <tt>changedocument_read</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_objectclass</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_cdobjectcl</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_objectid</tt> TYPE <tt>cl_chdo_read_tools=>tt_r_objectid</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_date_of_change</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_cddatum</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_time_of_change</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_cduzeit</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_date_until</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_cddatum</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_time_until</tt> TYPE <tt>if_chdo_object_tools_rel=>ty_cduzeit</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_username</tt> TYPE <tt>cl_chdo_read_tools=>tt_r_user</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>is_read_options</tt> TYPE <tt>cl_chdo_read_tools=>ty_attributes</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_cdredadd_tab</tt> TYPE <tt>cl_chdo_read_tools=>tt_cdredadd_tab</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_chdo_read_error.clas.html">cx_chdo_read_error</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

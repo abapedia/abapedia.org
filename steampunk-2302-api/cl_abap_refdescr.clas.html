@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_ABAP_REFDESCR CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_ABAP_REFDESCR</h2>
+<a href="https://github.com/abapedia/steampunk-2302-api/blob/mainrc%2Fcl_abap_refdescr.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_abap_refdescr/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_abap_range.clas.html">CL_ABAP_RANGE</a></small><br><small>Next Object: <a href="cl_abap_regex.clas.html">CL_ABAP_REGEX</a></small><br><br>Status: RELEASED<br><br>Superclass: <a href="cl_abap_datadescr.clas.html">cl_abap_datadescr</a><br><br>
+<u>Public</u><br>Static Method <tt>create</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_referenced_type</tt> TYPE <tt>cl_abap_typedescr</tt><br>
+&nbsp;&nbsp;RETURNING <tt>p_result</tt> TYPE <tt>cl_abap_refdescr</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_ref_creation.clas.html">cx_sy_ref_creation</a></tt><br>
+Static Method <tt>create_boxed</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_referenced_type</tt> TYPE <tt>cl_abap_structdescr</tt><br>
+&nbsp;&nbsp;RETURNING <tt>p_result</tt> TYPE <tt>cl_abap_refdescr</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_ref_creation.clas.html">cx_sy_ref_creation</a></tt><br>
+Static Method <tt>create_boxed_by_name</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_referenced_type_name</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;RETURNING <tt>p_result</tt> TYPE <tt>cl_abap_refdescr</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_ref_creation.clas.html">cx_sy_ref_creation</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_unknown_type.clas.html">cx_sy_unknown_type</a></tt><br>
+Static Method <tt>create_by_name</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_referenced_type_name</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;RETURNING <tt>p_result</tt> TYPE <tt>cl_abap_refdescr</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_ref_creation.clas.html">cx_sy_ref_creation</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_unknown_type.clas.html">cx_sy_unknown_type</a></tt><br>
+Static Method <tt>get</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_referenced_type</tt> TYPE <tt>cl_abap_typedescr</tt><br>
+&nbsp;&nbsp;RETURNING <tt>p_result</tt> TYPE <tt>cl_abap_refdescr</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_ref_creation.clas.html">cx_sy_ref_creation</a></tt><br>
+Static Method <tt>get_boxed</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_referenced_type</tt> TYPE <tt>cl_abap_structdescr</tt><br>
+&nbsp;&nbsp;RETURNING <tt>p_result</tt> TYPE <tt>cl_abap_refdescr</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_ref_creation.clas.html">cx_sy_ref_creation</a></tt><br>
+Static Method <tt>get_boxed_by_name</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_referenced_type_name</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;RETURNING <tt>p_result</tt> TYPE <tt>cl_abap_refdescr</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_ref_creation.clas.html">cx_sy_ref_creation</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_unknown_type.clas.html">cx_sy_unknown_type</a></tt><br>
+Static Method <tt>get_by_name</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_referenced_type_name</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;RETURNING <tt>p_result</tt> TYPE <tt>cl_abap_refdescr</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_ref_creation.clas.html">cx_sy_ref_creation</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_unknown_type.clas.html">cx_sy_unknown_type</a></tt><br>
+Method <tt>get_referenced_type</tt><br>
+&nbsp;&nbsp;RETURNING <tt>p_descr_ref</tt> TYPE <tt>cl_abap_typedescr</tt><br>
+Static Method <tt>get_ref_to_data</tt><br>
+&nbsp;&nbsp;RETURNING <tt>p_result</tt> TYPE <tt>cl_abap_refdescr</tt><br>
+Static Method <tt>get_ref_to_object</tt><br>
+&nbsp;&nbsp;RETURNING <tt>p_result</tt> TYPE <tt>cl_abap_refdescr</tt><br>
+Static Method <tt>load_class</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='green'>true</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

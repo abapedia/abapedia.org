@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_FDT_TYPES INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_FDT_TYPES</h2>
+<a href="https://github.com/abapedia/steampunk-2211-api/blob/mainrc%2Fif_fdt_types.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_fdt_types/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_fdt_cp_version_generic.intf.html">IF_FDT_CP_VERSION_GENERIC</a></small><br><small>Next Object: <a href="if_fhc_fcal_runtime.intf.html">IF_FHC_FCAL_RUNTIME</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>rel</tt> TYPE <tt>if_fdt_types=>rel</tt><br>
+Type <tt>quantity_dimension</tt> TYPE <tt>if_fdt_types=>quantity_dimension</tt><br>
+Type <tt>day_of_week</tt> TYPE <tt>FDT_DAY_OF_WEEK</tt><br>
+Type <tt>access_level</tt> TYPE <tt>if_fdt_types=>access_level</tt><br>
+Type <tt>esr_path</tt> TYPE <tt>if_fdt_types=>esr_path</tt><br>
+Type <tt>proxy_path</tt> TYPE <tt>if_fdt_types=>proxy_path</tt><br>
+Type <tt>timepoint_type</tt> TYPE <tt>if_fdt_types=>timepoint_type</tt><br>
+Type <tt>element_boolean</tt> TYPE <tt>if_fdt_types=>element_boolean</tt><br>
+Type <tt>element_currency</tt> TYPE <tt>if_fdt_types=>element_currency</tt><br>
+Type <tt>element_number</tt> TYPE <tt>if_fdt_types=>element_number</tt><br>
+Type <tt>element_text</tt> TYPE <tt>if_fdt_types=>element_text</tt><br>
+Type <tt>element_unit</tt> TYPE <tt>if_fdt_types=>element_unit</tt><br>
+Type <tt>element_amount</tt> TYPE <tt>if_fdt_types=>element_amount</tt><br>
+Type <tt>element_quantity</tt> TYPE <tt>if_fdt_types=>element_quantity</tt><br>
+Type <tt>element_timepoint</tt> TYPE <tt>if_fdt_types=>element_timepoint</tt><br>
+Type <tt>name</tt> TYPE <tt>if_fdt_types=>name</tt><br>
+Type <tt>activity</tt> TYPE <tt>if_fdt_types=>activity</tt><br>
+Type <tt>data_object_type</tt> TYPE <tt>if_fdt_types=>data_object_type</tt><br>
+Type <tt>element_type</tt> TYPE <tt>if_fdt_types=>element_type</tt><br>
+Type <tt>id</tt> TYPE <tt>if_fdt_types=>id</tt><br>
+Type <tt>object_type</tt> TYPE <tt>if_fdt_types=>object_type</tt><br>
+Type <tt>state</tt> TYPE <tt>if_fdt_types=>state</tt><br>
+Type <tt>version</tt> TYPE <tt>if_fdt_types=>version</tt><br>
+Type <tt>timestamp</tt> TYPE <tt>if_fdt_types=>timestamp</tt><br>
+Type <tt>trace_mode</tt> TYPE <tt>if_fdt_types=>trace_mode</tt><br>
+Type <tt>ui_mode</tt> TYPE <tt>if_fdt_types=>ui_mode</tt><br>
+Type <tt>t_object_id</tt> TYPE <tt>if_fdt_types=>t_object_id</tt><br>
+Type <tt>s_message</tt> TYPE <tt>if_fdt_types=>s_message</tt><br>
+Type <tt>t_message</tt> TYPE <tt>if_fdt_types=>t_message</tt><br>
+Type <tt>short_text</tt> TYPE <tt>if_fdt_types=>short_text</tt><br>
+Type <tt>s_short_text</tt> TYPE <tt>if_fdt_types=>s_short_text</tt><br>
+Type <tt>ts_short_text</tt> TYPE <tt>if_fdt_types=>ts_short_text</tt><br>
+Type <tt>text</tt> TYPE <tt>if_fdt_types=>text</tt><br>
+Type <tt>s_text</tt> TYPE <tt>if_fdt_types=>s_text</tt><br>
+Type <tt>ts_text</tt> TYPE <tt>if_fdt_types=>ts_text</tt><br>
+Type <tt>s_usage</tt> TYPE <tt>if_fdt_types=>s_usage</tt><br>
+Type <tt>ts_usage</tt> TYPE <tt>if_fdt_types=>ts_usage</tt><br>
+Type <tt>th_usage</tt> TYPE <tt>if_fdt_types=>th_usage</tt><br>
+Type <tt>s_rule_version</tt> TYPE <tt>if_fdt_types=>s_rule_version</tt><br>
+Type <tt>ts_rule_version</tt> TYPE <tt>if_fdt_types=>ts_rule_version</tt><br>
+Type <tt>ts_object_id</tt> TYPE <tt>if_fdt_types=>ts_object_id</tt><br>
+Type <tt>th_object_id</tt> TYPE <tt>if_fdt_types=>th_object_id</tt><br>
+Type <tt>t_object_type</tt> TYPE <tt>if_fdt_types=>t_object_type</tt><br>
+Type <tt>t_data_object_type</tt> TYPE <tt>if_fdt_types=>t_data_object_type</tt><br>
+Type <tt>t_element_type</tt> TYPE <tt>if_fdt_types=>t_element_type</tt><br>
+Type <tt>source_code</tt> TYPE <tt>if_fdt_types=>source_code</tt><br>
+Type <tt>t_source_code</tt> TYPE <tt>if_fdt_types=>t_source_code</tt><br>
+Type <tt>s_used_context_id</tt> TYPE <tt>if_fdt_types=>s_used_context_id</tt><br>
+Type <tt>ts_used_context_id</tt> TYPE <tt>if_fdt_types=>ts_used_context_id</tt><br>
+Type <tt>s_id_value</tt> TYPE <tt>if_fdt_types=>s_id_value</tt><br>
+Type <tt>ts_id_value</tt> TYPE <tt>if_fdt_types=>ts_id_value</tt><br>
+Type <tt>s_name_value</tt> TYPE <tt>if_fdt_types=>s_name_value</tt><br>
+Type <tt>t_name_value</tt> TYPE <tt>if_fdt_types=>t_name_value</tt><br>
+Type <tt>s_text_symbol</tt> TYPE <tt>if_fdt_types=>s_text_symbol</tt><br>
+Type <tt>s_sapscript_object</tt> TYPE <tt>if_fdt_types=>s_sapscript_object</tt><br>
+Type <tt>msg_severity</tt> TYPE <tt>if_fdt_types=>msg_severity</tt><br>
+Type <tt>s_id_name</tt> TYPE <tt>if_fdt_types=>s_id_name</tt><br>
+Type <tt>t_id_name</tt> TYPE <tt>if_fdt_types=>t_id_name</tt><br>
+Type <tt>ts_id_name</tt> TYPE <tt>if_fdt_types=>ts_id_name</tt><br>
+Type <tt>s_ids_for_id</tt> TYPE <tt>if_fdt_types=>s_ids_for_id</tt><br>
+Type <tt>th_ids_for_id</tt> TYPE <tt>if_fdt_types=>th_ids_for_id</tt><br>
+Type <tt>t_version</tt> TYPE <tt>if_fdt_types=>t_version</tt><br>
+Type <tt>sub_activity</tt> TYPE <tt>if_fdt_types=>sub_activity</tt><br>
+Type <tt>s_sub_activity</tt> TYPE <tt>if_fdt_types=>s_sub_activity</tt><br>
+Type <tt>s_brf_usage</tt> TYPE <tt>if_fdt_types=>s_brf_usage</tt><br>
+Type <tt>t_brf_usage</tt> TYPE <tt>if_fdt_types=>t_brf_usage</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='green'>true</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

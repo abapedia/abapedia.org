@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_IXML_DOCUMENT INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_IXML_DOCUMENT</h2>
+<a href="https://github.com/abapedia/steampunk-2305-api/blob/mainrc%2Fif_ixml_document.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_ixml_document/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_ixml_core.intf.html">IF_IXML_CORE</a></small><br><small>Next Object: <a href="if_ixml_document_fragment.intf.html">IF_IXML_DOCUMENT_FRAGMENT</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Interface <tt><a href="if_ixml_node.intf.html">if_ixml_node</a></tt><br>
+Method <tt>create_attribute</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>namespace</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>if_ixml_attribute</tt><br>
+Method <tt>create_attribute_ns</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>prefix</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>uri</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>if_ixml_attribute</tt><br>
+Method <tt>create_cdata_section</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>cdata</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>if_ixml_cdata_section</tt><br>
+Method <tt>create_comment</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>comment</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>if_ixml_comment</tt><br>
+Method <tt>create_document_fragment</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>if_ixml_document_fragment</tt><br>
+Method <tt>create_document_type</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>prefix</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>if_ixml_document_type</tt><br>
+Method <tt>create_element</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>namespace</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>if_ixml_element</tt><br>
+Method <tt>create_element_ns</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>prefix</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>uri</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>if_ixml_element</tt><br>
+Method <tt>create_entity_ref</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>if_ixml_entity_ref</tt><br>
+Method <tt>create_namespace_decl</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>prefix</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>uri</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>if_ixml_namespace_decl</tt><br>
+Method <tt>create_pi_parsed</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>if_ixml_pi_parsed</tt><br>
+Method <tt>create_pi_unparsed</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>data</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>if_ixml_pi_unparsed</tt><br>
+Method <tt>create_simple_element</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>namespace</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>parent</tt> TYPE <tt>if_ixml_node</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>value</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>if_ixml_element</tt><br>
+Method <tt>create_simple_element_ns</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>parent</tt> TYPE <tt>if_ixml_node</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>prefix</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>uri</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>value</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>if_ixml_element</tt><br>
+Method <tt>create_text</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>text</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>if_ixml_text</tt><br>
+Method <tt>expand</tt><br>
+Method <tt>find_from_id</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>uri</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>value</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>if_ixml_element</tt><br>
+Method <tt>find_from_name</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>depth</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>namespace</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>if_ixml_element</tt><br>
+Method <tt>find_from_name_ns</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>depth</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>uri</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>if_ixml_element</tt><br>
+Method <tt>find_from_path</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>path</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>if_ixml_element</tt><br>
+Method <tt>find_from_path_ns</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>default_uri</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>path</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>if_ixml_element</tt><br>
+Method <tt>get_declaration</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>get_document_type</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>if_ixml_document_type</tt><br>
+Method <tt>get_elements_by_tag_name</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>depth</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>namespace</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>if_ixml_node_collection</tt><br>
+Method <tt>get_elements_by_tag_name_ns</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>depth</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>name</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>uri</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>if_ixml_node_collection</tt><br>
+Method <tt>get_encoding</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>if_ixml_encoding</tt><br>
+Method <tt>get_root_element</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>if_ixml_element</tt><br>
+Method <tt>get_standalone</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>get_version</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>STRING</tt><br>
+Method <tt>linearize</tt><br>
+Method <tt>set_declaration</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>declaration</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>set_document_type</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>document_type</tt> TYPE <tt>if_ixml_document_type</tt><br>
+Method <tt>set_encoding</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>encoding</tt> TYPE <tt>if_ixml_encoding</tt><br>
+Method <tt>set_standalone</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>standalone</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>set_version</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>version</tt> TYPE <tt>STRING</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='green'>true</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

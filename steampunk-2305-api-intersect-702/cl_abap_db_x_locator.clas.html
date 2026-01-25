@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_ABAP_DB_X_LOCATOR CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_ABAP_DB_X_LOCATOR</h2>
+<a href="https://github.com/abapedia/steampunk-2305-api-intersect-702/blob/mainrc%2Fcl_abap_db_x_locator.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_abap_db_x_locator/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_abap_db_c_writer.clas.html">CL_ABAP_DB_C_WRITER</a></small><br><small>Next Object: <a href="cl_abap_db_x_reader.clas.html">CL_ABAP_DB_X_READER</a></small><br><br><u>Public</u><br>Interface <tt><a href="if_abap_db_blob_handle.intf.html">IF_ABAP_DB_BLOB_HANDLE</a></tt><br>
+Interface <tt><a href="if_abap_db_lob_handle.intf.html">IF_ABAP_DB_LOB_HANDLE</a></tt><br>
+Interface <tt><a href="if_abap_close_resource.intf.html">IF_ABAP_CLOSE_RESOURCE</a></tt><br>
+Method <tt>get_length</tt><br>
+&nbsp;&nbsp;RETURNING <tt>length</tt> TYPE <tt>ABAP_MSIZE</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_resource_already_closed.clas.html">cx_resource_already_closed</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_lob_sql_error.clas.html">cx_lob_sql_error</a></tt><br>
+Method <tt>get_bytes</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>offset</tt> TYPE <tt>ABAP_MSIZE</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>length</tt> TYPE <tt>ABAP_MSIZE</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>xstr</tt> TYPE <tt>XSTRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_lob_sql_error.clas.html">cx_lob_sql_error</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_parameter_invalid_range.clas.html">cx_parameter_invalid_range</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_resource_already_closed.clas.html">cx_resource_already_closed</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_range_out_of_bounds.clas.html">cx_sy_range_out_of_bounds</a></tt><br>
+Method <tt>find</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>start_offset</tt> TYPE <tt>ABAP_MSIZE</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>pattern</tt> TYPE <tt>XSTRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>match_offset</tt> TYPE <tt>ABAP_MSIZE</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_lob_sql_error.clas.html">cx_lob_sql_error</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_parameter_invalid_range.clas.html">cx_parameter_invalid_range</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_resource_already_closed.clas.html">cx_resource_already_closed</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_range_out_of_bounds.clas.html">cx_sy_range_out_of_bounds</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='green'>true</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - BAPIF4A TABL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>TABL BAPIF4A</h2>
+<a href="https://github.com/abapedia/steampunk-2302-api/blob/mainrc%2Fbapif4a.tabl.xml">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/ddic/structures/bapif4a">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="bapiextc.tabl.html">BAPIEXTC</a></small><br><small>Next Object: <a href="bapif4b.tabl.html">BAPIF4B</a></small><br><br>Status: RELEASED<br><br>Category: Structure<br><br><table border="1">
+<tr>
+      <td><u>Field</u></td>
+      <td><u>DDIC</u></td>
+      <td><u>Type</u></td>
+      </tr>
+<tr>
+        <td><tt>OBJTYPE</tt></td>
+        <td></td>
+        <td>```c LENGTH 10```</td>
+        </tr>
+<tr>
+        <td><tt>OBJNAME</tt></td>
+        <td></td>
+        <td>```c LENGTH 32```</td>
+        </tr>
+<tr>
+        <td><tt>METHOD</tt></td>
+        <td></td>
+        <td>```c LENGTH 32```</td>
+        </tr>
+<tr>
+        <td><tt>PARAM</tt></td>
+        <td></td>
+        <td>```c LENGTH 32```</td>
+        </tr>
+<tr>
+        <td><tt>FIELD</tt></td>
+        <td></td>
+        <td>```c LENGTH 30```</td>
+        </tr>
+<tr>
+        <td><tt>MAX_ROWS</tt></td>
+        <td><a href="bapimaxrow.dtel.html">BAPIMAXROW</a></td>
+        <td>```i```</td>
+        </tr>
+<tr>
+        <td><tt>DESCRIP</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+</table>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='green'>true</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

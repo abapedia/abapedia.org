@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_XCO_TTYP_CONTENT INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_XCO_TTYP_CONTENT</h2>
+<a href="https://github.com/abapedia/steampunk-2208-api/blob/mainrc%2Fif_xco_ttyp_content.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_xco_ttyp_content/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_xco_tt_secondary_key_factry.intf.html">IF_XCO_TT_SECONDARY_KEY_FACTRY</a></small><br><small>Next Object: <a href="if_xco_ttyp_row_type.intf.html">IF_XCO_TTYP_ROW_TYPE</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>tv_secondary_key_shrt_dscrptn</tt> TYPE <tt>if_xco_ttyp_content=>tv_secondary_key_shrt_dscrptn</tt><br>
+Type <tt>ts_secondary_key</tt> TYPE <tt>if_xco_ttyp_content=>ts_secondary_key</tt><br>
+Type <tt>tt_secondary_key</tt> TYPE <tt>if_xco_ttyp_content=>tt_secondary_key</tt><br>
+Type <tt>ts_content</tt> TYPE <tt>if_xco_ttyp_content=>ts_content</tt><br>
+Attribute <tt>table_type</tt> TYPE <tt>if_xco_ad_table_type</tt><br>
+Attribute <tt>read_state</tt> TYPE <tt>cl_xco_ad_object_read_state</tt><br>
+Method <tt>get_short_description</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_short_description</tt> TYPE <tt>SXCO_AR_SHORT_DESCRIPTION</tt><br>
+Method <tt>get_row_type</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_row_type</tt> TYPE <tt>if_xco_ttyp_row_type</tt><br>
+Method <tt>get_initial_number_of_rows</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_initial_number_of_rows</tt> TYPE <tt>I</tt><br>
+Method <tt>get_access</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_access</tt> TYPE <tt>cl_xco_tt_access</tt><br>
+Method <tt>get_primary_key</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_primary_key</tt> TYPE <tt>if_xco_tt_primary_key</tt><br>
+Method <tt>get_secondary_keys</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rt_secondary_keys</tt> TYPE <tt>if_xco_ttyp_content=>tt_secondary_key</tt><br>
+Method <tt>get</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rs_content</tt> TYPE <tt>if_xco_ttyp_content=>ts_content</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

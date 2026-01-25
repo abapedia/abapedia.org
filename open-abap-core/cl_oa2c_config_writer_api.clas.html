@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_OA2C_CONFIG_WRITER_API CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_OA2C_CONFIG_WRITER_API</h2>
+<a href="https://github.com/open-abap/open-abap-core/blob/mainrc%2Foauth2%2Fcl_oa2c_config_writer_api.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_oa2c_config_writer_api/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_numberrange_runtime.clas.html">CL_NUMBERRANGE_RUNTIME</a></small><br><small>Next Object: <a href="cl_oauth2_client.clas.html">CL_OAUTH2_CLIENT</a></small><br><br><u>Public</u><br>Constant <tt>c_granttype_cc</tt> TYPE <tt>OA2C_GRANTTYPE</tt><br>
+Static Method <tt>create</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_client_id</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_client_secret</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_profile</tt> TYPE <tt>OA2C_PROFILE</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_auth_code_allowed</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_authentication_method</tt> TYPE <tt>any</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_authorization_endpoint</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_clock_skew_tolerance</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_configuration</tt> TYPE <tt>OA2C_CONFIGURATION</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_configured_granttype</tt> TYPE <tt>OA2C_GRANTTYPE</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_proxy_host</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_proxy_port</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_proxy_user</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_redirection_uri_server</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_rs_authentication_method</tt> TYPE <tt>any</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_rt_validity</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_saml20_allowed</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_saml20_audience</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_saml20_nameid_email_num</tt> TYPE <tt>any</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_target_path</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_token_endpoint</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_configured_scopes</tt> TYPE <tt>STRING_TABLE</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>ro_config_writer_api</tt> TYPE <tt>cl_oa2c_config_writer_api</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_oa2c.clas.html">cx_oa2c</a></tt><br>
+Static Method <tt>load</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_profile</tt> TYPE <tt>OA2C_PROFILE</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_configuration</tt> TYPE <tt>OA2C_CONFIGURATION</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>ro_config_writer_api</tt> TYPE <tt>cl_oa2c_config_writer_api</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_oa2c.clas.html">cx_oa2c</a></tt><br>
+Method <tt>save</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_oa2c.clas.html">cx_oa2c</a></tt><br>
+Method <tt>read</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_auth_code_allowed</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_authentication_method</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_authorization_endpoint</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_client_id</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_client_uuid</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_clock_skew_tolerance</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_configuration</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_configured_grant_type</tt> TYPE <tt>OA2C_GRANTTYPE</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_proxy_host</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_proxy_port</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_proxy_user</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_redirect_uri</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_redirect_uri_host</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_redirect_uri_path</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_redirect_uri_port</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_rs_authentication_method</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_rt_validity</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_saml20_allowed</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_saml20_audience</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_saml20_nameid_email</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_saml20_recipient</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_target_path</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_token_endpoint</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>es_oa2c_admin</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_profiles</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>et_configured_scopes</tt> TYPE <tt>STRING_TABLE</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>e_configured_granttype</tt> TYPE <tt>OA2C_GRANTTYPE</tt><br>
+Method <tt>set_profiles</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_profiles</tt> TYPE <tt>any</tt><br>
+Method <tt>set_client_secret</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_client_secret</tt> TYPE <tt>STRING</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>750</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>702</td><td bgcolor='red'>undefined</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

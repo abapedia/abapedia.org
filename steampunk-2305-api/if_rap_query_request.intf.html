@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_RAP_QUERY_REQUEST INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_RAP_QUERY_REQUEST</h2>
+<a href="https://github.com/abapedia/steampunk-2305-api/blob/mainrc%2Fif_rap_query_request.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_rap_query_request/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_rap_query_provider.intf.html">IF_RAP_QUERY_PROVIDER</a></small><br><small>Next Object: <a href="if_rap_query_response.intf.html">IF_RAP_QUERY_RESPONSE</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ty_sort_element</tt> TYPE <tt>if_rap_query_request=>ty_sort_element</tt><br>
+Type <tt>tt_sort_elements</tt> TYPE <tt>if_rap_query_request=>tt_sort_elements</tt><br>
+Type <tt>ty_parameter</tt> TYPE <tt>if_rap_query_request=>ty_parameter</tt><br>
+Type <tt>tt_parameters</tt> TYPE <tt>if_rap_query_request=>tt_parameters</tt><br>
+Type <tt>tt_requested_elements</tt> TYPE <tt>if_rap_query_request=>tt_requested_elements</tt><br>
+Method <tt>get_entity_id</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_entity_id</tt> TYPE <tt>STRING</tt><br>
+Method <tt>is_data_requested</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_is_requested</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>is_total_numb_of_rec_requested</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_is_requested</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>get_filter</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_filter</tt> TYPE <tt>if_rap_query_filter</tt><br>
+Method <tt>get_paging</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_paging</tt> TYPE <tt>if_rap_query_paging</tt><br>
+Method <tt>get_sort_elements</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rt_sort_elements</tt> TYPE <tt>if_rap_query_request=>tt_sort_elements</tt><br>
+Method <tt>get_parameters</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rt_parameters</tt> TYPE <tt>if_rap_query_request=>tt_parameters</tt><br>
+Method <tt>get_aggregation</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_aggregation</tt> TYPE <tt>if_rap_query_aggregation</tt><br>
+Method <tt>get_search_expression</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_search_expression</tt> TYPE <tt>STRING</tt><br>
+Method <tt>get_requested_elements</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rt_requested_elements</tt> TYPE <tt>if_rap_query_request=>tt_requested_elements</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

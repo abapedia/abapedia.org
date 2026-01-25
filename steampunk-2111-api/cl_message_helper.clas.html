@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_MESSAGE_HELPER CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_MESSAGE_HELPER</h2>
+<a href="https://github.com/abapedia/steampunk-2111-api/blob/mainrc%2Fcl_message_helper.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_message_helper/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_ixml_xpath.clas.html">CL_IXML_XPATH</a></small><br><small>Next Object: <a href="cl_number_range_intervals.clas.html">CL_NUMBER_RANGE_INTERVALS</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>otr_parameter</tt> TYPE <tt>cl_message_helper=>otr_parameter</tt><br>
+Type <tt>otr_parameters</tt> TYPE <tt>cl_message_helper=>otr_parameters</tt><br>
+Type <tt>otr_char_parameter</tt> TYPE <tt>cl_message_helper=>otr_char_parameter</tt><br>
+Type <tt>otr_char_parameters</tt> TYPE <tt>cl_message_helper=>otr_char_parameters</tt><br>
+Type <tt>otr_id</tt> TYPE <tt>cl_message_helper=>otr_id</tt><br>
+Static Attribute <tt>message_object</tt> TYPE <tt>if_message</tt><br>
+Static Method <tt>get_latest_t100_exception</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>exception</tt> TYPE <tt>cx_root</tt><br>
+&nbsp;&nbsp;RETURNING <tt>result</tt> TYPE <tt>if_t100_message</tt><br>
+Static Method <tt>get_longtext_for_message</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>text</tt> TYPE <tt>if_message</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>preserve_newlines</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>t100_prepend_short</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>result</tt> TYPE <tt>STRING</tt><br>
+Static Method <tt>get_text_for_message</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>text</tt> TYPE <tt>if_message</tt><br>
+&nbsp;&nbsp;RETURNING <tt>result</tt> TYPE <tt>STRING</tt><br>
+Static Method <tt>set_msg_vars_for_clike</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>text</tt> TYPE <tt>clike</tt><br>
+Static Method <tt>set_msg_vars_for_if_t100_msg</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>text</tt> TYPE <tt>if_t100_message</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_message_illegal_text.clas.html">cx_sy_message_illegal_text</a></tt><br>
+Static Method <tt>set_msg_vars_for_any</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>text</tt> TYPE <tt>any</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>string</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_message_illegal_text.clas.html">cx_sy_message_illegal_text</a></tt><br>
+Static Method <tt>set_msg_vars_for_if_msg</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>text</tt> TYPE <tt>if_message</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>string</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_message_illegal_text.clas.html">cx_sy_message_illegal_text</a></tt><br>
+Static Method <tt>check_msg_kind</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>msg</tt> TYPE <tt>if_message</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>t100key</tt> TYPE <tt>SCX_T100KEY</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>textid</tt> TYPE <tt>cl_message_helper=>otr_id</tt><br>
+Static Method <tt>get_text_params</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>obj</tt> TYPE <tt>REF TO object</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>params</tt> TYPE <tt>cl_message_helper=>otr_char_parameters</tt><br>
+Static Method <tt>get_otr_text_raw</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>textid</tt> TYPE <tt>cl_message_helper=>otr_id</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>result</tt> TYPE <tt>STRING</tt><br>
+Static Method <tt>get_t100_text_for</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>obj</tt> TYPE <tt>REF TO object</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>t100key</tt> TYPE <tt>SCX_T100KEY</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>result</tt> TYPE <tt>STRING</tt><br>
+Static Method <tt>get_t100_for_object</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>obj</tt> TYPE <tt>if_t100_message</tt><br>
+&nbsp;&nbsp;RETURNING <tt>result</tt> TYPE <tt>SYMSG</tt><br>
+Static Method <tt>replace_text_params</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>obj</tt> TYPE <tt>REF TO object</tt><br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>result</tt> TYPE <tt>STRING</tt><br>
+Static Method <tt>strip_newlines_from</tt><br>
+&nbsp;&nbsp;CHANGING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>message</tt> TYPE <tt>STRING</tt><br>
+Static Method <tt>get_text_sparams</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>obj</tt> TYPE <tt>REF TO object</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>params</tt> TYPE <tt>cl_message_helper=>otr_parameters</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='green'>true</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

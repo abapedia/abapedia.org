@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_COM_SCENARIO INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_COM_SCENARIO</h2>
+<a href="https://github.com/abapedia/steampunk-2211-api/blob/mainrc%2Fif_com_scenario.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_com_scenario/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_com_management.intf.html">IF_COM_MANAGEMENT</a></small><br><small>Next Object: <a href="if_com_scenario_factory.intf.html">IF_COM_SCENARIO_FACTORY</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ty_cscn_property</tt> TYPE <tt>if_com_scenario=>ty_cscn_property</tt><br>
+Type <tt>tt_cscn_property</tt> TYPE <tt>if_com_scenario=>tt_cscn_property</tt><br>
+Type <tt>ty_cscn_inb_srv</tt> TYPE <tt>if_com_scenario=>ty_cscn_inb_srv</tt><br>
+Type <tt>tt_cscn_inb_srv</tt> TYPE <tt>if_com_scenario=>tt_cscn_inb_srv</tt><br>
+Type <tt>ty_cscn_outb_srv</tt> TYPE <tt>if_com_scenario=>ty_cscn_outb_srv</tt><br>
+Type <tt>tt_cscn_outb_srv</tt> TYPE <tt>if_com_scenario=>tt_cscn_outb_srv</tt><br>
+Type <tt>ty_cscn</tt> TYPE <tt>if_com_scenario=>ty_cscn</tt><br>
+Type <tt>tt_cscn</tt> TYPE <tt>if_com_scenario=>tt_cscn</tt><br>
+Constant <tt>co_instance_generation_type</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>co_inbound_service_type</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>co_outbound_service_type</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Method <tt>get_id</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_id</tt> TYPE <tt>if_com_scenario=>ty_cscn-id</tt><br>
+Method <tt>get_description</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_description</tt> TYPE <tt>if_com_scenario=>ty_cscn-description</tt><br>
+Method <tt>get_allowed_instance_type</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_allowed_instance_type</tt> TYPE <tt>if_com_scenario=>ty_cscn-allowed_instance_type</tt><br>
+Method <tt>is_inb_auth_none_supported</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_is_inb_auth_none_supported</tt> TYPE <tt>if_com_scenario=>ty_cscn-is_inb_auth_none_supported</tt><br>
+Method <tt>is_inb_auth_basic_supported</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_is_supported</tt> TYPE <tt>if_com_scenario=>ty_cscn-is_inb_auth_basic_supported</tt><br>
+Method <tt>is_inb_auth_x509_supported</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_is_supported</tt> TYPE <tt>if_com_scenario=>ty_cscn-is_inb_auth_x509_supported</tt><br>
+Method <tt>is_inb_auth_oauth2_supported</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_is_supported</tt> TYPE <tt>if_com_scenario=>ty_cscn-is_inb_auth_oauth2_supported</tt><br>
+Method <tt>is_outb_auth_none_supported</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_is_supported</tt> TYPE <tt>if_com_scenario=>ty_cscn-is_outb_auth_none_supported</tt><br>
+Method <tt>is_outb_auth_basic_supported</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_is_supported</tt> TYPE <tt>if_com_scenario=>ty_cscn-is_outb_auth_basic_supported</tt><br>
+Method <tt>is_outb_auth_x509_supported</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_is_supported</tt> TYPE <tt>if_com_scenario=>ty_cscn-is_outb_auth_x509_supported</tt><br>
+Method <tt>is_outb_auth_oauth1_supported</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_is_supported</tt> TYPE <tt>if_com_scenario=>ty_cscn-is_outb_auth_oauth1_supported</tt><br>
+Method <tt>is_outb_auth_oauth2_supported</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_is_supported</tt> TYPE <tt>if_com_scenario=>ty_cscn-is_outb_auth_oauth2_supported</tt><br>
+Method <tt>get_outb_oauth2_client_profile</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_outb_oauth2_client_profile</tt> TYPE <tt>if_com_scenario=>ty_cscn-outb_oauth2_client_profile</tt><br>
+Method <tt>get_outb_oauth2_target_path</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_outb_oauth2_target_path</tt> TYPE <tt>if_com_scenario=>ty_cscn-outb_oauth2_target_path</tt><br>
+Method <tt>get_outb_oauth2_granttype</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_outb_oauth2_granttype</tt> TYPE <tt>if_com_scenario=>ty_cscn-outb_oauth2_granttype</tt><br>
+Method <tt>is_outb_oa2_multi_cfg_allowed</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_is_allowed</tt> TYPE <tt>if_com_scenario=>ty_cscn-is_outb_oa2_multi_cfg_allowed</tt><br>
+Method <tt>get_created_by</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_created_by</tt> TYPE <tt>if_com_scenario=>ty_cscn-created_by</tt><br>
+Method <tt>get_create_at</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_create_at</tt> TYPE <tt>if_com_scenario=>ty_cscn-create_at</tt><br>
+Method <tt>get_change_by</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_change_by</tt> TYPE <tt>if_com_scenario=>ty_cscn-change_by</tt><br>
+Method <tt>get_change_at</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_change_at</tt> TYPE <tt>if_com_scenario=>ty_cscn-change_at</tt><br>
+Method <tt>get_properties</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rt_property</tt> TYPE <tt>if_com_scenario=>tt_cscn_property</tt><br>
+Method <tt>get_inbound_services</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rt_inbound_service</tt> TYPE <tt>if_com_scenario=>tt_cscn_inb_srv</tt><br>
+Method <tt>get_outbound_services</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rt_outbound_service</tt> TYPE <tt>if_com_scenario=>tt_cscn_outb_srv</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

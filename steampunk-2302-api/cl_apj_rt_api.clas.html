@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_APJ_RT_API CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_APJ_RT_API</h2>
+<a href="https://github.com/abapedia/steampunk-2302-api/blob/mainrc%2Fcl_apj_rt_api.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_apj_rt_api/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_apj_jt_check_base.clas.html">CL_APJ_JT_CHECK_BASE</a></small><br><small>Next Object: <a href="cl_apj_scp_tools.clas.html">CL_APJ_SCP_TOOLS</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ty_catalog_name</tt> TYPE <tt>cl_apj_rt_api=>ty_catalog_name</tt><br>
+Type <tt>ty_username</tt> TYPE <tt>cl_apj_rt_api=>ty_username</tt><br>
+Type <tt>ty_jobcount</tt> TYPE <tt>cl_apj_rt_api=>ty_jobcount</tt><br>
+Type <tt>ty_jobname</tt> TYPE <tt>cl_apj_rt_api=>ty_jobname</tt><br>
+Type <tt>ty_job_status</tt> TYPE <tt>cl_apj_rt_api=>ty_job_status</tt><br>
+Type <tt>ty_job_status_text</tt> TYPE <tt>cl_apj_rt_api=>ty_job_status_text</tt><br>
+Type <tt>ty_user_error</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Type <tt>ty_bapiret2</tt> TYPE <tt>BAPIRET2</tt><br>
+Type <tt>tt_bapiret2</tt> TYPE <tt>cl_apj_rt_api=>tt_bapiret2</tt><br>
+Type <tt>ty_start_info</tt> TYPE <tt>cl_apj_rt_api=>ty_start_info</tt><br>
+Type <tt>ty_value_range</tt> TYPE <tt>cl_apj_rt_api=>ty_value_range</tt><br>
+Type <tt>tt_value_range</tt> TYPE <tt>cl_apj_rt_api=>tt_value_range</tt><br>
+Type <tt>ty_job_exception</tt> TYPE <tt>cl_apj_rt_api=>ty_job_exception</tt><br>
+Type <tt>ty_job_parameter_value</tt> TYPE <tt>cl_apj_rt_api=>ty_job_parameter_value</tt><br>
+Type <tt>ty_weekday_info</tt> TYPE <tt>cl_apj_rt_api=>ty_weekday_info</tt><br>
+Type <tt>ty_month_info</tt> TYPE <tt>cl_apj_rt_api=>ty_month_info</tt><br>
+Type <tt>ty_scheduling_info</tt> TYPE <tt>cl_apj_rt_api=>ty_scheduling_info</tt><br>
+Type <tt>ty_job_details</tt> TYPE <tt>cl_apj_rt_api=>ty_job_details</tt><br>
+Type <tt>ty_end_info</tt> TYPE <tt>cl_apj_rt_api=>ty_end_info</tt><br>
+Type <tt>ty_job_text</tt> TYPE <tt>cl_apj_rt_api=>ty_job_text</tt><br>
+Type <tt>ty_template_name</tt> TYPE <tt>cl_apj_rt_api=>ty_template_name</tt><br>
+Type <tt>tt_job_parameter_value</tt> TYPE <tt>cl_apj_rt_api=>tt_job_parameter_value</tt><br>
+Static Method <tt>schedule_job</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_job_template_name</tt> TYPE <tt>cl_apj_rt_api=>ty_template_name</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_job_text</tt> TYPE <tt>cl_apj_rt_api=>ty_job_text</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>is_start_info</tt> TYPE <tt>cl_apj_rt_api=>ty_start_info</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_username</tt> TYPE <tt>cl_apj_rt_api=>ty_username</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>is_end_info</tt> TYPE <tt>cl_apj_rt_api=>ty_end_info</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>is_scheduling_info</tt> TYPE <tt>cl_apj_rt_api=>ty_scheduling_info</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_job_parameter_value</tt> TYPE <tt>cl_apj_rt_api=>tt_job_parameter_value</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_jobname</tt> TYPE <tt>cl_apj_rt_api=>ty_jobname</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_jobcount</tt> TYPE <tt>cl_apj_rt_api=>ty_jobcount</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_jobname</tt> TYPE <tt>cl_apj_rt_api=>ty_jobname</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_jobcount</tt> TYPE <tt>cl_apj_rt_api=>ty_jobcount</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_apj_rt.clas.html">cx_apj_rt</a></tt><br>
+Static Method <tt>get_job_status</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_jobname</tt> TYPE <tt>cl_apj_rt_api=>ty_jobname</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_jobcount</tt> TYPE <tt>cl_apj_rt_api=>ty_jobcount</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_job_status</tt> TYPE <tt>cl_apj_rt_api=>ty_job_status</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_job_status_text</tt> TYPE <tt>cl_apj_rt_api=>ty_job_status_text</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_apj_rt.clas.html">cx_apj_rt</a></tt><br>
+Static Method <tt>cancel_job</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_jobname</tt> TYPE <tt>cl_apj_rt_api=>ty_jobname</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_jobcount</tt> TYPE <tt>cl_apj_rt_api=>ty_jobcount</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_apj_rt.clas.html">cx_apj_rt</a></tt><br>
+Static Method <tt>get_job_runtime_info</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_catalog_name</tt> TYPE <tt>cl_apj_rt_api=>ty_catalog_name</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_template_name</tt> TYPE <tt>cl_apj_rt_api=>ty_template_name</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_apj_rt.clas.html">cx_apj_rt</a></tt><br>
+Static Method <tt>generate_jobkey</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_jobname</tt> TYPE <tt>cl_apj_rt_api=>ty_jobname</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ev_jobcount</tt> TYPE <tt>cl_apj_rt_api=>ty_jobcount</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_apj_rt.clas.html">cx_apj_rt</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

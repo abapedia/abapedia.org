@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CX_ABAP_AUTH_CHECK_EXCEPTION CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CX_ABAP_AUTH_CHECK_EXCEPTION</h2>
+<a href="https://github.com/abapedia/steampunk-2211-api/blob/mainrc%2Fcx_abap_auth_check_exception.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cx_abap_auth_check_exception/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cx_abap_api_state.clas.html">CX_ABAP_API_STATE</a></small><br><small>Next Object: <a href="cx_abap_context_info_error.clas.html">CX_ABAP_CONTEXT_INFO_ERROR</a></small><br><br>Status: RELEASED<br><br>Superclass: <a href="cx_static_check.clas.html">cx_static_check</a><br><br>
+<u>Public</u><br>Interface <tt><a href="if_t100_message.intf.html">IF_T100_MESSAGE</a></tt><br>
+Attribute <tt>message_prefix</tt> TYPE <tt>STRING</tt><br>
+Attribute <tt>text</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>unassignable_authorization</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>missing_authorization</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>missing_auth_objset</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>unavailable_auth_in_objset</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>unavailable_user</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>unsupported_value_range</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>unavailable_user_in_objset</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>unavailable_auth_obj</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>unavailable_auth_obj_id</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>unavailable_auth_restriction</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Method <tt>constructor</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>textid</tt> TYPE <tt>SCX_T100KEY</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>previous</tt> TYPE <tt>cx_root</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>text</tt> TYPE <tt>STRING</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>message_prefix</tt> TYPE <tt>STRING</tt> Optional<br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

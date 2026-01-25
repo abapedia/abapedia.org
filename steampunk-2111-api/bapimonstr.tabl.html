@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - BAPIMONSTR TABL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>TABL BAPIMONSTR</h2>
+<a href="https://github.com/abapedia/steampunk-2111-api/blob/mainrc%2Fbapimonstr.tabl.xml">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/ddic/structures/bapimonstr">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="bapimonit.tabl.html">BAPIMONIT</a></small><br><small>Next Object: <a href="bapiobjid.tabl.html">BAPIOBJID</a></small><br><br>Status: RELEASED<br><br>Category: Structure<br><br><table border="1">
+<tr>
+      <td><u>Field</u></td>
+      <td><u>DDIC</u></td>
+      <td><u>Type</u></td>
+      </tr>
+<tr>
+        <td><tt>OBJECTTYPE</tt></td>
+        <td></td>
+        <td>```c LENGTH 10```</td>
+        </tr>
+<tr>
+        <td><tt>OBJECTNAME</tt></td>
+        <td></td>
+        <td>```c LENGTH 32```</td>
+        </tr>
+<tr>
+        <td><tt>BAPINAME</tt></td>
+        <td></td>
+        <td>```c LENGTH 32```</td>
+        </tr>
+<tr>
+        <td><tt>ABAPNAME</tt></td>
+        <td></td>
+        <td>```c LENGTH 30```</td>
+        </tr>
+<tr>
+        <td><tt>COMP</tt></td>
+        <td></td>
+        <td>```c LENGTH 24```</td>
+        </tr>
+<tr>
+        <td><tt>CREA_REL</tt></td>
+        <td></td>
+        <td>```c LENGTH 4```</td>
+        </tr>
+<tr>
+        <td><tt>CREATOR</tt></td>
+        <td></td>
+        <td>```c LENGTH 12```</td>
+        </tr>
+<tr>
+        <td><tt>UDATE</tt></td>
+        <td></td>
+        <td>```d```</td>
+        </tr>
+<tr>
+        <td><tt>CHANGER</tt></td>
+        <td></td>
+        <td>```c LENGTH 12```</td>
+        </tr>
+<tr>
+        <td><tt>SOURCESYS</tt></td>
+        <td></td>
+        <td>```c LENGTH 8```</td>
+        </tr>
+<tr>
+        <td><tt>BAPI_AG</tt></td>
+        <td><a href="bapiag.dtel.html">BAPIAG</a></td>
+        <td>```c LENGTH 5```</td>
+        </tr>
+<tr>
+        <td><tt>ISINTERFAC</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>BAPI_REL</tt></td>
+        <td><a href="bapirelsta.dtel.html">BAPIRELSTA</a></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>FUNC_REL</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>OBSOLETE</tt></td>
+        <td></td>
+        <td>```c LENGTH 4```</td>
+        </tr>
+<tr>
+        <td><tt>FM_DOCU</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>BO_DOCU</tt></td>
+        <td></td>
+        <td>```c LENGTH 1```</td>
+        </tr>
+<tr>
+        <td><tt>MESTYPE</tt></td>
+        <td></td>
+        <td>```c LENGTH 30```</td>
+        </tr>
+<tr>
+        <td><tt>VERB</tt></td>
+        <td></td>
+        <td>```c LENGTH 32```</td>
+        </tr>
+<tr>
+        <td><tt>BO_TEXT</tt></td>
+        <td></td>
+        <td>```c LENGTH 80```</td>
+        </tr>
+<tr>
+        <td><tt>BAPI_TEXT</tt></td>
+        <td></td>
+        <td>```c LENGTH 80```</td>
+        </tr>
+</table>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='green'>true</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

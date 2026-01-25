@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_XCO_AR_SELECTION_BUILDER CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_XCO_AR_SELECTION_BUILDER</h2>
+<a href="https://github.com/abapedia/steampunk-2208-api/blob/mainrc%2Fcl_xco_ar_selection_builder.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_xco_ar_selection_builder/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_xco_aplo_subobj_text_attrbt.clas.html">CL_XCO_APLO_SUBOBJ_TEXT_ATTRBT</a></small><br><small>Next Object: <a href="cl_xco_ars_api_state.clas.html">CL_XCO_ARS_API_STATE</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>array</tt> TYPE <tt>cl_xco_ar_selection_builder=>array</tt><br>
+<u>Protected</u><br>Method <tt>add_join</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_table</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_type_condition</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name_condition</tt> TYPE <tt>STRING</tt><br>
+Method <tt>add_type_constraint</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_type_constraint</tt> TYPE <tt>cl_xco_asql_constraint</tt><br>
+Method <tt>add_name_constraint</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_name_constraint</tt> TYPE <tt>cl_xco_asql_constraint</tt><br>
+Method <tt>add_condition</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_condition</tt> TYPE <tt>REF TO c LENGTH 64</tt><br>
+Method <tt>clone</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_selection_builder</tt> TYPE <tt>cl_xco_ar_selection_builder</tt><br>
+Method <tt>get_selection</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_selection</tt> TYPE <tt>REF TO c LENGTH 64</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

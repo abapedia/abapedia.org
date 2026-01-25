@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_XCO_AO_C_METHOD INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_XCO_AO_C_METHOD</h2>
+<a href="https://github.com/abapedia/steampunk-2211-api/blob/mainrc%2Fif_xco_ao_c_method.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_xco_ao_c_method/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_xco_ao_c_datas.intf.html">IF_XCO_AO_C_DATAS</a></small><br><small>Next Object: <a href="if_xco_ao_c_type.intf.html">IF_XCO_AO_C_TYPE</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Interface <tt><a href="if_xco_printable.intf.html">if_xco_printable</a></tt><br>
+Type <tt>tv_name</tt> TYPE <tt>if_xco_ao_c_method=>tv_name</tt><br>
+Attribute <tt>name</tt> TYPE <tt>if_xco_ao_c_method=>tv_name</tt><br>
+Attribute <tt>object</tt> TYPE <tt>if_xco_ao_object</tt><br>
+Attribute <tt>parameters</tt> TYPE <tt>if_xco_ao_s_parameters_factory</tt><br>
+Attribute <tt>importing_parameters</tt> TYPE <tt>if_xco_ao_s_p_importings_fctry</tt><br>
+Attribute <tt>exporting_parameters</tt> TYPE <tt>if_xco_ao_s_p_exportings_fctry</tt><br>
+Attribute <tt>changing_parameters</tt> TYPE <tt>if_xco_ao_s_p_changings_fctry</tt><br>
+Attribute <tt>returning_parameters</tt> TYPE <tt>if_xco_ao_s_p_returnings_fctry</tt><br>
+Attribute <tt>exceptions</tt> TYPE <tt>if_xco_ao_s_exceptions_factory</tt><br>
+Method <tt>exists</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_version</tt> TYPE <tt>cl_xco_ao_version</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_origin</tt> TYPE <tt>cl_xco_ao_origin</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>rv_exists</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>parameter</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_AO_SUBCOMPONENT_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_parameter</tt> TYPE <tt>if_xco_ao_s_parameter</tt><br>
+Method <tt>importing_parameter</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_AO_SUBCOMPONENT_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_importing_parameter</tt> TYPE <tt>if_xco_ao_s_p_importing</tt><br>
+Method <tt>exporting_parameter</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_AO_SUBCOMPONENT_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_exporting_parameter</tt> TYPE <tt>if_xco_ao_s_p_exporting</tt><br>
+Method <tt>changing_parameter</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_AO_SUBCOMPONENT_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_changing_parameter</tt> TYPE <tt>if_xco_ao_s_p_changing</tt><br>
+Method <tt>returning_parameter</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_AO_SUBCOMPONENT_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_returning_parameter</tt> TYPE <tt>if_xco_ao_s_p_returning</tt><br>
+Method <tt>exception</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_name</tt> TYPE <tt>SXCO_AO_SUBCOMPONENT_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_exception</tt> TYPE <tt>if_xco_ao_s_exception</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

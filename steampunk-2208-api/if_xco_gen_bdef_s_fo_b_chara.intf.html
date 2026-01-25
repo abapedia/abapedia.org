@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_XCO_GEN_BDEF_S_FO_B_CHARA INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_XCO_GEN_BDEF_S_FO_B_CHARA</h2>
+<a href="https://github.com/abapedia/steampunk-2208-api/blob/mainrc%2Fif_xco_gen_bdef_s_fo_b_chara.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_xco_gen_bdef_s_fo_b_chara/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_xco_gen_bdef_s_fo_b_auth.intf.html">IF_XCO_GEN_BDEF_S_FO_B_AUTH</a></small><br><small>Next Object: <a href="if_xco_gen_bdef_s_fo_b_detrmtn.intf.html">IF_XCO_GEN_BDEF_S_FO_B_DETRMTN</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Attribute <tt>etag</tt> TYPE <tt>if_xco_gen_bdef_s_fo_b_etag</tt><br>
+Attribute <tt>lock</tt> TYPE <tt>if_xco_gen_bdef_s_fo_b_lock</tt><br>
+Attribute <tt>authorization</tt> TYPE <tt>if_xco_gen_bdef_s_fo_b_auth</tt><br>
+Method <tt>set_alias</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_alias</tt> TYPE <tt>clike</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_me</tt> TYPE <tt>if_xco_gen_bdef_s_fo_b_chara</tt><br>
+Method <tt>set_implementation_class</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_implementation_class</tt> TYPE <tt>SXCO_AO_OBJECT_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_me</tt> TYPE <tt>if_xco_gen_bdef_s_fo_b_chara</tt><br>
+Method <tt>set_late_numbering</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_late_numbering</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>ro_me</tt> TYPE <tt>if_xco_gen_bdef_s_fo_b_chara</tt><br>
+Method <tt>set_early_numbering</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_early_numbering</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>ro_me</tt> TYPE <tt>if_xco_gen_bdef_s_fo_b_chara</tt><br>
+Method <tt>set_draft_table</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_draft_table</tt> TYPE <tt>SXCO_DBT_OBJECT_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_me</tt> TYPE <tt>if_xco_gen_bdef_s_fo_b_chara</tt><br>
+Method <tt>set_persistent_table</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_persistent_table</tt> TYPE <tt>SXCO_DBT_OBJECT_NAME</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_me</tt> TYPE <tt>if_xco_gen_bdef_s_fo_b_chara</tt><br>
+Method <tt>set_with_unmanaged_save</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_with_unmanaged_save</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>ro_me</tt> TYPE <tt>if_xco_gen_bdef_s_fo_b_chara</tt><br>
+Method <tt>set_with_unmngd_save_and_clnup</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_with_unmngd_save_and_clnup</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>ro_me</tt> TYPE <tt>if_xco_gen_bdef_s_fo_b_chara</tt><br>
+Method <tt>set_with_additional_save</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_with_additional_save</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>ro_me</tt> TYPE <tt>if_xco_gen_bdef_s_fo_b_chara</tt><br>
+Method <tt>set_with_addtnl_save_and_clnup</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_with_addtnl_save_and_clnup</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>ro_me</tt> TYPE <tt>if_xco_gen_bdef_s_fo_b_chara</tt><br>
+Method <tt>set_extensible</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_extensible</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>ro_me</tt> TYPE <tt>if_xco_gen_bdef_s_fo_b_chara</tt><br>
+Method <tt>set_with_control</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_with_control</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>ro_me</tt> TYPE <tt>if_xco_gen_bdef_s_fo_b_chara</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

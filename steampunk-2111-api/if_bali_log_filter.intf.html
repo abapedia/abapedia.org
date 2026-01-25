@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_BALI_LOG_FILTER INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_BALI_LOG_FILTER</h2>
+<a href="https://github.com/abapedia/steampunk-2111-api/blob/mainrc%2Fif_bali_log_filter.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_bali_log_filter/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_bali_log_db.intf.html">IF_BALI_LOG_DB</a></small><br><small>Next Object: <a href="if_bali_message_getter.intf.html">IF_BALI_MESSAGE_GETTER</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ty_external_id</tt> TYPE <tt>if_bali_log_filter=>ty_external_id</tt><br>
+Type <tt>ty_external_id_table</tt> TYPE <tt>if_bali_log_filter=>ty_external_id_table</tt><br>
+Type <tt>ty_max_log_number</tt> TYPE <tt>if_bali_log_filter=>ty_max_log_number</tt><br>
+Type <tt>ty_object</tt> TYPE <tt>if_bali_log_filter=>ty_object</tt><br>
+Type <tt>ty_object_table</tt> TYPE <tt>if_bali_log_filter=>ty_object_table</tt><br>
+Type <tt>ty_subobject</tt> TYPE <tt>if_bali_log_filter=>ty_subobject</tt><br>
+Type <tt>ty_subobject_table</tt> TYPE <tt>if_bali_log_filter=>ty_subobject_table</tt><br>
+Type <tt>ty_timestamp</tt> TYPE <tt>if_bali_log_filter=>ty_timestamp</tt><br>
+Type <tt>ty_time_interval</tt> TYPE <tt>if_bali_log_filter=>ty_time_interval</tt><br>
+Type <tt>ty_user</tt> TYPE <tt>if_bali_log_filter=>ty_user</tt><br>
+Type <tt>ty_user_table</tt> TYPE <tt>if_bali_log_filter=>ty_user_table</tt><br>
+Method <tt>set_descriptor</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>object</tt> TYPE <tt>if_bali_log_filter=>ty_object</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>subobject</tt> TYPE <tt>if_bali_log_filter=>ty_subobject</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>subobject_table</tt> TYPE <tt>if_bali_log_filter=>ty_subobject_table</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>external_id</tt> TYPE <tt>if_bali_log_filter=>ty_external_id</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>external_id_table</tt> TYPE <tt>if_bali_log_filter=>ty_external_id_table</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>new_filter</tt> TYPE <tt>if_bali_log_filter</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bali_runtime.clas.html">cx_bali_runtime</a></tt><br>
+Method <tt>set_create_info</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>user</tt> TYPE <tt>if_bali_log_filter=>ty_user</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>user_table</tt> TYPE <tt>if_bali_log_filter=>ty_user_table</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>new_filter</tt> TYPE <tt>if_bali_log_filter</tt><br>
+Method <tt>set_time_interval</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>start_time</tt> TYPE <tt>if_bali_log_filter=>ty_timestamp</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>end_time</tt> TYPE <tt>if_bali_log_filter=>ty_timestamp</tt><br>
+&nbsp;&nbsp;RETURNING <tt>new_filter</tt> TYPE <tt>if_bali_log_filter</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bali_runtime.clas.html">cx_bali_runtime</a></tt><br>
+Method <tt>set_maximum_log_number</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>max_log_number</tt> TYPE <tt>if_bali_log_filter=>ty_max_log_number</tt><br>
+&nbsp;&nbsp;RETURNING <tt>new_filter</tt> TYPE <tt>if_bali_log_filter</tt><br>
+Method <tt>get_all_values</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>object_table</tt> TYPE <tt>if_bali_log_filter=>ty_object_table</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>subobject_table</tt> TYPE <tt>if_bali_log_filter=>ty_subobject_table</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>external_id_table</tt> TYPE <tt>if_bali_log_filter=>ty_external_id_table</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>user_table</tt> TYPE <tt>if_bali_log_filter=>ty_user_table</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>time_interval</tt> TYPE <tt>if_bali_log_filter=>ty_time_interval</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>max_log_number</tt> TYPE <tt>if_bali_log_filter=>ty_max_log_number</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_BALI_ITEM_GETTER INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_BALI_ITEM_GETTER</h2>
+<a href="https://github.com/abapedia/steampunk-2208-api/blob/mainrc%2Fif_bali_item_getter.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_bali_item_getter/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_bali_item_filter.intf.html">IF_BALI_ITEM_FILTER</a></small><br><small>Next Object: <a href="if_bali_item_setter.intf.html">IF_BALI_ITEM_SETTER</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ty_category</tt> TYPE <tt>if_bali_item_getter=>ty_category</tt><br>
+Type <tt>ty_detail_level</tt> TYPE <tt>if_bali_item_getter=>ty_detail_level</tt><br>
+Type <tt>ty_log_item_number</tt> TYPE <tt>BALMNR</tt><br>
+Type <tt>ty_message_text</tt> TYPE <tt>if_bali_item_getter=>ty_message_text</tt><br>
+Type <tt>ty_severity</tt> TYPE <tt>if_bali_item_getter=>ty_severity</tt><br>
+Type <tt>ty_timestamp</tt> TYPE <tt>if_bali_item_getter=>ty_timestamp</tt><br>
+Attribute <tt>category</tt> TYPE <tt>if_bali_item_getter=>ty_category</tt><br>
+Attribute <tt>log_item_number</tt> TYPE <tt>BALMNR</tt><br>
+Attribute <tt>severity</tt> TYPE <tt>if_bali_item_getter=>ty_severity</tt><br>
+Attribute <tt>detail_level</tt> TYPE <tt>if_bali_item_getter=>ty_detail_level</tt><br>
+Attribute <tt>timestamp</tt> TYPE <tt>if_bali_item_getter=>ty_timestamp</tt><br>
+Method <tt>get_message_text</tt><br>
+&nbsp;&nbsp;RETURNING <tt>message_text</tt> TYPE <tt>if_bali_item_getter=>ty_message_text</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bali_runtime.clas.html">cx_bali_runtime</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

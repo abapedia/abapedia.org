@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_BADI_BASE CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_BADI_BASE</h2>
+<a href="https://github.com/abapedia/steampunk-2305-api-intersect-702/blob/mainrc%2Fcl_badi_base.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_badi_base/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_aunit_constraints.clas.html">CL_AUNIT_CONSTRAINTS</a></small><br><small>Next Object: <a href="cl_fdt_brs_processor.clas.html">CL_FDT_BRS_PROCESSOR</a></small><br><br><u>Public</u><br>Type <tt>classname</tt> TYPE <tt>cl_badi_base=>classname</tt><br>
+Static Method <tt>translate_exception</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>excp</tt> TYPE <tt>cx_sy_dyn_call_error</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_dyn_call_error.clas.html">cx_sy_dyn_call_error</a></tt><br>
+Static Method <tt>get_dyn_instance</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>badi_name</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>filter_table</tt> TYPE <tt>BADI_FILTER_BINDINGS</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ctx</tt> TYPE <tt>if_badi_context</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>proxy</tt> TYPE <tt>cl_badi_base</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_dyn_call_error.clas.html">cx_sy_dyn_call_error</a></tt><br>
+Static Method <tt>interface</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>method</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;RETURNING <tt>interface</tt> TYPE <tt>cl_badi_base=>classname</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='green'>true</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

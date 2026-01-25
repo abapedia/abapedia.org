@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_IXML_ATTRIBUTE_DECL INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_IXML_ATTRIBUTE_DECL</h2>
+<a href="https://github.com/abapedia/steampunk-2111-api/blob/mainrc%2Fif_ixml_attribute_decl.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_ixml_attribute_decl/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_ixml_attribute.intf.html">IF_IXML_ATTRIBUTE</a></small><br><small>Next Object: <a href="if_ixml_cdata_section.intf.html">IF_IXML_CDATA_SECTION</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Interface <tt><a href="if_ixml_node.intf.html">if_ixml_node</a></tt><br>
+Constant <tt>co_cdata</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_default_value</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_entities</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_entity</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_enumeration</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_fixed</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_id</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_idref</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_idrefs</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_implied</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_nmtoken</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_nmtokens</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_notation</tt> TYPE <tt>I</tt><br>
+Constant <tt>co_required</tt> TYPE <tt>I</tt><br>
+Method <tt>add_enum_value</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>value</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>allows_enum_value</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>value</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>get_attr_default</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>I</tt><br>
+Method <tt>get_default_value</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>STRING</tt><br>
+Method <tt>get_enum_value</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>index</tt> TYPE <tt>I</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>STRING</tt><br>
+Method <tt>get_value_type</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>I</tt><br>
+Method <tt>remove_enum_value</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>value</tt> TYPE <tt>STRING</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rval</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Method <tt>set_attr_default</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>attr_default</tt> TYPE <tt>I</tt><br>
+Method <tt>set_default_value</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>default_value</tt> TYPE <tt>STRING</tt><br>
+Method <tt>set_value_type</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>value_type</tt> TYPE <tt>I</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='green'>true</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

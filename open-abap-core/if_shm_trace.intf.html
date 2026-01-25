@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_SHM_TRACE INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_SHM_TRACE</h2>
+<a href="https://github.com/open-abap/open-abap-core/blob/mainrc%2Fshma%2Fif_shm_trace.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_shm_trace/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_shm_build_instance.intf.html">IF_SHM_BUILD_INSTANCE</a></small><br><small>Next Object: <a href="if_sxml.intf.html">IF_SXML</a></small><br><br><u>Public</u><br>Attribute <tt>variant</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Method <tt>trin_attach_for_write</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>area_name</tt> TYPE <tt>SHM_AREA_NAME</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>inst_name</tt> TYPE <tt>SHM_INST_NAME</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>client</tt> TYPE <tt>SHM_CLIENT</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>mode</tt> TYPE <tt>SHM_ATTACH_MODE</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>wait_time</tt> TYPE <tt>I</tt> Optional<br>
+Method <tt>trcx_attach_for_write</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>area_name</tt> TYPE <tt>SHM_AREA_NAME</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>inst_name</tt> TYPE <tt>SHM_INST_NAME</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>client</tt> TYPE <tt>SHM_CLIENT</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>mode</tt> TYPE <tt>SHM_ATTACH_MODE</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>wait_time</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>cx</tt> TYPE <tt>cx_root</tt><br>
+Method <tt>trin_attach_for_update</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>area_name</tt> TYPE <tt>SHM_AREA_NAME</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>inst_name</tt> TYPE <tt>SHM_INST_NAME</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>client</tt> TYPE <tt>SHM_CLIENT</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>mode</tt> TYPE <tt>SHM_ATTACH_MODE</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>wait_time</tt> TYPE <tt>I</tt> Optional<br>
+Method <tt>trcx_attach_for_update</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>area_name</tt> TYPE <tt>SHM_AREA_NAME</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>inst_name</tt> TYPE <tt>SHM_INST_NAME</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>client</tt> TYPE <tt>SHM_CLIENT</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>mode</tt> TYPE <tt>SHM_ATTACH_MODE</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>wait_time</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>cx</tt> TYPE <tt>cx_root</tt><br>
+Method <tt>trin_attach_for_read</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>area_name</tt> TYPE <tt>SHM_AREA_NAME</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>inst_name</tt> TYPE <tt>SHM_INST_NAME</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>client</tt> TYPE <tt>SHM_CLIENT</tt> Optional<br>
+Method <tt>trcx_attach_for_read</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>area_name</tt> TYPE <tt>SHM_AREA_NAME</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>inst_name</tt> TYPE <tt>SHM_INST_NAME</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>client</tt> TYPE <tt>SHM_CLIENT</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>cx</tt> TYPE <tt>cx_root</tt><br>
+Method <tt>trin_build</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>area_name</tt> TYPE <tt>SHM_AREA_NAME</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>inst_name</tt> TYPE <tt>SHM_INST_NAME</tt> Optional<br>
+Method <tt>trcx_build</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>area_name</tt> TYPE <tt>SHM_AREA_NAME</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>inst_name</tt> TYPE <tt>SHM_INST_NAME</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>cx</tt> TYPE <tt>cx_root</tt><br>
+Method <tt>trin_set_root</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>area_name</tt> TYPE <tt>SHM_AREA_NAME</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>inst_name</tt> TYPE <tt>SHM_INST_NAME</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>root</tt> TYPE <tt>REF TO object</tt><br>
+Method <tt>trcx_set_root</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>area_name</tt> TYPE <tt>SHM_AREA_NAME</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>inst_name</tt> TYPE <tt>SHM_INST_NAME</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>root</tt> TYPE <tt>REF TO object</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>cx</tt> TYPE <tt>cx_root</tt><br>
+Method <tt>trin_detach_area</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>area_name</tt> TYPE <tt>SHM_AREA_NAME</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>client</tt> TYPE <tt>SHM_CLIENT</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>rc</tt> TYPE <tt>SHM_RC</tt><br>
+Method <tt>trin_free_area</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>area_name</tt> TYPE <tt>SHM_AREA_NAME</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>client</tt> TYPE <tt>SHM_CLIENT</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>terminate_changer</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>affect_server</tt> TYPE <tt>SHM_AFFECT_SERVER</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>rc</tt> TYPE <tt>SHM_RC</tt><br>
+Method <tt>trin_free_instance</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>area_name</tt> TYPE <tt>SHM_AREA_NAME</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>inst_name</tt> TYPE <tt>SHM_INST_NAME</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>client</tt> TYPE <tt>SHM_CLIENT</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>terminate_changer</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>affect_server</tt> TYPE <tt>SHM_AFFECT_SERVER</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>rc</tt> TYPE <tt>SHM_RC</tt><br>
+Method <tt>trin_get_instance_infos</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>area_name</tt> TYPE <tt>SHM_AREA_NAME</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>inst_name</tt> TYPE <tt>SHM_INST_NAME</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>client</tt> TYPE <tt>SHM_CLIENT</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>infos</tt> TYPE <tt>SHM_INST_INFOS</tt><br>
+Method <tt>trin_invalidate_area</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>area_name</tt> TYPE <tt>SHM_AREA_NAME</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>client</tt> TYPE <tt>SHM_CLIENT</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>rc</tt> TYPE <tt>SHM_RC</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>affect_server</tt> TYPE <tt>SHM_AFFECT_SERVER</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>terminate_changer</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+Method <tt>trin_invalidate_instance</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>area_name</tt> TYPE <tt>SHM_AREA_NAME</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>inst_name</tt> TYPE <tt>SHM_INST_NAME</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>client</tt> TYPE <tt>SHM_CLIENT</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>terminate_changer</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>affect_server</tt> TYPE <tt>SHM_AFFECT_SERVER</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>rc</tt> TYPE <tt>SHM_RC</tt><br>
+Method <tt>trin_get_root</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>area_name</tt> TYPE <tt>SHM_AREA_NAME</tt><br>
+Method <tt>trcx_get_root</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>area_name</tt> TYPE <tt>SHM_AREA_NAME</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>cx</tt> TYPE <tt>cx_root</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>750</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>702</td><td bgcolor='red'>undefined</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

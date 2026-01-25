@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_SXML_STRING_READER CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_SXML_STRING_READER</h2>
+<a href="https://github.com/abapedia/steampunk-2208-api/blob/mainrc%2Fcl_sxml_string_reader.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_sxml_string_reader/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_swf_cpwf_api_factory_a4c.clas.html">CL_SWF_CPWF_API_FACTORY_A4C</a></small><br><small>Next Object: <a href="cl_sxml_string_writer.clas.html">CL_SXML_STRING_WRITER</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Interface <tt><a href="if_sxml.intf.html">IF_SXML</a></tt><br>
+Interface <tt><a href="if_sxml_nsuri_helper.intf.html">IF_SXML_NSURI_HELPER</a></tt><br>
+Interface <tt><a href="if_sxml_reader.intf.html">IF_SXML_READER</a></tt><br>
+Method <tt>constructor</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>input</tt> TYPE <tt>XSTRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>normalizing</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>keep_whitespace</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+Static Method <tt>create</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>input</tt> TYPE <tt>XSTRING</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>normalizing</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>keep_whitespace</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>reader</tt> TYPE <tt>if_sxml_reader</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='green'>true</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

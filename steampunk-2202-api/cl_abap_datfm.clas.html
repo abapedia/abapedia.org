@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_ABAP_DATFM CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_ABAP_DATFM</h2>
+<a href="https://github.com/abapedia/steampunk-2202-api/blob/mainrc%2Fcl_abap_datfm.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_abap_datfm/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_abap_datadescr.clas.html">CL_ABAP_DATADESCR</a></small><br><small>Next Object: <a href="cl_abap_db_c_locator.clas.html">CL_ABAP_DB_C_LOCATOR</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ty_country</tt> TYPE <tt>cl_abap_datfm=>ty_country</tt><br>
+Type <tt>ty_datext</tt> TYPE <tt>cl_abap_datfm=>ty_datext</tt><br>
+Type <tt>ty_datfm</tt> TYPE <tt>cl_abap_datfm=>ty_datfm</tt><br>
+Type <tt>ty_delimiter</tt> TYPE <tt>cl_abap_datfm=>ty_delimiter</tt><br>
+Type <tt>ty_isldate</tt> TYPE <tt>cl_abap_datfm=>ty_isldate</tt><br>
+Type <tt>ty_langu</tt> TYPE <tt>cl_abap_datfm=>ty_langu</tt><br>
+Type <tt>ty_gregdate</tt> TYPE <tt>cl_abap_datfm=>ty_gregdate</tt><br>
+Static Method <tt>check_date_format</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>im_datfm</tt> TYPE <tt>cl_abap_datfm=>ty_datfm</tt><br>
+&nbsp;&nbsp;RETURNING <tt>re_is_valid</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Static Method <tt>conv_date_ext_to_int</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>im_datext</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>im_datfmdes</tt> TYPE <tt>cl_abap_datfm=>ty_datfm</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ex_datint</tt> TYPE <tt>D</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ex_datfmused</tt> TYPE <tt>cl_abap_datfm=>ty_datfm</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_datfm_no_date.clas.html">cx_abap_datfm_no_date</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_datfm_invalid_date.clas.html">cx_abap_datfm_invalid_date</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_datfm_format_unknown.clas.html">cx_abap_datfm_format_unknown</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_datfm_ambiguous.clas.html">cx_abap_datfm_ambiguous</a></tt><br>
+Static Method <tt>conv_date_int_to_ext</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>im_datint</tt> TYPE <tt>D</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>im_datfmdes</tt> TYPE <tt>cl_abap_datfm=>ty_datfm</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ex_datext</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ex_datfmused</tt> TYPE <tt>cl_abap_datfm=>ty_datfm</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_datfm_format_unknown.clas.html">cx_abap_datfm_format_unknown</a></tt><br>
+Static Method <tt>conv_date_int_to_shortex</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>im_datint</tt> TYPE <tt>D</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>im_datfmdes</tt> TYPE <tt>cl_abap_datfm=>ty_datfm</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ex_abbrdatext</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ex_datfmused</tt> TYPE <tt>cl_abap_datfm=>ty_datfm</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_datfm_format_unknown.clas.html">cx_abap_datfm_format_unknown</a></tt><br>
+Static Method <tt>conv_isl_to_greg_formula</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>isldate</tt> TYPE <tt>cl_abap_datfm=>ty_isldate</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>gregdate</tt> TYPE <tt>cl_abap_datfm=>ty_gregdate</tt><br>
+Static Method <tt>conv_period_ext_to_int</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>im_periodext</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>im_datfmdes</tt> TYPE <tt>cl_abap_datfm=>ty_datfm</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>im_inweeks</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>im_inarbitrary</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ex_periodint</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ex_datfmused</tt> TYPE <tt>cl_abap_datfm=>ty_datfm</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_datfm_no_date.clas.html">cx_abap_datfm_no_date</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_datfm_invalid_date.clas.html">cx_abap_datfm_invalid_date</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_datfm_format_unknown.clas.html">cx_abap_datfm_format_unknown</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_datfm_ambiguous.clas.html">cx_abap_datfm_ambiguous</a></tt><br>
+Static Method <tt>conv_period_int_to_ext</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>im_periodint</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>im_datfmdes</tt> TYPE <tt>cl_abap_datfm=>ty_datfm</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ex_periodext</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ex_datfmused</tt> TYPE <tt>cl_abap_datfm=>ty_datfm</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_datfm_format_unknown.clas.html">cx_abap_datfm_format_unknown</a></tt><br>
+Static Method <tt>conv_year_ext_to_int</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>im_datfmdes</tt> TYPE <tt>cl_abap_datfm=>ty_datfm</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>im_yearext</tt> TYPE <tt>clike</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>im_by_parameter</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ex_yearint</tt> TYPE <tt>clike</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_datfm_invalid_date.clas.html">cx_abap_datfm_invalid_date</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_datfm_no_date.clas.html">cx_abap_datfm_no_date</a></tt><br>
+Static Method <tt>conv_year_int_to_ext</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>im_datfmdes</tt> TYPE <tt>cl_abap_datfm=>ty_datfm</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>im_yearint</tt> TYPE <tt>clike</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>im_by_parameter</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ex_yearext</tt> TYPE <tt>clike</tt><br>
+Static Method <tt>get_country_datfm</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>country</tt> TYPE <tt>cl_abap_datfm=>ty_country</tt><br>
+&nbsp;&nbsp;RETURNING <tt>datfm</tt> TYPE <tt>cl_abap_datfm=>ty_datfm</tt><br>
+Static Method <tt>get_date_format_des</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>im_datfm</tt> TYPE <tt>cl_abap_datfm=>ty_datfm</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>im_langu</tt> TYPE <tt>cl_abap_datfm=>ty_langu</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>im_plain</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>im_long</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ex_dateformat</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_datfm_format_unknown.clas.html">cx_abap_datfm_format_unknown</a></tt><br>
+Static Method <tt>get_date_format_des_j</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>im_datfm</tt> TYPE <tt>cl_abap_datfm=>ty_datfm</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ex_dateformat</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_datfm_format_unknown.clas.html">cx_abap_datfm_format_unknown</a></tt><br>
+Static Method <tt>get_datfm</tt><br>
+&nbsp;&nbsp;RETURNING <tt>datfm</tt> TYPE <tt>cl_abap_datfm=>ty_datfm</tt><br>
+Static Method <tt>get_delimiter</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>im_datfm</tt> TYPE <tt>cl_abap_datfm=>ty_datfm</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ex_delimiter</tt> TYPE <tt>cl_abap_datfm=>ty_delimiter</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_datfm_format_unknown.clas.html">cx_abap_datfm_format_unknown</a></tt><br>
+Static Method <tt>get_num_of_dateformats</tt><br>
+&nbsp;&nbsp;RETURNING <tt>re_num</tt> TYPE <tt>INT4</tt><br>
+Static Method <tt>get_period_format_des</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>im_datfm</tt> TYPE <tt>cl_abap_datfm=>ty_datfm</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>im_langu</tt> TYPE <tt>cl_abap_datfm=>ty_langu</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>im_plain</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>im_long</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>im_isweeks</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ex_periodformat</tt> TYPE <tt>csequence</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_datfm_format_unknown.clas.html">cx_abap_datfm_format_unknown</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='green'>true</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

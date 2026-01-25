@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_ABAP_TABLEDESCR CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_ABAP_TABLEDESCR</h2>
+<a href="https://github.com/abapedia/steampunk-2208-api/blob/mainrc%2Fcl_abap_tabledescr.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_abap_tabledescr/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_abap_structdescr.clas.html">CL_ABAP_STRUCTDESCR</a></small><br><small>Next Object: <a href="cl_abap_testdouble.clas.html">CL_ABAP_TESTDOUBLE</a></small><br><br>Status: RELEASED<br><br>Superclass: <a href="cl_abap_complexdescr.clas.html">cl_abap_complexdescr</a><br><br>
+<u>Public</u><br>Attribute <tt>key</tt> TYPE <tt>abap_keydescr_tab</tt><br>
+Attribute <tt>initial_size</tt> TYPE <tt>I</tt><br>
+Attribute <tt>key_defkind</tt> TYPE <tt>abap_keydefkind</tt><br>
+Attribute <tt>has_unique_key</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Attribute <tt>table_kind</tt> TYPE <tt>abap_tablekind</tt><br>
+Constant <tt>tablekind_any</tt> TYPE <tt>abap_tablekind</tt><br>
+Constant <tt>tablekind_std</tt> TYPE <tt>abap_tablekind</tt><br>
+Constant <tt>tablekind_index</tt> TYPE <tt>abap_tablekind</tt><br>
+Constant <tt>tablekind_hashed</tt> TYPE <tt>abap_tablekind</tt><br>
+Constant <tt>tablekind_sorted</tt> TYPE <tt>abap_tablekind</tt><br>
+Constant <tt>keydefkind_default</tt> TYPE <tt>abap_keydefkind</tt><br>
+Constant <tt>keydefkind_tableline</tt> TYPE <tt>abap_keydefkind</tt><br>
+Constant <tt>keydefkind_user</tt> TYPE <tt>abap_keydefkind</tt><br>
+Constant <tt>keydefkind_empty</tt> TYPE <tt>abap_keydefkind</tt><br>
+Constant <tt>further_scnd_keys_not_spec</tt> TYPE <tt>I</tt><br>
+Constant <tt>further_scnd_keys_yes</tt> TYPE <tt>I</tt><br>
+Constant <tt>further_scnd_keys_no</tt> TYPE <tt>I</tt><br>
+Static Method <tt>load_class</tt><br>
+Method <tt>get_table_line_type</tt><br>
+&nbsp;&nbsp;RETURNING <tt>p_descr_ref</tt> TYPE <tt>cl_abap_datadescr</tt><br>
+Static Method <tt>get</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_line_type</tt> TYPE <tt>cl_abap_datadescr</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_table_kind</tt> TYPE <tt>abap_tablekind</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_unique</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_key</tt> TYPE <tt>abap_keydescr_tab</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_key_kind</tt> TYPE <tt>abap_keydefkind</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>p_result</tt> TYPE <tt>cl_abap_tabledescr</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_table_creation.clas.html">cx_sy_table_creation</a></tt><br>
+Static Method <tt>create</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_line_type</tt> TYPE <tt>cl_abap_datadescr</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_table_kind</tt> TYPE <tt>abap_tablekind</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_unique</tt> TYPE <tt>ABAP_BOOL</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_key</tt> TYPE <tt>abap_keydescr_tab</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_key_kind</tt> TYPE <tt>abap_keydefkind</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>p_result</tt> TYPE <tt>cl_abap_tabledescr</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_table_creation.clas.html">cx_sy_table_creation</a></tt><br>
+Method <tt>get_keys</tt><br>
+&nbsp;&nbsp;RETURNING <tt>p_keys</tt> TYPE <tt>abap_table_keydescr_tab</tt><br>
+Method <tt>get_key_aliases</tt><br>
+&nbsp;&nbsp;RETURNING <tt>p_key_aliases</tt> TYPE <tt>abap_key_alias_map</tt><br>
+Static Method <tt>get_with_keys</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_line_type</tt> TYPE <tt>cl_abap_datadescr</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_keys</tt> TYPE <tt>abap_table_keydescr_tab</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_key_aliases</tt> TYPE <tt>abap_key_alias_map</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_initial_size</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>p_result</tt> TYPE <tt>cl_abap_tabledescr</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_table_creation.clas.html">cx_sy_table_creation</a></tt><br>
+Static Method <tt>create_with_keys</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_line_type</tt> TYPE <tt>cl_abap_datadescr</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_keys</tt> TYPE <tt>abap_table_keydescr_tab</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>p_initial_size</tt> TYPE <tt>I</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>p_result</tt> TYPE <tt>cl_abap_tabledescr</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_sy_table_creation.clas.html">cx_sy_table_creation</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='green'>true</td></tr>
+<tr><td>702</td><td bgcolor='green'>true</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

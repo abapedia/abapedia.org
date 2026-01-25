@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_OAUTH2_CLIENT CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_OAUTH2_CLIENT</h2>
+<a href="https://github.com/open-abap/open-abap-core/blob/mainrc%2Foauth2%2Fcl_oauth2_client.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_oauth2_client/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_oa2c_config_writer_api.clas.html">CL_OA2C_CONFIG_WRITER_API</a></small><br><small>Next Object: <a href="cl_oo_factory.clas.html">CL_OO_FACTORY</a></small><br><br><u>Public</u><br>Interface <tt><a href="if_oauth2_client.intf.html">IF_OAUTH2_CLIENT</a></tt><br>
+Static Method <tt>create</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_profile</tt> TYPE <tt>OA2C_PROFILE</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>i_configuration</tt> TYPE <tt>OA2C_CONFIGURATION</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>ro_oauth2_client</tt> TYPE <tt>if_oauth2_client</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_oa2c.clas.html">cx_oa2c</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>750</td><td bgcolor='red'>undefined</td></tr>
+<tr><td>702</td><td bgcolor='red'>undefined</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

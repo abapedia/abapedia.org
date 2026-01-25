@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - /IWBEP/IF_CP_REQUEST_CHANGESET INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF /IWBEP/IF_CP_REQUEST_CHANGESET</h2>
+<a href="https://github.com/abapedia/steampunk-2111-api/blob/mainrc%2F%23iwbep%23if_cp_request_changeset.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces//iwbep/if_cp_request_changeset/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="%23iwbep%23if_cp_request_batch_op.intf.html">/IWBEP/IF_CP_REQUEST_BATCH_OP</a></small><br><small>Next Object: <a href="%23iwbep%23if_cp_request_create.intf.html">/IWBEP/IF_CP_REQUEST_CREATE</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Interface <tt><a href="%23iwbep%23if_cp_request_batch_op.intf.html">/iwbep/if_cp_request_batch_op</a></tt><br>
+Method <tt>add_request</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>io_request</tt> TYPE <tt>/iwbep/if_cp_request_batch_op</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_request</tt> TYPE <tt>/iwbep/if_cp_request_changeset</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+Method <tt>check_execution</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_request</tt> TYPE <tt>/iwbep/if_cp_request_changeset</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="%23iwbep%23cx_gateway.clas.html">/iwbep/cx_gateway</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

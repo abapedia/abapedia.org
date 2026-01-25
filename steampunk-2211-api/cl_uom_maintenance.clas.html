@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_UOM_MAINTENANCE CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_UOM_MAINTENANCE</h2>
+<a href="https://github.com/abapedia/steampunk-2211-api/blob/mainrc%2Fcl_uom_maintenance.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_uom_maintenance/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_uom_dim_maintenance.clas.html">CL_UOM_DIM_MAINTENANCE</a></small><br><small>Next Object: <a href="cl_uuid_factory.clas.html">CL_UUID_FACTORY</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ty_msehi</tt> TYPE <tt>cl_uom_maintenance=>ty_msehi</tt><br>
+Type <tt>ty_uom_cre_ts</tt> TYPE <tt>cl_uom_maintenance=>ty_uom_cre_ts</tt><br>
+Type <tt>ty_uom_upd_ts</tt> TYPE <tt>cl_uom_maintenance=>ty_uom_upd_ts</tt><br>
+Type <tt>ty_uom_conv_ts</tt> TYPE <tt>cl_uom_maintenance=>ty_uom_conv_ts</tt><br>
+Type <tt>ty_error</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Type <tt>ty_exist</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Type <tt>ty_meinsint</tt> TYPE <tt>cl_uom_maintenance=>ty_meinsint</tt><br>
+Type <tt>ty_mseh3</tt> TYPE <tt>cl_uom_maintenance=>ty_mseh3</tt><br>
+Type <tt>ty_mseh6</tt> TYPE <tt>cl_uom_maintenance=>ty_mseh6</tt><br>
+Type <tt>ty_dimid</tt> TYPE <tt>cl_uom_maintenance=>ty_dimid</tt><br>
+Type <tt>ty_transport</tt> TYPE <tt>cl_uom_maintenance=>ty_transport</tt><br>
+Type <tt>ty_uom_ts</tt> TYPE <tt>cl_uom_maintenance=>ty_uom_ts</tt><br>
+Method <tt>delete</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>unit</tt> TYPE <tt>cl_uom_maintenance=>ty_msehi</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>error</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_uom_error.clas.html">cx_uom_error</a></tt><br>
+Method <tt>read</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>unit</tt> TYPE <tt>cl_uom_maintenance=>ty_msehi</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>unit_st</tt> TYPE <tt>cl_uom_maintenance=>ty_uom_ts</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_uom_error.clas.html">cx_uom_error</a></tt><br>
+Method <tt>update</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>unit</tt> TYPE <tt>cl_uom_maintenance=>ty_msehi</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>unit_upd_ts</tt> TYPE <tt>cl_uom_maintenance=>ty_uom_upd_ts</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>error</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_uom_error.clas.html">cx_uom_error</a></tt><br>
+Method <tt>create</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>unit_dimid</tt> TYPE <tt>cl_uom_maintenance=>ty_dimid</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>unit_int</tt> TYPE <tt>cl_uom_maintenance=>ty_meinsint</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>unit_cre_ts</tt> TYPE <tt>cl_uom_maintenance=>ty_uom_cre_ts</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>error</tt> TYPE <tt>ABAP_BOOL</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_uom_error.clas.html">cx_uom_error</a></tt><br>
+Static Method <tt>get_instance</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>transport</tt> TYPE <tt>cl_uom_maintenance=>ty_transport</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>ro_uom</tt> TYPE <tt>cl_uom_maintenance</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_XCO_CDS_COMPOSITION_CONTENT INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_XCO_CDS_COMPOSITION_CONTENT</h2>
+<a href="https://github.com/abapedia/steampunk-2111-api/blob/mainrc%2Fif_xco_cds_composition_content.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_xco_cds_composition_content/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_xco_cds_composition.intf.html">IF_XCO_CDS_COMPOSITION</a></small><br><small>Next Object: <a href="if_xco_cds_compositions.intf.html">IF_XCO_CDS_COMPOSITIONS</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ts_cardinality</tt> TYPE <tt>if_xco_cds_composition_content=>ts_cardinality</tt><br>
+Type <tt>ts_content</tt> TYPE <tt>if_xco_cds_composition_content=>ts_content</tt><br>
+Attribute <tt>composition</tt> TYPE <tt>if_xco_cds_composition</tt><br>
+Attribute <tt>read_state</tt> TYPE <tt>cl_xco_ddef_object_read_state</tt><br>
+Method <tt>get_cardinality</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rs_cardinality</tt> TYPE <tt>if_xco_cds_composition_content=>ts_cardinality</tt><br>
+Method <tt>get_alias</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rv_alias</tt> TYPE <tt>SXCO_DDEF_ALIAS_NAME</tt><br>
+Method <tt>get</tt><br>
+&nbsp;&nbsp;RETURNING <tt>rs_content</tt> TYPE <tt>if_xco_cds_composition_content=>ts_content</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

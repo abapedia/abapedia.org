@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_XCO_AD_BUILT_IN_TYPE_F CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_XCO_AD_BUILT_IN_TYPE_F</h2>
+<a href="https://github.com/abapedia/steampunk-2302-api/blob/mainrc%2Fcl_xco_ad_built_in_type_f.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_xco_ad_built_in_type_f/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_xco_ad_built_in_type.clas.html">CL_XCO_AD_BUILT_IN_TYPE</a></small><br><small>Next Object: <a href="cl_xco_ad_object_read_state.clas.html">CL_XCO_AD_OBJECT_READ_STATE</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>tv_type</tt> TYPE <tt>cl_xco_ad_built_in_type_f=>tv_type</tt><br>
+Type <tt>tv_length</tt> TYPE <tt>cl_xco_ad_built_in_type_f=>tv_length</tt><br>
+Type <tt>tv_decimals</tt> TYPE <tt>cl_xco_ad_built_in_type_f=>tv_decimals</tt><br>
+Attribute <tt>int1</tt> TYPE <tt>cl_xco_ad_built_in_type</tt><br>
+Attribute <tt>int2</tt> TYPE <tt>cl_xco_ad_built_in_type</tt><br>
+Attribute <tt>int4</tt> TYPE <tt>cl_xco_ad_built_in_type</tt><br>
+Attribute <tt>int8</tt> TYPE <tt>cl_xco_ad_built_in_type</tt><br>
+Attribute <tt>decfloat16</tt> TYPE <tt>cl_xco_ad_built_in_type</tt><br>
+Attribute <tt>df16_raw</tt> TYPE <tt>cl_xco_ad_built_in_type</tt><br>
+Attribute <tt>decfloat34</tt> TYPE <tt>cl_xco_ad_built_in_type</tt><br>
+Attribute <tt>df34_raw</tt> TYPE <tt>cl_xco_ad_built_in_type</tt><br>
+Attribute <tt>fltp</tt> TYPE <tt>cl_xco_ad_built_in_type</tt><br>
+Attribute <tt>datn</tt> TYPE <tt>cl_xco_ad_built_in_type</tt><br>
+Attribute <tt>dats</tt> TYPE <tt>cl_xco_ad_built_in_type</tt><br>
+Attribute <tt>timn</tt> TYPE <tt>cl_xco_ad_built_in_type</tt><br>
+Attribute <tt>tims</tt> TYPE <tt>cl_xco_ad_built_in_type</tt><br>
+Attribute <tt>accp</tt> TYPE <tt>cl_xco_ad_built_in_type</tt><br>
+Attribute <tt>utclong</tt> TYPE <tt>cl_xco_ad_built_in_type</tt><br>
+Attribute <tt>clnt</tt> TYPE <tt>cl_xco_ad_built_in_type</tt><br>
+Attribute <tt>lang</tt> TYPE <tt>cl_xco_ad_built_in_type</tt><br>
+Attribute <tt>geom_ewkb</tt> TYPE <tt>cl_xco_ad_built_in_type</tt><br>
+Attribute <tt>cuky</tt> TYPE <tt>cl_xco_ad_built_in_type</tt><br>
+Method <tt>dec</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_length</tt> TYPE <tt>cl_xco_ad_built_in_type_f=>tv_length</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_decimals</tt> TYPE <tt>cl_xco_ad_built_in_type_f=>tv_decimals</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_dec</tt> TYPE <tt>cl_xco_ad_built_in_type</tt><br>
+Method <tt>df16_dec</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_length</tt> TYPE <tt>cl_xco_ad_built_in_type_f=>tv_length</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_decimals</tt> TYPE <tt>cl_xco_ad_built_in_type_f=>tv_decimals</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_df16_dec</tt> TYPE <tt>cl_xco_ad_built_in_type</tt><br>
+Method <tt>df34_dec</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_length</tt> TYPE <tt>cl_xco_ad_built_in_type_f=>tv_length</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_decimals</tt> TYPE <tt>cl_xco_ad_built_in_type_f=>tv_decimals</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_df34_dec</tt> TYPE <tt>cl_xco_ad_built_in_type</tt><br>
+Method <tt>char</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_length</tt> TYPE <tt>cl_xco_ad_built_in_type_f=>tv_length</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_char</tt> TYPE <tt>cl_xco_ad_built_in_type</tt><br>
+Method <tt>lchr</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_length</tt> TYPE <tt>cl_xco_ad_built_in_type_f=>tv_length</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_lchr</tt> TYPE <tt>cl_xco_ad_built_in_type</tt><br>
+Method <tt>sstring</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_length</tt> TYPE <tt>cl_xco_ad_built_in_type_f=>tv_length</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_sstring</tt> TYPE <tt>cl_xco_ad_built_in_type</tt><br>
+Method <tt>string</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_length</tt> TYPE <tt>cl_xco_ad_built_in_type_f=>tv_length</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_string</tt> TYPE <tt>cl_xco_ad_built_in_type</tt><br>
+Method <tt>raw</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_length</tt> TYPE <tt>cl_xco_ad_built_in_type_f=>tv_length</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_raw</tt> TYPE <tt>cl_xco_ad_built_in_type</tt><br>
+Method <tt>lraw</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_length</tt> TYPE <tt>cl_xco_ad_built_in_type_f=>tv_length</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_lraw</tt> TYPE <tt>cl_xco_ad_built_in_type</tt><br>
+Method <tt>rawstring</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_length</tt> TYPE <tt>cl_xco_ad_built_in_type_f=>tv_length</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_rawstring</tt> TYPE <tt>cl_xco_ad_built_in_type</tt><br>
+Method <tt>numc</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_length</tt> TYPE <tt>cl_xco_ad_built_in_type_f=>tv_length</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_numc</tt> TYPE <tt>cl_xco_ad_built_in_type</tt><br>
+Method <tt>curr</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_length</tt> TYPE <tt>cl_xco_ad_built_in_type_f=>tv_length</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_decimals</tt> TYPE <tt>cl_xco_ad_built_in_type_f=>tv_decimals</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_curr</tt> TYPE <tt>cl_xco_ad_built_in_type</tt><br>
+Method <tt>quan</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_length</tt> TYPE <tt>cl_xco_ad_built_in_type_f=>tv_length</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_decimals</tt> TYPE <tt>cl_xco_ad_built_in_type_f=>tv_decimals</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_quan</tt> TYPE <tt>cl_xco_ad_built_in_type</tt><br>
+Method <tt>unit</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_length</tt> TYPE <tt>cl_xco_ad_built_in_type_f=>tv_length</tt><br>
+&nbsp;&nbsp;RETURNING <tt>ro_unit</tt> TYPE <tt>cl_xco_ad_built_in_type</tt><br>
+Method <tt>for</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_type</tt> TYPE <tt>cl_xco_ad_built_in_type_f=>tv_type</tt><br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_length</tt> TYPE <tt>cl_xco_ad_built_in_type_f=>tv_length</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>iv_decimals</tt> TYPE <tt>cl_xco_ad_built_in_type_f=>tv_decimals</tt> Optional<br>
+&nbsp;&nbsp;RETURNING <tt>ro_built_in_type</tt> TYPE <tt>cl_xco_ad_built_in_type</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

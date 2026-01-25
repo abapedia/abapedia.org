@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_WEB_HTTP_HEADER INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_WEB_HTTP_HEADER</h2>
+<a href="https://github.com/abapedia/steampunk-2208-api/blob/mainrc%2Fif_web_http_header.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_web_http_header/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_web_http_client.intf.html">IF_WEB_HTTP_CLIENT</a></small><br><small>Next Object: <a href="if_web_http_request.intf.html">IF_WEB_HTTP_REQUEST</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Constant <tt>accept</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>accept_text_html</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>accept_application_xhtml</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>accept_application_xml</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>accept_application_json</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>accept_charset</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>accept_charset_utf8</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>accept_charset_iso_8859_1</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>accept_encoding</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>accept_encoding_gzip</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>accept_encoding_compress</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>accept_encoding_deflate</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>accept_language</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>accept_ranges</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>age</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>allow</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>authorization</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>cache_control</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>connection</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>content_encoding</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>content_encoding_gzip</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>content_encoding_compress</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>content_encoding_deflate</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>content_language</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>content_length</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>content_location</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>content_md5</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>content_range</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>content_type</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>content_type_html_utf8</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>date</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>etag</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>expect</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>expires</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>from</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>host</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>if_match</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>if_modified_since</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>if_none_match</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>if_range</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>if_unmodified_since</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>last_modified</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>location</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>max_forwards</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>pragma</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>proxy_authenticate</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>proxy_authorization</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>range</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>referer</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>retry_after</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>server</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>te</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>trailer</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>transfer_encoding</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>upgrade</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>user_agent</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>vary</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>via</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>warning</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>www_authenticate</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>content_disposition</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>content_transfer_encoding</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>x_requested_with</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>xmlhttprequest</tt> TYPE <tt>STRING</tt><br>
+Constant <tt>x_xhr_logon</tt> TYPE <tt>STRING</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

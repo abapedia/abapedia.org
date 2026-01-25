@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_ABAP_LOCK_OBJECT INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_ABAP_LOCK_OBJECT</h2>
+<a href="https://github.com/abapedia/steampunk-2211-api/blob/mainrc%2Fif_abap_lock_object.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_abap_lock_object/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_abap_gzip_text_handler.intf.html">IF_ABAP_GZIP_TEXT_HANDLER</a></small><br><small>Next Object: <a href="if_abap_matcher_callout.intf.html">IF_ABAP_MATCHER_CALLOUT</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>tv_name</tt> TYPE <tt>if_abap_lock_object=>tv_name</tt><br>
+Type <tt>tv_table_name</tt> TYPE <tt>if_abap_lock_object=>tv_table_name</tt><br>
+Type <tt>tv_parameter_name</tt> TYPE <tt>if_abap_lock_object=>tv_parameter_name</tt><br>
+Type <tt>tv_mode</tt> TYPE <tt>if_abap_lock_object=>tv_mode</tt><br>
+Type <tt>tv_scope</tt> TYPE <tt>if_abap_lock_object=>tv_scope</tt><br>
+Type <tt>tv_wait</tt> TYPE <tt>if_abap_lock_object=>tv_wait</tt><br>
+Type <tt>tv_synchronous</tt> TYPE <tt>if_abap_lock_object=>tv_synchronous</tt><br>
+Type <tt>ts_table_mode</tt> TYPE <tt>if_abap_lock_object=>ts_table_mode</tt><br>
+Type <tt>tt_table_mode</tt> TYPE <tt>if_abap_lock_object=>tt_table_mode</tt><br>
+Type <tt>ts_parameter</tt> TYPE <tt>if_abap_lock_object=>ts_parameter</tt><br>
+Type <tt>tt_parameter</tt> TYPE <tt>if_abap_lock_object=>tt_parameter</tt><br>
+Constant <tt>cs_mode</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>cs_scope</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>cs_synchronous</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>cs_wait</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Method <tt>enqueue</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_table_mode</tt> TYPE <tt>if_abap_lock_object=>tt_table_mode</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_parameter</tt> TYPE <tt>if_abap_lock_object=>tt_parameter</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>_scope</tt> TYPE <tt>if_abap_lock_object=>tv_scope</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>_wait</tt> TYPE <tt>if_abap_lock_object=>tv_wait</tt> Optional<br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_foreign_lock.clas.html">cx_abap_foreign_lock</a></tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_lock_failure.clas.html">cx_abap_lock_failure</a></tt><br>
+Method <tt>dequeue</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_table_mode</tt> TYPE <tt>if_abap_lock_object=>tt_table_mode</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>it_parameter</tt> TYPE <tt>if_abap_lock_object=>tt_parameter</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>_scope</tt> TYPE <tt>if_abap_lock_object=>tv_scope</tt> Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>_synchronous</tt> TYPE <tt>if_abap_lock_object=>tv_synchronous</tt> Optional<br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_lock_failure.clas.html">cx_abap_lock_failure</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='green'>true</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

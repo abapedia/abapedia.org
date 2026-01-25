@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - IF_BALI_LOG INTF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>INTF IF_BALI_LOG</h2>
+<a href="https://github.com/abapedia/steampunk-2302-api/blob/mainrc%2Fif_bali_log.intf.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/interfaces/if_bali_log/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="if_bali_item_setter.intf.html">IF_BALI_ITEM_SETTER</a></small><br><small>Next Object: <a href="if_bali_log_db.intf.html">IF_BALI_LOG_DB</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>ty_invalidated</tt> TYPE <tt>ABAP_BOOL</tt><br>
+Type <tt>ty_handle</tt> TYPE <tt>if_bali_log=>ty_handle</tt><br>
+Type <tt>ty_item_entry</tt> TYPE <tt>if_bali_log=>ty_item_entry</tt><br>
+Type <tt>ty_item_table</tt> TYPE <tt>if_bali_log=>ty_item_table</tt><br>
+Type <tt>ty_log_item_number</tt> TYPE <tt>BALMNR</tt><br>
+Method <tt>get_handle</tt><br>
+&nbsp;&nbsp;RETURNING <tt>handle</tt> TYPE <tt>if_bali_log=>ty_handle</tt><br>
+Method <tt>get_header</tt><br>
+&nbsp;&nbsp;RETURNING <tt>header</tt> TYPE <tt>if_bali_header_getter</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bali_runtime.clas.html">cx_bali_runtime</a></tt><br>
+Method <tt>set_header</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>header</tt> TYPE <tt>if_bali_header_setter</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bali_runtime.clas.html">cx_bali_runtime</a></tt><br>
+Method <tt>add_item</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>item</tt> TYPE <tt>if_bali_item_setter</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bali_runtime.clas.html">cx_bali_runtime</a></tt><br>
+Method <tt>cumulate_item</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>item</tt> TYPE <tt>if_bali_item_setter</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bali_runtime.clas.html">cx_bali_runtime</a></tt><br>
+Method <tt>add_messages_from_bapirettab</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>message_table</tt> TYPE <tt>BAPIRETTAB</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bali_runtime.clas.html">cx_bali_runtime</a></tt><br>
+Method <tt>add_abap_behavior_message</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>message</tt> TYPE <tt>if_abap_behv_message</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bali_runtime.clas.html">cx_bali_runtime</a></tt><br>
+Method <tt>add_all_items_from_other_log</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>source_log</tt> TYPE <tt>if_bali_log</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bali_runtime.clas.html">cx_bali_runtime</a></tt><br>
+Method <tt>set_filter_for_add_item</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>filter</tt> TYPE <tt>if_bali_item_filter</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bali_runtime.clas.html">cx_bali_runtime</a></tt><br>
+Method <tt>get_filter_for_add_item</tt><br>
+&nbsp;&nbsp;RETURNING <tt>filter</tt> TYPE <tt>if_bali_item_filter</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bali_runtime.clas.html">cx_bali_runtime</a></tt><br>
+Method <tt>get_item</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>log_item_number</tt> TYPE <tt>BALMNR</tt><br>
+&nbsp;&nbsp;RETURNING <tt>item</tt> TYPE <tt>if_bali_item_getter</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bali_runtime.clas.html">cx_bali_runtime</a></tt><br>
+Method <tt>get_all_items</tt><br>
+&nbsp;&nbsp;RETURNING <tt>item_table</tt> TYPE <tt>if_bali_log=>ty_item_table</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_bali_runtime.clas.html">cx_bali_runtime</a></tt><br>
+Method <tt>release_memory</tt><br>
+Method <tt>is_invalidated</tt><br>
+&nbsp;&nbsp;RETURNING <tt>is_invalidated</tt> TYPE <tt>ABAP_BOOL</tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>

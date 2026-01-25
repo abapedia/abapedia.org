@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>abapedia - CL_ABAP_RANGE CLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      a, a:visited, a:hover, a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+<h2>CLAS CL_ABAP_RANGE</h2>
+<a href="https://github.com/abapedia/steampunk-2111-api/blob/mainrc%2Fcl_abap_range.clas.abap">Source Link</a><br>
+<a id="adtLink" href="adt://ME1/sap/bc/adt/oo/classes/cl_abap_range/source/main">Open in ADT</a><br>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  fixADTLink();
+});
+
+function fixADTLink() {
+   const e = document.getElementById("adtLink");
+   var sys = localStorage.getItem("ADT_SYSTEM");
+   e.href = e.href.replace("ME1", sys);
+}
+</script><br><small><a href="./">Home</a></small><br><small>Previous Object: <a href="cl_abap_random_packed_dec9.clas.html">CL_ABAP_RANDOM_PACKED_DEC9</a></small><br><small>Next Object: <a href="cl_abap_refdescr.clas.html">CL_ABAP_REFDESCR</a></small><br><br>Status: RELEASED<br><br><u>Public</u><br>Type <tt>range_sign</tt> TYPE <tt>cl_abap_range=>range_sign</tt><br>
+Type <tt>range_option</tt> TYPE <tt>cl_abap_range=>range_option</tt><br>
+Type <tt>dswhere</tt> TYPE <tt>cl_abap_range=>dswhere</tt><br>
+Type <tt>ds_where_tab</tt> TYPE <tt>cl_abap_range=>ds_where_tab</tt><br>
+Type <tt>ds_where</tt> TYPE <tt>cl_abap_range=>ds_where</tt><br>
+Type <tt>ds_twhere</tt> TYPE <tt>cl_abap_range=>ds_twhere</tt><br>
+Type <tt>dsexpr</tt> TYPE <tt>cl_abap_range=>dsexpr</tt><br>
+Type <tt>ds_expr_tab</tt> TYPE <tt>cl_abap_range=>ds_expr_tab</tt><br>
+Type <tt>ds_expr</tt> TYPE <tt>cl_abap_range=>ds_expr</tt><br>
+Type <tt>ds_texpr</tt> TYPE <tt>cl_abap_range=>ds_texpr</tt><br>
+Type <tt>dsselopt</tt> TYPE <tt>cl_abap_range=>dsselopt</tt><br>
+Type <tt>ds_selopt_t</tt> TYPE <tt>cl_abap_range=>ds_selopt_t</tt><br>
+Type <tt>ds_frange</tt> TYPE <tt>cl_abap_range=>ds_frange</tt><br>
+Type <tt>ds_frange_t</tt> TYPE <tt>cl_abap_range=>ds_frange_t</tt><br>
+Type <tt>ds_range</tt> TYPE <tt>cl_abap_range=>ds_range</tt><br>
+Type <tt>ds_trange</tt> TYPE <tt>cl_abap_range=>ds_trange</tt><br>
+Type <tt>ds_type</tt> TYPE <tt>cl_abap_range=>ds_type</tt><br>
+Constant <tt>sign</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Constant <tt>option</tt> TYPE <tt>StructureTypetoABAPtodo</tt><br>
+Static Method <tt>ranges_to_where</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>ranges</tt> TYPE <tt>cl_abap_range=>ds_trange</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>where_clauses</tt> TYPE <tt>cl_abap_range=>ds_twhere</tt><br>
+Static Method <tt>ranges_to_expressions</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>field_ranges</tt> TYPE <tt>cl_abap_range=>ds_trange</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>expressions</tt> TYPE <tt>cl_abap_range=>ds_texpr</tt><br>
+Static Method <tt>expressions_to_ranges</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>expressions</tt> TYPE <tt>cl_abap_range=>ds_texpr</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>field_ranges</tt> TYPE <tt>cl_abap_range=>ds_trange</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_range_conv.clas.html">cx_abap_range_conv</a></tt><br>
+Static Method <tt>where_to_ranges</tt><br>
+&nbsp;&nbsp;IMPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>where_clauses</tt> TYPE <tt>cl_abap_range=>ds_twhere</tt><br>
+&nbsp;&nbsp;EXPORTING<br>
+&nbsp;&nbsp;&nbsp;&nbsp<tt>field_ranges</tt> TYPE <tt>cl_abap_range=>ds_trange</tt><br>
+&nbsp;&nbsp;RAISING <tt><a href="cx_abap_range_conv.clas.html">cx_abap_range_conv</a></tt><br>
+<br>Exists on:
+<table><tr><td>754</td><td bgcolor='red'>false</td></tr>
+<tr><td>750</td><td bgcolor='red'>false</td></tr>
+<tr><td>702</td><td bgcolor='red'>false</td></tr>
+</table><br>
+    <center><small>Bug reports and ideas <a href="https://github.com/abapedia/abapedia.org/issues">welcome</a></small></center>
+    <center><small>Made using <a href="https://abaplint.app">abaplint.app</a></small></center>
+  </body>
+</html>
